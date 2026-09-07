@@ -1,1232 +1,555 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deutsch-Lern Dashboard</title>
-    <!-- Google Fonts & FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-body: #f8fafc;
-            --sidebar-bg: #1e293b;
-            --sidebar-hover: #334155;
-            --primary: #4f46e5;
-            --primary-hover: #4338ca;
-            --success: #10b981;
-            --success-hover: #059669;
-            --danger: #ef4444;
-            --danger-hover: #dc2626;
-            --warning: #f59e0b;
-            --info: #0284c7;
-            --info-hover: #0369a1;
-            --purple: #9333ea;
-            --purple-hover: #7e22ce;
-            --text-main: #0f172a;
-            --text-muted: #64748b;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.05);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
-            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .dashboard {
-            display: flex;
-            height: 100vh;
-            width: 100vw;
-        }
-
-        /* --- SIDEBAR (LINKER BEREICH) --- */
-        .panel-left {
-            width: 280px;
-            min-width: 280px;
-            background-color: var(--sidebar-bg);
-            color: #f8fafc;
-            padding: 24px 16px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 4px 0 10px rgba(0,0,0,0.05);
-            z-index: 10;
-        }
-
-        .header-title-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            margin-bottom: 24px;
-        }
-
-        .header-title-container h2 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .profile-icon-btn {
-            background: rgba(255, 255, 255, 0.1);
-            color: #e2e8f0;
-            border: none;
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
-
-        .profile-icon-btn:hover {
-            background: var(--primary);
-            color: #ffffff;
-            transform: scale(1.05);
-        }
-
-        .menu-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .menu-item-container {
-            position: relative;
-        }
-
-        .menu-item {
-            padding: 12px 16px;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            transition: var(--transition);
-            color: #94a3b8;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.95rem;
-        }
-
-        .menu-item:hover {
-            background-color: var(--sidebar-hover);
-            color: #ffffff;
-        }
-
-        .menu-item.active {
-            background-color: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-        }
-
-        /* Submenü Flyout */
-        .submenu-flyout {
-            position: absolute;
-            left: 100%;
-            top: 0;
-            margin-left: 12px;
-            background-color: var(--sidebar-bg);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: var(--radius-md);
-            padding: 8px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            z-index: 50;
-            width: 180px;
-            box-shadow: var(--shadow-lg);
-            animation: fadeIn 0.2s ease-out;
-        }
-
-        .submenu-flyout button {
-            background-color: transparent;
-            color: #e2e8f0;
-            font-size: 0.875rem;
-            width: 100%;
-            text-align: left;
-            padding: 10px 12px;
-            border-radius: var(--radius-sm);
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition);
-        }
-
-        .submenu-flyout button:hover {
-            background-color: var(--sidebar-hover);
-            color: #fff;
-        }
-
-        .action-box {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 16px;
-            border-radius: var(--radius-md);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        /* --- MITTLERER BEREICH --- */
-        .panel-middle {
-            flex: 1;
-            background-color: var(--bg-body);
-            padding: 32px 40px;
-            overflow-y: auto;
-        }
-
-        .tab-content {
-            animation: fadeIn 0.3s ease-in-out;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .page-header {
-            margin-bottom: 24px;
-        }
-
-        .page-header h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--text-main);
-            letter-spacing: -0.02em;
-        }
-
-        .page-header p {
-            color: var(--text-muted);
-            margin-top: 4px;
-            font-size: 0.95rem;
-        }
-
-        /* Buttons & Forms */
-        button {
-            padding: 10px 18px;
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        button:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-md);
-        }
-
-        button:active {
-            transform: translateY(0);
-        }
-
-        button.btn-secondary {
-            background-color: #ffffff;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-        }
-
-        button.btn-secondary:hover {
-            background-color: #f1f5f9;
-            border-color: #cbd5e1;
-        }
-
-        button.btn-danger {
-            background-color: var(--danger);
-            color: white;
-        }
-
-        button.btn-danger:hover {
-            background-color: var(--danger-hover);
-        }
-
-        /* Farbige Status-Buttons */
-        button.btn-status-neu {
-            background-color: var(--info);
-            color: white;
-        }
-        button.btn-status-neu:hover {
-            background-color: var(--info-hover);
-        }
-
-        button.btn-status-gelernt {
-            background-color: var(--success);
-            color: white;
-        }
-        button.btn-status-gelernt:hover {
-            background-color: var(--success-hover);
-        }
-
-        button.btn-status-wiederholen {
-            background-color: var(--warning);
-            color: white;
-        }
-        button.btn-status-wiederholen:hover {
-            background-color: #d97706;
-        }
-
-        button.btn-status-bekannt {
-            background-color: var(--purple);
-            color: white;
-        }
-        button.btn-status-bekannt:hover {
-            background-color: var(--purple-hover);
-        }
-
-        .top-nav-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 24px;
-        }
-
-        /* Vokabel-Training Layout (Volle Breite) */
-        .word-cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .word-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 20px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .word-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background-color: var(--primary);
-        }
-
-        .word-card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-3px);
-        }
-
-        .word-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-
-        .word-card h3 {
-            font-size: 1.2rem;
-            color: var(--text-main);
-            font-weight: 700;
-        }
-
-        .tag {
-            font-size: 0.75rem;
-            padding: 4px 8px;
-            border-radius: 20px;
-            background-color: #e0e7ff;
-            color: var(--primary);
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .word-card p.example {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            font-style: italic;
-            background: #f8fafc;
-            padding: 10px 12px;
-            border-radius: var(--radius-sm);
-        }
-
-        .card-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-        }
-
-        .card-buttons button {
-            font-size: 0.75rem;
-            padding: 6px 8px;
-            width: 100%;
-        }
-
-        /* Tabellen Styling (Wörterbuch) */
-        .table-card {
-            background-color: var(--card-bg);
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
-            overflow: hidden;
-        }
-
-        .table-wrapper {
-            max-height: 600px;
-            overflow-y: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-            text-align: left;
-        }
-
-        th, td {
-            padding: 14px 18px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        th {
-            background-color: #f8fafc;
-            color: var(--text-muted);
-            font-weight: 600;
-            position: sticky;
-            top: 0;
-            z-index: 1;
-        }
-
-        tbody tr {
-            transition: var(--transition);
-        }
-
-        tbody tr:hover {
-            background-color: #f1f5f9;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .badge-neu { background-color: #e0f2fe; color: #0369a1; }
-        .badge-gelernt { background-color: #d1fae5; color: #047857; }
-        .badge-wiederholt { background-color: #fef3c7; color: #b45309; }
-        .badge-bekannt { background-color: #f3e8ff; color: #7e22ce; }
-
-        /* Modals */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(4px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            animation: fadeIn 0.2s ease-out;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 28px;
-            border-radius: var(--radius-lg);
-            width: 440px;
-            max-width: 90%;
-            box-shadow: var(--shadow-lg);
-            animation: slideUp 0.25s ease-out;
-        }
-
-        .modal-content h3 {
-            margin-bottom: 18px;
-            color: var(--text-main);
-            font-size: 1.25rem;
-        }
-
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        input[type="text"], input[type="number"], input[type="file"], select {
-            width: 100%;
-            padding: 10px 14px;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            font-size: 0.9rem;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        input[type="text"]:focus, input[type="number"]:focus, select:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
-        }
-
-        .radio-group {
-            display: flex;
-            gap: 16px;
-            margin-top: 6px;
-        }
-
-        .radio-group label {
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-        }
-
-        .modal-actions {
-            display: flex;
-            justify-content: flex-end;
-            gap: 10px;
-            margin-top: 24px;
-        }
-
-        .hidden { display: none !important; }
-
-        /* Keyframes für Animationen */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch-Lern Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg-body:#f8fafc;--sidebar-bg:#1e293b;--sidebar-hover:#334155;--primary:#4f46e5;--primary-hover:#4338ca;--success:#10b981;--danger:#ef4444;--warning:#f59e0b;--info:#0284c7;--purple:#9333ea;--text-main:#0f172a;--text-muted:#64748b;--card-bg:#fff;--border-color:#e2e8f0;--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--shadow-sm:0 1px 3px rgba(0,0,0,.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,.1)}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,sans-serif}
+body{background:var(--bg-body);color:var(--text-main);height:100vh;overflow:hidden}
+.dashboard{display:flex;height:100vh;width:100vw}
+.panel-left{width:280px;min-width:280px;background:var(--sidebar-bg);color:#f8fafc;padding:24px 16px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:4px 0 10px rgba(0,0,0,.05);z-index:10}
+.header-title-container{display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:24px}
+.header-title-container h2{font-size:1.25rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:10px}
+.profile-icon-btn{background:rgba(255,255,255,.1);color:#e2e8f0;border:0;border-radius:50%;width:36px;height:36px;cursor:pointer}
+.menu-list{list-style:none;display:flex;flex-direction:column;gap:6px}.menu-item-container{position:relative}
+.menu-item{padding:12px 16px;border-radius:8px;cursor:pointer;color:#94a3b8;font-weight:500;display:flex;align-items:center;gap:12px;font-size:.95rem}
+.menu-item:hover{background:var(--sidebar-hover);color:#fff}.menu-item.active{background:var(--primary);color:#fff}
+.submenu-flyout{position:absolute;left:100%;top:0;margin-left:12px;background:var(--sidebar-bg);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:6px;z-index:50;width:190px;box-shadow:0 10px 15px rgba(0,0,0,.15)}
+.submenu-flyout button{background:transparent;color:#e2e8f0;font-size:.875rem;width:100%;text-align:left;padding:10px 12px;border-radius:8px;border:0;cursor:pointer;display:flex;align-items:center;gap:8px}
+.submenu-flyout button:hover{background:var(--sidebar-hover);color:#fff}
+.action-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:16px;border-radius:12px;display:flex;flex-direction:column;gap:10px}
+.panel-middle{flex:1;background:var(--bg-body);padding:32px 40px;overflow-y:auto}
+.tab-content{animation:fadeIn .3s ease-in-out;max-width:1200px;margin:0 auto}
+.page-header{margin-bottom:24px}.page-header h2{font-size:1.75rem;font-weight:700}.page-header p{color:var(--text-muted);margin-top:4px;font-size:.95rem}
+button{padding:10px 18px;background:var(--primary);color:#fff;border:0;border-radius:8px;cursor:pointer;font-weight:600;font-size:.9rem;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:var(--shadow-sm)}
+button:hover{background:var(--primary-hover);transform:translateY(-1px)}button.btn-secondary{background:#fff;color:var(--text-main);border:1px solid var(--border-color)}button.btn-secondary:hover{background:#f1f5f9}
+button.btn-danger{background:var(--danger)}button.btn-status-neu{background:var(--info)}button.btn-status-gelernt{background:var(--success)}button.btn-status-wiederholen{background:var(--warning)}button.btn-status-bekannt{background:var(--purple)}
+.top-nav-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.word-cards-container{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px;margin-top:20px}
+.word-card{background:#fff;border:1px solid var(--border-color);border-radius:12px;padding:20px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.word-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--primary)}
+.word-card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}.word-card h3{font-size:1.2rem}.tag{font-size:.75rem;padding:4px 8px;border-radius:20px;background:#e0e7ff;color:var(--primary);font-weight:600}
+.word-card p.example{color:var(--text-muted);font-size:.95rem;line-height:1.5;margin-bottom:20px;font-style:italic;background:#f8fafc;padding:10px 12px;border-radius:8px}
+.card-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px}.card-buttons button{font-size:.75rem;padding:6px 8px;width:100%}
+.table-card{background:#fff;border-radius:12px;border:1px solid var(--border-color);box-shadow:var(--shadow-sm);overflow:hidden}.table-wrapper{max-height:600px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:.9rem;text-align:left}th,td{padding:14px 18px;border-bottom:1px solid var(--border-color)}th{background:#f8fafc;color:var(--text-muted);font-weight:600;position:sticky;top:0;z-index:1}
+.badge{display:inline-block;padding:4px 10px;border-radius:12px;font-size:.75rem;font-weight:600}.badge-neu{background:#e0f2fe;color:#0369a1}.badge-gelernt{background:#d1fae5;color:#047857}.badge-wiederholt{background:#fef3c7;color:#b45309}.badge-bekannt{background:#f3e8ff;color:#7e22ce}
+.modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.6);backdrop-filter:blur(4px);display:flex;justify-content:center;align-items:center;z-index:1000}.modal-content{background:#fff;padding:28px;border-radius:16px;width:440px;max-width:90%;box-shadow:0 10px 15px rgba(0,0,0,.15)}
+.modal-content h3{margin-bottom:18px}.form-group{margin-bottom:16px}label{display:block;margin-bottom:6px;font-size:.85rem;font-weight:600}
+input[type=text],input[type=number],input[type=file],select{width:100%;padding:10px 14px;border:1px solid var(--border-color);border-radius:8px;font-size:.9rem;outline:none}.radio-group{display:flex;gap:16px;margin-top:6px}.radio-group label{font-weight:400;display:flex;align-items:center;gap:6px;cursor:pointer}
+.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:24px}.hidden{display:none!important}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media(max-width:800px){.panel-left{width:220px;min-width:220px}.panel-middle{padding:20px}.word-cards-container{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
+<div class="dashboard">
+<div class="panel panel-left">
+<div>
+<div class="header-title-container">
+<h2><i class="fa-solid fa-graduation-cap"></i> Deutsch-App</h2>
+<button class="profile-icon-btn" onclick="openProfileInfoModal()" title="Profil-Informationen"><i class="fa-solid fa-circle-info"></i></button>
+</div>
+<ul class="menu-list">
+<li class="menu-item-container">
+<div class="menu-item" onclick="toggleProfileMenu()"><i class="fa-solid fa-user"></i> Profil</div>
+<div id="profileSubmenu" class="submenu-flyout hidden">
+<button onclick="openNewProfileModal()"><i class="fa-solid fa-plus"></i> Neues Profil</button>
+<button onclick="openLoadProfileModal()"><i class="fa-solid fa-folder-open"></i> Profil laden</button>
+</div>
+</li>
+<li class="menu-item active" onclick="switchTab('spiel1',event)"><i class="fa-solid fa-brain"></i> Vokabel Training</li>
+<li class="menu-item" onclick="switchTab('spiel2',event)"><i class="fa-solid fa-gamepad"></i> Spiel 2</li>
+<li class="menu-item" onclick="switchTab('spiel3',event)"><i class="fa-solid fa-trophy"></i> Spiel 3</li>
+<li class="menu-item" onclick="switchTab('dictionary',event)"><i class="fa-solid fa-book"></i> Wörterbuch</li>
+</ul>
+</div>
+<div class="action-box">
+<button onclick="startSpiel1()"><i class="fa-solid fa-play"></i> Spiel starten</button>
+<button onclick="saveProfileCSV()" class="btn-secondary"><i class="fa-solid fa-floppy-disk"></i> Speichern</button>
+<button onclick="downloadCSV()" class="btn-secondary"><i class="fa-solid fa-download"></i> Als CSV exportieren</button>
+</div>
+</div>
 
-    <div class="dashboard">
-        <!-- LINKER BEREICH (SIDEBAR) -->
-        <div class="panel panel-left">
-            <div>
-                <div class="header-title-container">
-                    <h2><i class="fa-solid fa-graduation-cap"></i> Deutsch-App</h2>
-                    <button class="profile-icon-btn" onclick="openProfileInfoModal()" title="Profil-Informationen">
-                        <i class="fa-solid fa-circle-info"></i>
-                    </button>
-                </div>
+<div class="panel panel-middle">
+<div id="tab-spiel1" class="tab-content">
+<div class="page-header"><h2>Vokabel Training</h2><p id="listInfoText">Wähle eine Aktion aus, um zu starten.</p></div>
+<div class="top-nav-buttons">
+<button class="btn-secondary" onclick="openWordCountModal()"><i class="fa-solid fa-sparkles"></i> Neue Wörter zeigen</button>
+<button class="btn-secondary" onclick="filterByStatus('gelernt')"><i class="fa-solid fa-check"></i> Gelernte Wörter</button>
+<button class="btn-secondary" onclick="filterByStatus('wiederholt')"><i class="fa-solid fa-rotate-right"></i> Wörter wiederholen</button>
+<button onclick="openAddWordModal()"><i class="fa-solid fa-plus"></i> Neues Wort ergänzen</button>
+</div>
+<div id="wordCardsContainer" class="word-cards-container"></div>
+</div>
+<div id="tab-spiel2" class="tab-content hidden"><div class="page-header"><h2>Spiel 2</h2><p>Dieser Bereich steht für Spiel 2 bereit.</p></div></div>
+<div id="tab-spiel3" class="tab-content hidden"><div class="page-header"><h2>Spiel 3</h2><p>Dieser Bereich steht für Spiel 3 bereit.</p></div></div>
+<div id="tab-dictionary" class="tab-content hidden">
+<div class="page-header"><h2>Wörterbuch</h2><p>Gesamtübersicht und Verwaltung aller Wörter deines aktuellen Profils.</p></div>
+<div class="top-nav-buttons"><button onclick="openAddWordModal()"><i class="fa-solid fa-plus"></i> Neues Wort ergänzen</button><button class="btn-danger" onclick="deleteSelectedWords()"><i class="fa-solid fa-trash-can"></i> Ausgewählte Wörter löschen</button></div>
+<div class="table-card"><div class="table-wrapper"><table><thead><tr><th><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"></th><th>Wort</th><th>Schwierigkeit</th><th>Thema</th><th>Status</th><th>Beispielsatz</th><th>Aktion</th></tr></thead><tbody id="fullDictionaryTbody"></tbody></table></div></div>
+</div>
+</div>
+</div>
 
-                <ul class="menu-list">
-                    <li class="menu-item-container">
-                        <div class="menu-item" onclick="toggleProfileMenu()">
-                            <i class="fa-solid fa-user"></i> Profil
-                        </div>
-                        <div id="profileSubmenu" class="submenu-flyout hidden">
-                            <button onclick="openNewProfileModal()"><i class="fa-solid fa-plus"></i> Neues Profil</button>
-                            <button onclick="openLoadProfileModal()"><i class="fa-solid fa-folder-open"></i> Profil Laden</button>
-                        </div>
-                    </li>
+<div id="modalWordCount" class="modal-overlay hidden"><div class="modal-content"><h3>Neue Wörter anzeigen</h3><div class="form-group"><label for="wordCountInput">Wie viele neue Wörter möchtest du sehen?</label><input type="number" id="wordCountInput" value="5" min="1" max="50"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalWordCount')">Abbrechen</button><button onclick="confirmShowNewWords()">Anzeigen</button></div></div></div>
 
-                    <li class="menu-item active" onclick="switchTab('spiel1', event)">
-                        <i class="fa-solid fa-brain"></i> Vokabel Training
-                    </li>
-                    <li class="menu-item" onclick="switchTab('spiel2', event)">
-                        <i class="fa-solid fa-gamepad"></i> Spiel 2
-                    </li>
-                    <li class="menu-item" onclick="switchTab('spiel3', event)">
-                        <i class="fa-solid fa-trophy"></i> Spiel 3
-                    </li>
-                    <li class="menu-item" onclick="switchTab('dictionary', event)">
-                        <i class="fa-solid fa-book"></i> Wörterbuch
-                    </li>
-                </ul>
-            </div>
+<div id="modalProfileInfo" class="modal-overlay hidden"><div class="modal-content"><h3>Aktuelles Profil</h3><div id="profileDetailsText" style="line-height:1.8;margin-bottom:15px"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalProfileInfo')">Schließen</button></div></div></div>
 
-            <!-- AKTION BOX UNTERHALB DES MENÜS -->
-            <div class="action-box">
-                <button onclick="startSpiel1()"><i class="fa-solid fa-play"></i> Spiel Starten</button>
-                <button onclick="saveProfileCSV()" class="btn-secondary"><i class="fa-solid fa-floppy-disk"></i> Speichern</button>
-                <button onclick="downloadCSV()" class="btn-secondary"><i class="fa-solid fa-download"></i> Als CSV Export</button>
-            </div>
-        </div>
+<div id="modalNewProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Profil erstellen</h3><div class="form-group"><label for="newProfileName">Profilname eingeben:</label><input type="text" id="newProfileName" placeholder="z. B. Max"></div><div class="form-group"><label>Schwierigkeitsgrad:</label><div class="radio-group"><label><input type="radio" name="newDifficulty" value="leicht" checked> Leicht</label><label><input type="radio" name="newDifficulty" value="mittel"> Mittel</label><label><input type="radio" name="newDifficulty" value="schwer"> Schwer</label></div></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalNewProfile')">Abbrechen</button><button onclick="createNewProfile()">Erstellen</button></div></div></div>
 
-        <!-- MITTLERER BEREICH (HAUPTINHALT) -->
-        <div class="panel panel-middle">
-            
-            <!-- TAB: VOKABEL TRAINING -->
-            <div id="tab-spiel1" class="tab-content">
-                <div class="page-header">
-                    <h2>Vokabel Training</h2>
-                    <p id="listInfoText">Wähle eine Aktion aus, um zu starten.</p>
-                </div>
+<div id="modalLoadProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil auswählen / laden</h3><div class="form-group"><label for="profileSelect">Vorhandene Profile:</label><select id="profileSelect"></select></div><div class="form-group"><label>Schwierigkeitsgrad:</label><div class="radio-group"><label><input type="radio" name="loadDifficulty" value="leicht" checked> Leicht</label><label><input type="radio" name="loadDifficulty" value="mittel"> Mittel</label><label><input type="radio" name="loadDifficulty" value="schwer"> Schwer</label></div></div><div class="form-group"><label>Oder lokale CSV-Datei hochladen:</label><input type="file" id="localCsvInput" accept=".csv,text/csv"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalLoadProfile')">Abbrechen</button><button onclick="loadSelectedProfile()">Laden</button></div></div></div>
 
-                <div class="top-nav-buttons">
-                    <button class="btn-secondary" onclick="openWordCountModal()"><i class="fa-solid fa-sparkles"></i> Neue Wörter zeigen</button>
-                    <button class="btn-secondary" onclick="filterByStatus('gelernt')"><i class="fa-solid fa-check"></i> Gelernte Wörter</button>
-                    <button class="btn-secondary" onclick="filterByStatus('wiederholt')"><i class="fa-solid fa-rotate-right"></i> Wörter wiederholen</button>
-                    <button onclick="openAddWordModal()"><i class="fa-solid fa-plus"></i> Neues Wort ergänzen</button>
-                </div>
+<div id="modalAddWord" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Wort ergänzen</h3><div class="form-group"><label for="addWort">Wort:</label><input type="text" id="addWort" placeholder="z. B. Haus"></div><div class="form-group"><label for="addSchwierigkeit">Schwierigkeit:</label><select id="addSchwierigkeit"><option value="leicht">leicht</option><option value="mittel">mittel</option><option value="schwer">schwer</option></select></div><div class="form-group"><label for="addThema">Thema:</label><input type="text" id="addThema" placeholder="z. B. Alltag"></div><div class="form-group"><label for="addStatus">Status:</label><select id="addStatus"><option value="neu">neu</option><option value="gelernt">gelernt</option><option value="wiederholt">wiederholt</option><option value="bekannt">bekannt</option></select></div><div class="form-group"><label for="addBeispielsatz">Beispielsatz:</label><input type="text" id="addBeispielsatz" placeholder="Beispielsatz eingeben"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalAddWord')">Abbrechen</button><button onclick="saveNewWord()">Wort hinzufügen</button></div></div></div>
 
-                <!-- Vokabelkarten Container -->
-                <div id="wordCardsContainer" class="word-cards-container">
-                    <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-muted);">
-                        <i class="fa-solid fa-book-open" style="font-size: 2.5rem; margin-bottom: 12px; color: #cbd5e1;"></i>
-                        <p>Klicke links auf <b>"Spiel Starten"</b> oder oben auf <b>"Neue Wörter zeigen"</b>.</p>
-                    </div>
-                </div>
-            </div>
+<script>
+'use strict';
 
-            <div id="tab-spiel2" class="tab-content hidden">
-                <div class="page-header">
-                    <h2>Spiel 2</h2>
-                    <p>Dieser Bereich steht für Spiel 2 bereit.</p>
-                </div>
-            </div>
+let currentProfile = null;
+let currentDifficulty = 'leicht';
+let currentFileName = 'Woerterbuch.csv';
+let meineWoerterliste = [];
+let baseDictionaryWords = [];
+let currentView = 'new';
+let lastRequestedWordCount = 5;
 
-            <div id="tab-spiel3" class="tab-content hidden">
-                <div class="page-header">
-                    <h2>Spiel 3</h2>
-                    <p>Dieser Bereich steht für Spiel 3 bereit.</p>
-                </div>
-            </div>
+const PROFILES_LIST_KEY = 'registered_profiles';
+const STANDARD_FILE = 'Woerterbuch.csv';
 
-            <!-- TAB: WÖRTERBUCH -->
-            <div id="tab-dictionary" class="tab-content hidden">
-                <div class="page-header">
-                    <h2>Wörterbuch</h2>
-                    <p>Gesamtübersicht und Verwaltung aller Wörter deines aktuellen Profils.</p>
-                </div>
+window.addEventListener('load', init);
 
-                <!-- 2 Anforderungsgemäße Buttons im Wörterbuch -->
-                <div class="top-nav-buttons">
-                    <button onclick="openAddWordModal()"><i class="fa-solid fa-plus"></i> Neues Wort ergänzen</button>
-                    <button class="btn-danger" onclick="deleteSelectedWords()"><i class="fa-solid fa-trash-can"></i> Ausgewählte Wörter löschen</button>
-                </div>
+async function init() {
+    currentProfile = 'Standard';
+    await loadStandardDictionary();
+}
 
-                <div class="table-card">
-                    <div class="table-wrapper">
-                        <table id="fullDictionaryTable">
-                            <thead>
-                                <tr>
-                                    <th style="width: 40px;"><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"></th>
-                                    <th>Wort</th>
-                                    <th>Schwierigkeit</th>
-                                    <th>Thema</th>
-                                    <th>Status</th>
-                                    <th>Beispielsatz</th>
-                                    <th style="width: 60px; text-align: center;">Aktion</th>
-                                </tr>
-                            </thead>
-                            <tbody id="fullDictionaryTbody"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+function getStoredProfilesList() {
+    try {
+        const list = JSON.parse(localStorage.getItem(PROFILES_LIST_KEY) || '[]');
+        return Array.isArray(list) ? list : [];
+    } catch (e) {
+        return [];
+    }
+}
 
-    <!-- MODALS -->
-    <!-- MODAL: ANZAHL NEUER WÖRTER EINGEBEN -->
-    <div id="modalWordCount" class="modal-overlay hidden">
-        <div class="modal-content">
-            <h3>Neue Wörter anzeigen</h3>
-            <div class="form-group">
-                <label for="wordCountInput">Wie viele neue Wörter möchtest du sehen?</label>
-                <input type="number" id="wordCountInput" value="5" min="1" max="50">
-            </div>
-            <div class="modal-actions">
-                <button class="btn-secondary" onclick="closeModal('modalWordCount')">Abbrechen</button>
-                <button onclick="confirmShowNewWords()">Anzeigen</button>
-            </div>
-        </div>
-    </div>
+function setStoredProfilesList(list) {
+    localStorage.setItem(PROFILES_LIST_KEY, JSON.stringify(list));
+}
 
-    <!-- MODAL: PROFIL INFO -->
-    <div id="modalProfileInfo" class="modal-overlay hidden">
-        <div class="modal-content">
-            <h3>Aktuelles Profil</h3>
-            <div id="profileDetailsText" style="line-height: 1.8; margin-bottom: 15px;"></div>
-            <div class="modal-actions">
-                <button class="btn-secondary" onclick="closeModal('modalProfileInfo')">Schließen</button>
-            </div>
-        </div>
-    </div>
+function addProfileToList(profileName, fileName) {
+    const list = getStoredProfilesList();
+    if (!list.some(p => p.file === fileName)) {
+        list.push({name: profileName, file: fileName});
+        setStoredProfilesList(list);
+    }
+}
 
-    <!-- MODAL: NEUES PROFIL -->
-    <div id="modalNewProfile" class="modal-overlay hidden">
-        <div class="modal-content">
-            <h3>Neues Profil erstellen</h3>
-            <div class="form-group">
-                <label for="newProfileName">Profilname eingeben:</label>
-                <input type="text" id="newProfileName" placeholder="z. B. Max">
-            </div>
-            <div class="form-group">
-                <label>Schwierigkeitsgrad auswählen:</label>
-                <div class="radio-group">
-                    <label><input type="radio" name="newDifficulty" value="leicht" checked> Leicht</label>
-                    <label><input type="radio" name="newDifficulty" value="mittel"> Mittel</label>
-                    <label><input type="radio" name="newDifficulty" value="schwer"> Schwer</label>
-                </div>
-            </div>
-            <div class="modal-actions">
-                <button class="btn-secondary" onclick="closeModal('modalNewProfile')">Abbrechen</button>
-                <button onclick="createNewProfile()">Erstellen</button>
-            </div>
-        </div>
-    </div>
+function removeProfileFromList(fileName) {
+    setStoredProfilesList(getStoredProfilesList().filter(p => p.file !== fileName));
+}
 
-    <!-- MODAL: PROFIL LADEN -->
-    <div id="modalLoadProfile" class="modal-overlay hidden">
-        <div class="modal-content">
-            <h3>Profil auswählen / laden</h3>
-            <div class="form-group">
-                <label for="profileSelect">Vorhandene Profile/Dateien:</label>
-                <select id="profileSelect"></select>
-            </div>
-            <div class="form-group">
-                <label>Schwierigkeitsgrad festlegen:</label>
-                <div class="radio-group">
-                    <label><input type="radio" name="loadDifficulty" value="leicht" checked> Leicht</label>
-                    <label><input type="radio" name="loadDifficulty" value="mittel"> Mittel</label>
-                    <label><input type="radio" name="loadDifficulty" value="schwer"> Schwer</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Oder lokale CSV-Datei hochladen:</label>
-                <input type="file" id="localCsvInput" accept=".csv">
-            </div>
-            <div class="modal-actions">
-                <button class="btn-secondary" onclick="closeModal('modalLoadProfile')">Abbrechen</button>
-                <button onclick="loadSelectedProfile()">Laden</button>
-            </div>
-        </div>
-    </div>
+function saveCurrentData(showNotification = false) {
+    if (!currentFileName) return;
+    localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
+    if (showNotification) alert('Erfolgreich gespeichert!');
+}
 
-    <!-- MODAL: NEUES WORT ERGÄNZEN -->
-    <div id="modalAddWord" class="modal-overlay hidden">
-        <div class="modal-content">
-            <h3>Neues Wort ergänzen</h3>
-            <div class="form-group">
-                <label for="addWort">Wort:</label>
-                <input type="text" id="addWort" placeholder="z. B. Haus">
-            </div>
-            <div class="form-group">
-                <label for="addSchwierigkeit">Schwierigkeit:</label>
-                <select id="addSchwierigkeit">
-                    <option value="leicht">leicht</option>
-                    <option value="mittel">mittel</option>
-                    <option value="schwer">schwer</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="addThema">Thema:</label>
-                <input type="text" id="addThema" placeholder="z. B. Alltag">
-            </div>
-            <div class="form-group">
-                <label for="addStatus">Status:</label>
-                <input type="text" id="addStatus" value="neu">
-            </div>
-            <div class="form-group">
-                <label for="addBeispielsatz">Beispielsatz:</label>
-                <input type="text" id="addBeispielsatz" placeholder="Beispielsatz eingeben">
-            </div>
-            <div class="modal-actions">
-                <button class="btn-secondary" onclick="closeModal('modalAddWord')">Abbrechen</button>
-                <button onclick="saveNewWord()">Wort Hinzufügen</button>
-            </div>
-        </div>
-    </div>
+function toggleProfileMenu(forceState) {
+    const submenu = document.getElementById('profileSubmenu');
+    if (typeof forceState === 'boolean') submenu.classList.toggle('hidden', !forceState);
+    else submenu.classList.toggle('hidden');
+}
 
-    <script>
-        let currentProfile = null;
-        let currentDifficulty = "leicht";
-        let currentFileName = "Woerterbuch.csv";
-        let meineWoerterliste = [];
-        let baseDictionaryWords = [];
-        let currentView = 'new'; // 'new', 'gelernt', oder 'wiederholt'
-        let lastRequestedWordCount = 5;
+function openProfileInfoModal() {
+    document.getElementById('profileDetailsText').innerHTML =
+        `<b>Profil:</b> ${escapeHtml(currentProfile || 'Standard')}<br>
+         <b>Schwierigkeit:</b> ${escapeHtml(currentDifficulty)}<br>
+         <b>Speicher:</b> Browser (localStorage)<br>
+         <b>Anzahl Wörter:</b> ${meineWoerterliste.length}`;
+    document.getElementById('modalProfileInfo').classList.remove('hidden');
+}
 
-        const PROFILES_LIST_KEY = 'registered_profiles';
+function switchTab(tabName, event) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.add('hidden'));
+    document.querySelectorAll('.menu-item').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + tabName).classList.remove('hidden');
+    if (event && event.currentTarget) event.currentTarget.classList.add('active');
+    if (tabName === 'dictionary') renderFullDictionary();
+}
 
-        window.onload = async function() {
-            await loadCSVFile("Woerterbuch.csv");
-        };
+function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+}
 
-        function getStoredProfilesList() {
-            const list = localStorage.getItem(PROFILES_LIST_KEY);
-            return list ? JSON.parse(list) : [];
-        }
+function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+}
 
-        function addProfileToList(profileName, fileName) {
-            let list = getStoredProfilesList();
-            if (!list.some(p => p.file === fileName)) {
-                list.push({ name: profileName, file: fileName });
-                localStorage.setItem(PROFILES_LIST_KEY, JSON.stringify(list));
-            }
-        }
+/* Robuster CSV-Parser: unterstützt Anführungszeichen, Kommas und Zeilenumbrüche in Feldern. */
+function parseCSV(text) {
+    const rows = [];
+    let row = [], field = '', quoted = false;
 
-        function toggleProfileMenu(forceState) {
-            const submenu = document.getElementById('profileSubmenu');
-            if (typeof forceState === 'boolean') {
-                if (forceState) submenu.classList.remove('hidden');
-                else submenu.classList.add('hidden');
+    for (let i = 0; i < text.length; i++) {
+        const c = text[i];
+        if (c === '"') {
+            if (quoted && text[i + 1] === '"') {
+                field += '"';
+                i++;
             } else {
-                submenu.classList.toggle('hidden');
+                quoted = !quoted;
             }
+        } else if (c === ',' && !quoted) {
+            row.push(field);
+            field = '';
+        } else if ((c === '\n' || c === '\r') && !quoted) {
+            if (c === '\r' && text[i + 1] === '\n') i++;
+            row.push(field);
+            field = '';
+            if (row.some(v => v.trim() !== '')) rows.push(row);
+            row = [];
+        } else {
+            field += c;
         }
+    }
+    if (field.length || row.length) {
+        row.push(field);
+        if (row.some(v => v.trim() !== '')) rows.push(row);
+    }
+    if (rows.length < 2) return [];
 
-        function openProfileInfoModal() {
-            const details = `
-                <b>Profil:</b> ${currentProfile || 'Standard'}<br>
-                <b>Schwierigkeit:</b> ${currentDifficulty}<br>
-                <b>Datei:</b> ${currentFileName}<br>
-                <b>Anzahl Wörter:</b> ${meineWoerterliste.length}
-            `;
-            document.getElementById('profileDetailsText').innerHTML = details;
-            document.getElementById('modalProfileInfo').classList.remove('hidden');
-        }
+    const headers = rows[0].map(h => h.trim().replace(/^\uFEFF/, ''));
+    return rows.slice(1).map(values => {
+        const obj = {};
+        headers.forEach((h, i) => obj[h] = (values[i] ?? '').trim() || '-');
+        if (!obj.Lernstatus || obj.Lernstatus === '-') obj.Lernstatus = 'neu';
+        return obj;
+    });
+}
 
-        function switchTab(tabName, event) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
-            document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
+function csvEscape(value) {
+    const text = String(value ?? '');
+    return '"' + text.replace(/"/g, '""') + '"';
+}
 
-            document.getElementById('tab-' + tabName).classList.remove('hidden');
-            if (event && event.currentTarget) {
-                event.currentTarget.classList.add('active');
-            }
+function convertToCSV(data) {
+    const headers = ['Wort','Schwierigkeit','Thema','Lernstatus','Beispielsatz'];
+    return headers.join(',') + '\n' +
+        data.map(item => [
+            csvEscape(item.Wort || '-'),
+            csvEscape(item.Schwierigkeit || '-'),
+            csvEscape(item.Thema || '-'),
+            csvEscape(item.Lernstatus || 'neu'),
+            csvEscape(item.Beispielsatz || '-')
+        ].join(',')).join('\n') + '\n';
+}
 
-            if(tabName === 'dictionary') {
-                renderFullDictionary();
-            }
-        }
+async function loadStandardDictionary() {
+    currentFileName = STANDARD_FILE;
+    try {
+        const response = await fetch(STANDARD_FILE, {cache: 'no-store'});
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const text = await response.text();
+        const words = parseCSV(text);
+        if (!words.length) throw new Error('CSV enthält keine Wörter.');
+        baseDictionaryWords = structuredClone(words);
+        meineWoerterliste = structuredClone(words);
+        currentProfile = 'Standard';
+        startSpiel1();
+    } catch (error) {
+        console.error(error);
+        meineWoerterliste = [];
+        baseDictionaryWords = [];
+        showError('Woerterbuch.csv konnte nicht geladen werden.');
+    }
+}
 
-        function closeModal(id) {
-            document.getElementById(id).classList.add('hidden');
-        }
+function loadStoredProfile(fileName, profileName) {
+    const saved = localStorage.getItem(fileName);
+    if (!saved) return false;
+    try {
+        const data = JSON.parse(saved);
+        if (!Array.isArray(data)) throw new Error('Ungültige Profildaten');
+        meineWoerterliste = data;
+        currentFileName = fileName;
+        currentProfile = profileName || 'Profil';
+        return true;
+    } catch (e) {
+        console.error('Profil konnte nicht geladen werden:', e);
+        return false;
+    }
+}
 
-        function parseCSV(text) {
-            const lines = text.trim().split('\n');
-            if (lines.length <= 1) return [];
+function showError(message) {
+    document.getElementById('wordCardsContainer').innerHTML =
+        `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--danger)"><p>${escapeHtml(message)}</p></div>`;
+}
 
-            const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
-            const data = [];
+function openNewProfileModal() {
+    toggleProfileMenu(false);
+    document.getElementById('newProfileName').value = '';
+    document.getElementById('modalNewProfile').classList.remove('hidden');
+}
 
-            for (let i = 1; i < lines.length; i++) {
-                if (!lines[i].trim()) continue;
-                const values = lines[i].split(',').map(v => v.trim().replace(/^"|"$/g, ''));
-                let row = {};
-                headers.forEach((h, idx) => {
-                    row[h] = values[idx] || '-';
-                });
-                if (!row.Lernstatus || row.Lernstatus === '-') row.Lernstatus = 'neu';
-                data.push(row);
-            }
-            return data;
-        }
+function createNewProfile() {
+    const profileName = document.getElementById('newProfileName').value.trim();
+    if (!profileName) return alert('Bitte gib einen Profilnamen ein!');
 
-        function convertToCSV(data) {
-            if (data.length === 0) return 'Wort,Schwierigkeit,Thema,Lernstatus,Beispielsatz\n';
-            const headers = ["Wort", "Schwierigkeit", "Thema", "Lernstatus", "Beispielsatz"];
-            let csvText = headers.join(',') + '\n';
+    const safeName = profileName.replace(/[\\/:*?"<>|]/g, '_').replace(/\s+/g, '_');
+    if (!safeName) return alert('Ungültiger Profilname.');
 
-            data.forEach(item => {
-                let row = [
-                    `"${item.Wort || '-'}"`,
-                    `"${item.Schwierigkeit || '-'}"`,
-                    `"${item.Thema || '-'}"`,
-                    `"${item.Lernstatus || 'neu'}"`,
-                    `"${item.Beispielsatz || '-'}"`
-                ];
-                csvText += row.join(',') + '\n';
-            });
-            return csvText;
-        }
+    const existing = getStoredProfilesList();
+    const fileName = `Woerterbuch_${safeName}.json`;
+    if (existing.some(p => p.file === fileName) || localStorage.getItem(fileName)) {
+        return alert('Dieses Profil existiert bereits.');
+    }
 
-        async function loadCSVFile(fileName) {
-            currentFileName = fileName;
-            
-            const savedData = localStorage.getItem(fileName);
-            if (savedData) {
-                meineWoerterliste = JSON.parse(savedData);
-                if (fileName === "Woerterbuch.csv" && baseDictionaryWords.length === 0) {
-                    baseDictionaryWords = JSON.parse(JSON.stringify(meineWoerterliste));
-                }
-                startSpiel1();
-                return;
-            }
+    currentDifficulty = document.querySelector('input[name="newDifficulty"]:checked').value;
+    currentProfile = profileName;
+    currentFileName = fileName;
+    meineWoerterliste = structuredClone(baseDictionaryWords);
 
-            try {
-                const response = await fetch(fileName);
-                if (response.ok) {
-                    const text = await response.text();
-                    meineWoerterliste = parseCSV(text);
-                    
-                    if (fileName === "Woerterbuch.csv") {
-                        baseDictionaryWords = JSON.parse(JSON.stringify(meineWoerterliste));
-                    }
-                    
-                    startSpiel1();
-                    return;
-                }
-            } catch(e) {
-                console.log("Fehler beim Laden:", e);
-            }
+    localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
+    addProfileToList(currentProfile, currentFileName);
 
-            meineWoerterliste = [];
-            startSpiel1();
-        }
+    closeModal('modalNewProfile');
+    startSpiel1();
+    alert(`Profil "${profileName}" wurde erstellt und im Browser gespeichert.`);
+}
 
-        function openNewProfileModal() {
-            toggleProfileMenu(false);
-            document.getElementById('modalNewProfile').classList.remove('hidden');
-        }
+function openLoadProfileModal() {
+    toggleProfileMenu(false);
+    const select = document.getElementById('profileSelect');
+    select.innerHTML = '';
 
-        function createNewProfile() {
-            const profileName = document.getElementById('newProfileName').value.trim();
-            if (!profileName) {
-                alert("Bitte gib einen Profilnamen ein!");
-                return;
-            }
+    const standard = document.createElement('option');
+    standard.value = STANDARD_FILE;
+    standard.textContent = 'Standard (Woerterbuch.csv)';
+    select.appendChild(standard);
 
-            currentDifficulty = document.querySelector('input[name="newDifficulty"]:checked').value;
-            currentProfile = profileName;
-            currentFileName = `Woerterbuch_${profileName}.csv`;
+    getStoredProfilesList().forEach(p => {
+        if (!p || !p.file || p.file === STANDARD_FILE) return;
+        const opt = document.createElement('option');
+        opt.value = p.file;
+        opt.textContent = `${p.name} (lokal)`;
+        opt.dataset.profileName = p.name;
+        select.appendChild(opt);
+    });
 
-            if (baseDictionaryWords.length === 0 && meineWoerterliste.length > 0) {
-                baseDictionaryWords = JSON.parse(JSON.stringify(meineWoerterliste));
-            }
+    document.getElementById('localCsvInput').value = '';
+    document.getElementById('modalLoadProfile').classList.remove('hidden');
+}
 
-            meineWoerterliste = JSON.parse(JSON.stringify(baseDictionaryWords));
+async function loadSelectedProfile() {
+    currentDifficulty = document.querySelector('input[name="loadDifficulty"]:checked').value;
+    const select = document.getElementById('profileSelect');
+    const fileInput = document.getElementById('localCsvInput');
+
+    if (fileInput.files.length > 0) {
+        try {
+            const file = fileInput.files[0];
+            const text = await file.text();
+            const data = parseCSV(text);
+            if (!data.length) throw new Error('Keine gültigen Daten.');
+            meineWoerterliste = data;
+            currentFileName = file.name;
+            currentProfile = file.name.replace(/\.csv$/i, '').replace(/^Woerterbuch_/, '') || 'Import';
             localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
-            addProfileToList(profileName, currentFileName);
-
-            closeModal('modalNewProfile');
-            startSpiel1();
+            addProfileToList(currentProfile, currentFileName);
+        } catch (e) {
+            alert('Die CSV-Datei konnte nicht geladen werden.');
+            return;
         }
-
-        async function openLoadProfileModal() {
-            toggleProfileMenu(false);
-            const select = document.getElementById('profileSelect');
-            select.innerHTML = '';
-
-            let profiles = getStoredProfilesList();
-
-            if (!profiles.some(p => p.file === 'Woerterbuch.csv')) {
-                profiles.unshift({ name: 'Standard', file: 'Woerterbuch.csv' });
-            }
-
-            profiles.forEach(p => {
-                const opt = document.createElement('option');
-                opt.value = p.file;
-                opt.textContent = `${p.name} (${p.file})`;
-                select.appendChild(opt);
-            });
-
-            document.getElementById('modalLoadProfile').classList.remove('hidden');
+    } else if (select.value === STANDARD_FILE) {
+        await loadStandardDictionary();
+    } else {
+        const option = select.options[select.selectedIndex];
+        const profileName = option?.dataset.profileName || option?.textContent?.replace(/\s*\(lokal\)$/, '') || 'Profil';
+        if (!loadStoredProfile(select.value, profileName)) {
+            alert('Dieses lokale Profil ist nicht mehr vorhanden.');
+            return;
         }
+    }
 
-        async function loadSelectedProfile() {
-            const select = document.getElementById('profileSelect');
-            const fileInput = document.getElementById('localCsvInput');
-            currentDifficulty = document.querySelector('input[name="loadDifficulty"]:checked').value;
+    closeModal('modalLoadProfile');
+    startSpiel1();
+}
 
-            if (fileInput.files.length > 0) {
-                const file = fileInput.files[0];
-                const text = await file.text();
-                meineWoerterliste = parseCSV(text);
-                currentFileName = file.name;
-                currentProfile = file.name.replace('.csv', '').replace('Woerterbuch_', '');
-                
-                localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
-                addProfileToList(currentProfile, currentFileName);
-            } else if (select.value) {
-                currentFileName = select.value;
-                const selectedOptionText = select.options[select.selectedIndex].text;
-                currentProfile = selectedOptionText.split(' ')[0];
-                await loadCSVFile(currentFileName);
-            }
+function startSpiel1() {
+    const filteredWords = meineWoerterliste.filter(item =>
+        String(item.Schwierigkeit || '').toLowerCase() === currentDifficulty.toLowerCase()
+    );
+    document.getElementById('listInfoText').innerText =
+        `Profil: ${currentProfile || 'Standard'} · Schwierigkeit: ${currentDifficulty.toUpperCase()} (${filteredWords.length} Wörter verfügbar)`;
+    showNewWords(lastRequestedWordCount);
+}
 
-            closeModal('modalLoadProfile');
-            startSpiel1();
-        }
+function openWordCountModal() {
+    document.getElementById('modalWordCount').classList.remove('hidden');
+}
 
-        function startSpiel1() {
-            const filteredWords = meineWoerterliste.filter(item => 
-                item.Schwierigkeit && item.Schwierigkeit.toLowerCase() === currentDifficulty.toLowerCase()
-            );
+function confirmShowNewWords() {
+    let count = parseInt(document.getElementById('wordCountInput').value, 10);
+    if (!Number.isFinite(count) || count < 1) count = 5;
+    lastRequestedWordCount = Math.min(count, 50);
+    closeModal('modalWordCount');
+    showNewWords(lastRequestedWordCount);
+}
 
-            document.getElementById('listInfoText').innerText = `Schwierigkeit: ${currentDifficulty.toUpperCase()} (${filteredWords.length} Wörter verfügbar)`;
-            showNewWords(lastRequestedWordCount);
-        }
+function createCardButtons(wordObj) {
+    const word = escapeHtml(wordObj.Wort || '');
+    return `<div class="card-buttons">
+        <button class="btn-status-neu" onclick="updateWordStatusByWord('${word}','neu')">Neu</button>
+        <button class="btn-status-gelernt" onclick="updateWordStatusByWord('${word}','gelernt')">Gelernt</button>
+        <button class="btn-status-wiederholen" onclick="updateWordStatusByWord('${word}','wiederholt')">Wiederholen</button>
+        <button class="btn-status-bekannt" onclick="updateWordStatusByWord('${word}','bekannt')">Bekannt</button>
+    </div>`;
+}
 
-        function openWordCountModal() {
-            document.getElementById('modalWordCount').classList.remove('hidden');
-        }
+function updateWordStatusByWord(wort, newStatus) {
+    const decoded = document.createElement('textarea');
+    decoded.innerHTML = wort;
+    updateWordStatus(decoded.value, newStatus);
+}
 
-        function confirmShowNewWords() {
-            const countInput = document.getElementById('wordCountInput').value;
-            let count = parseInt(countInput, 10);
-            if (isNaN(count) || count < 1) count = 5;
-            
-            lastRequestedWordCount = count;
-            closeModal('modalWordCount');
-            showNewWords(count);
-        }
+function showNewWords(count = 5) {
+    currentView = 'new';
+    const newWords = meineWoerterliste.filter(item =>
+        String(item.Schwierigkeit || '').toLowerCase() === currentDifficulty.toLowerCase() &&
+        (item.Lernstatus === 'neu' || !item.Lernstatus)
+    ).slice(0, count);
 
-        function createCardButtons(wordObj) {
-            return `
-                <div class="card-buttons">
-                    <button class="btn-status-neu" onclick="updateWordStatus('${wordObj.Wort}', 'neu')"><i class="fa-solid fa-sparkles"></i> Neu</button>
-                    <button class="btn-status-gelernt" onclick="updateWordStatus('${wordObj.Wort}', 'gelernt')"><i class="fa-solid fa-check"></i> Gelernt</button>
-                    <button class="btn-status-wiederholen" onclick="updateWordStatus('${wordObj.Wort}', 'wiederholt')"><i class="fa-solid fa-rotate-right"></i> Wiederholen</button>
-                    <button class="btn-status-bekannt" onclick="updateWordStatus('${wordObj.Wort}', 'bekannt')"><i class="fa-solid fa-star"></i> Bekannt</button>
-                </div>
-            `;
-        }
+    const container = document.getElementById('wordCardsContainer');
+    container.innerHTML = '';
+    if (!newWords.length) {
+        container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted)"><p>Keine neuen Wörter in dieser Schwierigkeitsstufe vorhanden.</p></div>`;
+        return;
+    }
 
-        function showNewWords(count = 5) {
-            currentView = 'new';
-            const newWords = meineWoerterliste.filter(item => 
-                item.Schwierigkeit && 
-                item.Schwierigkeit.toLowerCase() === currentDifficulty.toLowerCase() && 
-                (item.Lernstatus === 'neu' || !item.Lernstatus)
-            ).slice(0, count);
+    newWords.forEach(wordObj => {
+        const card = document.createElement('div');
+        card.className = 'word-card';
+        card.innerHTML = `<div><div class="word-card-header"><h3>${escapeHtml(wordObj.Wort)}</h3><span class="tag">${escapeHtml(wordObj.Thema || 'Allgemein')}</span></div><p class="example">"${escapeHtml(wordObj.Beispielsatz || '-')}"</p></div>${createCardButtons(wordObj)}`;
+        container.appendChild(card);
+    });
+}
 
-            const container = document.getElementById('wordCardsContainer');
-            container.innerHTML = '';
+function updateWordStatus(wort, newStatus) {
+    const item = meineWoerterliste.find(w => w.Wort === wort);
+    if (!item) return;
+    item.Lernstatus = newStatus;
+    saveProfileCSV(false);
+    currentView === 'new' ? showNewWords(lastRequestedWordCount) : filterByStatus(currentView);
+}
 
-            if (newWords.length === 0) {
-                container.innerHTML = `
-                    <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-muted);">
-                        <p>Keine neuen Wörter in dieser Schwierigkeitsstufe vorhanden.</p>
-                    </div>`;
-                return;
-            }
+function filterByStatus(status) {
+    currentView = status;
+    const container = document.getElementById('wordCardsContainer');
+    const words = meineWoerterliste.filter(w =>
+        String(w.Schwierigkeit || '').toLowerCase() === currentDifficulty.toLowerCase() &&
+        w.Lernstatus === status
+    );
+    container.innerHTML = '';
+    if (!words.length) {
+        container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted)"><p>Keine Wörter mit Status "${escapeHtml(status)}" gefunden.</p></div>`;
+        return;
+    }
+    words.forEach(wordObj => {
+        const card = document.createElement('div');
+        card.className = 'word-card';
+        card.innerHTML = `<div><div class="word-card-header"><h3>${escapeHtml(wordObj.Wort)}</h3><span class="badge badge-${escapeHtml(wordObj.Lernstatus)}">${escapeHtml(wordObj.Lernstatus)}</span></div><p class="example">"${escapeHtml(wordObj.Beispielsatz || '-')}"</p></div>${createCardButtons(wordObj)}`;
+        container.appendChild(card);
+    });
+}
 
-            newWords.forEach(wordObj => {
-                const card = document.createElement('div');
-                card.className = 'word-card';
-                card.innerHTML = `
-                    <div>
-                        <div class="word-card-header">
-                            <h3>${wordObj.Wort}</h3>
-                            <span class="tag">${wordObj.Thema || 'Allgemein'}</span>
-                        </div>
-                        <p class="example">"${wordObj.Beispielsatz || '-'}"</p>
-                    </div>
-                    ${createCardButtons(wordObj)}
-                `;
-                container.appendChild(card);
-            });
-        }
+function openAddWordModal() {
+    document.getElementById('addSchwierigkeit').value = currentDifficulty;
+    document.getElementById('modalAddWord').classList.remove('hidden');
+}
 
-        function updateWordStatus(wort, newStatus) {
-            const item = meineWoerterliste.find(w => w.Wort === wort);
-            if (item) {
-                item.Lernstatus = newStatus;
-                saveProfileCSV(false);
-                
-                if (currentView === 'new') {
-                    showNewWords(lastRequestedWordCount);
-                } else {
-                    filterByStatus(currentView);
-                }
-            }
-        }
+function saveNewWord() {
+    const wort = document.getElementById('addWort').value.trim();
+    if (!wort) return alert('Bitte gib ein Wort ein!');
 
-        function filterByStatus(status) {
-            currentView = status;
-            const container = document.getElementById('wordCardsContainer');
-            const words = meineWoerterliste.filter(w => 
-                w.Schwierigkeit && 
-                w.Schwierigkeit.toLowerCase() === currentDifficulty.toLowerCase() && 
-                w.Lernstatus === status
-            );
-            
-            container.innerHTML = '';
-            if(words.length === 0) {
-                container.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-muted);"><p>Keine Wörter mit Status "${status}" gefunden.</p></div>`;
-                return;
-            }
+    meineWoerterliste.push({
+        Wort: wort,
+        Schwierigkeit: document.getElementById('addSchwierigkeit').value || currentDifficulty,
+        Thema: document.getElementById('addThema').value.trim() || '-',
+        Lernstatus: document.getElementById('addStatus').value || 'neu',
+        Beispielsatz: document.getElementById('addBeispielsatz').value.trim() || '-'
+    });
 
-            words.forEach(wordObj => {
-                const card = document.createElement('div');
-                card.className = 'word-card';
-                card.innerHTML = `
-                    <div>
-                        <div class="word-card-header">
-                            <h3>${wordObj.Wort}</h3>
-                            <span class="badge badge-${wordObj.Lernstatus}">${wordObj.Lernstatus}</span>
-                        </div>
-                        <p class="example">"${wordObj.Beispielsatz || '-'}"</p>
-                    </div>
-                    ${createCardButtons(wordObj)}
-                `;
-                container.appendChild(card);
-            });
-        }
+    ['addWort','addThema','addBeispielsatz'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('addStatus').value = 'neu';
+    closeModal('modalAddWord');
+    saveProfileCSV(false);
+    document.getElementById('tab-dictionary').classList.contains('hidden') ? startSpiel1() : renderFullDictionary();
+}
 
-        function openAddWordModal() {
-            document.getElementById('modalAddWord').classList.remove('hidden');
-        }
+function renderFullDictionary() {
+    const tbody = document.getElementById('fullDictionaryTbody');
+    tbody.innerHTML = '';
+    if (!meineWoerterliste.length) {
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:20px;color:var(--text-muted)">Keine Wörter vorhanden.</td></tr>';
+        return;
+    }
 
-        function saveNewWord() {
-            let wort = document.getElementById('addWort').value.trim();
-            let schwierigkeit = document.getElementById('addSchwierigkeit').value;
-            let thema = document.getElementById('addThema').value.trim();
-            let status = document.getElementById('addStatus').value.trim();
-            let beispielsatz = document.getElementById('addBeispielsatz').value.trim();
+    meineWoerterliste.forEach((item, index) => {
+        const tr = document.createElement('tr');
+        const status = item.Lernstatus || 'neu';
+        tr.innerHTML = `<td><input type="checkbox" class="word-checkbox" data-index="${index}"></td>
+            <td><b>${escapeHtml(item.Wort || '-')}</b></td>
+            <td>${escapeHtml(item.Schwierigkeit || '-')}</td>
+            <td>${escapeHtml(item.Thema || '-')}</td>
+            <td><span class="badge badge-${escapeHtml(status)}">${escapeHtml(status)}</span></td>
+            <td>${escapeHtml(item.Beispielsatz || '-')}</td>
+            <td><button class="btn-secondary" style="padding:4px 8px;color:var(--danger)" onclick="deleteSingleWord(${index})" title="Löschen"><i class="fa-solid fa-trash"></i></button></td>`;
+        tbody.appendChild(tr);
+    });
+}
 
-            if (!wort) {
-                alert("Bitte gib ein Wort ein!");
-                return;
-            }
+function deleteSingleWord(index) {
+    if (!confirm(`Möchtest du "${meineWoerterliste[index]?.Wort || ''}" wirklich löschen?`)) return;
+    meineWoerterliste.splice(index, 1);
+    saveProfileCSV(false);
+    renderFullDictionary();
+}
 
-            meineWoerterliste.push({
-                Wort: wort,
-                Schwierigkeit: schwierigkeit || currentDifficulty || "leicht",
-                Thema: thema || "-",
-                Lernstatus: status || "neu",
-                Beispielsatz: beispielsatz || "-"
-            });
+function toggleSelectAll(master) {
+    document.querySelectorAll('.word-checkbox').forEach(cb => cb.checked = master.checked);
+}
 
-            document.getElementById('addWort').value = '';
-            document.getElementById('addThema').value = '';
-            document.getElementById('addStatus').value = 'neu';
-            document.getElementById('addBeispielsatz').value = '';
+function deleteSelectedWords() {
+    const checked = [...document.querySelectorAll('.word-checkbox:checked')];
+    if (!checked.length) return alert('Bitte wähle mindestens ein Wort zum Löschen aus!');
+    if (!confirm(`Möchtest du wirklich ${checked.length} ausgewählte(s) Wort/Wörter löschen?`)) return;
+    checked.map(cb => parseInt(cb.dataset.index,10)).sort((a,b)=>b-a).forEach(index => meineWoerterliste.splice(index,1));
+    saveProfileCSV(false);
+    document.getElementById('selectAllCheckbox').checked = false;
+    renderFullDictionary();
+}
 
-            closeModal('modalAddWord');
-            saveProfileCSV(false);
-            if(!document.getElementById('tab-dictionary').classList.contains('hidden')) {
-                renderFullDictionary();
-            } else {
-                startSpiel1();
-            }
-        }
+function saveProfileCSV(showNotification = true) {
+    saveCurrentData(false);
+    if (showNotification) alert('Erfolgreich im Browser gespeichert.');
+}
 
-        // --- WÖRTERBUCH & LÖSCH-FUNKTIONEN ---
-        function renderFullDictionary() {
-            const tbody = document.getElementById('fullDictionaryTbody');
-            tbody.innerHTML = '';
-
-            if (meineWoerterliste.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 20px; color: var(--text-muted);">Keine Wörter vorhanden.</td></tr>';
-                return;
-            }
-
-            meineWoerterliste.forEach((item, index) => {
-                const tr = document.createElement('tr');
-                const statusClass = `badge-${item.Lernstatus || 'neu'}`;
-                tr.innerHTML = `
-                    <td><input type="checkbox" class="word-checkbox" data-index="${index}"></td>
-                    <td><b>${item.Wort || '-'}</b></td>
-                    <td>${item.Schwierigkeit || '-'}</td>
-                    <td>${item.Thema || '-'}</td>
-                    <td><span class="badge ${statusClass}">${item.Lernstatus || 'neu'}</span></td>
-                    <td>${item.Beispielsatz || '-'}</td>
-                    <td style="text-align: center;">
-                        <button class="btn-secondary" style="padding: 4px 8px; color: var(--danger);" onclick="deleteSingleWord(${index})" title="Löschen">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
-        }
-
-        function deleteSingleWord(index) {
-            if(confirm(`Möchtest du "${meineWoerterliste[index].Wort}" wirklich löschen?`)) {
-                meineWoerterliste.splice(index, 1);
-                saveProfileCSV(false);
-                renderFullDictionary();
-            }
-        }
-
-        function toggleSelectAll(master) {
-            const checkboxes = document.querySelectorAll('.word-checkbox');
-            checkboxes.forEach(cb => cb.checked = master.checked);
-        }
-
-        function deleteSelectedWords() {
-            const checkboxes = document.querySelectorAll('.word-checkbox:checked');
-            if(checkboxes.length === 0) {
-                alert("Bitte wähle mindestens ein Wort zum Löschen aus!");
-                return;
-            }
-
-            if(confirm(`Möchtest du wirklich ${checkboxes.length} ausgewählte(s) Wort/Wörter löschen?`)) {
-                const indicesToDelete = Array.from(checkboxes).map(cb => parseInt(cb.getAttribute('data-index'))).sort((a,b) => b - a);
-                indicesToDelete.forEach(index => {
-                    meineWoerterliste.splice(index, 1);
-                });
-                saveProfileCSV(false);
-                document.getElementById('selectAllCheckbox').checked = false;
-                renderFullDictionary();
-            }
-        }
-
-        function saveProfileCSV(showNotification = true) {
-            localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
-            if(showNotification) {
-                alert(`Erfolgreich gespeichert!`);
-            }
-        }
-
-        function downloadCSV() {
-            const csvText = convertToCSV(meineWoerterliste);
-            const blob = new Blob([csvText], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(blob);
-            link.setAttribute("download", currentFileName);
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    </script>
+function downloadCSV() {
+    const csvText = convertToCSV(meineWoerterliste);
+    const blob = new Blob(['\uFEFF' + csvText], {type:'text/csv;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = currentProfile ? `Woerterbuch_${currentProfile.replace(/[^\wäöüÄÖÜß-]+/g,'_')}.csv` : 'Woerterbuch.csv';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+}
+</script>
 </body>
 </html>
