@@ -242,7 +242,7 @@ function parseCSV(text) {
             } else {
                 quoted = !quoted;
             }
-        } else if (c === ',' && !quoted) {
+        } else if (c === ';' && !quoted) {
             row.push(field);
             field = '';
         } else if ((c === '\n' || c === '\r') && !quoted) {
@@ -277,14 +277,14 @@ function csvEscape(value) {
 
 function convertToCSV(data) {
     const headers = ['Wort','Schwierigkeit','Thema','Lernstatus','Beispielsatz'];
-    return headers.join(',') + '\n' +
+    return headers.join(';') + '\n' +
         data.map(item => [
             csvEscape(item.Wort || '-'),
             csvEscape(item.Schwierigkeit || '-'),
             csvEscape(item.Thema || '-'),
             csvEscape(item.Lernstatus || 'neu'),
             csvEscape(item.Beispielsatz || '-')
-        ].join(',')).join('\n') + '\n';
+        ].join(';')).join('\n') + '\n';
 }
 
 async function loadStandardDictionary() {
@@ -509,7 +509,6 @@ function confirmShowSameTopicWords() {
 
 function showSameTopicWords(count = 10) {
     currentView = 'sameTopic';
-    // Nur Wörter mit Status 'neu'
     const newWords = meineWoerterliste.filter(item => item.Lernstatus === 'neu' || !item.Lernstatus);
 
     if (!newWords.length) {
@@ -538,7 +537,6 @@ function showSameTopicWords(count = 10) {
 }
 
 function createCardButtons(wordObj) {
-    // Sichere Übergabe des Worts per data-Attribute
     return `<div class="card-buttons">
         <button class="btn-status-neu" onclick="handleStatusClick(event, 'neu')">Neu</button>
         <button class="btn-status-gelernt" onclick="handleStatusClick(event, 'gelernt')">Gelernt</button>
@@ -547,7 +545,6 @@ function createCardButtons(wordObj) {
     </div>`;
 }
 
-// Direkte und fehlerfreie Statusänderung in meineWoerterliste
 function handleStatusClick(event, newStatus) {
     const cardElement = event.currentTarget.closest('.word-card');
     if (!cardElement) return;
@@ -567,7 +564,6 @@ function handleStatusClick(event, newStatus) {
 
 function showNewWords(count = 10) {
     currentView = 'new';
-    // Nur Wörter mit Status 'neu'
     const availableNewWords = meineWoerterliste.filter(item => item.Lernstatus === 'neu' || !item.Lernstatus);
 
     updateListInfoText(availableNewWords.length);
