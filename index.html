@@ -145,7 +145,6 @@ const STANDARD_FILE = 'Woerterbuch.csv';
 
 window.addEventListener('load', init);
 
-// Event-Listener zum Schließen des Kontextmenüs bei Klicks außerhalb
 document.addEventListener('click', function(event) {
     const profileContainer = document.querySelector('.menu-item-container');
     if (profileContainer && !profileContainer.contains(event.target)) {
@@ -510,6 +509,7 @@ function confirmShowSameTopicWords() {
 
 function showSameTopicWords(count = 10) {
     currentView = 'sameTopic';
+    // Nur Wörter mit Status 'neu'
     const newWords = meineWoerterliste.filter(item => item.Lernstatus === 'neu' || !item.Lernstatus);
 
     if (!newWords.length) {
@@ -538,35 +538,36 @@ function showSameTopicWords(count = 10) {
 }
 
 function createCardButtons(wordObj) {
-    const word = escapeHtml(wordObj.Wort || '');
+    // Sichere Übergabe des Worts per data-Attribute
     return `<div class="card-buttons">
-        <button class="btn-status-neu" onclick="handleStatusClick(event, '${word}', 'neu')">Neu</button>
-        <button class="btn-status-gelernt" onclick="handleStatusClick(event, '${word}', 'gelernt')">Gelernt</button>
-        <button class="btn-status-wiederholen" onclick="handleStatusClick(event, '${word}', 'wiederholt')">Wiederholen</button>
-        <button class="btn-status-bekannt" onclick="handleStatusClick(event, '${word}', 'bekannt')">Bekannt</button>
+        <button class="btn-status-neu" onclick="handleStatusClick(event, 'neu')">Neu</button>
+        <button class="btn-status-gelernt" onclick="handleStatusClick(event, 'gelernt')">Gelernt</button>
+        <button class="btn-status-wiederholen" onclick="handleStatusClick(event, 'wiederholt')">Wiederholen</button>
+        <button class="btn-status-bekannt" onclick="handleStatusClick(event, 'bekannt')">Bekannt</button>
     </div>`;
 }
 
-// Bei Klick auf einen der Status-Buttons wird NUR dieses eine Wort ausgeblendet
-function handleStatusClick(event, wort, newStatus) {
-    const decoded = document.createElement('textarea');
-    decoded.innerHTML = wort;
-    const realWort = decoded.value;
-
-    const item = meineWoerterliste.find(w => w.Wort === realWort);
-    if (item) {
-        item.Lernstatus = newStatus;
-        saveProfileCSV(false);
-    }
-
+// Direkte und fehlerfreie Statusänderung in meineWoerterliste
+function handleStatusClick(event, newStatus) {
     const cardElement = event.currentTarget.closest('.word-card');
-    if (cardElement) {
-        cardElement.remove();
+    if (!cardElement) return;
+
+    const h3 = cardElement.querySelector('h3');
+    if (h3) {
+        const rawWortText = h3.textContent;
+        const item = meineWoerterliste.find(w => w.Wort === rawWortText);
+        if (item) {
+            item.Lernstatus = newStatus;
+            saveProfileCSV(false);
+        }
     }
+
+    cardElement.remove();
 }
 
 function showNewWords(count = 10) {
     currentView = 'new';
+    // Nur Wörter mit Status 'neu'
     const availableNewWords = meineWoerterliste.filter(item => item.Lernstatus === 'neu' || !item.Lernstatus);
 
     updateListInfoText(availableNewWords.length);
