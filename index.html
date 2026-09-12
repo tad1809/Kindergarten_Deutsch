@@ -29,16 +29,13 @@ button{padding:10px 18px;background:var(--primary);color:#fff;border:0;border-ra
 button:hover{background:var(--primary-hover);transform:translateY(-1px)}button.btn-secondary{background:#fff;color:var(--text-main);border:1px solid var(--border-color)}button.btn-secondary:hover{background:#f1f5f9}
 button.btn-danger{background:var(--danger)}
 
-/* Angepasste Farben für die 4 Vokabel-Training Buttons */
+/* Vokabel-Training Buttons */
 button.btn-status-neu { background: #fca5a5; color: #7f1d1d; }
 button.btn-status-neu:hover { background: #f87171; }
-
 button.btn-status-gelernt { background: #fdba74; color: #7c2d12; }
 button.btn-status-gelernt:hover { background: #fb923c; }
-
 button.btn-status-wiederholen { background: #fef08a; color: #713f12; }
 button.btn-status-wiederholen:hover { background: #fde047; }
-
 button.btn-status-bekannt { background: #86efac; color: #14532d; }
 button.btn-status-bekannt:hover { background: #4ade80; }
 
@@ -52,15 +49,41 @@ button.btn-status-bekannt:hover { background: #4ade80; }
 .card-buttons{display:grid;grid-template-columns:repeat(4, 1fr);gap:6px;}
 .card-buttons button{font-size:.75rem;padding:16px 4px;width:100%;line-height:1.2;text-align:center;}
 
+.repeat-counter-badge{position:absolute;top:16px;right:16px;background:var(--success);color:#fff;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;box-shadow:var(--shadow-sm);}
+
 .table-card{background:#fff;border-radius:12px;border:1px solid var(--border-color);box-shadow:var(--shadow-sm);overflow:hidden}.table-wrapper{max-height:600px;overflow:auto}
 table{width:100%;border-collapse:collapse;font-size:.9rem;text-align:left}th,td{padding:14px 18px;border-bottom:1px solid var(--border-color)}th{background:#f8fafc;color:var(--text-muted);font-weight:600;position:sticky;top:0;z-index:1}
 .badge{display:inline-block;padding:4px 10px;border-radius:12px;font-size:.75rem;font-weight:600}.badge-neu{background:#e0f2fe;color:#0369a1}.badge-gelernt{background:#d1fae5;color:#047857}.badge-wiederholt{background:#fef3c7;color:#b45309}.badge-bekannt{background:#f3e8ff;color:#7e22ce}
+
+/* Anpassung: Dropdown und Spaltenbreite im Wörterbuch vergrößert */
+.dict-status-select{padding:6px 12px;border-radius:8px;border:1px solid var(--border-color);font-size:.9rem;background:#fff;outline:none;cursor:pointer;width:150px;}
+.col-status { width: 180px; } 
+
 .modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.6);backdrop-filter:blur(4px);display:flex;justify-content:center;align-items:center;z-index:1000}.modal-content{background:#fff;padding:28px;border-radius:16px;width:440px;max-width:90%;box-shadow:0 10px 15px rgba(0,0,0,.15)}
 .modal-content h3{margin-bottom:18px}.form-group{margin-bottom:16px}label{display:block;margin-bottom:6px;font-size:.85rem;font-weight:600}
 input[type=text],input[type=number],input[type=file],select{width:100%;padding:10px 14px;border:1px solid var(--border-color);border-radius:8px;font-size:.9rem;outline:none}.radio-group{display:flex;gap:16px;margin-top:6px}.radio-group label{font-weight:400;display:flex;align-items:center;gap:6px;cursor:pointer}
 .modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:24px}.hidden{display:none!important}
+
+/* Memory Game spezifische Styles */
+.memory-setup-card { background: #fff; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; max-width: 600px; margin: 0 auto; box-shadow: var(--shadow-sm); }
+.memory-settings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+.memory-board-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; background: #fff; padding: 12px 20px; border-radius: 12px; border: 1px solid var(--border-color); flex-wrap: wrap; gap: 10px; }
+.memory-status-badge { font-weight: 700; padding: 6px 14px; border-radius: 20px; font-size: 0.95rem; }
+.memory-scores { display: flex; gap: 16px; font-size: 0.9rem; font-weight: 600; flex-wrap: wrap; }
+.memory-score-item { padding: 4px 12px; border-radius: 8px; border: 1px solid var(--border-color); transition: all 0.2s; }
+
+.memory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 12px; perspective: 1000px; width: 100%; align-content: start; }
+.memory-card { aspect-ratio: 1; background: var(--sidebar-bg); border-radius: 10px; cursor: pointer; position: relative; transform-style: preserve-3d; transition: transform 0.4s ease; box-shadow: var(--shadow-sm); border: 2px solid var(--border-color); width: 100%; }
+.memory-card.flipped { transform: rotateY(180deg); }
+.memory-card.solved { visibility: hidden; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+.memory-card-face { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; backface-visibility: hidden; border-radius: 8px; overflow: hidden; }
+.memory-card-front { background: var(--sidebar-bg); color: #818cf8; font-size: 1.75rem; }
+.memory-card-back { background: #fff; transform: rotateY(180deg); padding: 6px; text-align: center; }
+.memory-card-back img { width: 100%; height: 100%; object-fit: contain; }
+.memory-card-back span { font-size: 0.8rem; font-weight: 700; color: var(--text-main); padding: 4px; word-break: break-word; }
+
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@media(max-width:800px){.panel-left{width:220px;min-width:220px}.panel-middle{padding:20px}.word-cards-container{grid-template-columns:1fr}}
+@media(max-width:800px){.panel-left{width:220px;min-width:220px}.panel-middle{padding:20px}.word-cards-container{grid-template-columns:1fr}.memory-settings-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -81,7 +104,7 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 </div>
 </li>
 <li class="menu-item active" id="menu-spiel1" onclick="switchTab('spiel1',event)"><i class="fa-solid fa-brain"></i> Vokabel Training</li>
-<li class="menu-item" id="menu-spiel2" onclick="switchTab('spiel2',event)"><i class="fa-solid fa-gamepad"></i> Spiel 2</li>
+<li class="menu-item" id="menu-spiel2" onclick="switchTab('spiel2',event)"><i class="fa-solid fa-puzzle-piece"></i> Memory-Spiel</li>
 <li class="menu-item" id="menu-spiel3" onclick="switchTab('spiel3',event)"><i class="fa-solid fa-trophy"></i> Spiel 3</li>
 <li class="menu-item" id="menu-dictionary" onclick="switchTab('dictionary',event)"><i class="fa-solid fa-book"></i> Wörterbuch</li>
 </ul>
@@ -105,28 +128,25 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 </div>
 <div id="wordCardsContainer" class="word-cards-container"></div>
 </div>
-<div id="tab-spiel2" class="tab-content hidden"><div class="page-header"><h2>Spiel 2</h2><p>Dieser Bereich steht für Spiel 2 bereit.</p></div></div>
+<div id="tab-spiel2" class="tab-content hidden">
+<div class="page-header"><h2>Memory-Spiel</h2><p>Finde passende Bild- und Wortpaare aus deinem Vokabelwortschatz!</p></div>
+<div id="memoryContainer"></div>
+</div>
 <div id="tab-spiel3" class="tab-content hidden"><div class="page-header"><h2>Spiel 3</h2><p>Dieser Bereich steht für Spiel 3 bereit.</p></div></div>
 <div id="tab-dictionary" class="tab-content hidden">
 <div class="page-header"><h2>Wörterbuch</h2><p>Gesamtübersicht und Verwaltung aller Wörter deines aktuellen Profils.</p></div>
 <div class="top-nav-buttons"><button onclick="openAddWordModal()"><i class="fa-solid fa-plus"></i> Neues Wort ergänzen</button><button class="btn-danger" onclick="deleteSelectedWords()"><i class="fa-solid fa-trash-can"></i> Ausgewählte Wörter löschen</button></div>
-<div class="table-card"><div class="table-wrapper"><table><thead><tr><th><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"></th><th>Wort</th><th>Schwierigkeit</th><th>Thema</th><th>Status</th><th>Beispielsatz</th><th>Aktion</th></tr></thead><tbody id="fullDictionaryTbody"></tbody></table></div></div>
+<div class="table-card"><div class="table-wrapper"><table><thead><tr><th><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"></th><th>Wort</th><th>Schwierigkeit</th><th>Thema</th><th class="col-status">Status</th><th>Beispielsatz</th><th>Aktion</th></tr></thead><tbody id="fullDictionaryTbody"></tbody></table></div></div>
 </div>
 </div>
 </div>
 
 <div id="modalWordCount" class="modal-overlay hidden"><div class="modal-content"><h3>Neue Wörter anzeigen</h3><div class="form-group"><label for="wordCountInput">Wie viele neue Wörter möchtest du sehen?</label><input type="number" id="wordCountInput" value="10" min="1" max="50"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalWordCount')">Abbrechen</button><button onclick="confirmShowNewWords()">Anzeigen</button></div></div></div>
-
 <div id="modalSameTopic" class="modal-overlay hidden"><div class="modal-content"><h3>Wörter mit gleichen Themen</h3><div class="form-group"><label for="topicWordCountInput">Wie viele Wörter aus einem zufälligen Thema möchtest du sehen?</label><input type="number" id="topicWordCountInput" value="10" min="1" max="50"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalSameTopic')">Abbrechen</button><button onclick="confirmShowSameTopicWords()">Anzeigen</button></div></div></div>
-
 <div id="modalProfileInfo" class="modal-overlay hidden"><div class="modal-content"><h3>Aktuelles Profil</h3><div id="profileDetailsText" style="line-height:1.8;margin-bottom:15px"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalProfileInfo')">Schließen</button></div></div></div>
-
 <div id="modalNewProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Profil erstellen</h3><div class="form-group"><label for="newProfileName">Profilname eingeben:</label><input type="text" id="newProfileName" placeholder="z. B. Max"></div><div class="form-group"><label>Schwierigkeitsgrad:</label><div class="radio-group"><label><input type="radio" name="newDifficulty" value="leicht" checked> Leicht</label><label><input type="radio" name="newDifficulty" value="mittel"> Mittel</label><label><input type="radio" name="newDifficulty" value="schwer"> Schwer</label></div></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalNewProfile')">Abbrechen</button><button onclick="createNewProfile()">Erstellen</button></div></div></div>
-
 <div id="modalLoadProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil auswählen / laden</h3><div class="form-group"><label for="profileSelect">Vorhandene Profile:</label><select id="profileSelect"></select></div><div class="form-group"><label>Oder lokale CSV-Datei hochladen:</label><input type="file" id="localCsvInput" accept=".csv,text/csv"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalLoadProfile')">Abbrechen</button><button onclick="loadSelectedProfile()">Laden</button></div></div></div>
-
 <div id="modalDeleteProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil löschen</h3><div class="form-group"><label for="deleteProfileSelect">Zu löschendes Profil auswählen:</label><select id="deleteProfileSelect"></select></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalDeleteProfile')">Abbrechen</button><button class="btn-danger" onclick="confirmDeleteProfile()">Löschen</button></div></div></div>
-
 <div id="modalAddWord" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Wort ergänzen</h3><div class="form-group"><label for="addWort">Wort:</label><input type="text" id="addWort" placeholder="z. B. Haus"></div><div class="form-group"><label for="addSchwierigkeit">Schwierigkeit:</label><select id="addSchwierigkeit"><option value="leicht">leicht</option><option value="mittel">mittel</option><option value="schwer">schwer</option></select></div><div class="form-group"><label for="addThema">Thema:</label><input type="text" id="addThema" placeholder="z. B. Alltag"></div><div class="form-group"><label for="addStatus">Status:</label><select id="addStatus"><option value="neu">neu</option><option value="gelernt">gelernt</option><option value="wiederholt">wiederholt</option><option value="bekannt">bekannt</option></select></div><div class="form-group"><label for="addBeispielsatz">Beispielsatz:</label><input type="text" id="addBeispielsatz" placeholder="Beispielsatz eingeben"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalAddWord')">Abbrechen</button><button onclick="saveNewWord()">Wort hinzufügen</button></div></div></div>
 
 <script>
@@ -142,6 +162,9 @@ let lastRequestedWordCount = 10;
 
 const PROFILES_LIST_KEY = 'registered_profiles';
 const STANDARD_FILE = 'Woerterbuch.csv';
+
+const playerColors = ['#4f46e5', '#10b981', '#f59e0b', '#ef4444', '#9333ea', '#0284c7'];
+const playerBgColors = ['#e0e7ff', '#d1fae5', '#fef3c7', '#fee2e2', '#f3e8ff', '#e0f2fe'];
 
 window.addEventListener('load', init);
 
@@ -161,9 +184,7 @@ function getStoredProfilesList() {
     try {
         const list = JSON.parse(localStorage.getItem(PROFILES_LIST_KEY) || '[]');
         return Array.isArray(list) ? list : [];
-    } catch (e) {
-        return [];
-    }
+    } catch (e) { return []; }
 }
 
 function setStoredProfilesList(list) {
@@ -184,12 +205,6 @@ function addProfileToList(profileName, fileName, difficulty) {
 function removeProfileFromList(fileName) {
     setStoredProfilesList(getStoredProfilesList().filter(p => p.file !== fileName));
     localStorage.removeItem(fileName);
-}
-
-function saveCurrentData(showNotification = false) {
-    if (!currentFileName) return;
-    localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
-    if (showNotification) alert('Erfolgreich gespeichert!');
 }
 
 function toggleProfileMenu(forceState) {
@@ -219,6 +234,7 @@ function switchTab(tabName, event) {
     if (menuItem) menuItem.classList.add('active');
     
     if (tabName === 'dictionary') renderFullDictionary();
+    if (tabName === 'spiel2') initMemorySetup();
 }
 
 function closeModal(id) {
@@ -266,6 +282,7 @@ function parseCSV(text) {
         const obj = {};
         headers.forEach((h, i) => obj[h] = (values[i] ?? '').trim() || '-');
         if (!obj.Lernstatus || obj.Lernstatus === '-') obj.Lernstatus = 'neu';
+        if (obj.wiederholZaehler) obj.wiederholZaehler = parseInt(obj.wiederholZaehler, 10) || 0;
         return obj;
     });
 }
@@ -319,10 +336,7 @@ function loadStoredProfile(fileName, profileName, difficulty) {
         currentProfile = profileName || 'Profil';
         currentDifficulty = difficulty || null;
         return true;
-    } catch (e) {
-        console.error('Profil konnte nicht geladen werden:', e);
-        return false;
-    }
+    } catch (e) { return false; }
 }
 
 function showError(message) {
@@ -341,27 +355,18 @@ async function createNewProfile() {
     if (!profileName) return alert('Bitte gib einen Profilnamen ein!');
 
     const safeName = profileName.replace(/[\\/:*?"<>|]/g, '_').replace(/\s+/g, '_');
-    if (!safeName) return alert('Ungültiger Profilname.');
-
     const csvFileName = `Woerterbuch_${safeName}.csv`;
     const jsonStorageKey = `Woerterbuch_${safeName}.json`;
-
     const selectedDifficulty = document.querySelector('input[name="newDifficulty"]:checked').value;
 
     if (!baseDictionaryWords.length) {
         try {
             const response = await fetch(STANDARD_FILE, {cache: 'no-store'});
-            if (response.ok) {
-                const text = await response.text();
-                baseDictionaryWords = parseCSV(text);
-            }
-        } catch(e) { console.error(e); }
+            if (response.ok) baseDictionaryWords = parseCSV(await response.text());
+        } catch(e) {}
     }
 
-    meineWoerterliste = baseDictionaryWords.filter(w => 
-        (w.Schwierigkeit || '').toLowerCase() === selectedDifficulty.toLowerCase()
-    );
-
+    meineWoerterliste = baseDictionaryWords.filter(w => (w.Schwierigkeit || '').toLowerCase() === selectedDifficulty.toLowerCase());
     currentProfile = profileName;
     currentDifficulty = selectedDifficulty;
     currentFileName = jsonStorageKey;
@@ -403,13 +408,12 @@ async function loadSelectedProfile() {
 
     if (fileInput.files.length > 0) {
         try {
-            const file = fileInput.files[0];
-            const text = await file.text();
+            const text = await fileInput.files[0].text();
             const data = parseCSV(text);
-            if (!data.length) throw new Error('Keine gültigen Daten.');
+            if (!data.length) throw new Error();
             meineWoerterliste = data;
-            currentFileName = file.name;
-            currentProfile = file.name.replace(/\.csv$/i, '').replace(/^Woerterbuch_/, '') || 'Import';
+            currentFileName = fileInput.files[0].name;
+            currentProfile = currentFileName.replace(/\.csv$/i, '');
             currentDifficulty = null;
             localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
             addProfileToList(currentProfile, currentFileName, null);
@@ -421,14 +425,11 @@ async function loadSelectedProfile() {
         await loadStandardDictionary();
     } else {
         const option = select.options[select.selectedIndex];
-        const profileName = option?.dataset.profileName || 'Profil';
-        const difficulty = option?.dataset.difficulty || null;
-        if (!loadStoredProfile(select.value, profileName, difficulty)) {
+        if (!loadStoredProfile(select.value, option?.dataset.profileName, option?.dataset.difficulty)) {
             alert('Dieses lokale Profil ist nicht mehr vorhanden.');
             return;
         }
     }
-
     closeModal('modalLoadProfile');
     startSpiel1();
 }
@@ -437,12 +438,8 @@ function openDeleteProfileModal() {
     toggleProfileMenu(false);
     const select = document.getElementById('deleteProfileSelect');
     select.innerHTML = '';
-
     const profiles = getStoredProfilesList();
-    if (!profiles.length) {
-        alert('Es sind keine löschbaren Benutzerprofile vorhanden.');
-        return;
-    }
+    if (!profiles.length) return alert('Es sind keine löschbaren Benutzerprofile vorhanden.');
 
     profiles.forEach(p => {
         const opt = document.createElement('option');
@@ -450,7 +447,6 @@ function openDeleteProfileModal() {
         opt.textContent = p.name;
         select.appendChild(opt);
     });
-
     document.getElementById('modalDeleteProfile').classList.remove('hidden');
 }
 
@@ -459,73 +455,46 @@ function confirmDeleteProfile() {
     const selectedFile = select.value;
     const selectedName = select.options[select.selectedIndex]?.textContent;
 
-    if (!selectedFile) return;
-
-    if (confirm(`Möchtest du das Profil "${selectedName}" wirklich unwiderruflich löschen?`)) {
+    if (selectedFile && confirm(`Möchtest du das Profil "${selectedName}" wirklich löschen?`)) {
         removeProfileFromList(selectedFile);
-        alert(`Das Profil "${selectedName}" wurde gelöscht.`);
         closeModal('modalDeleteProfile');
-        if (currentFileName === selectedFile) {
-            loadStandardDictionary();
-        }
+        if (currentFileName === selectedFile) loadStandardDictionary();
     }
 }
 
 function updateListInfoText(availableCount) {
-    const totalBase = baseDictionaryWords.length || meineWoerterliste.length;
-    const countCurrent = meineWoerterliste.length;
-    const diffText = currentDifficulty ? ` (${currentDifficulty})` : '';
-    
     document.getElementById('listInfoText').innerText =
-        `${countCurrent}${diffText} von ${totalBase} Wörtern verfügbar`;
+        `${meineWoerterliste.length}${currentDifficulty ? ` (${currentDifficulty})` : ''} Wörter im aktuellen Kontext`;
 }
 
-function startSpiel1() {
-    showNewWords(lastRequestedWordCount);
-}
-
-function openWordCountModal() {
-    document.getElementById('modalWordCount').classList.remove('hidden');
-}
-
+function startSpiel1() { showNewWords(lastRequestedWordCount); }
+function openWordCountModal() { document.getElementById('modalWordCount').classList.remove('hidden'); }
 function confirmShowNewWords() {
     let count = parseInt(document.getElementById('wordCountInput').value, 10);
-    if (!Number.isFinite(count) || count < 1) count = 10;
-    lastRequestedWordCount = Math.min(count, 50);
+    lastRequestedWordCount = Number.isFinite(count) && count > 0 ? Math.min(count, 50) : 10;
     closeModal('modalWordCount');
     showNewWords(lastRequestedWordCount);
 }
 
-function openSameTopicModal() {
-    document.getElementById('modalSameTopic').classList.remove('hidden');
-}
-
+function openSameTopicModal() { document.getElementById('modalSameTopic').classList.remove('hidden'); }
 function confirmShowSameTopicWords() {
     let count = parseInt(document.getElementById('topicWordCountInput').value, 10);
-    if (!Number.isFinite(count) || count < 1) count = 10;
     closeModal('modalSameTopic');
-    showSameTopicWords(count);
+    showSameTopicWords(Number.isFinite(count) && count > 0 ? count : 10);
 }
 
 function showSameTopicWords(count = 10) {
     currentView = 'sameTopic';
     const newWords = meineWoerterliste.filter(item => item.Lernstatus === 'neu' || !item.Lernstatus);
-
     if (!newWords.length) {
-        updateListInfoText(0);
-        const container = document.getElementById('wordCardsContainer');
-        container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted)"><p>Keine neuen Wörter vorhanden.</p></div>`;
+        document.getElementById('wordCardsContainer').innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted)"><p>Keine neuen Wörter vorhanden.</p></div>`;
         return;
     }
-
     const topics = [...new Set(newWords.map(w => w.Thema || 'Allgemein'))];
     const randomTopic = topics[Math.floor(Math.random() * topics.length)];
-
-    let topicWords = newWords.filter(w => (w.Thema || 'Allgemein') === randomTopic);
-    topicWords = topicWords.sort(() => 0.5 - Math.random()).slice(0, count);
+    let topicWords = newWords.filter(w => (w.Thema || 'Allgemein') === randomTopic).sort(() => 0.5 - Math.random()).slice(0, count);
 
     updateListInfoText(topicWords.length);
-
     const container = document.getElementById('wordCardsContainer');
     container.innerHTML = '';
     topicWords.forEach(wordObj => {
@@ -548,28 +517,36 @@ function createCardButtons(wordObj) {
 function handleStatusClick(event, newStatus) {
     const cardElement = event.currentTarget.closest('.word-card');
     if (!cardElement) return;
-
     const h3 = cardElement.querySelector('h3');
     if (h3) {
-        const rawWortText = h3.textContent;
-        const item = meineWoerterliste.find(w => w.Wort === rawWortText);
+        const item = meineWoerterliste.find(w => w.Wort === h3.textContent);
         if (item) {
-            item.Lernstatus = newStatus;
-            saveProfileCSV(false);
+            if (newStatus === 'wiederholt' && currentView === 'wiederholt') {
+                item.wiederholZaehler = (item.wiederholZaehler || 0) + 1;
+                saveCurrentData(false);
+                let badge = cardElement.querySelector('.repeat-counter-badge');
+                if (!badge) {
+                    badge = document.createElement('div');
+                    badge.className = 'repeat-counter-badge';
+                    cardElement.appendChild(badge);
+                }
+                badge.textContent = item.wiederholZaehler;
+                return;
+            } else {
+                item.Lernstatus = newStatus;
+                item.wiederholZaehler = 0;
+                saveCurrentData(false);
+            }
         }
     }
-
     cardElement.remove();
 }
 
 function showNewWords(count = 10) {
     currentView = 'new';
     const availableNewWords = meineWoerterliste.filter(item => item.Lernstatus === 'neu' || !item.Lernstatus);
-
     updateListInfoText(availableNewWords.length);
-
-    const shuffled = [...availableNewWords].sort(() => 0.5 - Math.random());
-    const selectedWords = shuffled.slice(0, count);
+    const selectedWords = [...availableNewWords].sort(() => 0.5 - Math.random()).slice(0, count);
 
     const container = document.getElementById('wordCardsContainer');
     container.innerHTML = '';
@@ -577,7 +554,6 @@ function showNewWords(count = 10) {
         container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted)"><p>Keine neuen Wörter vorhanden.</p></div>`;
         return;
     }
-
     selectedWords.forEach(wordObj => {
         const card = document.createElement('div');
         card.className = 'word-card';
@@ -588,11 +564,9 @@ function showNewWords(count = 10) {
 
 function filterByStatus(status) {
     currentView = status;
-    const container = document.getElementById('wordCardsContainer');
     const words = meineWoerterliste.filter(w => w.Lernstatus === status);
-
     updateListInfoText(words.length);
-
+    const container = document.getElementById('wordCardsContainer');
     container.innerHTML = '';
     if (!words.length) {
         container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted)"><p>Keine Wörter mit Status "${escapeHtml(status)}" gefunden.</p></div>`;
@@ -601,31 +575,31 @@ function filterByStatus(status) {
     words.forEach(wordObj => {
         const card = document.createElement('div');
         card.className = 'word-card';
-        card.innerHTML = `<div><div class="word-card-header"><h3>${escapeHtml(wordObj.Wort)}</h3><span class="badge badge-${escapeHtml(wordObj.Lernstatus)}">${escapeHtml(wordObj.Lernstatus)}</span></div><p class="example">"${escapeHtml(wordObj.Beispielsatz || '-')}"</p></div>${createCardButtons(wordObj)}`;
+        let badgeHtml = '';
+        if (status === 'wiederholt') {
+            const count = wordObj.wiederholZaehler || 0;
+            badgeHtml = `<div class="repeat-counter-badge" title="Wiederholungen">${count}</div>`;
+        }
+        card.innerHTML = `${badgeHtml}<div><div class="word-card-header"><h3>${escapeHtml(wordObj.Wort)}</h3><span class="badge badge-${escapeHtml(wordObj.Lernstatus)}">${escapeHtml(wordObj.Lernstatus)}</span></div><p class="example">"${escapeHtml(wordObj.Beispielsatz || '-')}"</p></div>${createCardButtons(wordObj)}`;
         container.appendChild(card);
     });
 }
 
-function openAddWordModal() {
-    document.getElementById('modalAddWord').classList.remove('hidden');
-}
-
+function openAddWordModal() { document.getElementById('modalAddWord').classList.remove('hidden'); }
 function saveNewWord() {
     const wort = document.getElementById('addWort').value.trim();
     if (!wort) return alert('Bitte gib ein Wort ein!');
-
     meineWoerterliste.push({
         Wort: wort,
         Schwierigkeit: document.getElementById('addSchwierigkeit').value || 'leicht',
         Thema: document.getElementById('addThema').value.trim() || '-',
         Lernstatus: document.getElementById('addStatus').value || 'neu',
-        Beispielsatz: document.getElementById('addBeispielsatz').value.trim() || '-'
+        Beispielsatz: document.getElementById('addBeispielsatz').value.trim() || '-',
+        wiederholZaehler: 0
     });
-
     ['addWort','addThema','addBeispielsatz'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('addStatus').value = 'neu';
     closeModal('modalAddWord');
-    saveProfileCSV(false);
+    saveCurrentData(false);
     document.getElementById('tab-dictionary').classList.contains('hidden') ? startSpiel1() : renderFullDictionary();
 }
 
@@ -636,7 +610,6 @@ function renderFullDictionary() {
         tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:20px;color:var(--text-muted)">Keine Wörter vorhanden.</td></tr>';
         return;
     }
-
     meineWoerterliste.forEach((item, index) => {
         const tr = document.createElement('tr');
         const status = item.Lernstatus || 'neu';
@@ -644,17 +617,35 @@ function renderFullDictionary() {
             <td><b>${escapeHtml(item.Wort || '-')}</b></td>
             <td>${escapeHtml(item.Schwierigkeit || '-')}</td>
             <td>${escapeHtml(item.Thema || '-')}</td>
-            <td><span class="badge badge-${escapeHtml(status)}">${escapeHtml(status)}</span></td>
+            <td>
+                <select class="dict-status-select" onchange="updateWordStatusFromDict(${index}, this.value)">
+                    <option value="neu" ${status === 'neu' ? 'selected' : ''}>neu</option>
+                    <option value="gelernt" ${status === 'gelernt' ? 'selected' : ''}>gelernt</option>
+                    <option value="wiederholt" ${status === 'wiederholt' ? 'selected' : ''}>wiederholt</option>
+                    <option value="bekannt" ${status === 'bekannt' ? 'selected' : ''}>bekannt</option>
+                </select>
+            </td>
             <td>${escapeHtml(item.Beispielsatz || '-')}</td>
-            <td><button class="btn-secondary" style="padding:4px 8px;color:var(--danger)" onclick="deleteSingleWord(${index})" title="Löschen"><i class="fa-solid fa-trash"></i></button></td>`;
+            <td><button class="btn-secondary" style="padding:4px 8px;color:var(--danger)" onclick="deleteSingleWord(${index})"><i class="fa-solid fa-trash"></i></button></td>`;
         tbody.appendChild(tr);
     });
+}
+
+function updateWordStatusFromDict(index, newStatus) {
+    if (meineWoerterliste[index]) {
+        meineWoerterliste[index].Lernstatus = newStatus;
+        if (newStatus !== 'wiederholt') {
+            meineWoerterliste[index].wiederholZaehler = 0;
+        }
+        saveCurrentData(false);
+        renderFullDictionary();
+    }
 }
 
 function deleteSingleWord(index) {
     if (!confirm(`Möchtest du "${meineWoerterliste[index]?.Wort || ''}" wirklich löschen?`)) return;
     meineWoerterliste.splice(index, 1);
-    saveProfileCSV(false);
+    saveCurrentData(false);
     renderFullDictionary();
 }
 
@@ -664,18 +655,21 @@ function toggleSelectAll(master) {
 
 function deleteSelectedWords() {
     const checked = [...document.querySelectorAll('.word-checkbox:checked')];
-    if (!checked.length) return alert('Bitte wähle mindestens ein Wort zum Löschen aus!');
-    if (!confirm(`Möchtest du wirklich ${checked.length} ausgewählte(s) Wort/Wörter löschen?`)) return;
+    if (!checked.length) return alert('Bitte wähle mindestens ein Wort aus!');
+    if (!confirm(`Möchtest du wirklich ${checked.length} Wörter löschen?`)) return;
     checked.map(cb => parseInt(cb.dataset.index,10)).sort((a,b)=>b-a).forEach(index => meineWoerterliste.splice(index,1));
-    saveProfileCSV(false);
+    saveCurrentData(false);
     document.getElementById('selectAllCheckbox').checked = false;
     renderFullDictionary();
 }
 
-function saveProfileCSV(showNotification = true) {
-    saveCurrentData(false);
+function saveCurrentData(showNotification = true) {
+    if (!currentFileName) return;
+    localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
     if (showNotification) alert('Erfolgreich im Browser gespeichert.');
 }
+
+function saveProfileCSV() { saveCurrentData(true); }
 
 function downloadCSV() {
     const csvText = convertToCSV(meineWoerterliste);
@@ -688,6 +682,250 @@ function downloadCSV() {
     link.click();
     link.remove();
     URL.revokeObjectURL(url);
+}
+
+/* ==========================================
+   MEMORY-SPIEL LOGIK
+   ========================================== */
+let memoryState = {
+    players: 2,
+    pairsCount: 15,
+    statusFilter: 'neu',
+    scores: [],
+    currentPlayer: 0,
+    cards: [],
+    originalDeck: [],
+    flippedCards: [],
+    matchedPairs: 0,
+    solvedCount: 0,
+    isLocked: false
+};
+
+function initMemorySetup() {
+    const container = document.getElementById('memoryContainer');
+    container.innerHTML = `
+        <div class="memory-setup-card">
+            <h3 style="margin-bottom: 16px;"><i class="fa-solid fa-puzzle-piece"></i> Memory-Spiel konfigurieren</h3>
+            <div class="memory-settings-grid">
+                <div class="form-group">
+                    <label for="memoryPlayers">Anzahl Spieler:</label>
+                    <input type="number" id="memoryPlayers" value="2" min="1" max="6">
+                </div>
+                <div class="form-group">
+                    <label for="memoryPairs">Anzahl Kartenpaare:</label>
+                    <input type="number" id="memoryPairs" value="12" min="2" max="30">
+                </div>
+                <div class="form-group" style="grid-column: 1 / -1;">
+                    <label for="memoryStatusFilter">Wort-Kategorie (Lernstatus):</label>
+                    <select id="memoryStatusFilter">
+                        <option value="neu" selected>Neue Wörter ("neu")</option>
+                        <option value="gelernt">Gelernte Wörter ("gelernt")</option>
+                        <option value="wiederholt">Wiederholte Wörter ("wiederholt")</option>
+                        <option value="bekannt">Bekannte Wörter ("bekannt")</option>
+                        <option value="alle">Alle Wörter</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="startMemoryGame()"><i class="fa-solid fa-play"></i> Spiel starten</button>
+        </div>
+    `;
+}
+
+async function checkImageExists(url) {
+    return new Promise(resolve => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = url;
+    });
+}
+
+async function startMemoryGame() {
+    const playersInput = parseInt(document.getElementById('memoryPlayers').value, 10);
+    const pairsInput = parseInt(document.getElementById('memoryPairs').value, 10);
+    const statusFilter = document.getElementById('memoryStatusFilter').value;
+
+    memoryState.players = Number.isFinite(playersInput) && playersInput >= 1 ? playersInput : 2;
+    memoryState.pairsCount = Number.isFinite(pairsInput) && pairsInput >= 2 ? pairsInput : 12;
+    memoryState.statusFilter = statusFilter;
+
+    let pool = meineWoerterliste;
+    if (statusFilter !== 'alle') {
+        pool = meineWoerterliste.filter(w => (w.Lernstatus || 'neu') === statusFilter);
+    }
+
+    if (pool.length < 2) {
+        alert('Nicht genügend Wörter in dieser Kategorie vorhanden (mindestens 2 erforderlich).');
+        return;
+    }
+
+    if (pool.length < memoryState.pairsCount) {
+        memoryState.pairsCount = pool.length;
+    }
+
+    const shuffledPool = [...pool].sort(() => 0.5 - Math.random());
+    const selectedWords = shuffledPool.slice(0, memoryState.pairsCount);
+
+    let cardDeck = [];
+    for (let i = 0; i < selectedWords.length; i++) {
+        const wordObj = selectedWords[i];
+        const wortText = wordObj.Wort || '';
+        const imageName = wortText.replace(/\s+/g, '_');
+        const imagePath = `Bilder/${imageName}.png`;
+
+        const hasValidImage = await checkImageExists(imagePath);
+
+        const cardData = {
+            id: i,
+            wort: wortText,
+            displayType: hasValidImage ? 'image' : 'text',
+            imagePath: hasValidImage ? imagePath : null
+        };
+
+        cardDeck.push({...cardData, uniqueId: i * 2, solved: false});
+        cardDeck.push({...cardData, uniqueId: i * 2 + 1, solved: false});
+    }
+
+    cardDeck.sort(() => 0.5 - Math.random());
+
+    memoryState.originalDeck = structuredClone(cardDeck);
+    memoryState.cards = structuredClone(cardDeck);
+    memoryState.scores = new Array(memoryState.players).fill(0);
+    memoryState.currentPlayer = 0;
+    memoryState.flippedCards = [];
+    memoryState.matchedPairs = 0;
+    memoryState.solvedCount = 0;
+    memoryState.isLocked = false;
+
+    renderMemoryBoard();
+}
+
+function restartMemoryGameSameWords() {
+    if (!memoryState.originalDeck || memoryState.originalDeck.length === 0) {
+        initMemorySetup();
+        return;
+    }
+    memoryState.cards = structuredClone(memoryState.originalDeck).map(c => ({...c, solved: false})).sort(() => 0.5 - Math.random());
+    memoryState.scores = new Array(memoryState.players).fill(0);
+    memoryState.currentPlayer = 0;
+    memoryState.flippedCards = [];
+    memoryState.matchedPairs = 0;
+    memoryState.solvedCount = 0;
+    memoryState.isLocked = false;
+    renderMemoryBoard();
+}
+
+function renderMemoryBoard() {
+    const container = document.getElementById('memoryContainer');
+    
+    const curColor = playerColors[memoryState.currentPlayer % playerColors.length];
+    const curBg = playerBgColors[memoryState.currentPlayer % playerBgColors.length];
+
+    let scoresHtml = memoryState.scores.map((score, idx) => {
+        const pColor = playerColors[idx % playerColors.length];
+        const pBg = playerBgColors[idx % playerBgColors.length];
+        const isActive = idx === memoryState.currentPlayer;
+        return `
+            <div class="memory-score-item" style="background: ${isActive ? pColor : pBg}; color: ${isActive ? '#fff' : pColor}; border-color: ${pColor}; font-weight: 700;">
+                Spieler ${idx + 1}: ${score} Pkt
+            </div>
+        `;
+    }).join('');
+
+    let cardsHtml = memoryState.cards.map((card, index) => {
+        let backContent = card.displayType === 'image' 
+            ? `<img src="${escapeHtml(card.imagePath)}" alt="${escapeHtml(card.wort)}" onerror="this.parentElement.innerHTML='<span>${escapeHtml(card.wort)}</span>';">`
+            : `<span>${escapeHtml(card.wort)}</span>`;
+
+        const solvedClass = card.solved ? 'solved' : '';
+
+        return `
+            <div class="memory-card ${solvedClass}" data-unique-id="${card.uniqueId}" onclick="handleMemoryCardClick(${index})">
+                <div class="memory-card-face memory-card-front"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="memory-card-face memory-card-back">
+                    ${backContent}
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    container.innerHTML = `
+        <div class="memory-board-header">
+            <div>
+                <span class="memory-status-badge" id="memoryInfoText" style="background: ${curBg}; color: ${curColor};">Spieler ${memoryState.currentPlayer + 1} ist an der Reihe</span>
+            </div>
+            <div class="memory-scores">
+                ${scoresHtml}
+            </div>
+            <button class="btn-secondary" onclick="restartMemoryGameSameWords()"><i class="fa-solid fa-rotate-left"></i> Neu starten</button>
+        </div>
+        <div class="memory-grid">
+            ${cardsHtml}
+        </div>
+    `;
+}
+
+function handleMemoryCardClick(index) {
+    if (memoryState.isLocked) return;
+    const cardEl = document.querySelectorAll('.memory-card')[index];
+    const cardObj = memoryState.cards[index];
+
+    if (!cardEl || cardEl.classList.contains('flipped') || cardObj.solved) return;
+
+    cardEl.classList.add('flipped');
+    memoryState.flippedCards.push({index, cardObj, element: cardEl});
+
+    if (memoryState.flippedCards.length === 2) {
+        memoryState.isLocked = true;
+        const [first, second] = memoryState.flippedCards;
+
+        if (first.cardObj.id === second.cardObj.id) {
+            memoryState.scores[memoryState.currentPlayer]++;
+            memoryState.matchedPairs++;
+            memoryState.solvedCount += 2;
+
+            memoryState.cards[first.index].solved = true;
+            memoryState.cards[second.index].solved = true;
+
+            memoryState.flippedCards = [];
+            memoryState.isLocked = false;
+
+            setTimeout(() => {
+                if (first.element) first.element.classList.add('solved');
+                if (second.element) second.element.classList.add('solved');
+
+                renderMemoryBoard();
+
+                if (memoryState.solvedCount >= memoryState.cards.length) {
+                    announcedWinner();
+                }
+            }, 400);
+        } else {
+            setTimeout(() => {
+                if (first.element) first.element.classList.remove('flipped');
+                if (second.element) second.element.classList.remove('flipped');
+                memoryState.flippedCards = [];
+                memoryState.currentPlayer = (memoryState.currentPlayer + 1) % memoryState.players;
+                memoryState.isLocked = false;
+                renderMemoryBoard();
+            }, 1200);
+        }
+    }
+}
+
+function announcedWinner() {
+    const maxScore = Math.max(...memoryState.scores);
+    const winners = [];
+    memoryState.scores.forEach((score, idx) => {
+        if (score === maxScore) winners.push(`Spieler ${idx + 1}`);
+    });
+
+    const infoText = document.getElementById('memoryInfoText');
+    if (infoText) {
+        infoText.innerHTML = `<i class="fa-solid fa-trophy"></i> Spiel beendet! Gewinner: ${winners.join(', ')} mit ${maxScore} Punkten!`;
+        infoText.style.background = '#d1fae5';
+        infoText.style.color = '#047857';
+    }
 }
 </script>
 </body>
