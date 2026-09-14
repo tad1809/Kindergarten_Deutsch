@@ -55,7 +55,6 @@ button.btn-status-bekannt:hover { background: #4ade80; }
 table{width:100%;border-collapse:collapse;font-size:.9rem;text-align:left}th,td{padding:14px 18px;border-bottom:1px solid var(--border-color)}th{background:#f8fafc;color:var(--text-muted);font-weight:600;position:sticky;top:0;z-index:1}
 .badge{display:inline-block;padding:4px 10px;border-radius:12px;font-size:.75rem;font-weight:600}.badge-neu{background:#e0f2fe;color:#0369a1}.badge-gelernt{background:#d1fae5;color:#047857}.badge-wiederholt{background:#fef3c7;color:#b45309}.badge-bekannt{background:#f3e8ff;color:#7e22ce}
 
-/* Anpassung: Dropdown und Spaltenbreite im Wörterbuch vergrößert */
 .dict-status-select{padding:6px 12px;border-radius:8px;border:1px solid var(--border-color);font-size:.9rem;background:#fff;outline:none;cursor:pointer;width:150px;}
 .col-status { width: 180px; } 
 
@@ -685,7 +684,7 @@ function downloadCSV() {
 }
 
 /* ==========================================
-   MEMORY-SPIEL LOGIK
+   MEMORY-SPIEL LOGIK (ANGEPASST)
    ========================================== */
 let memoryState = {
     players: 2,
@@ -749,37 +748,55 @@ async function startMemoryGame() {
     memoryState.pairsCount = Number.isFinite(pairsInput) && pairsInput >= 2 ? pairsInput : 12;
     memoryState.statusFilter = statusFilter;
 
+    // 1. Zuerst nach Status filtern
     let pool = meineWoerterliste;
     if (statusFilter !== 'alle') {
         pool = meineWoerterliste.filter(w => (w.Lernstatus || 'neu') === statusFilter);
     }
 
     if (pool.length < 2) {
-        alert('Nicht genügend Wörter in dieser Kategorie vorhanden (mindestens 2 erforderlich).');
+        alert('Nicht genügend Wörter mit dem gewählten Status vorhanden (mindestens 2 erforderlich).');
         return;
     }
 
-    if (pool.length < memoryState.pairsCount) {
-        memoryState.pairsCount = pool.length;
-    }
-
-    const shuffledPool = [...pool].sort(() => 0.5 - Math.random());
-    const selectedWords = shuffledPool.slice(0, memoryState.pairsCount);
-
-    let cardDeck = [];
-    for (let i = 0; i < selectedWords.length; i++) {
-        const wordObj = selectedWords[i];
+    // 2. Asynchron prüfen, für welche Wörter im Ordner "Bilder" tatsächlich eine Bilddatei existiert (ohne Fehlerausgabe)
+    let validPool = [];
+    for (let wordObj of pool) {
         const wortText = wordObj.Wort || '';
         const imageName = wortText.replace(/\s+/g, '_');
         const imagePath = `Bilder/${imageName}.png`;
 
         const hasValidImage = await checkImageExists(imagePath);
+        if (hasValidImage) {
+            validPool.push({
+                wort: wortText,
+                imagePath: imagePath
+            });
+        }
+    }
+
+    if (validPool.length < 2) {
+        alert('Es wurden nicht genügend Wörter gefunden, für die im Ordner "Bilder" eine entsprechende Bilddatei existiert!');
+        return;
+    }
+
+    if (validPool.length < memoryState.pairsCount) {
+        memoryState.pairsCount = validPool.length;
+    }
+
+    // 3. Zufällig die gewünschte Anzahl Paare auswählen
+    const shuffledPool = [...validPool].sort(() => 0.5 - Math.random());
+    const selectedWords = shuffledPool.slice(0, memoryState.pairsCount);
+
+    let cardDeck = [];
+    for (let i = 0; i < selectedWords.length; i++) {
+        const wordObj = selectedWords[i];
 
         const cardData = {
             id: i,
-            wort: wortText,
-            displayType: hasValidImage ? 'image' : 'text',
-            imagePath: hasValidImage ? imagePath : null
+            wort: wordObj.wort,
+            displayType: 'image',
+            imagePath: wordObj.imagePath
         };
 
         cardDeck.push({...cardData, uniqueId: i * 2, solved: false});
@@ -833,10 +850,7 @@ function renderMemoryBoard() {
     }).join('');
 
     let cardsHtml = memoryState.cards.map((card, index) => {
-        let backContent = card.displayType === 'image' 
-            ? `<img src="${escapeHtml(card.imagePath)}" alt="${escapeHtml(card.wort)}" onerror="this.parentElement.innerHTML='<span>${escapeHtml(card.wort)}</span>';">`
-            : `<span>${escapeHtml(card.wort)}</span>`;
-
+        let backContent = `<img src="${escapeHtml(card.imagePath)}" alt="${escapeHtml(card.wort)}">`;
         const solvedClass = card.solved ? 'solved' : '';
 
         return `
