@@ -68,8 +68,39 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 .memory-settings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
 .memory-board-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; background: #fff; padding: 12px 20px; border-radius: 12px; border: 1px solid var(--border-color); flex-wrap: wrap; gap: 10px; }
 .memory-status-badge { font-weight: 700; padding: 6px 14px; border-radius: 20px; font-size: 0.95rem; }
-.memory-scores { display: flex; gap: 16px; font-size: 0.9rem; font-weight: 600; flex-wrap: wrap; }
-.memory-score-item { padding: 4px 12px; border-radius: 8px; border: 1px solid var(--border-color); transition: all 0.2s; }
+.memory-scores { display: flex; gap: 12px; font-size: 0.85rem; flex-wrap: wrap; }
+
+/* Neues Design für die Punktestand-Felder (rundlich, zweizeilig, farbig) */
+.memory-score-item { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px; 
+    border-radius: 24px; 
+    border: 2px solid var(--border-color); 
+    transition: all 0.2s; 
+    min-width: 90px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+.memory-score-name {
+    font-weight: 700;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 110px;
+}
+.memory-score-points {
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin-top: 2px;
+}
+
+.player-config-row { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+.player-config-row input[type="text"] { flex: 1; }
+.player-config-row input[type="color"] { width: 45px; height: 40px; border: 1px solid var(--border-color); border-radius: 8px; cursor: pointer; background: none; padding: 2px; }
 
 .memory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 12px; perspective: 1000px; width: 100%; align-content: start; }
 .memory-card { aspect-ratio: 1; background: var(--sidebar-bg); border-radius: 10px; cursor: pointer; position: relative; transform-style: preserve-3d; transition: transform 0.4s ease; box-shadow: var(--shadow-sm); border: 2px solid var(--border-color); width: 100%; }
@@ -135,7 +166,7 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 <div id="tab-dictionary" class="tab-content hidden">
 <div class="page-header"><h2>Wörterbuch</h2><p>Gesamtübersicht und Verwaltung aller Wörter deines aktuellen Profils.</p></div>
 <div class="top-nav-buttons"><button onclick="openAddWordModal()"><i class="fa-solid fa-plus"></i> Neues Wort ergänzen</button><button class="btn-danger" onclick="deleteSelectedWords()"><i class="fa-solid fa-trash-can"></i> Ausgewählte Wörter löschen</button></div>
-<div class="table-card"><div class="table-wrapper"><table><thead><tr><th><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"></th><th>Wort</th><th>Schwierigkeit</th><th>Thema</th><th class="col-status">Status</th><th>Beispielsatz</th><th>Aktion</th></tr></thead><tbody id="fullDictionaryTbody"></tbody></table></div></div>
+<div class="table-card"><div class="table-wrapper"><table><thead><tr><th><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"></th><th>Wort</th><th>Schwierigkeit</th><th>Thema</th><th>Bilddatei</th><th class="col-status">Status</th><th>Beispielsatz</th><th>Aktion</th></tr></thead><tbody id="fullDictionaryTbody"></tbody></table></div></div>
 </div>
 </div>
 </div>
@@ -146,7 +177,7 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 <div id="modalNewProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Profil erstellen</h3><div class="form-group"><label for="newProfileName">Profilname eingeben:</label><input type="text" id="newProfileName" placeholder="z. B. Max"></div><div class="form-group"><label>Schwierigkeitsgrad:</label><div class="radio-group"><label><input type="radio" name="newDifficulty" value="leicht" checked> Leicht</label><label><input type="radio" name="newDifficulty" value="mittel"> Mittel</label><label><input type="radio" name="newDifficulty" value="schwer"> Schwer</label></div></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalNewProfile')">Abbrechen</button><button onclick="createNewProfile()">Erstellen</button></div></div></div>
 <div id="modalLoadProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil auswählen / laden</h3><div class="form-group"><label for="profileSelect">Vorhandene Profile:</label><select id="profileSelect"></select></div><div class="form-group"><label>Oder lokale CSV-Datei hochladen:</label><input type="file" id="localCsvInput" accept=".csv,text/csv"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalLoadProfile')">Abbrechen</button><button onclick="loadSelectedProfile()">Laden</button></div></div></div>
 <div id="modalDeleteProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil löschen</h3><div class="form-group"><label for="deleteProfileSelect">Zu löschendes Profil auswählen:</label><select id="deleteProfileSelect"></select></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalDeleteProfile')">Abbrechen</button><button class="btn-danger" onclick="confirmDeleteProfile()">Löschen</button></div></div></div>
-<div id="modalAddWord" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Wort ergänzen</h3><div class="form-group"><label for="addWort">Wort:</label><input type="text" id="addWort" placeholder="z. B. Haus"></div><div class="form-group"><label for="addSchwierigkeit">Schwierigkeit:</label><select id="addSchwierigkeit"><option value="leicht">leicht</option><option value="mittel">mittel</option><option value="schwer">schwer</option></select></div><div class="form-group"><label for="addThema">Thema:</label><input type="text" id="addThema" placeholder="z. B. Alltag"></div><div class="form-group"><label for="addStatus">Status:</label><select id="addStatus"><option value="neu">neu</option><option value="gelernt">gelernt</option><option value="wiederholt">wiederholt</option><option value="bekannt">bekannt</option></select></div><div class="form-group"><label for="addBeispielsatz">Beispielsatz:</label><input type="text" id="addBeispielsatz" placeholder="Beispielsatz eingeben"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalAddWord')">Abbrechen</button><button onclick="saveNewWord()">Wort hinzufügen</button></div></div></div>
+<div id="modalAddWord" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Wort ergänzen</h3><div class="form-group"><label for="addWort">Wort:</label><input type="text" id="addWort" placeholder="z. B. Haus"></div><div class="form-group"><label for="addSchwierigkeit">Schwierigkeit:</label><select id="addSchwierigkeit"><option value="leicht">leicht</option><option value="mittel">mittel</option><option value="schwer">schwer</option></select></div><div class="form-group"><label for="addThema">Thema:</label><input type="text" id="addThema" placeholder="z. B. Alltag"></div><div class="form-group"><label for="addBilddatei">Bilddatei:</label><input type="text" id="addBilddatei" placeholder="z. B. haus.png oder -"></div><div class="form-group"><label for="addStatus">Status:</label><select id="addStatus"><option value="neu">neu</option><option value="gelernt">gelernt</option><option value="wiederholt">wiederholt</option><option value="bekannt">bekannt</option></select></div><div class="form-group"><label for="addBeispielsatz">Beispielsatz:</label><input type="text" id="addBeispielsatz" placeholder="Beispielsatz eingeben"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalAddWord')">Abbrechen</button><button onclick="saveNewWord()">Wort hinzufügen</button></div></div></div>
 
 <script>
 'use strict';
@@ -162,8 +193,7 @@ let lastRequestedWordCount = 10;
 const PROFILES_LIST_KEY = 'registered_profiles';
 const STANDARD_FILE = 'Woerterbuch.csv';
 
-const playerColors = ['#4f46e5', '#10b981', '#f59e0b', '#ef4444', '#9333ea', '#0284c7'];
-const playerBgColors = ['#e0e7ff', '#d1fae5', '#fef3c7', '#fee2e2', '#f3e8ff', '#e0f2fe'];
+const defaultPlayerColors = ['#4f46e5', '#10b981', '#f59e0b', '#ef4444', '#9333ea', '#0284c7'];
 
 window.addEventListener('load', init);
 
@@ -281,6 +311,7 @@ function parseCSV(text) {
         const obj = {};
         headers.forEach((h, i) => obj[h] = (values[i] ?? '').trim() || '-');
         if (!obj.Lernstatus || obj.Lernstatus === '-') obj.Lernstatus = 'neu';
+        if (!obj.Bilddatei || obj.Bilddatei === '-') obj.Bilddatei = '-';
         if (obj.wiederholZaehler) obj.wiederholZaehler = parseInt(obj.wiederholZaehler, 10) || 0;
         return obj;
     });
@@ -292,12 +323,13 @@ function csvEscape(value) {
 }
 
 function convertToCSV(data) {
-    const headers = ['Wort','Schwierigkeit','Thema','Lernstatus','Beispielsatz'];
+    const headers = ['Wort','Schwierigkeit','Thema','Bilddatei','Lernstatus','Beispielsatz'];
     return headers.join(';') + '\n' +
         data.map(item => [
             csvEscape(item.Wort || '-'),
             csvEscape(item.Schwierigkeit || '-'),
             csvEscape(item.Thema || '-'),
+            csvEscape(item.Bilddatei || '-'),
             csvEscape(item.Lernstatus || 'neu'),
             csvEscape(item.Beispielsatz || '-')
         ].join(';')).join('\n') + '\n';
@@ -592,11 +624,12 @@ function saveNewWord() {
         Wort: wort,
         Schwierigkeit: document.getElementById('addSchwierigkeit').value || 'leicht',
         Thema: document.getElementById('addThema').value.trim() || '-',
+        Bilddatei: document.getElementById('addBilddatei').value.trim() || '-',
         Lernstatus: document.getElementById('addStatus').value || 'neu',
         Beispielsatz: document.getElementById('addBeispielsatz').value.trim() || '-',
         wiederholZaehler: 0
     });
-    ['addWort','addThema','addBeispielsatz'].forEach(id => document.getElementById(id).value = '');
+    ['addWort','addThema','addBilddatei','addBeispielsatz'].forEach(id => document.getElementById(id).value = '');
     closeModal('modalAddWord');
     saveCurrentData(false);
     document.getElementById('tab-dictionary').classList.contains('hidden') ? startSpiel1() : renderFullDictionary();
@@ -606,7 +639,7 @@ function renderFullDictionary() {
     const tbody = document.getElementById('fullDictionaryTbody');
     tbody.innerHTML = '';
     if (!meineWoerterliste.length) {
-        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:20px;color:var(--text-muted)">Keine Wörter vorhanden.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:20px;color:var(--text-muted)">Keine Wörter vorhanden.</td></tr>';
         return;
     }
     meineWoerterliste.forEach((item, index) => {
@@ -616,6 +649,7 @@ function renderFullDictionary() {
             <td><b>${escapeHtml(item.Wort || '-')}</b></td>
             <td>${escapeHtml(item.Schwierigkeit || '-')}</td>
             <td>${escapeHtml(item.Thema || '-')}</td>
+            <td>${escapeHtml(item.Bilddatei || '-')}</td>
             <td>
                 <select class="dict-status-select" onchange="updateWordStatusFromDict(${index}, this.value)">
                     <option value="neu" ${status === 'neu' ? 'selected' : ''}>neu</option>
@@ -687,8 +721,8 @@ function downloadCSV() {
    MEMORY-SPIEL LOGIK (ANGEPASST)
    ========================================== */
 let memoryState = {
-    players: 2,
-    pairsCount: 15,
+    players: [], // Enthält {name, color}
+    pairsCount: 12,
     statusFilter: 'neu',
     scores: [],
     currentPlayer: 0,
@@ -707,8 +741,8 @@ function initMemorySetup() {
             <h3 style="margin-bottom: 16px;"><i class="fa-solid fa-puzzle-piece"></i> Memory-Spiel konfigurieren</h3>
             <div class="memory-settings-grid">
                 <div class="form-group">
-                    <label for="memoryPlayers">Anzahl Spieler:</label>
-                    <input type="number" id="memoryPlayers" value="2" min="1" max="6">
+                    <label for="memoryPlayersCount">Anzahl Spieler:</label>
+                    <input type="number" id="memoryPlayersCount" value="2" min="1" max="6" onchange="renderPlayerInputs()">
                 </div>
                 <div class="form-group">
                     <label for="memoryPairs">Anzahl Kartenpaare:</label>
@@ -725,9 +759,34 @@ function initMemorySetup() {
                     </select>
                 </div>
             </div>
+            <div id="playerConfigContainer" style="margin-bottom: 20px;"></div>
             <button onclick="startMemoryGame()"><i class="fa-solid fa-play"></i> Spiel starten</button>
         </div>
     `;
+    renderPlayerInputs();
+}
+
+function renderPlayerInputs() {
+    const countInput = document.getElementById('memoryPlayersCount');
+    const container = document.getElementById('playerConfigContainer');
+    if (!countInput || !container) return;
+
+    let count = parseInt(countInput.value, 10);
+    if (!Number.isFinite(count) || count < 1) count = 1;
+    if (count > 6) count = 6;
+
+    let html = '<label style="margin-bottom: 8px;">Spieler-Namen & Farben:</label>';
+    for (let i = 0; i < count; i++) {
+        let defaultName = `Spieler ${i + 1}`;
+        let defaultColor = defaultPlayerColors[i % defaultPlayerColors.length];
+        html += `
+            <div class="player-config-row">
+                <input type="text" id="playerName_${i}" value="${defaultName}" placeholder="Name für Spieler ${i + 1}">
+                <input type="color" id="playerColor_${i}" value="${defaultColor}">
+            </div>
+        `;
+    }
+    container.innerHTML = html;
 }
 
 async function checkImageExists(url) {
@@ -740,31 +799,43 @@ async function checkImageExists(url) {
 }
 
 async function startMemoryGame() {
-    const playersInput = parseInt(document.getElementById('memoryPlayers').value, 10);
+    const countInput = document.getElementById('memoryPlayersCount');
+    let count = parseInt(countInput.value, 10);
+    if (!Number.isFinite(count) || count < 1) count = 1;
+
+    memoryState.players = [];
+    for (let i = 0; i < count; i++) {
+        const nameInput = document.getElementById(`playerName_${i}`);
+        const colorInput = document.getElementById(`playerColor_${i}`);
+        memoryState.players.push({
+            name: nameInput && nameInput.value.trim() ? nameInput.value.trim() : `Spieler ${i + 1}`,
+            color: colorInput ? colorInput.value : defaultPlayerColors[i % defaultPlayerColors.length]
+        });
+    }
+
     const pairsInput = parseInt(document.getElementById('memoryPairs').value, 10);
     const statusFilter = document.getElementById('memoryStatusFilter').value;
 
-    memoryState.players = Number.isFinite(playersInput) && playersInput >= 1 ? playersInput : 2;
     memoryState.pairsCount = Number.isFinite(pairsInput) && pairsInput >= 2 ? pairsInput : 12;
     memoryState.statusFilter = statusFilter;
 
-    // 1. Zuerst nach Status filtern
     let pool = meineWoerterliste;
     if (statusFilter !== 'alle') {
         pool = meineWoerterliste.filter(w => (w.Lernstatus || 'neu') === statusFilter);
     }
 
+    pool = pool.filter(w => w.Bilddatei && w.Bilddatei !== '-');
+
     if (pool.length < 2) {
-        alert('Nicht genügend Wörter mit dem gewählten Status vorhanden (mindestens 2 erforderlich).');
+        alert('Nicht genügend Wörter mit dem gewählten Status und eingetragener Bilddatei vorhanden (mindestens 2 erforderlich).');
         return;
     }
 
-    // 2. Asynchron prüfen, für welche Wörter im Ordner "Bilder" tatsächlich eine Bilddatei existiert (ohne Fehlerausgabe)
     let validPool = [];
     for (let wordObj of pool) {
         const wortText = wordObj.Wort || '';
-        const imageName = wortText.replace(/\s+/g, '_');
-        const imagePath = `Bilder/${imageName}.png`;
+        const imgName = wordObj.Bilddatei;
+        const imagePath = imgName.startsWith('Bilder/') ? imgName : `Bilder/${imgName}`;
 
         const hasValidImage = await checkImageExists(imagePath);
         if (hasValidImage) {
@@ -784,7 +855,6 @@ async function startMemoryGame() {
         memoryState.pairsCount = validPool.length;
     }
 
-    // 3. Zufällig die gewünschte Anzahl Paare auswählen
     const shuffledPool = [...validPool].sort(() => 0.5 - Math.random());
     const selectedWords = shuffledPool.slice(0, memoryState.pairsCount);
 
@@ -807,7 +877,7 @@ async function startMemoryGame() {
 
     memoryState.originalDeck = structuredClone(cardDeck);
     memoryState.cards = structuredClone(cardDeck);
-    memoryState.scores = new Array(memoryState.players).fill(0);
+    memoryState.scores = new Array(memoryState.players.length).fill(0);
     memoryState.currentPlayer = 0;
     memoryState.flippedCards = [];
     memoryState.matchedPairs = 0;
@@ -823,7 +893,7 @@ function restartMemoryGameSameWords() {
         return;
     }
     memoryState.cards = structuredClone(memoryState.originalDeck).map(c => ({...c, solved: false})).sort(() => 0.5 - Math.random());
-    memoryState.scores = new Array(memoryState.players).fill(0);
+    memoryState.scores = new Array(memoryState.players.length).fill(0);
     memoryState.currentPlayer = 0;
     memoryState.flippedCards = [];
     memoryState.matchedPairs = 0;
@@ -835,16 +905,18 @@ function restartMemoryGameSameWords() {
 function renderMemoryBoard() {
     const container = document.getElementById('memoryContainer');
     
-    const curColor = playerColors[memoryState.currentPlayer % playerColors.length];
-    const curBg = playerBgColors[memoryState.currentPlayer % playerBgColors.length];
+    const curPlayerObj = memoryState.players[memoryState.currentPlayer % memoryState.players.length];
+    const curColor = curPlayerObj.color;
 
     let scoresHtml = memoryState.scores.map((score, idx) => {
-        const pColor = playerColors[idx % playerColors.length];
-        const pBg = playerBgColors[idx % playerBgColors.length];
+        const playerObj = memoryState.players[idx % memoryState.players.length];
+        const pColor = playerObj.color;
         const isActive = idx === memoryState.currentPlayer;
+        
         return `
-            <div class="memory-score-item" style="background: ${isActive ? pColor : pBg}; color: ${isActive ? '#fff' : pColor}; border-color: ${pColor}; font-weight: 700;">
-                Spieler ${idx + 1}: ${score} Pkt
+            <div class="memory-score-item" style="background: ${isActive ? pColor : '#fff'}; color: ${isActive ? '#fff' : pColor}; border-color: ${pColor};">
+                <span class="memory-score-name">${escapeHtml(playerObj.name)}</span>
+                <span class="memory-score-points">${score} Pkt</span>
             </div>
         `;
     }).join('');
@@ -866,7 +938,7 @@ function renderMemoryBoard() {
     container.innerHTML = `
         <div class="memory-board-header">
             <div>
-                <span class="memory-status-badge" id="memoryInfoText" style="background: ${curBg}; color: ${curColor};">Spieler ${memoryState.currentPlayer + 1} ist an der Reihe</span>
+                <span class="memory-status-badge" id="memoryInfoText" style="background: ${curColor}22; color: ${curColor}; border: 1px solid ${curColor};">${escapeHtml(curPlayerObj.name)} ist an der Reihe</span>
             </div>
             <div class="memory-scores">
                 ${scoresHtml}
@@ -919,7 +991,7 @@ function handleMemoryCardClick(index) {
                 if (first.element) first.element.classList.remove('flipped');
                 if (second.element) second.element.classList.remove('flipped');
                 memoryState.flippedCards = [];
-                memoryState.currentPlayer = (memoryState.currentPlayer + 1) % memoryState.players;
+                memoryState.currentPlayer = (memoryState.currentPlayer + 1) % memoryState.players.length;
                 memoryState.isLocked = false;
                 renderMemoryBoard();
             }, 1200);
@@ -931,7 +1003,7 @@ function announcedWinner() {
     const maxScore = Math.max(...memoryState.scores);
     const winners = [];
     memoryState.scores.forEach((score, idx) => {
-        if (score === maxScore) winners.push(`Spieler ${idx + 1}`);
+        if (score === maxScore) winners.push(memoryState.players[idx].name);
     });
 
     const infoText = document.getElementById('memoryInfoText');
@@ -939,6 +1011,7 @@ function announcedWinner() {
         infoText.innerHTML = `<i class="fa-solid fa-trophy"></i> Spiel beendet! Gewinner: ${winners.join(', ')} mit ${maxScore} Punkten!`;
         infoText.style.background = '#d1fae5';
         infoText.style.color = '#047857';
+        infoText.style.border = '1px solid #047857';
     }
 }
 </script>
