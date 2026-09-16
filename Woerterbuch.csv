@@ -1145,7 +1145,7 @@ das Waschbecken;leicht;In Küche und Bad;neu;Er wäscht sich vor dem Essen die H
 der Wasserhahn;leicht;In Küche und Bad;neu;"Aus dem Wasserhahn kommt kaltes und warmes Wasser. | Bitte dreh den Wasserhahn fest zu, damit er nicht tropft.""""";der_Wasserhahn.png
 der Spiegel;leicht;In Küche und Bad;neu;"Sie schaut morgens kurz in den Spiegel, bevor sie das Haus verlässt. | An der Wand hängt ein großer Spiegel mit Holzrahmen.""""";-
 der Haken;leicht;In Küche und Bad;neu;Häng deine Jacke bitte an den freien Haken. | An der Wand befestigen wir Haken für die Handtücher.;der_Haken.png
-der Besen;leicht;In Küche und Bad;neu;Mit dem Besen kehrt er die Blätter vor dem Haus zusammen. | Der Besen steht in der Ecke des Flurs.;-
+der Besen;leicht;In Küche und Bad;neu;Mit dem Besen kehrt er die Blätter vor dem Haus zusammen. | Der Besen steht in der Ecke des Flurs.;der_Besen.png
 fegen;leicht;In Küche und Bad;neu;Man sollte den Bürgersteig regelmäßig von Laub fegen. | Sie fegt die Krümel vom Küchenboden auf.;-
 der Küchenschrank;mittel;In Küche und Bad;neu;Die Tassen und Teller stehen im oberen Küchenschrank. | Sie räumt die Lebensmittel ordentlich in den Küchenschrank.;-
 der Küchentisch;mittel;In Küche und Bad;neu;Die ganze Familie sitzt gemeinsam am großen Küchentisch. | Auf dem Küchentisch steht eine Schale mit frischem Obst.;-
@@ -1183,7 +1183,7 @@ der Tisch;leicht;Im Wohnzimmer;neu;Wir sitzen alle zusammen an einem großen hö
 der Stuhl;leicht;Im Wohnzimmer;neu;Setz dich bitte auf den freien Stuhl neben mir. | Dieser Stuhl aus Holz ist sehr bequem.;-
 das Sofa;leicht;Im Wohnzimmer;neu;Nach der Arbeit entspannt er sich gerne auf dem gemütlichen Sofa. | Das Sofa bietet bequem Platz für drei Personen.;-
 der Sessel;leicht;Im Wohnzimmer;neu;Opa sitzt abends am liebsten in seinem weichen Sessel und liest. | Der Sessel steht direkt neben der Leselampe.;der_Sessel.png
-der Teppich;leicht;Im Wohnzimmer;neu;Der Teppich im Wohnzimmer fühlt sich angenehm weich unter den Füßen an. | Wir müssen den Teppich wieder einmal absaugen.;-
+der Teppich;leicht;Im Wohnzimmer;neu;Der Teppich im Wohnzimmer fühlt sich angenehm weich unter den Füßen an. | Wir müssen den Teppich wieder einmal absaugen.;der_Teppich.png
 das Bild;leicht;Im Wohnzimmer;neu;An der Wand hängt ein schönes Bild von einer Landschaft. | Das Kind hat ein buntes Bild für seine Eltern gemalt.;-
 fernsehen;leicht;Im Wohnzimmer;neu;"Wir schauen abends selten fernsehen, sondern lesen lieber ein Buch. | Die Kinder dürfen heute eine Stunde lang fernsehen.""""";-
 das Telefon;leicht;Im Wohnzimmer;neu;"Das Telefon klingelt im Flur, er läuft schnell hin. | Kannst du mir bitte deine Telefonnummer geben?""""";-
@@ -1231,11 +1231,11 @@ die Leiter;leicht;Ein Haus wird gebaut;neu;Seine ganze Theorie stützt sich auf 
 der Kran;leicht;Ein Haus wird gebaut;neu;Ein Anonymer hat der Bibliothek eine große Geldsumme gespendet. | Die Beschwerde wurde von einem Anonymen per Post verschickt.;der_Kran.png
 die Wand;leicht;Ein Haus wird gebaut;neu;"Die interessante Diskussion konnte viele neue Gedanken anregen. | Ich möchte anregen, dass wir die Sitzung um eine Stunde verschieben.""""";-
 der Boden;leicht;Ein Haus wird gebaut;neu;Bei Verspätungen haben Fahrgäste oft Anspruch auf eine Entschädigung. | Man sollte im Leben nicht immer den Anspruch auf Perfektion haben.;der_Boden.png
-das Dach;leicht;Ein Haus wird gebaut;neu;Auf dem Dach des Autos ist eine lange Radioantenne montiert. | Die Insekten nutzen ihre Fühler als feine Antennen.;-
-der Hammer;leicht;Ein Haus wird gebaut;neu;Die Philosophie der Antike prägt das moderne Denken bis heute. | In dem Museum gibt es viele wertvolle Statuen aus der Antike.;-
-der Nagel;leicht;Ein Haus wird gebaut;neu;Sie hat gestern offiziell einen Antrag auf Elternzeit gestellt. | Der Bauantrag wurde von der Stadtverwaltung ohne Probleme genehmigt.;-
-das Holz;leicht;Ein Haus wird gebaut;neu;Wegen des Lärms hat ein Nachbar sofort die Polizei Anzeige erstattet. | Die Stellenanzeige klang für ihn sofort sehr vielversprechend.;-
-der Stein;leicht;Ein Haus wird gebaut;neu;Die nächste Apotheke hat heute zum Glück einen Notdienst. | Ich muss in der Stadt noch schnell ein Medikament aus der Apotheke holen.;-
+das Dach;leicht;Ein Haus wird gebaut;neu;Auf dem Dach des Autos ist eine lange Radioantenne montiert. | Die Insekten nutzen ihre Fühler als feine Antennen.;das_Dach.png
+der Hammer;leicht;Ein Haus wird gebaut;neu;Die Philosophie der Antike prägt das moderne Denken bis heute. | In dem Museum gibt es viele wertvolle Statuen aus der Antike.;der_Hammer.png
+der Nagel;leicht;Ein Haus wird gebaut;neu;Sie hat gestern offiziell einen Antrag auf Elternzeit gestellt. | Der Bauantrag wurde von der Stadtverwaltung ohne Probleme genehmigt.;der_Nagel.png
+das Holz;leicht;Ein Haus wird gebaut;neu;Wegen des Lärms hat ein Nachbar sofort die Polizei Anzeige erstattet. | Die Stellenanzeige klang für ihn sofort sehr vielversprechend.;das_Holz.png
+der Stein;leicht;Ein Haus wird gebaut;neu;Die nächste Apotheke hat heute zum Glück einen Notdienst. | Ich muss in der Stadt noch schnell ein Medikament aus der Apotheke holen.;der_Stein.png
 der Bauarbeiter;mittel;Ein Haus wird gebaut;neu;Dieser medizinische Apparat rettet im Notfall Leben. | Wer bedient eigentlich diesen komplizierten technischen Apparat?;-
 der Bau;mittel;Ein Haus wird gebaut;neu;Ein ergonomischer Arbeitsplatz ist wichtig für die Rückengesundheit. | Durch die Krise sind viele Arbeitsplätze in der Region gefährdet.;-
 die Baustelle;mittel;Ein Haus wird gebaut;neu;Wegen der Verspätung gab es großen Ärger mit dem Chef. | Er möchte kein unnötiges Risiko eingehen und Ärger vermeiden.;-
@@ -1274,12 +1274,12 @@ schief;schwer;Ein Haus wird gebaut;neu;Eine Infektion mit dieser Bakterie kann z
 krumm;schwer;Ein Haus wird gebaut;neu;"Der Artist konnte geschickt auf dem schmalen Seil balancieren. | Sie versuchte, das volle Glas Wasser zu balancieren.""""";-
 der Maler;schwer;Ein Haus wird gebaut;neu;"Im Sommer sitzt sie gerne abends auf ihrem sonnigen Balkon. | Über dem Wohnzimmer befindet sich ein kleiner, feiner Balkon.""""";-
 streichen;schwer;Ein Haus wird gebaut;neu;Die Kinder spielen draußen auf der Wiese mit einem Ball. | Auf dem traditionellen Ball trugen die Gäste festliche Abendkleidung.;-
-der Sand;leicht;Auf dem Spielplatz;neu;Die Rockband spielt heute Abend ein Konzert in der Stadthalle. | Das Paket war fest mit einem breiten Klebeband verschlossen.;-
+der Sand;leicht;Auf dem Spielplatz;neu;Die Rockband spielt heute Abend ein Konzert in der Stadthalle. | Das Paket war fest mit einem breiten Klebeband verschlossen.;der_Sand.png
 der Sandkasten;leicht;Auf dem Spielplatz;neu;Er saß gemütlich auf einer hölzernen Bank im Stadtpark. | Sie arbeitet als Kundenberaterin bei einer großen Bank.;-
 buddeln;leicht;Auf dem Spielplatz;neu;Im dichten Wald wurde vor Kurzem ein Bär gesichtet. | Der große Braunbär suchte im Fluss nach frischem Fisch.;-
-der Eimer;leicht;Auf dem Spielplatz;neu;Abends treffen sich die Freunde oft in einer kleinen Bar. | Das Getränk an der Hotelbar war erfrischend und kühl.;-
+der Eimer;leicht;Auf dem Spielplatz;neu;Abends treffen sich die Freunde oft in einer kleinen Bar. | Das Getränk an der Hotelbar war erfrischend und kühl.;der_Eimer.png
 das Förmchen;leicht;Auf dem Spielplatz;neu;Der alte Baum spendet an heißen Sommertagen viel Schatten. | Im Herbst fallen die bunten Blätter von den Bäumen.;-
-der Matsch;leicht;Auf dem Spielplatz;neu;Auf dem orientalischen Bazar gab es viele bunte Gewürze zu kaufen. | Die Schule veranstaltet am Wochenende einen wohltätigen Bazar.;-
+der Matsch;leicht;Auf dem Spielplatz;neu;Auf dem orientalischen Bazar gab es viele bunte Gewürze zu kaufen. | Die Schule veranstaltet am Wochenende einen wohltätigen Bazar.;der_Matsch.png
 die Rutsche;leicht;Auf dem Spielplatz;neu;Man muss bei der Bedienung unbedingt die Sicherheitshinweise beachten. | Seine Warnung wurde von den meisten Leuten gar nicht beachtet.;-
 rutschen;leicht;Auf dem Spielplatz;neu;Er arbeitet seit vielen Jahren als treuer Beamter in der Verwaltung. | Der Beamte prüfte sorgfältig die eingereichten Unterlagen.;-
 die Schaukel;leicht;Auf dem Spielplatz;neu;"Sie konnte alle Fragen des Prüfers souverän beantworten. | Es ist höflich, eine erhaltene E-Mail zeitnah zu beantworten.""""";-
@@ -1317,9 +1317,9 @@ vorwärts;schwer;Auf dem Spielplatz;neu;Beim Seilspringen kann man hervorragend 
 rückwärts;schwer;Auf dem Spielplatz;neu;Der Zug setzt sich langsam in Bewegung und fährt vorwärts. | Für eine erfolgreiche Zukunft müssen wir gemeinsam vorwärts gehen.;-
 die Leute;leicht;In der Stadt;neu;Nach dem Schreck lief er panisch einige Schritte rückwärts. | Das Auto rollte wegen der Steigung ein Stück rückwärts.;-
 die Straße;leicht;In der Stadt;neu;Auf dem Marktplatz versammelten sich heute sehr viele neugierige Leute. | Die netten Leute von nebenan haben uns zum Kaffee eingeladen.;-
-die Laterne;leicht;In der Stadt;neu;Die lange Straße führt direkt durch das historische Stadtzentrum. | An dieser Straße befinden sich viele schöne alte Fachwerkhäuser.;-
+die Laterne;leicht;In der Stadt;neu;Die lange Straße führt direkt durch das historische Stadtzentrum. | An dieser Straße befinden sich viele schöne alte Fachwerkhäuser.;die_Laterne.png
 leuchten;leicht;In der Stadt;neu;Pünktlich bei Einbruch der Dunkelheit schaltete sich die Laterne ein. | Die alte Petroleumlampe war eine wunderschöne Straßenlaterne.;-
-die Kirche;leicht;In der Stadt;neu;Die bunten Lichter leuchten in der Dunkelheit wunderschön. | Seine Augen leuchteten vor Freude über das tolle Geschenk.;-
+die Kirche;leicht;In der Stadt;neu;Die bunten Lichter leuchten in der Dunkelheit wunderschön. | Seine Augen leuchteten vor Freude über das tolle Geschenk.;die_Kirche.png
 kennen;leicht;In der Stadt;neu;Die historische Kirche prägt das Bild des kleinen Dorfes seit Jahrhunderten. | Am Sonntag besuchen viele Gläubige den Gottesdienst in der Kirche.;-
 die Stadt;mittel;In der Stadt;neu;"Kannst du mir sagen, ob du diesen berühmten Autor kennst? | Wir kennen uns bereits seit unserer gemeinsamen Kindergartenzeit.""""";-
 der Platz;mittel;In der Stadt;neu;Berlin ist eine pulsierende und sehr abwechslungsreiche deutsche Stadt. | In dieser Stadt gibt es an jeder Ecke etwas Neues zu entdecken.;-
@@ -1359,15 +1359,15 @@ bummeln;schwer;In der Stadt;neu;"Nachmittags kann man herrlich durch die Fußgä
 die Telefonzelle;schwer;In der Stadt;neu;"Die alte rote Telefonzelle wird heute kaum noch von jemandem genutzt. | Er musste in der Telefonzelle Kleingeld einwerfen, um anzurufen.""""";-
 das Parkhaus;schwer;In der Stadt;neu;Im geräumigen Parkhaus fanden wir glücklicherweise sofort einen freien Stellplatz. | Das Parkhaus ist rund um die Uhr geöffnet und beleuchtet.;-
 der Garten;leicht;In unserem Garten;neu;"Hinter dem Haus erstreckt sich ein großer, gepflegter Garten. | Im Sommer verbringen wir die meiste Zeit draußen im Garten.""""";-
-das Gras;leicht;In unserem Garten;neu;Das grüne Gras im Park duftet nach dem Sommerregen herrlich frisch. | Die Schafe fressen friedlich das saftige Gras auf der Weide.;-
-die Erde;leicht;In unserem Garten;neu;Die dunkle Erde im Blumenbeet ist feucht und nährstoffreich. | Nach dem Umgraben war die Erde schön locker und fein.;-
+das Gras;leicht;In unserem Garten;neu;Das grüne Gras im Park duftet nach dem Sommerregen herrlich frisch. | Die Schafe fressen friedlich das saftige Gras auf der Weide.;das_Gras.png
+die Erde;leicht;In unserem Garten;neu;Die dunkle Erde im Blumenbeet ist feucht und nährstoffreich. | Nach dem Umgraben war die Erde schön locker und fein.;die_Erde.png
 graben;leicht;In unserem Garten;neu;"Der kleine Maulwurf liebt es, tief in der Erde zu graben. | Sie fing sofort an, ein tiefes Loch im Sand zu graben.""""";-
 das Beet;leicht;In unserem Garten;neu;"In dem kleinen Beet wachsen in diesem Jahr bunte Sommerblumen. | Das frisch geharkte Beet wartet darauf, bepflanzt zu werden.""""";-
 gießen;leicht;In unserem Garten;neu;Man muss die durstigen Zimmerpflanzen regelmäßig mit frischem Wasser gießen. | Bei der Dürre müssen wir den Rasen jeden Abend intensiv gießen.;-
 die Erdbeere;leicht;In unserem Garten;neu;Die süße Erdbeere schmeckte nach dem Sommerfest besonders gut. | Im Frühsommer pflücken wir frische Erdbeeren direkt auf dem Feld.;-
 pflücken;leicht;In unserem Garten;neu;"Die Kinder helfen begeistert dabei, die roten Kirschen zu pflücken. | Im Herbst kann man hier leckere Äpfel pflücken.""""";-
 die Nuss;leicht;In unserem Garten;neu;Eine harte Schale knackt man am besten mit einem Nussknacker. | Die Eichhörnchen sammeln im Herbst eifrig jede Nuss.;-
-der Kern;leicht;In unserem Garten;neu;"In der Mitte der Frucht befindet sich ein kleiner, harter Kern. | Der Kirschkern wurde nach dem Essen einfach ausgespuckt.""""";-
+der Kern;leicht;In unserem Garten;neu;"In der Mitte der Frucht befindet sich ein kleiner, harter Kern. | Der Kirschkern wurde nach dem Essen einfach ausgespuckt.""""";der_Kern.png
 der Obstbaum;mittel;In unserem Garten;neu;Der alte Obstbaum trägt in diesem Jahr unglaublich viele Früchte. | Im Frühling blüht der Obstbaum in einem zarten Rosa.;-
 das Baumhaus;mittel;In unserem Garten;neu;Die Kinder haben sich im Garten ein eigenes Baumhaus gebaut. | Von oben aus dem Baumhaus hat man eine tolle Aussicht.;-
 der Apfelbaum;mittel;In unserem Garten;neu;Der große Apfelbaum spendet an heißen Sommertagen kühlen Schatten. | Im Herbst hängen rote Äpfel schwer an den Ästen vom Apfelbaum.;-
@@ -1409,11 +1409,11 @@ der Spaten;schwer;In unserem Garten;neu;Mit dem scharfen Spaten ließ sich der h
 umgraben;schwer;In unserem Garten;neu;"Im Spätherbst müssen wir das gesamte Gemüsebeet umgraben. | Er half seiner Großmutter dabei, die Erde im Garten umzugraben.""""";-
 die Harke;schwer;In unserem Garten;neu;"Mit der Harke glättet sie die Erde vor der Aussaat. | Er nahm die Harke, um das abgefallene Laub zusammenzurechen.""""";-
 jäten;schwer;In unserem Garten;neu;"Das mühsame Jäten gehört zu den regelmäßigen Aufgaben im Garten. | Sie verbrachte den ganzen Nachmittag damit, Unkraut im Beet zu jäten.""""";-
-der Park;leicht;Ein Nachmittag im Park;neu;Viele Familien verbringen den sonnigen Sonntag im Park. | Der Park bietet eine grüne Oase mitten in der lauten Stadt.;-
+der Park;leicht;Ein Nachmittag im Park;neu;Viele Familien verbringen den sonnigen Sonntag im Park. | Der Park bietet eine grüne Oase mitten in der lauten Stadt.;der_Park.png
 die Blume;leicht;Ein Nachmittag im Park;neu;Die bunte Blume duftet herrlich im Sonnenschein. | Er pflückte eine schöne Blume und schenkte sie seiner Mutter.;-
-der Rasen;leicht;Ein Nachmittag im Park;neu;Nach dem Regen leuchtet der Rasen in einem saftigen Grün. | Kinder spielen im Sommer gerne barfuß auf dem weichen Rasen.;-
-die Kastanie;leicht;Ein Nachmittag im Park;neu;Im Herbst basteln die Kinder niedliche Figuren aus Kastanien. | Eine glänzende Kastanie fiel vom Baum direkt auf den Weg.;-
-das Blatt;leicht;Ein Nachmittag im Park;neu;Im Oktober verfärbt sich jedes Blatt an den Bäumen bunt. | Ein trockenes Blatt schwebte leise zu Boden.;-
+der Rasen;leicht;Ein Nachmittag im Park;neu;Nach dem Regen leuchtet der Rasen in einem saftigen Grün. | Kinder spielen im Sommer gerne barfuß auf dem weichen Rasen.;der_Rasen.png
+die Kastanie;leicht;Ein Nachmittag im Park;neu;Im Herbst basteln die Kinder niedliche Figuren aus Kastanien. | Eine glänzende Kastanie fiel vom Baum direkt auf den Weg.;die_Kastanie.png
+das Blatt;leicht;Ein Nachmittag im Park;neu;Im Oktober verfärbt sich jedes Blatt an den Bäumen bunt. | Ein trockenes Blatt schwebte leise zu Boden.;das_Blatt.png
 die Rose;leicht;Ein Nachmittag im Park;neu;"Die rote Rose blüht im Sommer im Vorgarten besonders prächtig. | Vorsicht beim Pflücken, denn die Rose hat scharfe Dornen.""""";-
 der Löwenzahn;leicht;Ein Nachmittag im Park;neu;"Der gelbe Löwenzahn verwandelt die Wiese im Frühling in ein Meer aus Blüten. | Pusteblumen entstehen, wenn der Löwenzahn verblüht ist.""""";-
 das Gänseblümchen;leicht;Ein Nachmittag im Park;neu;Auf der Wiese wachsen zahlreiche kleine Gänseblümchen. | Das Mädchen flocht eine hübsche Krone aus Gänseblümchen.;-
@@ -1453,10 +1453,10 @@ verwelken;schwer;Ein Nachmittag im Park;neu;Ohne ausreichend Wasser beginnen die
 die Gärtnerin;schwer;Ein Nachmittag im Park;neu;Die erfahrene Gärtnerin kümmert sich liebevoll um die städtischen Beete. | Die Gärtnerin empfahl uns einen halbschattigen Standplatz für die Pflanze.;-
 der Rasensprenger;schwer;Ein Nachmittag im Park;neu;Im heißen Sommer läuft am Abend regelmäßig der Rasensprenger. | Die Kinder hüpften vergnügt durch den kühlen Wasserstrahl vom Rasensprenger.;-
 die Schubkarre;schwer;Ein Nachmittag im Park;neu;Er belud die schwere Schubkarre mit frischer Gartenerde. | Mit der Schubkarre transportierte er das geerntete Holz zum Schuppen.;-
-der Wald;leicht;Ein Spaziergang im Wald;neu;Ein Spaziergang im kühlen Wald tut Körper und Seele gut. | Im dichten Wald kann man viele verschiedene Wildtiere beobachten.;-
+der Wald;leicht;Ein Spaziergang im Wald;neu;Ein Spaziergang im kühlen Wald tut Körper und Seele gut. | Im dichten Wald kann man viele verschiedene Wildtiere beobachten.;der_Wald.png
 der Baum;leicht;Ein Spaziergang im Wald;neu;Der alte Baum spendet im Sommer kühlen Schatten im Garten. | Ein starker Windstoß brachte den mächtigen Baum zum Schwanken.;-
-der Busch;leicht;Ein Spaziergang im Wald;neu;Hinter dem dichten Busch versteckte sich ein kleiner Hase. | Wir müssen den überwucherten Busch am Wegesrand zurückschneiden.;-
-der Pilz;leicht;Ein Spaziergang im Wald;neu;"Im feuchten Herbstboden wächst so mancher schmackhafte Pilz. | Man sollte nur Pilze pflücken, die man ganz sicher kennt.""""";-
+der Busch;leicht;Ein Spaziergang im Wald;neu;Hinter dem dichten Busch versteckte sich ein kleiner Hase. | Wir müssen den überwucherten Busch am Wegesrand zurückschneiden.;der_Busch.png
+der Pilz;leicht;Ein Spaziergang im Wald;neu;"Im feuchten Herbstboden wächst so mancher schmackhafte Pilz. | Man sollte nur Pilze pflücken, die man ganz sicher kennt.""""";der_Pilz.png
 giftig;leicht;Ein Spaziergang im Wald;neu;Manche Beeren im Wald sind sehr giftig und dürfen nicht gegessen werden. | Der grüne Knollenblätterpilz ist lebensgefährlich giftig.;-
 der Ast;mittel;Ein Spaziergang im Wald;neu;Auf dem dicken Ast saß eine Eule und blickte schweigend umher. | Der schwere Ast brach unter der Last des frischen Schnees ab.;-
 der Baumstamm;mittel;Ein Spaziergang im Wald;neu;Der dicke Baumstamm war von Moos und Flechten bewachsen. | Die Waldarbeiter sägten den langen Baumstamm in handliche Stücke.;-
@@ -1500,18 +1500,18 @@ morsch;schwer;Ein Spaziergang im Wald;neu;Die morsch gewordene Holzbrücke durft
 vermodern;schwer;Ein Spaziergang im Wald;neu;"Das Totholz bleibt am Waldboden liegen, um langsam zu vermodern. | Im feuchten Wald vermodern alte Blätter zu fruchtbarem Humus.""""";-
 der Waldbrand;schwer;Ein Spaziergang im Wald;neu;Bei lang anhaltender Trockenheit steigt die Gefahr für einen gefährlichen Waldbrand. | Die Feuerwehr kämpfte stundenlang gegen den verheerenden Waldbrand.;-
 kahl;schwer;Ein Spaziergang im Wald;neu;Im Spätherbst standen die Bäume völlig kahl da. | Die kahle Wand brauchte dringend einen neuen Anstrich.;-
-der Bauernhof;leicht;Auf dem Bauernhof;neu;Auf dem idyllischen Bauernhof leben viele verschiedene Tiere. | Die Kinder durften heute dem Bauern beim Füttern auf dem Bauernhof helfen.;-
+der Bauernhof;leicht;Auf dem Bauernhof;neu;Auf dem idyllischen Bauernhof leben viele verschiedene Tiere. | Die Kinder durften heute dem Bauern beim Füttern auf dem Bauernhof helfen.;der_Bauernhof.png
 die Bäuerin;leicht;Auf dem Bauernhof;neu;Die freundliche Bäuerin versorgte die verletzte Taube im Hof. | Jeden Morgen sammelt die Bäuerin die frischen Eier ein.;-
-die Wiese;leicht;Auf dem Bauernhof;neu;Die grüne Wiese bot reichlich Platz zum Fuße spielen. | Auf der Wiese blühten im Frühling unzählige bunte Blumen.;-
+die Wiese;leicht;Auf dem Bauernhof;neu;Die grüne Wiese bot reichlich Platz zum Fuße spielen. | Auf der Wiese blühten im Frühling unzählige bunte Blumen.;die_Wiese.png
 die Kuh;leicht;Auf dem Bauernhof;neu;Die braune Kuh kaute gemütlich frisches Gras auf der Weide. | Jeden Tag gibt die gesunde Kuh frische Milch.;-
-der Stall;leicht;Auf dem Bauernhof;neu;Am Abend wurden alle Tiere in den warmen Stall gebracht. | Der Bauer mistete am Vormittag den großen Kuhstall aus.;-
+der Stall;leicht;Auf dem Bauernhof;neu;Am Abend wurden alle Tiere in den warmen Stall gebracht. | Der Bauer mistete am Vormittag den großen Kuhstall aus.;der_Stall.png
 die Scheune;leicht;Auf dem Bauernhof;neu;In der großen Scheune lagern im Winter die schweren Strohballen. | Die alten Maschinen fanden ihren Platz in der Scheune.;-
 der Misthaufen;leicht;Auf dem Bauernhof;neu;Neben dem Stall dampfte der große Misthaufen in der Morgensonne. | Der Bauer lud den Mist vom Misthaufen auf den Anhänger.;-
 der Hahn;leicht;Auf dem Bauernhof;neu;Der stolze Hahn krähte laut bei Anbruch des neuen Tages. | Der bunte Hahn passte gut auf seine Hühnerschar auf.;-
 das Huhn;leicht;Auf dem Bauernhof;neu;Das Huhn scharrte geschäftig im Boden nach ein paar Würmern. | Im Gehege pickte das Huhn nach den Körnern.;-
 die Ente;leicht;Auf dem Bauernhof;neu;Eine weiße Ente zog mit ihren Küken gemächlich ihre Bahnen auf dem Teich. | Die Ente watschelte lustig über den Hof.;-
 die Katze;leicht;Auf dem Bauernhof;neu;Die Katze schlief zusammengerollt auf dem warmen Ofen. | Die Hofkatze fing geschickt eine kleine Maus.;-
-der Traktor;leicht;Auf dem Bauernhof;neu;Der rote Traktor fuhr langsam über das holprige Feld. | Mit dem großen Traktor zog er den schweren Anhänger.;-
+der Traktor;leicht;Auf dem Bauernhof;neu;Der rote Traktor fuhr langsam über das holprige Feld. | Mit dem großen Traktor zog er den schweren Anhänger.;der_Traktor.png
 der Anhänger;leicht;Auf dem Bauernhof;neu;Der Traktor hatte einen großen Anhänger voller Getreide geladen. | Er lud die schweren Kisten auf den Anhänger.;-
 die Sonnenblume;leicht;Auf dem Bauernhof;neu;Die riesige Sonnenblume blickte direkt in die warme Sonne. | Gelbe Sonnenblumen säumen den Rand des Gemüsebeets.;-
 das Dorf;mittel;Auf dem Bauernhof;neu;Das kleine Dorf liegt friedlich eingebettet zwischen sanften Hügeln. | Im Dorf kennt fast jeder Bewohner jeden mit Namen.;-
@@ -1557,13 +1557,13 @@ das Meer;leicht;Am Wasser;neu;Das weite Meer schimmerte in der Nachmittagssonne 
 der Fluss;leicht;Am Wasser;neu;Der Fluss schlängelt sich malerisch durch das grüne Tal. | Die Brücke führt über den breit fließenden Fluss.;-
 der See;leicht;Am Wasser;neu;Ein lauschiger Weg führte direkt zum idyllischen Waldsee. | Im klaren Wasser des Sees spiegelten sich die Wolken.;-
 der Bach;leicht;Am Wasser;neu;Ein kleiner Bach plätscherte munter über die runden Steine. | Forellen fühlten sich im kühlen Bach besonders wohl.;-
-die Welle;leicht;Am Wasser;neu;Eine hohe Welle schwappte an den Bug des kleinen Holzbootes. | Die sanften Wellen rollten gleichmäßig an den Strand.;-
-der Tropfen;leicht;Am Wasser;neu;Ein einzelner Regentropfen landete auf ihrer Nasenspitze. | Die Tropfen trommelten leise gegen das Fensterscheibe.;-
+die Welle;leicht;Am Wasser;neu;Eine hohe Welle schwappte an den Bug des kleinen Holzbootes. | Die sanften Wellen rollten gleichmäßig an den Strand.;die_Welle.png
+der Tropfen;leicht;Am Wasser;neu;Ein einzelner Regentropfen landete auf ihrer Nasenspitze. | Die Tropfen trommelten leise gegen das Fensterscheibe.;der_Tropfen.png
 fließen;leicht;Am Wasser;neu;Das Wasser begann langsam aus dem undichten Hahn zu fließen. | Tränen begannen über ihre Wangen zu fließen.;-
 planschen;leicht;Am Wasser;neu;"Die Kinder verbrachten den Nachmittag damit, im flachen Wasser zu planschen. | Entenküken planschten vergnügt im kühlen Nass.""""";-
 blau;leicht;Am Wasser;neu;Ein strahlend blauer Himmel ohne Wolken lockte alle nach draußen. | Sie trug heute einen schicken blauen Mantel.;-
 der Strand;leicht;Am Wasser;neu;Am sandigen Strand bauten die Kinder eine riesige Burg. | Barfuß liefen sie im warmen Sand am Strand entlang.;-
-die Sandburg;leicht;Am Wasser;neu;Aus feuchtem Sand bauten sie eine detailreiche Sandburg. | Die Flut schwemmte die sorgfältig gebaute Sandburg weg.;-
+die Sandburg;leicht;Am Wasser;neu;Aus feuchtem Sand bauten sie eine detailreiche Sandburg. | Die Flut schwemmte die sorgfältig gebaute Sandburg weg.;die_Sandburg.png
 der Teich;mittel;Am Wasser;neu;Im kleinen Gartenbiotop gluckerte ein künstlicher Teich. | Frösche quakten vergnügt am Ufer des großen Teichs.;-
 plätschern;mittel;Am Wasser;neu;Das Wasser schien fröhlich über die glatten Steine zu plätschern. | Man konnte das ferne Plätschern des Brunnens hören.;-
 rauschen;mittel;Am Wasser;neu;In der Ferne hörte man das laute Rauschen des großen Wasserfalls. | Das Rauschen der Blätter im Wind wirkte sehr beruhigend.;-
@@ -1600,7 +1600,7 @@ der Angler;schwer;Am Wasser;neu;Der geduldige Angler saß seit Stunden schweigen
 die Angelrute;schwer;Am Wasser;neu;Er zog sorgsam seine neue Angelrute aus der Hülle. | Die lange Angelrute bog sich unter dem Gewicht des Fisches.;-
 seicht;schwer;Am Wasser;neu;"Das Wasser an dieser Stelle war so seicht, dass man den Grund sah. | Kinder konnten in dem seichten Bereich sicher planschen.""""";-
 das Watt;schwer;Am Wasser;neu;Bei Ebbe kann man im Wattenmeer wunderbar durch das feuchte Watt wandern. | Die Muscheln und Wattwürmer verstecken sich tief im Watt.;-
-der Berg;leicht;In den Bergen;neu;Der Mount Everest ist der höchste Berg der Welt. | Auf dem schneebedeckten Berg kann man herrlich Ski fahren.;-
+der Berg;leicht;In den Bergen;neu;Der Mount Everest ist der höchste Berg der Welt. | Auf dem schneebedeckten Berg kann man herrlich Ski fahren.;der_Berg.png
 hoch;leicht;In den Bergen;neu;Der Kirchturm ist erstaunlich hoch und weithin sichtbar. | Sie flog mit dem Flugzeug hoch über den Wolken.;-
 der Weg;leicht;In den Bergen;neu;Dieser schmale Weg führt direkt durch den dichten Wald. | Welcher Weg führt am schnellsten zum Bahnhof?;-
 das Tal;mittel;In den Bergen;neu;Das malerische Tal ist im Frühling von Blumen übersät. | Der Fluss schlängelt sich friedlich durch das tiefe Tal.;-
@@ -1647,7 +1647,7 @@ die Lawine;schwer;In den Bergen;neu;Nach dem schweren Schneefall drohte im obere
 zwischen;schwer;In den Bergen;neu;Das kleine Haus liegt idyllisch zwischen zwei großen Seen. | Wähle eine Zahl zwischen eins und zehn.;-
 am höchsten;schwer;In den Bergen;neu;Dieser Berg ist der höchste im ganzen Umkreis. | Er erreichte das Ziel als Schnellster und wurde am höchsten belohnt.;-
 der Hund;leicht;Tiere im Haus;neu;Der treue Hund begrüßte sein Herrchen schwanzwedelnd an der Tür. | Ein lautes Bellen des Hundes kündigte den Besucher an.;-
-das Fell;leicht;Tiere im Haus;neu;Das dicke Fell schützt den Bären vor der eisigen Kälte im Winter. | Sie streichelte der Katze über das weiche Fell.;-
+das Fell;leicht;Tiere im Haus;neu;Das dicke Fell schützt den Bären vor der eisigen Kälte im Winter. | Sie streichelte der Katze über das weiche Fell.;das_Fell.png
 bellen;leicht;Tiere im Haus;neu;Abends fing der große Schäferhund wieder an zu bellen. | Warum musste der fremde Hund denn schon wieder bellen?;-
 miauen;leicht;Tiere im Haus;neu;Die kleine Katze fing plötzlich an leise zu miauen. | Man hörte die hungernde Katze vor der geschlossenen Tür miauen.;-
 fressen;leicht;Tiere im Haus;neu;"Löwen fressen meistens Fleisch, während Kühe Gras fressen. | Die hungrigen Vögel fressen die Körner vom Boden.""""";-
