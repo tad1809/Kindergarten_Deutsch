@@ -194,7 +194,27 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 </div>
 
 <div id="modalWordCount" class="modal-overlay hidden"><div class="modal-content"><h3>Neue Wörter anzeigen</h3><div class="form-group"><label for="wordCountInput">Wie viele neue Wörter möchtest du sehen?</label><input type="number" id="wordCountInput" value="10" min="1" max="50"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalWordCount')">Abbrechen</button><button onclick="confirmShowNewWords()">Anzeigen</button></div></div></div>
-<div id="modalSameTopic" class="modal-overlay hidden"><div class="modal-content"><h3>Wörter mit gleichen Themen</h3><div class="form-group"><label for="topicWordCountInput">Wie viele Wörter aus einem zufälligen Thema möchtest du sehen?</label><input type="number" id="topicWordCountInput" value="10" min="1" max="50"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalSameTopic')">Abbrechen</button><button onclick="confirmShowSameTopicWords()">Anzeigen</button></div></div></div>
+
+<div id="modalSameTopic" class="modal-overlay hidden">
+    <div class="modal-content">
+        <h3>Wörter mit gleichen Themen</h3>
+        <div class="form-group">
+            <label for="topicSelect">Thema auswählen:</label>
+            <select id="topicSelect">
+                <option value="random">-- Zufälliges Thema --</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="topicWordCountInput">Wie viele Wörter möchtest du sehen?</label>
+            <input type="number" id="topicWordCountInput" value="10" min="1" max="50">
+        </div>
+        <div class="modal-actions">
+            <button class="btn-secondary" onclick="closeModal('modalSameTopic')">Abbrechen</button>
+            <button onclick="confirmShowSameTopicWords()">Anzeigen</button>
+        </div>
+    </div>
+</div>
+
 <div id="modalProfileInfo" class="modal-overlay hidden"><div class="modal-content"><h3>Aktuelles Profil</h3><div id="profileDetailsText" style="line-height:1.8;margin-bottom:15px"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalProfileInfo')">Schließen</button></div></div></div>
 <div id="modalNewProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Profil erstellen</h3><div class="form-group"><label for="newProfileName">Profilname eingeben:</label><input type="text" id="newProfileName" placeholder="z. B. Max"></div><div class="form-group"><label>Schwierigkeitsgrad:</label><div class="radio-group"><label><input type="radio" name="newDifficulty" value="leicht" checked> Leicht</label><label><input type="radio" name="newDifficulty" value="mittel"> Mittel</label><label><input type="radio" name="newDifficulty" value="schwer"> Schwer</label></div></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalNewProfile')">Abbrechen</button><button onclick="createNewProfile()">Erstellen</button></div></div></div>
 <div id="modalLoadProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil auswählen / laden</h3><div class="form-group"><label for="profileSelect">Vorhandene Profile:</label><select id="profileSelect"></select></div><div class="form-group"><label>Oder lokale CSV-Datei hochladen:</label><input type="file" id="localCsvInput" accept=".csv,text/csv"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalLoadProfile')">Abbrechen</button><button onclick="loadSelectedProfile()">Laden</button></div></div></div>
@@ -297,6 +317,63 @@ function escapeHtml(value) {
     return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
 }
 
+/* ==========================================
+   Zeichenkodierung & Umlaute
+   ========================================== */
+// Umkehrtabelle Windows-1252 (Zeichen im Bereich 0x80-0x9F), nötig zum Reparieren von doppelt kodiertem Text
+const CP1252_REVERSE = {0x20AC:0x80,0x201A:0x82,0x0192:0x83,0x201E:0x84,0x2026:0x85,0x2020:0x86,0x2021:0x87,0x02C6:0x88,0x2030:0x89,0x0160:0x8A,0x2039:0x8B,0x0152:0x8C,0x017D:0x8E,0x2018:0x91,0x2019:0x92,0x201C:0x93,0x201D:0x94,0x2022:0x95,0x2013:0x96,0x2014:0x97,0x02DC:0x98,0x2122:0x99,0x0161:0x9A,0x203A:0x9B,0x0153:0x9C,0x017E:0x9E,0x0178:0x9F};
+
+// Repariert Text, bei dem UTF-8 fälschlich als Windows-1252/Latin-1 gelesen wurde ("Ã¤" statt "ä").
+// Ist der Text nicht eindeutig betroffen oder nicht verlustfrei umkehrbar, bleibt er unverändert.
+function repairMojibake(text) {
+    if (!/Ã[\u0080-\u00BF\u0152\u0153\u0160\u0161\u0178\u017D\u017E\u0192\u02C6\u02DC\u2013\u2014\u2018-\u201E\u2020-\u2022\u2026\u2030\u2039\u203A\u20AC\u2122]/.test(text)) return text;
+    const bytes = new Uint8Array(text.length);
+    for (let i = 0; i < text.length; i++) {
+        const code = text.charCodeAt(i);
+        if (code < 256) bytes[i] = code;
+        else if (CP1252_REVERSE[code] !== undefined) bytes[i] = CP1252_REVERSE[code];
+        else return text;
+    }
+    try {
+        return new TextDecoder('utf-8', {fatal: true}).decode(bytes);
+    } catch (e) {
+        return text;
+    }
+}
+
+// Vereinheitlicht einen Text: BOM entfernen, Mojibake reparieren, Umlaute in die zusammengesetzte Form (NFC) bringen
+function normalizeGermanText(text) {
+    return repairMojibake(String(text ?? '').replace(/^\uFEFF/, '')).normalize('NFC');
+}
+
+// Dekodiert CSV-Bytes: UTF-8 (mit/ohne BOM), UTF-16 (BOM) oder – falls kein gültiges UTF-8 – Windows-1252 (Excel-"CSV")
+function decodeCsvBuffer(buffer) {
+    const bytes = new Uint8Array(buffer);
+    let text;
+    if (bytes[0] === 0xFF && bytes[1] === 0xFE) {
+        text = new TextDecoder('utf-16le').decode(bytes.subarray(2));
+    } else if (bytes[0] === 0xFE && bytes[1] === 0xFF) {
+        text = new TextDecoder('utf-16be').decode(bytes.subarray(2));
+    } else {
+        try {
+            text = new TextDecoder('utf-8', {fatal: true}).decode(bytes);
+        } catch (e) {
+            text = new TextDecoder('windows-1252').decode(bytes);
+        }
+    }
+    return normalizeGermanText(text);
+}
+
+// Bereinigt alle Textfelder eines gespeicherten Wort-Eintrags (z. B. aus älteren Profilen im localStorage)
+function sanitizeWordEntry(entry) {
+    if (!entry || typeof entry !== 'object') return entry;
+    const clean = {};
+    Object.keys(entry).forEach(k => {
+        clean[k] = typeof entry[k] === 'string' ? normalizeGermanText(entry[k]) : entry[k];
+    });
+    return clean;
+}
+
 function parseCSV(text) {
     const rows = [];
     let row = [], field = '', quoted = false;
@@ -363,7 +440,11 @@ async function loadStandardDictionary() {
     try {
         const response = await fetch(STANDARD_FILE, {cache: 'no-store'});
         if (!response.ok) throw new Error('HTTP ' + response.status);
-        const text = await response.text();
+        
+        // Umlaut-sichere Dekodierung (UTF-8, Windows-1252, UTF-16)
+        const buffer = await response.arrayBuffer();
+        const text = decodeCsvBuffer(buffer);
+
         const words = parseCSV(text);
         if (!words.length) throw new Error('CSV enthält keine Wörter.');
         baseDictionaryWords = structuredClone(words);
@@ -385,7 +466,7 @@ function loadStoredProfile(fileName, profileName, difficulty) {
     try {
         const data = JSON.parse(saved);
         if (!Array.isArray(data)) throw new Error('Ungültige Profildaten');
-        meineWoerterliste = data;
+        meineWoerterliste = data.map(sanitizeWordEntry);
         currentFileName = fileName;
         currentProfile = profileName || 'Profil';
         currentDifficulty = difficulty || null;
@@ -416,7 +497,11 @@ async function createNewProfile() {
     if (!baseDictionaryWords.length) {
         try {
             const response = await fetch(STANDARD_FILE, {cache: 'no-store'});
-            if (response.ok) baseDictionaryWords = parseCSV(await response.text());
+            if (response.ok) {
+                const buffer = await response.arrayBuffer();
+                const text = decodeCsvBuffer(buffer);
+                baseDictionaryWords = parseCSV(text);
+            }
         } catch(e) {}
     }
 
@@ -462,7 +547,9 @@ async function loadSelectedProfile() {
 
     if (fileInput.files.length > 0) {
         try {
-            const text = await fileInput.files[0].text();
+            const buffer = await fileInput.files[0].arrayBuffer();
+            const text = decodeCsvBuffer(buffer);
+
             const data = parseCSV(text);
             if (!data.length) throw new Error();
             meineWoerterliste = data;
@@ -530,27 +617,53 @@ function confirmShowNewWords() {
     showNewWords(lastRequestedWordCount);
 }
 
-function openSameTopicModal() { document.getElementById('modalSameTopic').classList.remove('hidden'); }
-function confirmShowSameTopicWords() {
-    let count = parseInt(document.getElementById('topicWordCountInput').value, 10);
-    closeModal('modalSameTopic');
-    showSameTopicWords(Number.isFinite(count) && count > 0 ? count : 10);
+function openSameTopicModal() {
+    const newWords = meineWoerterliste.filter(item => item.Lernstatus === 'neu' || !item.Lernstatus);
+    const topics = [...new Set(newWords.map(w => w.Thema || 'Allgemein'))].sort((a, b) => a.localeCompare(b, 'de'));
+    
+    const topicSelect = document.getElementById('topicSelect');
+    topicSelect.innerHTML = '<option value="random">-- Zufälliges Thema --</option>';
+    topics.forEach(t => {
+        const opt = document.createElement('option');
+        opt.value = t;
+        opt.textContent = t;
+        topicSelect.appendChild(opt);
+    });
+
+    document.getElementById('modalSameTopic').classList.remove('hidden');
 }
 
-function showSameTopicWords(count = 10) {
+function confirmShowSameTopicWords() {
+    let count = parseInt(document.getElementById('topicWordCountInput').value, 10);
+    const selectedTopic = document.getElementById('topicSelect').value;
+    closeModal('modalSameTopic');
+    showSameTopicWords(Number.isFinite(count) && count > 0 ? count : 10, selectedTopic);
+}
+
+function showSameTopicWords(count = 10, chosenTopic = 'random') {
     currentView = 'sameTopic';
     const newWords = meineWoerterliste.filter(item => item.Lernstatus === 'neu' || !item.Lernstatus);
     if (!newWords.length) {
         document.getElementById('wordCardsContainer').innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted)"><p>Keine neuen Wörter vorhanden.</p></div>`;
         return;
     }
-    const topics = [...new Set(newWords.map(w => w.Thema || 'Allgemein'))];
-    const randomTopic = topics[Math.floor(Math.random() * topics.length)];
-    let topicWords = newWords.filter(w => (w.Thema || 'Allgemein') === randomTopic).sort(() => 0.5 - Math.random()).slice(0, count);
+    
+    let targetTopic = chosenTopic;
+    if (!targetTopic || targetTopic === 'random') {
+        const topics = [...new Set(newWords.map(w => w.Thema || 'Allgemein'))];
+        targetTopic = topics[Math.floor(Math.random() * topics.length)];
+    }
+
+    let topicWords = newWords.filter(w => (w.Thema || 'Allgemein') === targetTopic).sort(() => 0.5 - Math.random()).slice(0, count);
 
     updateListInfoText(topicWords.length);
     const container = document.getElementById('wordCardsContainer');
     container.innerHTML = '';
+    if (!topicWords.length) {
+        container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted)"><p>Keine neuen Wörter für das Thema "${escapeHtml(targetTopic)}" gefunden.</p></div>`;
+        return;
+    }
+
     topicWords.forEach(wordObj => {
         const card = document.createElement('div');
         card.className = 'word-card';
@@ -821,6 +934,16 @@ async function checkImageExists(url) {
     });
 }
 
+// Liefert den funktionierenden Bildpfad oder null. Probiert bei Dateinamen mit Umlauten
+// beide Unicode-Schreibweisen (ü als ein Zeichen = NFC, als u + ¨ = NFD, z. B. von macOS oder ZIP-Dateien).
+async function resolveImagePath(path) {
+    const candidates = [...new Set([path.normalize('NFC'), path.normalize('NFD'), path])];
+    for (const candidate of candidates) {
+        if (await checkImageExists(candidate)) return candidate;
+    }
+    return null;
+}
+
 async function startMemoryGame() {
     const countInput = document.getElementById('memoryPlayersCount');
     let count = parseInt(countInput.value, 10);
@@ -860,11 +983,11 @@ async function startMemoryGame() {
         const imgName = wordObj.Bilddatei;
         const imagePath = imgName.startsWith('Bilder/') ? imgName : `Bilder/${imgName}`;
 
-        const hasValidImage = await checkImageExists(imagePath);
-        if (hasValidImage) {
+        const resolvedPath = await resolveImagePath(imagePath);
+        if (resolvedPath) {
             validPool.push({
                 wort: wortText,
-                imagePath: imagePath
+                imagePath: resolvedPath
             });
         }
     }
@@ -1122,11 +1245,11 @@ async function startFlashGame() {
         const imgName = wordObj.Bilddatei;
         const imagePath = imgName.startsWith('Bilder/') ? imgName : `Bilder/${imgName}`;
 
-        const hasValidImage = await checkImageExists(imagePath);
-        if (hasValidImage) {
+        const resolvedPath = await resolveImagePath(imagePath);
+        if (resolvedPath) {
             validPool.push({
                 wort: wortText,
-                imagePath: imagePath
+                imagePath: resolvedPath
             });
         }
     }
@@ -1153,14 +1276,11 @@ function nextFlashRound() {
     flashState.isAnswered = false;
     clearInterval(flashState.timerInterval);
 
-    // Abwechselnd: Ungerade Runde = Bild -> 5 Wörter; Gerade Runde = Wort -> 5 Bilder
     const mode = (flashState.currentRound % 2 !== 0) ? 'imgToWord' : 'wordToImg';
 
-    // Zielwort/Bild auswählen
     const shuffledPool = [...flashState.validPool].sort(() => 0.5 - Math.random());
     const targetItem = shuffledPool[0];
 
-    // 4 Distraktoren (Falsche Optionen) auswählen
     const distractors = shuffledPool.slice(1, 5);
     const options = [...distractors, targetItem].sort(() => 0.5 - Math.random());
 
@@ -1217,7 +1337,7 @@ function startFlashTimer() {
     const bar = document.getElementById('flashProgressBar');
     if (!bar) return;
 
-    const intervalTime = 50; // ms
+    const intervalTime = 50; 
     const totalTimeMs = flashState.countdownDuration * 1000;
 
     flashState.timerInterval = setInterval(() => {
@@ -1244,7 +1364,6 @@ function handleFlashAnswer(btnElement, isCorrect, targetWord) {
     flashState.isAnswered = true;
     clearInterval(flashState.timerInterval);
 
-    // Alle Buttons deaktivieren
     document.querySelectorAll('.flash-option-btn, .flash-option-img-btn').forEach(btn => btn.disabled = true);
 
     if (isCorrect) {
@@ -1252,7 +1371,6 @@ function handleFlashAnswer(btnElement, isCorrect, targetWord) {
         btnElement.classList.add('correct');
     } else {
         btnElement.classList.add('wrong');
-        // Richtige Option visuell markieren
         document.querySelectorAll('.flash-option-btn, .flash-option-img-btn').forEach(btn => {
             if (btn.textContent.trim() === targetWord || btn.querySelector(`img[alt="${targetWord}"]`)) {
                 btn.classList.add('correct');
