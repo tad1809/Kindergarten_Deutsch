@@ -3089,3 +3089,530 @@ sechs;schwer;Drunter und drüber;neu;Ein Würfel hat genau sechs verschiedene Se
 acht;schwer;Drunter und drüber;neu;Eine Spinne hat bekanntermaßen acht Beine. | Unser Treffen findet am achten Tag des Monats statt.;-
 neun;schwer;Drunter und drüber;neu;Neun Kinder spielten vergnügt auf dem Schulhof. | Sie wohnt im Haus Nummer neun.;-
 zehn;schwer;Drunter und drüber;neu;Die Schulklasse besteht aus genau zehn Jungen und Mädchen. | Nach dem Zählen kam er auf die Zahl zehn.;-
+gut;leicht;Adjektive;neu;-;-
+besser;leicht;Adjektive;neu;-;-
+bester;leicht;Adjektive;neu;-;-
+deutsch;leicht;Adjektive;neu;-;-
+wichtig;leicht;Adjektive;neu;-;-
+nÃ¤chste;leicht;Adjektive;neu;-;-
+mÃ¶glich;leicht;Adjektive;neu;-;-
+einfach;leicht;Adjektive;neu;-;-
+bekannt;leicht;Adjektive;neu;-;-
+letzter;leicht;Adjektive;neu;-;-
+schlecht;leicht;Adjektive;neu;-;-
+meist;leicht;Adjektive;neu;-;-
+europÃ¤isch;leicht;Adjektive;neu;-;-
+halb;leicht;Adjektive;neu;-;-
+normal;leicht;Adjektive;neu;-;-
+fremd;leicht;Adjektive;neu;-;-
+tot;leicht;Adjektive;neu;-;-
+geboren;leicht;Adjektive;neu;-;-
+kulturell;leicht;Adjektive;neu;-;-
+auslÃ¤ndisch;leicht;Adjektive;neu;-;-
+automatisch;leicht;Adjektive;neu;-;-
+international;leicht;Adjektive;neu;-;-
+gÃ¼nstig;leicht;Adjektive;neu;-;-
+wunderbar;leicht;Adjektive;neu;-;-
+willkommen;leicht;Adjektive;neu;-;-
+geschlossen;leicht;Adjektive;neu;-;-
+selbstÃ¤ndig;leicht;Adjektive;neu;-;-
+gÃ¼ltig;leicht;Adjektive;neu;-;-
+geÃ¶ffnet;leicht;Adjektive;neu;-;-
+besetzt;leicht;Adjektive;neu;-;-
+eilig;leicht;Adjektive;neu;-;-
+ledig;leicht;Adjektive;neu;-;-
+so;leicht;Adverbien;neu;-;-
+sehr;leicht;Adverbien;neu;-;-
+weiter;leicht;Adverbien;neu;-;-
+einmal;leicht;Adverbien;neu;-;-
+also;leicht;Adverbien;neu;-;-
+lange;leicht;Adverbien;neu;-;-
+allein;leicht;Adverbien;neu;-;-
+leider;leicht;Adverbien;neu;-;-
+lieber;leicht;Adverbien;neu;-;-
+zurzeit;leicht;Adverbien;neu;-;-
+zurÃ¼ck;leicht;Adverbien;neu;-;-
+plus;leicht;Adverbien;neu;-;-
+zirka;leicht;Adverbien;neu;-;-
+daneben;leicht;Adverbien;neu;-;-
+woher;leicht;Adverbien;neu;-;-
+dorthin;leicht;Adverbien;neu;-;-
+minus;leicht;Adverbien;neu;-;-
+selbst;mittel;Adverbien;neu;-;-
+etwas;mittel;Adverbien;neu;-;-
+mal;mittel;Adverbien;neu;-;-
+fast;mittel;Adverbien;neu;-;-
+natÃ¼rlich;mittel;Adverbien;neu;-;-
+darauf;mittel;Adverbien;neu;-;-
+besonders;mittel;Adverbien;neu;-;-
+eigentlich;mittel;Adverbien;neu;-;-
+darÃ¼ber;mittel;Adverbien;neu;-;-
+deshalb;mittel;Adverbien;neu;-;-
+sogar;mittel;Adverbien;neu;-;-
+sonst;mittel;Adverbien;neu;-;-
+wirklich;mittel;Adverbien;neu;-;-
+wahrscheinlich;mittel;Adverbien;neu;-;-
+her;mittel;Adverbien;neu;-;-
+auÃŸerdem;mittel;Adverbien;neu;-;-
+genug;mittel;Adverbien;neu;-;-
+endlich;mittel;Adverbien;neu;-;-
+hin;mittel;Adverbien;neu;-;-
+mindestens;mittel;Adverbien;neu;-;-
+zuerst;mittel;Adverbien;neu;-;-
+unbedingt;mittel;Adverbien;neu;-;-
+hinaus;mittel;Adverbien;neu;-;-
+zuletzt;mittel;Adverbien;neu;-;-
+weg;mittel;Adverbien;neu;-;-
+wenigstens;mittel;Adverbien;neu;-;-
+heraus;mittel;Adverbien;neu;-;-
+unterwegs;mittel;Adverbien;neu;-;-
+vorbei;mittel;Adverbien;neu;-;-
+online;mittel;Adverbien;neu;-;-
+egal;mittel;Adverbien;neu;-;-
+zweimal;mittel;Adverbien;neu;-;-
+meistens;mittel;Adverbien;neu;-;-
+drÃ¼ben;mittel;Adverbien;neu;-;-
+hinein;mittel;Adverbien;neu;-;-
+hoffentlich;mittel;Adverbien;neu;-;-
+dreimal;mittel;Adverbien;neu;-;-
+herein;mittel;Adverbien;neu;-;-
+erstens;mittel;Adverbien;neu;-;-
+dienstags;mittel;Adverbien;neu;-;-
+vormittags;mittel;Adverbien;neu;-;-
+zweitens;mittel;Adverbien;neu;-;-
+vorgestern;mittel;Adverbien;neu;-;-
+nebenan;mittel;Adverbien;neu;-;-
+sonntags;mittel;Adverbien;neu;-;-
+freitags;mittel;Adverbien;neu;-;-
+montags;mittel;Adverbien;neu;-;-
+mittwochs;mittel;Adverbien;neu;-;-
+viermal;mittel;Adverbien;neu;-;-
+nachmittags;mittel;Adverbien;neu;-;-
+samstags;mittel;Adverbien;neu;-;-
+donnerstags;mittel;Adverbien;neu;-;-
+getrennt;mittel;Adverbien;neu;-;-
+drittens;mittel;Adverbien;neu;-;-
+tagsÃ¼ber;mittel;Adverbien;neu;-;-
+Ã¼bermorgen;mittel;Adverbien;neu;-;-
+im;leicht;PrÃ¤positionen;neu;-;-
+am;leicht;PrÃ¤positionen;neu;-;-
+zum;leicht;PrÃ¤positionen;neu;-;-
+vom;leicht;PrÃ¤positionen;neu;-;-
+wegen;mittel;PrÃ¤positionen;neu;-;-
+gegenÃ¼ber;mittel;PrÃ¤positionen;neu;-;-
+pro;mittel;PrÃ¤positionen;neu;-;-
+auÃŸer;mittel;PrÃ¤positionen;neu;-;-
+auÃŸerhalb;mittel;PrÃ¤positionen;neu;-;-
+sein;leicht;Verben;neu;-;-
+nehmen;leicht;Verben;neu;-;-
+bekommen;leicht;Verben;neu;-;-
+gehÃ¶ren;leicht;Verben;neu;-;-
+beginnen;leicht;Verben;neu;-;-
+leben;leicht;Verben;neu;-;-
+sich fragen;leicht;Verben;neu;-;-
+legen;leicht;Verben;neu;-;-
+anfangen;leicht;Verben;neu;-;-
+anbieten;leicht;Verben;neu;-;-
+studieren;leicht;Verben;neu;-;-
+dauern;leicht;Verben;neu;-;-
+bitten;leicht;Verben;neu;-;-
+antworten;leicht;Verben;neu;-;-
+drÃ¼cken;leicht;Verben;neu;-;-
+benutzen;leicht;Verben;neu;-;-
+reisen;leicht;Verben;neu;-;-
+sich kÃ¼mmern;leicht;Verben;neu;-;-
+empfehlen;leicht;Verben;neu;-;-
+abgeben;leicht;Verben;neu;-;-
+enden;leicht;Verben;neu;-;-
+danken;leicht;Verben;neu;-;-
+kriegen;leicht;Verben;neu;-;-
+anrufen;leicht;Verben;neu;-;-
+aufhÃ¶ren;leicht;Verben;neu;-;-
+entschuldigen;leicht;Verben;neu;-;-
+rauchen;leicht;Verben;neu;-;-
+mitmachen;leicht;Verben;neu;-;-
+abholen;leicht;Verben;neu;-;-
+ausfÃ¼llen;leicht;Verben;neu;-;-
+kennenlernen;leicht;Verben;neu;-;-
+Ã¼berweisen;leicht;Verben;neu;-;-
+gratulieren;leicht;Verben;neu;-;-
+vermieten;leicht;Verben;neu;-;-
+Ã¼bernachten;leicht;Verben;neu;-;-
+Rad fahren;leicht;Verben;neu;-;-
+mitkommen;leicht;Verben;neu;-;-
+ankreuzen;leicht;Verben;neu;-;-
+buchstabieren;leicht;Verben;neu;-;-
+setzen;mittel;Verben;neu;-;-
+bestehen;mittel;Verben;neu;-;-
+meinen;mittel;Verben;neu;-;-
+erreichen;mittel;Verben;neu;-;-
+reden;mittel;Verben;neu;-;-
+interessieren;mittel;Verben;neu;-;-
+sich interessieren;mittel;Verben;neu;-;-
+erinnern;mittel;Verben;neu;-;-
+ausgehen;mittel;Verben;neu;-;-
+beschreiben;mittel;Verben;neu;-;-
+wÃ¤hlen;mittel;Verben;neu;-;-
+stattfinden;mittel;Verben;neu;-;-
+berichten;mittel;Verben;neu;-;-
+hoffen;mittel;Verben;neu;-;-
+bestÃ¤tigen;mittel;Verben;neu;-;-
+wechseln;mittel;Verben;neu;-;-
+begrÃ¼nden;mittel;Verben;neu;-;-
+vorbereiten;mittel;Verben;neu;-;-
+stÃ¶ren;mittel;Verben;neu;-;-
+diskutieren;mittel;Verben;neu;-;-
+organisieren;mittel;Verben;neu;-;-
+informieren;mittel;Verben;neu;-;-
+verletzen;mittel;Verben;neu;-;-
+teilnehmen;mittel;Verben;neu;-;-
+beenden;mittel;Verben;neu;-;-
+klappen;mittel;Verben;neu;-;-
+beantworten;mittel;Verben;neu;-;-
+sparen;mittel;Verben;neu;-;-
+speichern;mittel;Verben;neu;-;-
+verschieben;mittel;Verben;neu;-;-
+kÃ¼ndigen;mittel;Verben;neu;-;-
+trainieren;mittel;Verben;neu;-;-
+verpassen;mittel;Verben;neu;-;-
+zurÃ¼ckkommen;mittel;Verben;neu;-;-
+zurÃ¼ckgehen;mittel;Verben;neu;-;-
+aussprechen;mittel;Verben;neu;-;-
+unternehmen;mittel;Verben;neu;-;-
+vereinbaren;mittel;Verben;neu;-;-
+Ã¼bersetzen;mittel;Verben;neu;-;-
+eintragen;mittel;Verben;neu;-;-
+ausgeben;mittel;Verben;neu;-;-
+wecken;mittel;Verben;neu;-;-
+sich verlieben;mittel;Verben;neu;-;-
+(sich) Ã¤rgern;mittel;Verben;neu;-;-
+sich bewerben;mittel;Verben;neu;-;-
+streiten;mittel;Verben;neu;-;-
+markieren;mittel;Verben;neu;-;-
+austauschen;mittel;Verben;neu;-;-
+putzen;mittel;Verben;neu;-;-
+notieren;mittel;Verben;neu;-;-
+spazieren;mittel;Verben;neu;-;-
+weitermachen;mittel;Verben;neu;-;-
+zurÃ¼ckgeben;mittel;Verben;neu;-;-
+lÃ¼gen;mittel;Verben;neu;-;-
+wegnehmen;mittel;Verben;neu;-;-
+renovieren;mittel;Verben;neu;-;-
+sich beschweren;mittel;Verben;neu;-;-
+ausruhen;mittel;Verben;neu;-;-
+surfen;mittel;Verben;neu;-;-
+sich verabreden;mittel;Verben;neu;-;-
+reservieren;mittel;Verben;neu;-;-
+austragen;mittel;Verben;neu;-;-
+sich umziehen;mittel;Verben;neu;-;-
+(he)runterladen;mittel;Verben;neu;-;-
+leihen;mittel;Verben;neu;-;-
+weiterhelfen;mittel;Verben;neu;-;-
+chatten;mittel;Verben;neu;-;-
+weglaufen;mittel;Verben;neu;-;-
+sich beeilen;mittel;Verben;neu;-;-
+zurÃ¼ckfahren;mittel;Verben;neu;-;-
+wegmachen;mittel;Verben;neu;-;-
+wegbringen;mittel;Verben;neu;-;-
+joggen;mittel;Verben;neu;-;-
+das Prozent;leicht;A1;neu;-;-
+das Ende;leicht;A1;neu;-;-
+das Deutschland;leicht;A1;neu;-;-
+die Million;leicht;A1;neu;-;-
+das Leben;leicht;A1;neu;-;-
+das Thema;leicht;A1;neu;-;-
+die Frage;leicht;A1;neu;-;-
+der Teil;leicht;A1;neu;-;-
+die Welt;leicht;A1;neu;-;-
+das Problem;leicht;A1;neu;-;-
+das Beispiel;leicht;A1;neu;-;-
+die Stelle;leicht;A1;neu;-;-
+die Aufgabe;leicht;A1;neu;-;-
+der Blick;leicht;A1;neu;-;-
+der Herr;leicht;A1;neu;-;-
+der Anfang;leicht;A1;neu;-;-
+der Moment;leicht;A1;neu;-;-
+der Ort;leicht;A1;neu;-;-
+die Milliarde;leicht;A1;neu;-;-
+das Ergebnis;leicht;A1;neu;-;-
+das GesprÃ¤ch;leicht;A1;neu;-;-
+der Lehrer;leicht;A1;neu;-;-
+die Information;leicht;A1;neu;-;-
+der Student;leicht;A1;neu;-;-
+der Satz;leicht;A1;neu;-;-
+das Angebot;leicht;A1;neu;-;-
+die LÃ¶sung;leicht;A1;neu;-;-
+das Studium;leicht;A1;neu;-;-
+der Kunde;leicht;A1;neu;-;-
+der Dank;leicht;A1;neu;-;-
+die Antwort;leicht;A1;neu;-;-
+die Hilfe;leicht;A1;neu;-;-
+die Mitte;leicht;A1;neu;-;-
+die Aussage;leicht;A1;neu;-;-
+der Jugendliche;leicht;A1;neu;-;-
+das Essen;leicht;A1;neu;-;-
+der Plan;leicht;A1;neu;-;-
+der Schluss;leicht;A1;neu;-;-
+die Nummer;leicht;A1;neu;-;-
+der Grad;leicht;A1;neu;-;-
+der Fehler;leicht;A1;neu;-;-
+der Partner;leicht;A1;neu;-;-
+der Arbeitsplatz;leicht;A1;neu;-;-
+der Urlaub;leicht;A1;neu;-;-
+die Karte;leicht;A1;neu;-;-
+die PrÃ¼fung;leicht;A1;neu;-;-
+die Bitte;leicht;A1;neu;-;-
+die Dame;leicht;A1;neu;-;-
+die Bahn;leicht;A1;neu;-;-
+der Nachmittag;leicht;A1;neu;-;-
+die FÃ¼hrung;leicht;A1;neu;-;-
+der Wein;leicht;A1;neu;-;-
+der Test;leicht;A1;neu;-;-
+der Termin;leicht;A1;neu;-;-
+das Bier;leicht;A1;neu;-;-
+die Heimat;leicht;A1;neu;-;-
+der Erwachsene;leicht;A1;neu;-;-
+das Drittel;leicht;A1;neu;-;-
+der Fahrer;leicht;A1;neu;-;-
+der Beamte(r);leicht;A1;neu;-;-
+der Anschluss;leicht;A1;neu;-;-
+das CafÃ©;leicht;A1;neu;-;-
+der Kindergarten;leicht;A1;neu;-;-
+die Anzeige;leicht;A1;neu;-;-
+die Party;leicht;A1;neu;-;-
+der GruÃŸ;leicht;A1;neu;-;-
+das Fax;leicht;A1;neu;-;-
+der Sonnabend;leicht;A1;neu;-;-
+der Deutsche;leicht;A1;neu;-;-
+die Anmeldung;leicht;A1;neu;-;-
+das Europa;leicht;A1;neu;-;-
+die SchÃ¼lerin;leicht;A1;neu;-;-
+die Studentin;leicht;A1;neu;-;-
+die Kollegin;leicht;A1;neu;-;-
+der Unterricht;leicht;A1;neu;-;-
+die Freizeit;leicht;A1;neu;-;-
+die Partnerin;leicht;A1;neu;-;-
+das Hobby;leicht;A1;neu;-;-
+der AuslÃ¤nder;leicht;A1;neu;-;-
+das Lebensmittel;leicht;A1;neu;-;-
+das Viertel;leicht;A1;neu;-;-
+die Zigarette;leicht;A1;neu;-;-
+die VerkÃ¤uferin;leicht;A1;neu;-;-
+der Verwandte;leicht;A1;neu;-;-
+der Eingang;leicht;A1;neu;-;-
+die Miete;leicht;A1;neu;-;-
+die Entschuldigung;leicht;A1;neu;-;-
+der EmpfÃ¤nger;leicht;A1;neu;-;-
+der Hunger;leicht;A1;neu;-;-
+das Wiedersehen;leicht;A1;neu;-;-
+das Geschwister;leicht;A1;neu;-;-
+das MÃ¶bel;leicht;A1;neu;-;-
+die Einladung;leicht;A1;neu;-;-
+die Vorsicht;leicht;A1;neu;-;-
+das Praktikum;leicht;A1;neu;-;-
+die Unterschrift;leicht;A1;neu;-;-
+der Vermieter;leicht;A1;neu;-;-
+der Vormittag;leicht;A1;neu;-;-
+der EuropÃ¤er;leicht;A1;neu;-;-
+das Ticket;leicht;A1;neu;-;-
+die Reparatur;leicht;A1;neu;-;-
+der Ausweis;leicht;A1;neu;-;-
+die Speisekarte;leicht;A1;neu;-;-
+der Anruf;leicht;A1;neu;-;-
+die Achtung;leicht;A1;neu;-;-
+der Absender;leicht;A1;neu;-;-
+die Hausaufgabe;leicht;A1;neu;-;-
+die Ehefrau;leicht;A1;neu;-;-
+die Hausfrau;leicht;A1;neu;-;-
+die Vorwahl;leicht;A1;neu;-;-
+der Ehemann;leicht;A1;neu;-;-
+der Feierabend;leicht;A1;neu;-;-
+die Papiere;leicht;A1;neu;-;-
+der Bekannte;leicht;A1;neu;-;-
+die Disco;leicht;A1;neu;-;-
+das WiederhÃ¶ren;leicht;A1;neu;-;-
+der Lieblings-;leicht;A1;neu;-;-
+die Abfahrt;leicht;A1;neu;-;-
+der Durst;leicht;A1;neu;-;-
+die Viertelstunde;leicht;A1;neu;-;-
+der GlÃ¼ckwunsch;leicht;A1;neu;-;-
+die SehenswÃ¼rdigkeit;leicht;A1;neu;-;-
+das Formular;leicht;A1;neu;-;-
+der Schalter;leicht;A1;neu;-;-
+der Prospekt;leicht;A1;neu;-;-
+das Doppelzimmer;leicht;A1;neu;-;-
+die Briefmarke;leicht;A1;neu;-;-
+die Pommes frites;leicht;A1;neu;-;-
+die Postleitzahl;leicht;A1;neu;-;-
+die BÃ¤ckerei;leicht;A1;neu;-;-
+der Automat;leicht;A1;neu;-;-
+die Ankunft;leicht;A1;neu;-;-
+das Schild;leicht;A1;neu;-;-
+die Vermieterin;leicht;A1;neu;-;-
+der Schinken;leicht;A1;neu;-;-
+die Anrede;leicht;A1;neu;-;-
+die Dreiviertelstunde;leicht;A1;neu;-;-
+die Durchsage;leicht;A1;neu;-;-
+der ReisefÃ¼hrer;leicht;A1;neu;-;-
+die Rezeption;leicht;A1;neu;-;-
+das Einzelzimmer;leicht;A1;neu;-;-
+das Geburtsjahr;leicht;A1;neu;-;-
+der Familienstand;leicht;A1;neu;-;-
+der Wochentag;leicht;A1;neu;-;-
+der Kuli;leicht;A1;neu;-;-
+der Hausmann;leicht;A1;neu;-;-
+die Halbpension;leicht;A1;neu;-;-
+der Geburtsort;leicht;A1;neu;-;-
+das Mal;leicht;A2;neu;-;-
+die Sache;Mittel;A2;neu;-;-
+die Uni;Mittel;A2;neu;-;-
+die Person;Mittel;A2;neu;-;-
+das Ding;Mittel;A2;neu;-;-
+der Punkt;Mittel;A2;neu;-;-
+die Kunst;Mittel;A2;neu;-;-
+die Erfahrung;Mittel;A2;neu;-;-
+die Kultur;Mittel;A2;neu;-;-
+das Projekt;Mittel;A2;neu;-;-
+die Idee;Mittel;A2;neu;-;-
+das Produkt;Mittel;A2;neu;-;-
+die Meinung;Mittel;A2;neu;-;-
+das Mittel;Mittel;A2;neu;-;-
+die Natur;Mittel;A2;neu;-;-
+der Kontakt;Mittel;A2;neu;-;-
+die Ausbildung;Mittel;A2;neu;-;-
+das GerÃ¤t;Mittel;A2;neu;-;-
+der Vertrag;Mittel;A2;neu;-;-
+die Reihe;Mittel;A2;neu;-;-
+die NÃ¤he;Mittel;A2;neu;-;-
+der Autor;Mittel;A2;neu;-;-
+der Artikel;Mittel;A2;neu;-;-
+die Kenntnis;Mittel;A2;neu;-;-
+der Haushalt;Mittel;A2;neu;-;-
+der Titel;Mittel;A2;neu;-;-
+die Ruhe;Mittel;A2;neu;-;-
+das Zentrum;Mittel;A2;neu;-;-
+die Band;Mittel;A2;neu;-;-
+die QualitÃ¤t;Mittel;A2;neu;-;-
+das Instrument;Mittel;A2;neu;-;-
+die Nachricht;Mittel;A2;neu;-;-
+der Vorschlag;Mittel;A2;neu;-;-
+das Interview;Mittel;A2;neu;-;-
+die Veranstaltung;Mittel;A2;neu;-;-
+die Lust;Mittel;A2;neu;-;-
+der Club;Mittel;A2;neu;-;-
+der Nachbar;Mittel;A2;neu;-;-
+die Messe;Mittel;A2;neu;-;-
+der Wettbewerb;Mittel;A2;neu;-;-
+das Konzert;Mittel;A2;neu;-;-
+die Hauptstadt;Mittel;A2;neu;-;-
+das Gegenteil;Mittel;A2;neu;-;-
+der Polizist;Mittel;A2;neu;-;-
+die Gesundheit;Mittel;A2;neu;-;-
+das FrÃ¼hjahr;Mittel;A2;neu;-;-
+der Journalist;Mittel;A2;neu;-;-
+die Kamera;Mittel;A2;neu;-;-
+der Schauspieler;Mittel;A2;neu;-;-
+das Training;Mittel;A2;neu;-;-
+der Musiker;Mittel;A2;neu;-;-
+der Fan;Mittel;A2;neu;-;-
+die Tour;Mittel;A2;neu;-;-
+der Stress;Mittel;A2;neu;-;-
+das Weihnachten;Mittel;A2;neu;-;-
+die Note;Mittel;A2;neu;-;-
+der Tipp;Mittel;A2;neu;-;-
+das Festival;Mittel;A2;neu;-;-
+der SÃ¤nger;Mittel;A2;neu;-;-
+der Hamburger;Mittel;A2;neu;-;-
+der Service;Mittel;A2;neu;-;-
+die Website;Mittel;A2;neu;-;-
+die Homepage;Mittel;A2;neu;-;-
+der Blog;Mittel;A2;neu;-;-
+der Link;Mittel;A2;neu;-;-
+der Star;Mittel;A2;neu;-;-
+das Deutsch;Mittel;A2;neu;-;-
+das Englisch;Mittel;A2;neu;-;-
+das FranzÃ¶sisch;Mittel;A2;neu;-;-
+das Fach;Mittel;A2;neu;-;-
+die Autorin;Mittel;A2;neu;-;-
+die KÃ¼nstlerin;Mittel;A2;neu;-;-
+der Direktor;Mittel;A2;neu;-;-
+die Ahnung;Mittel;A2;neu;-;-
+die Religion;Mittel;A2;neu;-;-
+der Tourist;Mittel;A2;neu;-;-
+die Mathematik;Mittel;A2;neu;-;-
+die Physik;Mittel;A2;neu;-;-
+das Abitur;Mittel;A2;neu;-;-
+das Radio;Mittel;A2;neu;-;-
+der Kredit;Mittel;A2;neu;-;-
+der Bescheid;Mittel;A2;neu;-;-
+der Angestellte;Mittel;A2;neu;-;-
+die Chemie;Mittel;A2;neu;-;-
+der Flug;Mittel;A2;neu;-;-
+das Gehalt;Mittel;A2;neu;-;-
+das Tennis;Mittel;A2;neu;-;-
+die Ãœbersetzung;Mittel;A2;neu;-;-
+das Zelt;Mittel;A2;neu;-;-
+der Magen;Mittel;A2;neu;-;-
+die Biologie;Mittel;A2;neu;-;-
+die Schauspielerin;Mittel;A2;neu;-;-
+die Krankenkasse;Mittel;A2;neu;-;-
+der Rundgang;Mittel;A2;neu;-;-
+der Werktag;Mittel;A2;neu;-;-
+der Ski;Mittel;A2;neu;-;-
+der Krimi;Mittel;A2;neu;-;-
+die Mitternacht;Mittel;A2;neu;-;-
+die Portion;Mittel;A2;neu;-;-
+das Verkehrsmittel;Mittel;A2;neu;-;-
+die Gitarre;Mittel;A2;neu;-;-
+das Passwort;Mittel;A2;neu;-;-
+die Unterkunft;Mittel;A2;neu;-;-
+das Stipendium;Mittel;A2;neu;-;-
+der Auszubildende;Mittel;A2;neu;-;-
+das E-Book;Mittel;A2;neu;-;-
+das Mobiltelefon;Mittel;A2;neu;-;-
+das Stockwerk;Mittel;A2;neu;-;-
+die Sprechstunde;Mittel;A2;neu;-;-
+der Workshop;Mittel;A2;neu;-;-
+der Laptop;Mittel;A2;neu;-;-
+das Tablet;Mittel;A2;neu;-;-
+die Bewerbung;Mittel;A2;neu;-;-
+die Kosmetik;Mittel;A2;neu;-;-
+das Ostern;Mittel;A2;neu;-;-
+das Einkaufszentrum;Mittel;A2;neu;-;-
+der Flohmarkt;Mittel;A2;neu;-;-
+der Volleyball;Mittel;A2;neu;-;-
+der Basketball;Mittel;A2;neu;-;-
+das Neujahr;Mittel;A2;neu;-;-
+die Erlaubnis;Mittel;A2;neu;-;-
+der Rentner;Mittel;A2;neu;-;-
+die Cafeteria;Mittel;A2;neu;-;-
+der Arbeitstag;Mittel;A2;neu;-;-
+das Model;Mittel;A2;neu;-;-
+der Karneval;Mittel;A2;neu;-;-
+der Kaufmann;Mittel;A2;neu;-;-
+das Sekretariat;Mittel;A2;neu;-;-
+die LÃ¼ge;Mittel;A2;neu;-;-
+die Notiz;Mittel;A2;neu;-;-
+der PrÃ¼fer;Mittel;A2;neu;-;-
+der Techniker;Mittel;A2;neu;-;-
+die Grippe;Mittel;A2;neu;-;-
+der Schirm;Mittel;A2;neu;-;-
+die Rentnerin;Mittel;A2;neu;-;-
+die Geografie;Mittel;A2;neu;-;-
+die KÃ¶chin;Mittel;A2;neu;-;-
+das Latein;Mittel;A2;neu;-;-
+der Mechaniker;Mittel;A2;neu;-;-
+die Sozialkunde;Mittel;A2;neu;-;-
+der Motorroller;Mittel;A2;neu;-;-
+das Quiz;Mittel;A2;neu;-;-
+die Jugendherberge;Mittel;A2;neu;-;-
+die Fundsache;Mittel;A2;neu;-;-
+das ParfÃ¼m;Mittel;A2;neu;-;-
+der Ehepartner;Mittel;A2;neu;-;-
+die ErmÃ¤ÃŸigung;Mittel;A2;neu;-;-
+die Klassenfahrt;Mittel;A2;neu;-;-
+die Mailbox;Mittel;A2;neu;-;-
+der Krankenpfleger;Mittel;A2;neu;-;-
+die Kellnerin;Mittel;A2;neu;-;-
+die Kauffrau;Mittel;A2;neu;-;-
+der Antwortbogen;Mittel;A2;neu;-;-
