@@ -144,7 +144,7 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
    ========================================== */
 @keyframes kidPopIn{0%{opacity:0;transform:scale(.85) translateY(6px)}60%{opacity:1;transform:scale(1.03) translateY(0)}100%{opacity:1;transform:scale(1) translateY(0)}}
 @keyframes kidWiggle{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-4deg)}75%{transform:rotate(4deg)}}
-@keyframes kidBounceIn{0%{opacity:0;transform:scale(.7)}50%{opacity:1;transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes kidBounceIn{0%{opacity:0;transform:scale(.7)}50%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
 @keyframes kidMatchPulse{0%{transform:rotateY(180deg) scale(1)}30%{transform:rotateY(180deg) scale(1.12)}60%{transform:rotateY(180deg) scale(.95)}100%{transform:rotateY(180deg) scale(1)}}
 @keyframes kidGlow{0%,100%{box-shadow:0 0 0 4px #fde68a inset,var(--shadow-md)}50%{box-shadow:0 0 0 4px #fbbf24 inset,var(--shadow-md)}}
 @keyframes kidStarSpin{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(1.25)}100%{transform:rotate(360deg) scale(1)}}
@@ -261,7 +261,7 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 <div id="flashContainer"></div>
 </div>
 <div id="tab-dictionary" class="tab-content hidden">
-<div class="page-header"><h2>Wörterbuch</h2><p>Gesamtübersicht und Verwaltung aller Wörter deines aktuellen Profils.</p></div>
+<div class="page-header"><h2>Wörterbuch</h2><p id="dictionaryInfoText">Gesamtübersicht und Verwaltung aller Wörter deines aktuellen Profils.</p></div>
 <div class="top-nav-buttons"><button onclick="openAddWordModal()"><i class="fa-solid fa-plus"></i> Neues Wort ergänzen</button><button class="btn-danger" onclick="deleteSelectedWords()"><i class="fa-solid fa-trash-can"></i> Ausgewählte Wörter löschen</button></div>
 <div class="table-card"><div class="table-wrapper"><table><thead><tr><th><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"></th><th>Wort</th><th>Schwierigkeit</th><th>Thema</th><th class="col-image">Bild</th><th class="col-status">Status</th><th>Beispielsatz</th><th>Aktion</th></tr></thead><tbody id="fullDictionaryTbody"></tbody></table></div></div>
 </div>
@@ -292,7 +292,7 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 
 <div id="modalProfileInfo" class="modal-overlay hidden"><div class="modal-content"><h3>Aktuelles Profil</h3><div id="profileDetailsText" style="line-height:1.8;margin-bottom:15px"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalProfileInfo')">Schließen</button></div></div></div>
 <div id="modalNewProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Profil erstellen</h3><div class="form-group"><label for="newProfileName">Profilname eingeben:</label><input type="text" id="newProfileName" placeholder="z. B. Max"></div><div class="form-group"><label>Schwierigkeitsgrad:</label><div class="radio-group"><label><input type="radio" name="newDifficulty" value="leicht" checked> Leicht</label><label><input type="radio" name="newDifficulty" value="mittel"> Mittel</label><label><input type="radio" name="newDifficulty" value="schwer"> Schwer</label></div></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalNewProfile')">Abbrechen</button><button onclick="createNewProfile()">Erstellen</button></div></div></div>
-<div id="modalLoadProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil auswählen / laden</h3><div class="form-group"><label for="profileSelect">Vorhandene Profile:</label><select id="profileSelect"></select></div><div class="form-group"><label>Oder lokale CSV-Datei hochladen:</label><input type="file" id="localCsvInput" accept=".csv,text/csv"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalLoadProfile')">Abbrechen</button><button onclick="loadSelectedProfile()">Laden</button></div></div></div>
+<div id="modalLoadProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil auswählen / laden</h3><div class="form-group"><label for="profileSelect">Vorhandene Profile:</label><select id="profileSelect"></select></div><div class="form-group"><label>Oder lokale CSV-Datei hochladen:</label><input type="file" id="localCsvInput" accept=".csv,text/csv" onchange="toggleLocalCsvMergeOption()"></div><div class="form-group hidden" id="localCsvMergeOptionGroup"><label>Neue Wörter aus dem Standard-Wörterbuch übernehmen?</label><div class="radio-group"><label><input type="radio" name="localCsvMergeOption" value="merge" checked> Ja, neue Wörter ergänzen</label><label><input type="radio" name="localCsvMergeOption" value="nomerge"> Nein, nur Wörter aus der Datei</label></div></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalLoadProfile')">Abbrechen</button><button onclick="loadSelectedProfile()">Laden</button></div></div></div>
 <div id="modalDeleteProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil löschen</h3><div class="form-group"><label for="deleteProfileSelect">Zu löschendes Profil auswählen:</label><select id="deleteProfileSelect"></select></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalDeleteProfile')">Abbrechen</button><button class="btn-danger" onclick="confirmDeleteProfile()">Löschen</button></div></div></div>
 <div id="modalAddWord" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Wort ergänzen</h3><div class="form-group"><label for="addWort">Wort:</label><input type="text" id="addWort" placeholder="z. B. Haus"></div><div class="form-group"><label for="addSchwierigkeit">Schwierigkeit:</label><select id="addSchwierigkeit"><option value="leicht">leicht</option><option value="mittel">mittel</option><option value="schwer">schwer</option></select></div><div class="form-group"><label for="addThema">Thema:</label><input type="text" id="addThema" placeholder="z. B. Alltag"></div><div class="form-group"><label for="addBilddatei">Bilddatei:</label><input type="text" id="addBilddatei" placeholder="z. B. haus.png oder -"></div><div class="form-group"><label for="addStatus">Status:</label><select id="addStatus"><option value="neu">neu</option><option value="gelernt">gelernt</option><option value="wiederholt">wiederholt</option><option value="bekannt">bekannt</option></select></div><div class="form-group"><label for="addBeispielsatz">Beispielsatz:</label><input type="text" id="addBeispielsatz" placeholder="Beispielsatz eingeben"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalAddWord')">Abbrechen</button><button onclick="saveNewWord()">Wort hinzufügen</button></div></div></div>
 
@@ -380,6 +380,7 @@ function switchTab(tabName, event) {
     if (menuItem) menuItem.classList.add('active');
     
     if (tabName === 'dictionary') renderFullDictionary();
+    if (tabName === 'spiel1') updateListInfoText();
     if (tabName === 'spiel2') initMemorySetup();
     if (tabName === 'spiel3') initFlashSetup();
 }
@@ -707,7 +708,14 @@ function openLoadProfileModal() {
     });
 
     document.getElementById('localCsvInput').value = '';
+    document.getElementById('localCsvMergeOptionGroup').classList.add('hidden');
+    document.querySelector('input[name="localCsvMergeOption"][value="merge"]').checked = true;
     document.getElementById('modalLoadProfile').classList.remove('hidden');
+}
+
+function toggleLocalCsvMergeOption() {
+    const fileInput = document.getElementById('localCsvInput');
+    document.getElementById('localCsvMergeOptionGroup').classList.toggle('hidden', fileInput.files.length === 0);
 }
 
 async function loadSelectedProfile() {
@@ -725,8 +733,11 @@ async function loadSelectedProfile() {
             currentFileName = fileInput.files[0].name;
             currentProfile = currentFileName.replace(/\.csv$/i, '');
             currentDifficulty = null;
-            
-            await mergeNewWordsFromStandard();
+
+            const mergeOption = document.querySelector('input[name="localCsvMergeOption"]:checked')?.value || 'merge';
+            if (mergeOption === 'merge') {
+                await mergeNewWordsFromStandard();
+            }
 
             localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
             addProfileToList(currentProfile, currentFileName, null);
@@ -777,9 +788,26 @@ function confirmDeleteProfile() {
     }
 }
 
+function getStatisticsText() {
+    const total = meineWoerterliste.length;
+    let neu = 0, gelernt = 0, wiederholt = 0, bekannt = 0;
+    meineWoerterliste.forEach(item => {
+        const status = item.Lernstatus || 'neu';
+        if (status === 'neu') neu++;
+        else if (status === 'gelernt') gelernt++;
+        else if (status === 'wiederholt') wiederholt++;
+        else if (status === 'bekannt') bekannt++;
+    });
+    const diffText = currentDifficulty ? ` (${currentDifficulty})` : '';
+    return `Insgesamt ${total}${diffText} Wörter:  ${neu} neu  |  ${gelernt} gelernt  |  ${wiederholt} wiederholt  |  ${bekannt} bekannt`;
+}
+
 function updateListInfoText(availableCount) {
-    document.getElementById('listInfoText').innerText =
-        `${meineWoerterliste.length}${currentDifficulty ? ` (${currentDifficulty})` : ''} Wörter im aktuellen Kontext`;
+    const statText = getStatisticsText();
+    const listInfo = document.getElementById('listInfoText');
+    if (listInfo) listInfo.innerText = statText;
+    const dictInfo = document.getElementById('dictionaryInfoText');
+    if (dictInfo) dictInfo.innerText = statText;
 }
 
 function startSpiel1() { showNewWords(lastRequestedWordCount); }
@@ -816,6 +844,7 @@ function confirmShowSameTopicWords() {
 
 function showSameTopicWords(count = 10, chosenTopic = 'random') {
     currentView = 'sameTopic';
+    updateListInfoText();
     const newWords = meineWoerterliste.filter(item => item.Lernstatus === 'neu' || !item.Lernstatus);
     if (!newWords.length) {
         document.getElementById('wordCardsContainer').innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted)"><p>Keine neuen Wörter vorhanden.</p></div>`;
@@ -830,7 +859,6 @@ function showSameTopicWords(count = 10, chosenTopic = 'random') {
 
     let topicWords = newWords.filter(w => (w.Thema || 'Allgemein') === targetTopic).sort(() => 0.5 - Math.random()).slice(0, count);
 
-    updateListInfoText(topicWords.length);
     const container = document.getElementById('wordCardsContainer');
     container.innerHTML = '';
     if (!topicWords.length) {
@@ -872,6 +900,7 @@ function handleStatusClick(event, newStatus) {
                     cardElement.appendChild(badge);
                 }
                 badge.textContent = item.wiederholZaehler;
+                updateListInfoText();
                 return;
             } else {
                 item.Lernstatus = newStatus;
@@ -881,12 +910,13 @@ function handleStatusClick(event, newStatus) {
         }
     }
     cardElement.remove();
+    updateListInfoText();
 }
 
 function showNewWords(count = 10) {
     currentView = 'new';
+    updateListInfoText();
     const availableNewWords = meineWoerterliste.filter(item => item.Lernstatus === 'neu' || !item.Lernstatus);
-    updateListInfoText(availableNewWords.length);
     const selectedWords = [...availableNewWords].sort(() => 0.5 - Math.random()).slice(0, count);
 
     const container = document.getElementById('wordCardsContainer');
@@ -905,8 +935,8 @@ function showNewWords(count = 10) {
 
 function filterByStatus(status) {
     currentView = status;
+    updateListInfoText();
     const words = meineWoerterliste.filter(w => w.Lernstatus === status);
-    updateListInfoText(words.length);
     const container = document.getElementById('wordCardsContainer');
     container.innerHTML = '';
     if (!words.length) {
@@ -942,10 +972,12 @@ function saveNewWord() {
     ['addWort','addThema','addBilddatei','addBeispielsatz'].forEach(id => document.getElementById(id).value = '');
     closeModal('modalAddWord');
     saveCurrentData(false);
+    updateListInfoText();
     document.getElementById('tab-dictionary').classList.contains('hidden') ? startSpiel1() : renderFullDictionary();
 }
 
 function renderFullDictionary() {
+    updateListInfoText();
     const tbody = document.getElementById('fullDictionaryTbody');
     tbody.innerHTML = '';
     if (!meineWoerterliste.length) {
