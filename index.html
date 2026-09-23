@@ -292,7 +292,30 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 
 <div id="modalProfileInfo" class="modal-overlay hidden"><div class="modal-content"><h3>Aktuelles Profil</h3><div id="profileDetailsText" style="line-height:1.8;margin-bottom:15px"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalProfileInfo')">Schließen</button></div></div></div>
 <div id="modalNewProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Profil erstellen</h3><div class="form-group"><label for="newProfileName">Profilname eingeben:</label><input type="text" id="newProfileName" placeholder="z. B. Max"></div><div class="form-group"><label>Schwierigkeitsgrad:</label><div class="radio-group"><label><input type="radio" name="newDifficulty" value="leicht" checked> Leicht</label><label><input type="radio" name="newDifficulty" value="mittel"> Mittel</label><label><input type="radio" name="newDifficulty" value="schwer"> Schwer</label></div></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalNewProfile')">Abbrechen</button><button onclick="createNewProfile()">Erstellen</button></div></div></div>
-<div id="modalLoadProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil auswählen / laden</h3><div class="form-group"><label for="profileSelect">Vorhandene Profile:</label><select id="profileSelect"></select></div><div class="form-group"><label>Oder lokale CSV-Datei hochladen:</label><input type="file" id="localCsvInput" accept=".csv,text/csv" onchange="toggleLocalCsvMergeOption()"></div><div class="form-group hidden" id="localCsvMergeOptionGroup"><label>Neue Wörter aus dem Standard-Wörterbuch übernehmen?</label><div class="radio-group"><label><input type="radio" name="localCsvMergeOption" value="merge" checked> Ja, neue Wörter ergänzen</label><label><input type="radio" name="localCsvMergeOption" value="nomerge"> Nein, nur Wörter aus der Datei</label></div></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalLoadProfile')">Abbrechen</button><button onclick="loadSelectedProfile()">Laden</button></div></div></div>
+<div id="modalLoadProfile" class="modal-overlay hidden">
+    <div class="modal-content">
+        <h3>Profil auswählen / laden</h3>
+        <div class="form-group">
+            <label for="profileSelect">Vorhandene Profile:</label>
+            <select id="profileSelect"></select>
+        </div>
+        <div class="form-group">
+            <label>Oder lokale CSV-Datei hochladen:</label>
+            <input type="file" id="localCsvInput" accept=".csv,text/csv">
+        </div>
+        <div class="form-group" id="localCsvMergeOptionGroup">
+            <label>Neue Wörter aus dem Standard-Wörterbuch übernehmen?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="localCsvMergeOption" value="merge" checked> Ja, neue Wörter ergänzen</label>
+                <label><input type="radio" name="localCsvMergeOption" value="nomerge"> Nein, nur Wörter aus der Datei</label>
+            </div>
+        </div>
+        <div class="modal-actions">
+            <button class="btn-secondary" onclick="closeModal('modalLoadProfile')">Abbrechen</button>
+            <button onclick="loadSelectedProfile()">Laden</button>
+        </div>
+    </div>
+</div>
 <div id="modalDeleteProfile" class="modal-overlay hidden"><div class="modal-content"><h3>Profil löschen</h3><div class="form-group"><label for="deleteProfileSelect">Zu löschendes Profil auswählen:</label><select id="deleteProfileSelect"></select></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalDeleteProfile')">Abbrechen</button><button class="btn-danger" onclick="confirmDeleteProfile()">Löschen</button></div></div></div>
 <div id="modalAddWord" class="modal-overlay hidden"><div class="modal-content"><h3>Neues Wort ergänzen</h3><div class="form-group"><label for="addWort">Wort:</label><input type="text" id="addWort" placeholder="z. B. Haus"></div><div class="form-group"><label for="addSchwierigkeit">Schwierigkeit:</label><select id="addSchwierigkeit"><option value="leicht">leicht</option><option value="mittel">mittel</option><option value="schwer">schwer</option></select></div><div class="form-group"><label for="addThema">Thema:</label><input type="text" id="addThema" placeholder="z. B. Alltag"></div><div class="form-group"><label for="addBilddatei">Bilddatei:</label><input type="text" id="addBilddatei" placeholder="z. B. haus.png oder -"></div><div class="form-group"><label for="addStatus">Status:</label><select id="addStatus"><option value="neu">neu</option><option value="gelernt">gelernt</option><option value="wiederholt">wiederholt</option><option value="bekannt">bekannt</option></select></div><div class="form-group"><label for="addBeispielsatz">Beispielsatz:</label><input type="text" id="addBeispielsatz" placeholder="Beispielsatz eingeben"></div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal('modalAddWord')">Abbrechen</button><button onclick="saveNewWord()">Wort hinzufügen</button></div></div></div>
 
@@ -708,19 +731,14 @@ function openLoadProfileModal() {
     });
 
     document.getElementById('localCsvInput').value = '';
-    document.getElementById('localCsvMergeOptionGroup').classList.add('hidden');
     document.querySelector('input[name="localCsvMergeOption"][value="merge"]').checked = true;
     document.getElementById('modalLoadProfile').classList.remove('hidden');
-}
-
-function toggleLocalCsvMergeOption() {
-    const fileInput = document.getElementById('localCsvInput');
-    document.getElementById('localCsvMergeOptionGroup').classList.toggle('hidden', fileInput.files.length === 0);
 }
 
 async function loadSelectedProfile() {
     const select = document.getElementById('profileSelect');
     const fileInput = document.getElementById('localCsvInput');
+    const mergeOption = document.querySelector('input[name="localCsvMergeOption"]:checked')?.value || 'merge';
 
     if (fileInput.files.length > 0) {
         try {
@@ -734,7 +752,6 @@ async function loadSelectedProfile() {
             currentProfile = currentFileName.replace(/\.csv$/i, '');
             currentDifficulty = null;
 
-            const mergeOption = document.querySelector('input[name="localCsvMergeOption"]:checked')?.value || 'merge';
             if (mergeOption === 'merge') {
                 await mergeNewWordsFromStandard();
             }
@@ -754,7 +771,9 @@ async function loadSelectedProfile() {
             return;
         }
         
-        await mergeNewWordsFromStandard();
+        if (mergeOption === 'merge') {
+            await mergeNewWordsFromStandard();
+        }
     }
     closeModal('modalLoadProfile');
     startSpiel1();
