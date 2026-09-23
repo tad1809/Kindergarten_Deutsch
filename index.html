@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deutsch-Lern Dashboard</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg-body:#f8fafc;--sidebar-bg:#1e293b;--sidebar-hover:#334155;--primary:#4f46e5;--primary-hover:#4338ca;--success:#10b981;--danger:#ef4444;--warning:#f59e0b;--info:#0284c7;--purple:#9333ea;--text-main:#0f172a;--text-muted:#64748b;--card-bg:#fff;--border-color:#e2e8f0;--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--shadow-sm:0 1px 3px rgba(0,0,0,.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,.1)}
+:root{--bg-body:#f8fafc;--sidebar-bg:#1e293b;--sidebar-hover:#334155;--primary:#4f46e5;--primary-hover:#4338ca;--success:#10b981;--danger:#ef4444;--warning:#f59e0b;--info:#0284c7;--purple:#9333ea;--text-main:#0f172a;--text-muted:#64748b;--card-bg:#fff;--border-color:#e2e8f0;--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--shadow-sm:0 1px 3px rgba(0,0,0,.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,.1);--kid-font:'Baloo 2',Inter,system-ui,sans-serif;--kid-pink:#f472b6;--kid-rose:#fb7185;--kid-orange:#fb923c;--kid-amber:#fbbf24;--kid-yellow:#facc15;--kid-green:#4ade80;--kid-teal:#2dd4bf;--kid-blue:#38bdf8;--kid-indigo:#818cf8;--kid-purple:#c084fc}
 *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,sans-serif}
 body{background:var(--bg-body);color:var(--text-main);height:100vh;overflow:hidden}
 .dashboard{display:flex;height:100vh;width:100vw}
@@ -28,6 +28,13 @@ body{background:var(--bg-body);color:var(--text-main);height:100vh;overflow:hidd
 button{padding:10px 18px;background:var(--primary);color:#fff;border:0;border-radius:8px;cursor:pointer;font-weight:600;font-size:.9rem;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:var(--shadow-sm)}
 button:hover{background:var(--primary-hover);transform:translateY(-1px)}button.btn-secondary{background:#fff;color:var(--text-main);border:1px solid var(--border-color)}button.btn-secondary:hover{background:#f1f5f9}
 button.btn-danger{background:var(--danger)}
+button.btn-speak{background:transparent;color:var(--primary);border:0;box-shadow:none;padding:6px;width:32px;height:32px;min-width:32px;border-radius:50%;font-size:1rem;flex-shrink:0}
+button.btn-speak:hover{background:#e0e7ff;transform:none}
+button.btn-speak:active{background:#c7d2fe}
+button.btn-speak-sm{width:26px;height:26px;font-size:.8rem;padding:4px}
+
+.thumb-img{object-fit:cover;border-radius:8px;border:1px solid var(--border-color);background:#f8fafc;display:block;flex-shrink:0}
+.thumb-placeholder{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;background:#f1f5f9;color:#cbd5e1;border:1px dashed var(--border-color);flex-shrink:0}
 
 /* Vokabel-Training Buttons */
 button.btn-status-neu { background: #fca5a5; color: #7f1d1d; }
@@ -56,7 +63,8 @@ table{width:100%;border-collapse:collapse;font-size:.9rem;text-align:left}th,td{
 .badge{display:inline-block;padding:4px 10px;border-radius:12px;font-size:.75rem;font-weight:600}.badge-neu{background:#e0f2fe;color:#0369a1}.badge-gelernt{background:#d1fae5;color:#047857}.badge-wiederholt{background:#fef3c7;color:#b45309}.badge-bekannt{background:#f3e8ff;color:#7e22ce}
 
 .dict-status-select{padding:6px 12px;border-radius:8px;border:1px solid var(--border-color);font-size:.9rem;background:#fff;outline:none;cursor:pointer;width:150px;}
-.col-status { width: 180px; } 
+.col-status { width: 180px; }
+.col-image { width: 70px; } 
 
 .modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.6);backdrop-filter:blur(4px);display:flex;justify-content:center;align-items:center;z-index:1000}.modal-content{background:#fff;padding:28px;border-radius:16px;width:440px;max-width:90%;box-shadow:0 10px 15px rgba(0,0,0,.15)}
 .modal-content h3{margin-bottom:18px}.form-group{margin-bottom:16px}label{display:block;margin-bottom:6px;font-size:.85rem;font-weight:600}
@@ -131,6 +139,73 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 .flash-option-btn.correct, .flash-option-img-btn.correct { background: var(--success) !important; color: #fff !important; border-color: var(--success) !important; }
 .flash-option-btn.wrong, .flash-option-img-btn.wrong { background: var(--danger) !important; color: #fff !important; border-color: var(--danger) !important; }
 
+/* ==========================================
+   Kindgerechtes Design: Vokabel-Training, Memory-Spiel, Bild-Wort-Blitz
+   ========================================== */
+@keyframes kidPopIn{0%{opacity:0;transform:scale(.85) translateY(6px)}60%{opacity:1;transform:scale(1.03) translateY(0)}100%{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes kidWiggle{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-4deg)}75%{transform:rotate(4deg)}}
+@keyframes kidBounceIn{0%{opacity:0;transform:scale(.7)}50%{opacity:1;transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes kidMatchPulse{0%{transform:rotateY(180deg) scale(1)}30%{transform:rotateY(180deg) scale(1.12)}60%{transform:rotateY(180deg) scale(.95)}100%{transform:rotateY(180deg) scale(1)}}
+@keyframes kidGlow{0%,100%{box-shadow:0 0 0 4px #fde68a inset,var(--shadow-md)}50%{box-shadow:0 0 0 4px #fbbf24 inset,var(--shadow-md)}}
+@keyframes kidStarSpin{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(1.25)}100%{transform:rotate(360deg) scale(1)}}
+
+#tab-spiel1 .page-header h2,#tab-spiel2 .page-header h2,#tab-spiel3 .page-header h2{font-family:var(--kid-font);font-size:2.1rem;color:var(--primary);letter-spacing:.3px}
+#tab-spiel1 .page-header p,#tab-spiel2 .page-header p,#tab-spiel3 .page-header p{font-size:1.05rem}
+#tab-spiel1 .top-nav-buttons button,#tab-spiel2 button,#tab-spiel3 button{font-family:var(--kid-font);border-radius:16px;font-weight:700}
+#tab-spiel1 .top-nav-buttons .btn-secondary{border-width:2px}
+#tab-spiel1 .top-nav-buttons .btn-secondary:hover,#tab-spiel2 .btn-secondary:hover,#tab-spiel3 .btn-secondary:hover{transform:translateY(-2px) rotate(-1deg)}
+
+/* --- Vokabel-Training: Wortkarten --- */
+#tab-spiel1 .word-card{font-family:var(--kid-font);border:3px solid #eef2ff;border-radius:22px;box-shadow:0 5px 0 rgba(79,70,229,.14),var(--shadow-sm);animation:kidPopIn .35s ease-out both;transition:transform .18s ease,box-shadow .18s ease}
+#tab-spiel1 .word-card:hover{transform:translateY(-5px) scale(1.015);box-shadow:0 9px 0 rgba(79,70,229,.18),var(--shadow-md)}
+#tab-spiel1 .word-card::before{width:9px;border-radius:22px 0 0 22px;background:linear-gradient(180deg,var(--kid-pink),var(--kid-indigo))}
+#tab-spiel1 .word-card:nth-child(5n+1)::before{background:linear-gradient(180deg,var(--kid-pink),var(--kid-rose))}
+#tab-spiel1 .word-card:nth-child(5n+2)::before{background:linear-gradient(180deg,var(--kid-blue),var(--kid-teal))}
+#tab-spiel1 .word-card:nth-child(5n+3)::before{background:linear-gradient(180deg,var(--kid-green),var(--kid-teal))}
+#tab-spiel1 .word-card:nth-child(5n+4)::before{background:linear-gradient(180deg,var(--kid-amber),var(--kid-orange))}
+#tab-spiel1 .word-card:nth-child(5n+5)::before{background:linear-gradient(180deg,var(--kid-purple),var(--kid-indigo))}
+#tab-spiel1 .word-card h3{font-size:1.6rem;font-weight:700}
+#tab-spiel1 .tag{font-family:Inter,sans-serif;background:#fef3c7;color:#92400e;font-weight:700}
+#tab-spiel1 .word-card p.example{border-radius:14px;font-family:Inter,sans-serif;background:#f0f9ff}
+#tab-spiel1 .btn-speak{background:#eef2ff;width:38px;height:38px;font-size:1.15rem}
+#tab-spiel1 .btn-speak:hover{background:var(--kid-amber);color:#7c2d12;animation:kidWiggle .4s ease}
+#tab-spiel1 .thumb-img-card,#tab-spiel1 .thumb-img-card-placeholder{border-radius:12px;border-width:2px}
+#tab-spiel1 .thumb-img-card{border-color:#c7d2fe}
+#tab-spiel1 .card-buttons button{border-radius:16px;font-family:var(--kid-font);font-weight:700;font-size:.85rem;padding:16px 4px;border:2px solid rgba(0,0,0,.06)}
+#tab-spiel1 .card-buttons button:hover{transform:translateY(-2px) scale(1.04)}
+#tab-spiel1 .repeat-counter-badge{width:32px;height:32px;border-radius:50%;font-size:1rem;animation:kidBounceIn .3s ease}
+
+/* --- Memory-Spiel --- */
+#tab-spiel2 .memory-setup-card,#tab-spiel2 .memory-board-header{font-family:var(--kid-font);border-radius:22px;border:3px solid #eef2ff}
+#tab-spiel2 .memory-setup-card h3{font-size:1.4rem;color:var(--primary)}
+#tab-spiel2 .memory-status-badge{font-size:1.05rem;border-radius:24px}
+#tab-spiel2 .memory-score-item{border-radius:20px;font-family:var(--kid-font)}
+#tab-spiel2 .memory-grid{gap:16px}
+#tab-spiel2 .memory-card{border-radius:18px;border:3px solid #ddd6fe;box-shadow:0 4px 0 rgba(129,140,248,.25),var(--shadow-sm)}
+#tab-spiel2 .memory-card:not(.flipped):not(.solved):hover{transform:translateY(-3px) scale(1.04)}
+#tab-spiel2 .memory-card-face{border-radius:15px}
+#tab-spiel2 .memory-card-front{background:linear-gradient(135deg,#6366f1,#a855f7);color:#fde68a;font-size:2.1rem}
+#tab-spiel2 .memory-card:not(.flipped):not(.solved):hover .memory-card-front{animation:kidWiggle .5s ease}
+#tab-spiel2 .memory-card-back{border-radius:15px}
+#tab-spiel2 .memory-card-back span{font-family:var(--kid-font);font-size:.85rem}
+#tab-spiel2 .memory-card.flipped .memory-card-back{animation:kidBounceIn .35s ease}
+#tab-spiel2 .memory-card.matched .memory-card-back{animation:kidMatchPulse .6s ease,kidGlow 1.6s ease-in-out infinite;border-radius:15px}
+
+/* --- Bild-Wort-Blitz --- */
+#tab-spiel3 .flash-setup-card,#tab-spiel3 .flash-game-card{font-family:var(--kid-font);border-radius:24px;border:3px solid #eef2ff}
+#tab-spiel3 .flash-setup-card h3{font-size:1.4rem;color:var(--primary)}
+#tab-spiel3 .flash-hud{font-family:var(--kid-font);font-size:1rem}
+#tab-spiel3 .flash-progress-bar-container{height:12px;border-radius:8px;background:#f1f5f9}
+#tab-spiel3 .flash-progress-bar{background:linear-gradient(90deg,var(--kid-green),var(--kid-amber),var(--kid-rose));border-radius:8px}
+#tab-spiel3 .flash-target-image{width:240px;height:240px;border-radius:20px;border:3px solid #eef2ff;animation:kidBounceIn .4s ease}
+#tab-spiel3 .flash-target-word{font-family:var(--kid-font);font-size:2.4rem;border-radius:18px;background:linear-gradient(135deg,#e0e7ff,#fce7f3);animation:kidBounceIn .4s ease}
+#tab-spiel3 .flash-option-btn{border-radius:18px;font-family:var(--kid-font);font-size:1.1rem;border-width:3px}
+#tab-spiel3 .flash-option-btn:hover:not(:disabled){transform:translateY(-3px) scale(1.03)}
+#tab-spiel3 .flash-option-img-btn{border-radius:18px;border-width:3px}
+#tab-spiel3 .flash-option-img-btn:hover:not(:disabled){transform:translateY(-3px) scale(1.05)}
+#tab-spiel3 .flash-option-btn.correct,#tab-spiel3 .flash-option-img-btn.correct{animation:kidBounceIn .4s ease}
+#tab-spiel3 .flash-option-btn.wrong,#tab-spiel3 .flash-option-img-btn.wrong{animation:kidWiggle .4s ease}
+
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @media(max-width:800px){.panel-left{width:220px;min-width:220px}.panel-middle{padding:20px}.word-cards-container{grid-template-columns:1fr}.memory-settings-grid{grid-template-columns:1fr}.flash-options-grid.images{grid-template-columns:repeat(3, 1fr)}}
 </style>
@@ -167,7 +242,7 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 
 <div class="panel panel-middle">
 <div id="tab-spiel1" class="tab-content">
-<div class="page-header"><h2>Vokabel Training</h2><p id="listInfoText">Wähle eine Aktion aus, um zu starten.</p></div>
+<div class="page-header"><h2>🧠 Vokabel Training</h2><p id="listInfoText">Wähle eine Aktion aus, um zu starten.</p></div>
 <div class="top-nav-buttons">
 <button class="btn-secondary" onclick="openWordCountModal()"><i class="fa-solid fa-sparkles"></i> Neue Wörter zeigen</button>
 <button class="btn-secondary" onclick="openSameTopicModal()"><i class="fa-solid fa-layer-group"></i> Wörter mit gleichen Themen</button>
@@ -178,17 +253,17 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 <div id="wordCardsContainer" class="word-cards-container"></div>
 </div>
 <div id="tab-spiel2" class="tab-content hidden">
-<div class="page-header"><h2>Memory-Spiel</h2><p>Finde passende Bild- und Wortpaare aus deinem Vokabelwortschatz!</p></div>
+<div class="page-header"><h2>🧩 Memory-Spiel</h2><p>Finde passende Bild- und Wortpaare aus deinem Vokabelwortschatz!</p></div>
 <div id="memoryContainer"></div>
 </div>
 <div id="tab-spiel3" class="tab-content hidden">
-<div class="page-header"><h2>Bild-Wort-Blitz</h2><p>Teste deine Reaktionsfähigkeit und deinen Wortschatz unter Zeitdruck!</p></div>
+<div class="page-header"><h2>⚡ Bild-Wort-Blitz</h2><p>Teste deine Reaktionsfähigkeit und deinen Wortschatz unter Zeitdruck!</p></div>
 <div id="flashContainer"></div>
 </div>
 <div id="tab-dictionary" class="tab-content hidden">
 <div class="page-header"><h2>Wörterbuch</h2><p>Gesamtübersicht und Verwaltung aller Wörter deines aktuellen Profils.</p></div>
 <div class="top-nav-buttons"><button onclick="openAddWordModal()"><i class="fa-solid fa-plus"></i> Neues Wort ergänzen</button><button class="btn-danger" onclick="deleteSelectedWords()"><i class="fa-solid fa-trash-can"></i> Ausgewählte Wörter löschen</button></div>
-<div class="table-card"><div class="table-wrapper"><table><thead><tr><th><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"></th><th>Wort</th><th>Schwierigkeit</th><th>Thema</th><th>Bilddatei</th><th class="col-status">Status</th><th>Beispielsatz</th><th>Aktion</th></tr></thead><tbody id="fullDictionaryTbody"></tbody></table></div></div>
+<div class="table-card"><div class="table-wrapper"><table><thead><tr><th><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this)"></th><th>Wort</th><th>Schwierigkeit</th><th>Thema</th><th class="col-image">Bild</th><th class="col-status">Status</th><th>Beispielsatz</th><th>Aktion</th></tr></thead><tbody id="fullDictionaryTbody"></tbody></table></div></div>
 </div>
 </div>
 </div>
@@ -315,6 +390,80 @@ function closeModal(id) {
 
 function escapeHtml(value) {
     return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+}
+
+/* ==========================================
+   Sprachausgabe (Web Speech API)
+   ========================================== */
+let germanVoice = null;
+
+function pickGermanVoice() {
+    if (!('speechSynthesis' in window)) return;
+    const voices = window.speechSynthesis.getVoices();
+    if (!voices.length) return;
+    germanVoice = voices.find(v => v.lang === 'de-DE') ||
+                  voices.find(v => v.lang && v.lang.toLowerCase().startsWith('de')) ||
+                  null;
+}
+
+if ('speechSynthesis' in window) {
+    pickGermanVoice();
+    window.speechSynthesis.onvoiceschanged = pickGermanVoice;
+}
+
+function speakButtonHtml(word, small) {
+    const cls = small ? 'btn-speak btn-speak-sm' : 'btn-speak';
+    return `<button type="button" class="${cls}" data-word="${escapeHtml(word || '')}" onclick="speakWord(this.dataset.word, event)" title="Wort anhören" aria-label="Wort anhören"><i class="fa-solid fa-volume-high"></i></button>`;
+}
+
+function buildImagePath(filename) {
+    if (!filename || filename === '-') return null;
+    return filename.startsWith('Bilder/') ? filename : `Bilder/${filename}`;
+}
+
+function thumbnailHtml(filename, options) {
+    options = options || {};
+    const size = options.size || 44;
+    const cls = options.cls || 'thumb-img';
+    const path = buildImagePath(filename);
+    if (!path) {
+        return `<span class="thumb-placeholder ${cls}-placeholder" style="width:${size}px;height:${size}px;"><i class="fa-solid fa-image"></i></span>`;
+    }
+    return `<img src="${escapeHtml(path)}" alt="" loading="lazy" class="${cls}" style="width:${size}px;height:${size}px;" data-attempt="0" data-original="${escapeHtml(filename)}" data-size="${size}" data-cls="${cls}" onerror="handleThumbError(this)">`;
+}
+
+function handleThumbError(imgEl) {
+    const attempt = parseInt(imgEl.dataset.attempt || '0', 10);
+    const original = imgEl.dataset.original || '';
+    if (attempt === 0) {
+        imgEl.dataset.attempt = '1';
+        imgEl.src = buildImagePath(original.normalize('NFD'));
+    } else if (attempt === 1) {
+        imgEl.dataset.attempt = '2';
+        imgEl.src = buildImagePath(original.normalize('NFC'));
+    } else {
+        const size = imgEl.dataset.size || 44;
+        const cls = imgEl.dataset.cls || 'thumb-img';
+        const placeholder = document.createElement('span');
+        placeholder.className = `thumb-placeholder ${cls}-placeholder`;
+        placeholder.style.width = size + 'px';
+        placeholder.style.height = size + 'px';
+        placeholder.innerHTML = '<i class="fa-solid fa-image"></i>';
+        imgEl.replaceWith(placeholder);
+    }
+}
+
+function speakWord(text, event) {
+    if (event) event.stopPropagation();
+    if (!text || text === '-' || !('speechSynthesis' in window)) return;
+
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'de-DE';
+    utterance.rate = 0.85;
+    utterance.pitch = 1;
+    if (germanVoice) utterance.voice = germanVoice;
+    window.speechSynthesis.speak(utterance);
 }
 
 /* ==========================================
@@ -692,17 +841,17 @@ function showSameTopicWords(count = 10, chosenTopic = 'random') {
     topicWords.forEach(wordObj => {
         const card = document.createElement('div');
         card.className = 'word-card';
-        card.innerHTML = `<div><div class="word-card-header"><h3>${escapeHtml(wordObj.Wort)}</h3><span class="tag">${escapeHtml(wordObj.Thema || 'Allgemein')}</span></div><p class="example">"${escapeHtml(wordObj.Beispielsatz || '-')}"</p></div>${createCardButtons(wordObj)}`;
+        card.innerHTML = `<div><div class="word-card-header"><div style="display:flex;align-items:center;gap:8px;min-width:0;">${thumbnailHtml(wordObj.Bilddatei, {size: 40, cls: 'thumb-img-card'})}<h3>${escapeHtml(wordObj.Wort)}</h3>${speakButtonHtml(wordObj.Wort)}</div><span class="tag">${escapeHtml(wordObj.Thema || 'Allgemein')}</span></div><p class="example">"${escapeHtml(wordObj.Beispielsatz || '-')}"</p></div>${createCardButtons(wordObj)}`;
         container.appendChild(card);
     });
 }
 
 function createCardButtons(wordObj) {
     return `<div class="card-buttons">
-        <button class="btn-status-neu" onclick="handleStatusClick(event, 'neu')">Neu</button>
-        <button class="btn-status-gelernt" onclick="handleStatusClick(event, 'gelernt')">Gelernt</button>
-        <button class="btn-status-wiederholen" onclick="handleStatusClick(event, 'wiederholt')">Wiederholen</button>
-        <button class="btn-status-bekannt" onclick="handleStatusClick(event, 'bekannt')">Bekannt</button>
+        <button class="btn-status-neu" onclick="handleStatusClick(event, 'neu')">🆕 Neu</button>
+        <button class="btn-status-gelernt" onclick="handleStatusClick(event, 'gelernt')">✅ Gelernt</button>
+        <button class="btn-status-wiederholen" onclick="handleStatusClick(event, 'wiederholt')">🔁 Wiederholen</button>
+        <button class="btn-status-bekannt" onclick="handleStatusClick(event, 'bekannt')">⭐ Bekannt</button>
     </div>`;
 }
 
@@ -749,7 +898,7 @@ function showNewWords(count = 10) {
     selectedWords.forEach(wordObj => {
         const card = document.createElement('div');
         card.className = 'word-card';
-        card.innerHTML = `<div><div class="word-card-header"><h3>${escapeHtml(wordObj.Wort)}</h3><span class="tag">${escapeHtml(wordObj.Thema || 'Allgemein')}</span></div><p class="example">"${escapeHtml(wordObj.Beispielsatz || '-')}"</p></div>${createCardButtons(wordObj)}`;
+        card.innerHTML = `<div><div class="word-card-header"><div style="display:flex;align-items:center;gap:8px;min-width:0;">${thumbnailHtml(wordObj.Bilddatei, {size: 40, cls: 'thumb-img-card'})}<h3>${escapeHtml(wordObj.Wort)}</h3>${speakButtonHtml(wordObj.Wort)}</div><span class="tag">${escapeHtml(wordObj.Thema || 'Allgemein')}</span></div><p class="example">"${escapeHtml(wordObj.Beispielsatz || '-')}"</p></div>${createCardButtons(wordObj)}`;
         container.appendChild(card);
     });
 }
@@ -772,7 +921,7 @@ function filterByStatus(status) {
             const count = wordObj.wiederholZaehler || 0;
             badgeHtml = `<div class="repeat-counter-badge" title="Wiederholungen">${count}</div>`;
         }
-        card.innerHTML = `${badgeHtml}<div><div class="word-card-header"><h3>${escapeHtml(wordObj.Wort)}</h3><span class="badge badge-${escapeHtml(wordObj.Lernstatus)}">${escapeHtml(wordObj.Lernstatus)}</span></div><p class="example">"${escapeHtml(wordObj.Beispielsatz || '-')}"</p></div>${createCardButtons(wordObj)}`;
+        card.innerHTML = `${badgeHtml}<div><div class="word-card-header"><div style="display:flex;align-items:center;gap:8px;min-width:0;">${thumbnailHtml(wordObj.Bilddatei, {size: 40, cls: 'thumb-img-card'})}<h3>${escapeHtml(wordObj.Wort)}</h3>${speakButtonHtml(wordObj.Wort)}</div><span class="badge badge-${escapeHtml(wordObj.Lernstatus)}">${escapeHtml(wordObj.Lernstatus)}</span></div><p class="example">"${escapeHtml(wordObj.Beispielsatz || '-')}"</p></div>${createCardButtons(wordObj)}`;
         container.appendChild(card);
     });
 }
@@ -807,10 +956,10 @@ function renderFullDictionary() {
         const tr = document.createElement('tr');
         const status = item.Lernstatus || 'neu';
         tr.innerHTML = `<td><input type="checkbox" class="word-checkbox" data-index="${index}"></td>
-            <td><b>${escapeHtml(item.Wort || '-')}</b></td>
+            <td><div style="display:flex;align-items:center;gap:4px;"><b>${escapeHtml(item.Wort || '-')}</b>${speakButtonHtml(item.Wort, true)}</div></td>
             <td>${escapeHtml(item.Schwierigkeit || '-')}</td>
             <td>${escapeHtml(item.Thema || '-')}</td>
-            <td>${escapeHtml(item.Bilddatei || '-')}</td>
+            <td>${thumbnailHtml(item.Bilddatei, {size: 40, cls: 'thumb-img-dict'})}</td>
             <td>
                 <select class="dict-status-select" onchange="updateWordStatusFromDict(${index}, this.value)">
                     <option value="neu" ${status === 'neu' ? 'selected' : ''}>neu</option>
@@ -899,7 +1048,7 @@ function initMemorySetup() {
     const container = document.getElementById('memoryContainer');
     container.innerHTML = `
         <div class="memory-setup-card">
-            <h3 style="margin-bottom: 16px;"><i class="fa-solid fa-puzzle-piece"></i> Memory-Spiel konfigurieren</h3>
+            <h3 style="margin-bottom: 16px;">🧩 Memory-Spiel konfigurieren</h3>
             <div class="memory-settings-grid">
                 <div class="form-group">
                     <label for="memoryPlayersCount">Anzahl Spieler:</label>
@@ -1138,6 +1287,9 @@ function handleMemoryCardClick(index) {
             memoryState.scores[memoryState.currentPlayer]++;
             memoryState.matchedPairs++;
             memoryState.solvedCount += 2;
+            speakWord(first.cardObj.wort);
+            if (first.element) first.element.classList.add('matched');
+            if (second.element) second.element.classList.add('matched');
 
             memoryState.cards[first.index].solved = true;
             memoryState.cards[second.index].solved = true;
@@ -1154,7 +1306,7 @@ function handleMemoryCardClick(index) {
                 if (memoryState.solvedCount >= memoryState.cards.length) {
                     announcedWinner();
                 }
-            }, 400);
+            }, 2400);
         } else {
             setTimeout(() => {
                 if (first.element) first.element.classList.remove('flipped');
@@ -1205,7 +1357,7 @@ function initFlashSetup() {
     const container = document.getElementById('flashContainer');
     container.innerHTML = `
         <div class="flash-setup-card">
-            <h3 style="margin-bottom: 16px;"><i class="fa-solid fa-bolt"></i> Bild-Wort-Blitz konfigurieren</h3>
+            <h3 style="margin-bottom: 16px;">⚡ Bild-Wort-Blitz konfigurieren</h3>
             <div class="form-group">
                 <label for="flashPlayerName">Dein Name:</label>
                 <input type="text" id="flashPlayerName" value="Spieler 1" placeholder="Name eingeben">
@@ -1307,6 +1459,7 @@ function nextFlashRound() {
     const distractors = shuffledPool.slice(1, 5);
     const options = [...distractors, targetItem].sort(() => 0.5 - Math.random());
 
+    flashState.currentTarget = targetItem;
     renderFlashGameScreen(mode, targetItem, options);
     startFlashTimer();
 }
@@ -1327,7 +1480,7 @@ function renderFlashGameScreen(mode, targetItem, options) {
         }).join('');
     } else {
         gridClass = 'images';
-        mainContentHtml = `<div class="flash-target-word">${escapeHtml(targetItem.wort)}</div>`;
+        mainContentHtml = `<div class="flash-target-word" style="display:flex;align-items:center;justify-content:center;gap:10px;">${escapeHtml(targetItem.wort)}${speakButtonHtml(targetItem.wort)}</div>`;
         optionsHtml = options.map(opt => {
             const isCorrect = opt.wort === targetItem.wort;
             return `<button class="flash-option-img-btn" onclick="handleFlashAnswer(this, ${isCorrect}, '${escapeHtml(targetItem.wort)}')"><img src="${escapeHtml(opt.imagePath)}" alt="${escapeHtml(opt.wort)}"></button>`;
@@ -1388,6 +1541,7 @@ function handleFlashAnswer(btnElement, isCorrect, targetWord) {
     clearInterval(flashState.timerInterval);
 
     document.querySelectorAll('.flash-option-btn, .flash-option-img-btn').forEach(btn => btn.disabled = true);
+    speakWord(targetWord);
 
     if (isCorrect) {
         flashState.score++;
@@ -1403,7 +1557,7 @@ function handleFlashAnswer(btnElement, isCorrect, targetWord) {
 
     setTimeout(() => {
         nextFlashRound();
-    }, 1100);
+    }, 3100);
 }
 
 function handleFlashTimeout() {
@@ -1411,10 +1565,11 @@ function handleFlashTimeout() {
     flashState.isAnswered = true;
 
     document.querySelectorAll('.flash-option-btn, .flash-option-img-btn').forEach(btn => btn.disabled = true);
+    if (flashState.currentTarget) speakWord(flashState.currentTarget.wort);
 
     setTimeout(() => {
         nextFlashRound();
-    }, 1000);
+    }, 3000);
 }
 
 function showFlashSummary() {
