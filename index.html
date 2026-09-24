@@ -193,7 +193,7 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 #tab-spiel2 .memory-card-back{border-radius:15px}
 #tab-spiel2 .memory-card-back span{font-family:var(--kid-font);font-size:.85rem}
 #tab-spiel2 .memory-card.flipped .memory-card-back{animation:kidBounceIn .35s ease}
-#tab-spiel2 .memory-card.matched .memory-card-back{animation:kidMatchPulse .6s ease,kidGlow 1.6s ease-in-out infinite;border-radius:15px}
+#tab-spiel2 .memory-card.matched{animation:kidMatchPulse .6s ease,kidGlow 1.6s ease-in-out infinite;border-radius:15px}
 
 /* --- Bild-Wort-Blitz --- */
 #tab-spiel3 .flash-setup-card,#tab-spiel3 .flash-game-card{font-family:var(--kid-font);border-radius:24px;border:3px solid #eef2ff}
@@ -913,17 +913,17 @@ function showSameTopicWords(count = 10, chosenTopic = 'random') {
     topicWords.forEach(wordObj => {
         const card = document.createElement('div');
         card.className = 'word-card';
-        card.innerHTML = `<div>${createCardHeader(wordObj)}${createExampleBox(wordObj.Beispielsatz)}</div>${createCardButtons(wordObj)}`;
+        card.innerHTML = `<div>${createCardHeader(wordObj)}${createExampleBox(wordObj.Beispielsatz)}</div>${createCardButtons()}`;
         container.appendChild(card);
     });
 }
 
-function createCardButtons(wordObj) {
+function createCardButtons() {
     return `<div class="card-buttons">
-        <button class="btn-status-neu" title="neu" aria-label="neu">🆕</button>
-        <button class="btn-status-gelernt" title="gelernt" aria-label="gelernt">✅</button>
-        <button class="btn-status-wiederholen" title="wiederholen" aria-label="wiederholen">🔁</button>
-        <button class="btn-status-bekannt" title="bekannt" aria-label="bekannt">⭐</button>
+        <button class="btn-status-neu" title="neu" aria-label="neu" onclick="handleStatusClick(event, 'neu')">🆕</button>
+        <button class="btn-status-gelernt" title="gelernt" aria-label="gelernt" onclick="handleStatusClick(event, 'gelernt')">✅</button>
+        <button class="btn-status-wiederholen" title="wiederholen" aria-label="wiederholen" onclick="handleStatusClick(event, 'wiederholt')">🔁</button>
+        <button class="btn-status-bekannt" title="bekannt" aria-label="bekannt" onclick="handleStatusClick(event, 'bekannt')">⭐</button>
     </div>`;
 }
 
@@ -972,7 +972,7 @@ function showNewWords(count = 10) {
     selectedWords.forEach(wordObj => {
         const card = document.createElement('div');
         card.className = 'word-card';
-        card.innerHTML = `<div>${createCardHeader(wordObj)}${createExampleBox(wordObj.Beispielsatz)}</div>${createCardButtons(wordObj)}`;
+        card.innerHTML = `<div>${createCardHeader(wordObj)}${createExampleBox(wordObj.Beispielsatz)}</div>${createCardButtons()}`;
         container.appendChild(card);
     });
 }
@@ -996,7 +996,7 @@ function filterByStatus(status) {
             badgeHtml = `<div class="repeat-counter-badge" title="Wiederholungen">${count}</div>`;
         }
         const statusBadge = `<span class="badge badge-${escapeHtml(wordObj.Lernstatus)}">${escapeHtml(wordObj.Lernstatus)}</span>`;
-        card.innerHTML = `${badgeHtml}<div>${createCardHeader(wordObj, statusBadge)}${createExampleBox(wordObj.Beispielsatz)}</div>${createCardButtons(wordObj)}`;
+        card.innerHTML = `${badgeHtml}<div>${createCardHeader(wordObj, statusBadge)}${createExampleBox(wordObj.Beispielsatz)}</div>${createCardButtons()}`;
         container.appendChild(card);
     });
 }
@@ -1372,18 +1372,19 @@ function handleMemoryCardClick(index) {
             memoryState.cards[second.index].solved = true;
 
             memoryState.flippedCards = [];
-            memoryState.isLocked = false;
 
+            // Korrigierte Wartezeit: Etwas kürzer (z.B. 1.4 Sekunden statt 2.4 Sekunden)
             setTimeout(() => {
                 if (first.element) first.element.classList.add('solved');
                 if (second.element) second.element.classList.add('solved');
 
                 renderMemoryBoard();
+                memoryState.isLocked = false;
 
                 if (memoryState.solvedCount >= memoryState.cards.length) {
                     announcedWinner();
                 }
-            }, 2400);
+            }, 1400);
         } else {
             setTimeout(() => {
                 if (first.element) first.element.classList.remove('flipped');
