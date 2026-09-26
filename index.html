@@ -129,19 +129,23 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 
 /* Bild-Wort-Blitz (Spiel 3) Styles */
 .flash-setup-card { background: #fff; border: 1px solid var(--border-color); border-radius: 12px; padding: 28px; max-width: 600px; margin: 0 auto; box-shadow: var(--shadow-sm); }
-.flash-game-card { background: #fff; border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; max-width: 700px; margin: 0 auto; box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; }
-.flash-progress-bar-container { width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
-.flash-progress-bar { height: 100%; background: var(--primary); width: 100%; transition: width 0.1s linear; }
-.flash-hud { width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; font-weight: 600; color: var(--text-muted); font-size: 0.95rem; gap: 10px; flex-wrap: wrap; }
-.flash-target-display { width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom: 24px; }
-.flash-target-image { width: 220px; height: 220px; object-fit: contain; border: 2px solid var(--border-color); border-radius: 12px; background: #fff; padding: 8px; box-shadow: var(--shadow-sm); margin-bottom: 12px; }
-.flash-target-word { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 12px; text-align: center; background: #e0e7ff; padding: 10px 24px; border-radius: 12px; }
-.flash-options-grid { width: 100%; display: grid; gap: 12px; }
-.flash-options-grid.words { grid-template-columns: 1fr; }
-.flash-options-grid.images { grid-template-columns: repeat(5, 1fr); }
-.flash-option-btn { background: #fff; border: 2px solid var(--border-color); border-radius: 12px; padding: 16px; font-size: 1rem; font-weight: 700; color: var(--text-main); cursor: pointer; transition: all 0.2s; box-shadow: var(--shadow-sm); text-align: center; display: flex; align-items: center; justify-content: center; min-height: 56px; }
+.flash-game-card { background: #fff; border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; max-width: 980px; margin: 0 auto; box-shadow: var(--shadow-md); display: flex; flex-direction: column; align-items: center; }
+.flash-hud { width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; font-weight: 600; color: var(--text-muted); font-size: 0.95rem; gap: 10px; flex-wrap: wrap; }
+
+/* Spielfeld: 2 Optionen links, Zielobjekt mit Zeit-Rahmen in der Mitte, 2 Optionen rechts */
+.flash-play-row { width: 100%; display: flex; align-items: center; justify-content: center; gap: 28px; }
+.flash-options-side { display: flex; flex-direction: column; gap: 14px; flex: 0 0 auto; width: 190px; }
+
+/* Zeitbalken als Rahmen um Wort/Bild: conic-gradient läuft im Uhrzeigersinn leer */
+.flash-timer-frame { flex: 0 0 auto; padding: 7px; border-radius: 22px; background: conic-gradient(var(--primary) calc(var(--pct, 100) * 1%), #e2e8f0 0); transition: background 0.05s linear; }
+.flash-timer-inner { background: #fff; border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 10px; min-width: 220px; min-height: 220px; }
+
+.flash-target-image { width: 220px; height: 220px; object-fit: contain; border-radius: 10px; background: #fff; }
+.flash-target-word { font-size: 2rem; font-weight: 800; color: var(--primary); text-align: center; padding: 10px 20px; word-break: break-word; }
+
+.flash-option-btn { width: 100%; background: #fff; border: 2px solid var(--border-color); border-radius: 12px; padding: 16px 10px; font-size: 1rem; font-weight: 700; color: var(--text-main); cursor: pointer; transition: all 0.2s; box-shadow: var(--shadow-sm); text-align: center; display: flex; align-items: center; justify-content: center; min-height: 56px; }
 .flash-option-btn:hover:not(:disabled) { border-color: var(--primary); background: #f8fafc; transform: translateY(-2px); }
-.flash-option-img-btn { aspect-ratio: 1; background: #fff; border: 2px solid var(--border-color); border-radius: 12px; padding: 6px; cursor: pointer; transition: all 0.2s; overflow: hidden; box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; }
+.flash-option-img-btn { width: 100%; aspect-ratio: 1; background: #fff; border: 2px solid var(--border-color); border-radius: 12px; padding: 6px; cursor: pointer; transition: all 0.2s; overflow: hidden; box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; }
 .flash-option-img-btn:hover:not(:disabled) { border-color: var(--primary); transform: translateY(-2px); }
 .flash-option-img-btn img { width: 100%; height: 100%; object-fit: contain; }
 .flash-option-btn.correct, .flash-option-img-btn.correct { background: var(--success) !important; color: #fff !important; border-color: var(--success) !important; }
@@ -203,10 +207,10 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 #tab-spiel3 .flash-setup-card,#tab-spiel3 .flash-game-card{font-family:var(--kid-font);border-radius:24px;border:3px solid #eef2ff}
 #tab-spiel3 .flash-setup-card h3{font-size:1.4rem;color:var(--primary)}
 #tab-spiel3 .flash-hud{font-family:var(--kid-font);font-size:1rem}
-#tab-spiel3 .flash-progress-bar-container{height:12px;border-radius:8px;background:#f1f5f9}
-#tab-spiel3 .flash-progress-bar{background:linear-gradient(90deg,var(--kid-green),var(--kid-amber),var(--kid-rose));border-radius:8px}
-#tab-spiel3 .flash-target-image{width:240px;height:240px;border-radius:20px;border:3px solid #eef2ff;animation:kidBounceIn .4s ease}
-#tab-spiel3 .flash-target-word{font-family:var(--kid-font);font-size:2.4rem;border-radius:18px;background:linear-gradient(135deg,#e0e7ff,#fce7f3);animation:kidBounceIn .4s ease}
+#tab-spiel3 .flash-timer-frame{border-radius:26px;background:conic-gradient(var(--kid-green) calc(var(--pct, 100) * 1%), #f1f5f9 0)}
+#tab-spiel3 .flash-timer-inner{border-radius:20px;animation:kidBounceIn .4s ease}
+#tab-spiel3 .flash-target-image{width:240px;height:240px;border-radius:20px}
+#tab-spiel3 .flash-target-word{font-family:var(--kid-font);font-size:2.4rem;border-radius:18px;background:linear-gradient(135deg,#e0e7ff,#fce7f3)}
 #tab-spiel3 .flash-option-btn{border-radius:18px;font-family:var(--kid-font);font-size:1.1rem;border-width:3px}
 #tab-spiel3 .flash-option-btn:hover:not(:disabled){transform:translateY(-3px) scale(1.03)}
 #tab-spiel3 .flash-option-img-btn{border-radius:18px;border-width:3px}
@@ -215,7 +219,7 @@ input[type=text],input[type=number],input[type=file],select{width:100%;padding:1
 #tab-spiel3 .flash-option-btn.wrong,#tab-spiel3 .flash-option-img-btn.wrong{animation:kidWiggle .4s ease}
 
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@media(max-width:800px){.panel-left{width:220px;min-width:220px}.panel-middle{padding:20px}.word-cards-container{grid-template-columns:1fr}.memory-settings-grid{grid-template-columns:1fr}.flash-options-grid.images{grid-template-columns:repeat(3, 1fr)}}
+@media(max-width:800px){.panel-left{width:220px;min-width:220px}.panel-middle{padding:20px}.word-cards-container{grid-template-columns:1fr}.memory-settings-grid{grid-template-columns:1fr}.flash-play-row{flex-direction:column}.flash-options-side{flex-direction:row;width:auto;justify-content:center;flex-wrap:wrap}.flash-timer-inner{min-width:180px;min-height:180px}.flash-target-image{width:170px;height:170px}}
 </style>
 </head>
 <body>
@@ -663,6 +667,7 @@ async function loadStandardDictionary() {
         meineWoerterliste = structuredClone(words);
         currentProfile = 'Standard';
         currentDifficulty = null;
+        preloadWordImages(meineWoerterliste);
         startSpiel1();
     } catch (error) {
         console.error(error);
@@ -682,6 +687,7 @@ function loadStoredProfile(fileName, profileName, difficulty) {
         currentFileName = fileName;
         currentProfile = profileName || 'Profil';
         currentDifficulty = difficulty || null;
+        preloadWordImages(meineWoerterliste);
         return true;
     } catch (e) { return false; }
 }
@@ -715,6 +721,7 @@ async function createNewProfile() {
 
     localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
     addProfileToList(currentProfile, currentFileName, selectedDifficulty);
+    preloadWordImages(meineWoerterliste);
 
     closeModal('modalNewProfile');
     switchTab('dictionary');
@@ -768,6 +775,7 @@ async function loadSelectedProfile() {
 
             localStorage.setItem(currentFileName, JSON.stringify(meineWoerterliste));
             addProfileToList(currentProfile, currentFileName, null);
+            preloadWordImages(meineWoerterliste);
         } catch (e) {
             alert('Die CSV-Datei konnte nicht geladen werden.');
             return;
@@ -783,6 +791,7 @@ async function loadSelectedProfile() {
         
         if (mergeOption === 'merge') {
             await mergeNewWordsFromStandard();
+            preloadWordImages(meineWoerterliste);
         }
     }
     closeModal('modalLoadProfile');
@@ -1205,12 +1214,35 @@ async function checkImageExists(url) {
     });
 }
 
+// Merkt sich für jeden Bildpfad, ob/unter welchem genauen Namen die Datei existiert,
+// damit derselbe Pfad nicht bei jedem Spielstart erneut geprüft werden muss.
+let imagePathCache = {};
+
 async function resolveImagePath(path) {
+    if (Object.prototype.hasOwnProperty.call(imagePathCache, path)) {
+        return imagePathCache[path];
+    }
     const candidates = [...new Set([path.normalize('NFC'), path.normalize('NFD'), path])];
     for (const candidate of candidates) {
-        if (await checkImageExists(candidate)) return candidate;
+        if (await checkImageExists(candidate)) {
+            imagePathCache[path] = candidate;
+            return candidate;
+        }
     }
+    imagePathCache[path] = null;
     return null;
+}
+
+// Prüft und lädt im Hintergrund alle Bilder der aktuellen Wörterliste in den Browser-Cache
+// vor (parallel statt nacheinander), damit Memory- und Bild-Wort-Blitz-Spiel beim ersten
+// Start nicht mehr auf jedes einzelne Bild warten müssen.
+function preloadWordImages(list) {
+    const targets = (list || []).filter(w => w.Bilddatei && w.Bilddatei !== '-');
+    Promise.all(targets.map(w => {
+        const imgName = w.Bilddatei;
+        const imagePath = imgName.startsWith('Bilder/') ? imgName : `Bilder/${imgName}`;
+        return resolveImagePath(imagePath).catch(() => null);
+    })).catch(() => {});
 }
 
 async function startMemoryGame() {
@@ -1246,20 +1278,13 @@ async function startMemoryGame() {
         return;
     }
 
-    let validPool = [];
-    for (let wordObj of pool) {
+    const validPool = (await Promise.all(pool.map(async wordObj => {
         const wortText = wordObj.Wort || '';
         const imgName = wordObj.Bilddatei;
         const imagePath = imgName.startsWith('Bilder/') ? imgName : `Bilder/${imgName}`;
-
         const resolvedPath = await resolveImagePath(imagePath);
-        if (resolvedPath) {
-            validPool.push({
-                wort: wortText,
-                imagePath: resolvedPath
-            });
-        }
-    }
+        return resolvedPath ? { wort: wortText, imagePath: resolvedPath } : null;
+    }))).filter(Boolean);
 
     if (validPool.length < 2) {
         alert('Es wurden nicht genügend Wörter gefunden, für die im Ordner "Bilder" eine entsprechende Bilddatei existiert!');
@@ -1440,6 +1465,7 @@ function announcedWinner() {
    ========================================== */
 let flashState = {
     playerName: 'Spieler',
+    gameMode: 'wordToImg',
     totalRounds: 10,
     statusFilter: 'neu',
     countdownDuration: 5,
@@ -1460,6 +1486,13 @@ function initFlashSetup() {
             <div class="form-group">
                 <label for="flashPlayerName">Dein Name:</label>
                 <input type="text" id="flashPlayerName" value="Spieler 1" placeholder="Name eingeben">
+            </div>
+            <div class="form-group">
+                <label for="flashGameMode">Spielart:</label>
+                <select id="flashGameMode">
+                    <option value="wordToImg" selected>Richtiges Bild finden (Wort wird gezeigt)</option>
+                    <option value="imgToWord">Richtiges Wort finden (Bild wird gezeigt)</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="flashRoundsCount">Anzahl Spielläufe (Runden):</label>
@@ -1497,6 +1530,8 @@ async function startFlashGame() {
     const speedSelect = document.getElementById('flashCountdownSpeed');
 
     flashState.playerName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Spieler';
+    const modeSelect = document.getElementById('flashGameMode');
+    flashState.gameMode = modeSelect ? modeSelect.value : 'wordToImg';
     let rCount = parseInt(roundsInput.value, 10);
     flashState.totalRounds = Number.isFinite(rCount) && rCount > 0 ? rCount : 10;
     flashState.statusFilter = statusSelect.value;
@@ -1509,27 +1544,20 @@ async function startFlashGame() {
 
     pool = pool.filter(w => w.Bilddatei && w.Bilddatei !== '-');
 
-    if (pool.length < 5) {
-        alert('Für diesen Status sind nicht genügend Wörter mit Bildern vorhanden (mindestens 5 erforderlich).');
+    if (pool.length < 4) {
+        alert('Für diesen Status sind nicht genügend Wörter mit Bildern vorhanden (mindestens 4 erforderlich).');
         return;
     }
 
-    let validPool = [];
-    for (let wordObj of pool) {
+    const validPool = (await Promise.all(pool.map(async wordObj => {
         const wortText = wordObj.Wort || '';
         const imgName = wordObj.Bilddatei;
         const imagePath = imgName.startsWith('Bilder/') ? imgName : `Bilder/${imgName}`;
-
         const resolvedPath = await resolveImagePath(imagePath);
-        if (resolvedPath) {
-            validPool.push({
-                wort: wortText,
-                imagePath: resolvedPath
-            });
-        }
-    }
+        return resolvedPath ? { wort: wortText, imagePath: resolvedPath } : null;
+    }))).filter(Boolean);
 
-    if (validPool.length < 5) {
+    if (validPool.length < 4) {
         alert('Es wurden nicht genügend gültige Bilddateien im Ordner "Bilder" gefunden!');
         return;
     }
@@ -1551,12 +1579,12 @@ function nextFlashRound() {
     flashState.isAnswered = false;
     clearInterval(flashState.timerInterval);
 
-    const mode = (flashState.currentRound % 2 !== 0) ? 'imgToWord' : 'wordToImg';
+    const mode = flashState.gameMode;
 
     const shuffledPool = [...flashState.validPool].sort(() => 0.5 - Math.random());
     const targetItem = shuffledPool[0];
 
-    const distractors = shuffledPool.slice(1, 5);
+    const distractors = shuffledPool.slice(1, 4);
     const options = [...distractors, targetItem].sort(() => 0.5 - Math.random());
 
     flashState.currentTarget = targetItem;
@@ -1567,25 +1595,20 @@ function nextFlashRound() {
 function renderFlashGameScreen(mode, targetItem, options) {
     const container = document.getElementById('flashContainer');
 
-    let mainContentHtml = '';
-    let optionsHtml = '';
-    let gridClass = '';
-
-    if (mode === 'imgToWord') {
-        gridClass = 'words';
-        mainContentHtml = `<img src="${escapeHtml(targetItem.imagePath)}" alt="Suchbild" class="flash-target-image">`;
-        optionsHtml = options.map(opt => {
-            const isCorrect = opt.wort === targetItem.wort;
+    const optionHtml = (opt) => {
+        const isCorrect = opt.wort === targetItem.wort;
+        if (mode === 'imgToWord') {
             return `<button class="flash-option-btn" onclick="handleFlashAnswer(this, ${isCorrect}, '${escapeHtml(targetItem.wort)}')">${escapeHtml(opt.wort)}</button>`;
-        }).join('');
-    } else {
-        gridClass = 'images';
-        mainContentHtml = `<div class="flash-target-word" style="display:flex;align-items:center;justify-content:center;gap:10px;">${escapeHtml(targetItem.wort)}${speakButtonHtml(targetItem.wort)}</div>`;
-        optionsHtml = options.map(opt => {
-            const isCorrect = opt.wort === targetItem.wort;
-            return `<button class="flash-option-img-btn" onclick="handleFlashAnswer(this, ${isCorrect}, '${escapeHtml(targetItem.wort)}')"><img src="${escapeHtml(opt.imagePath)}" alt="${escapeHtml(opt.wort)}"></button>`;
-        }).join('');
-    }
+        }
+        return `<button class="flash-option-img-btn" onclick="handleFlashAnswer(this, ${isCorrect}, '${escapeHtml(targetItem.wort)}')"><img src="${escapeHtml(opt.imagePath)}" alt="${escapeHtml(opt.wort)}"></button>`;
+    };
+
+    const leftHtml = options.slice(0, 2).map(optionHtml).join('');
+    const rightHtml = options.slice(2, 4).map(optionHtml).join('');
+
+    const centerHtml = mode === 'imgToWord'
+        ? `<img src="${escapeHtml(targetItem.imagePath)}" alt="Suchbild" class="flash-target-image">`
+        : `<div class="flash-target-word" style="display:flex;align-items:center;justify-content:center;gap:10px;">${escapeHtml(targetItem.wort)}${speakButtonHtml(targetItem.wort)}</div>`;
 
     container.innerHTML = `
         <div class="flash-game-card">
@@ -1595,14 +1618,12 @@ function renderFlashGameScreen(mode, targetItem, options) {
                 <span>Punkte: ${flashState.score}</span>
                 <button class="btn-danger" style="padding: 4px 10px; font-size: 0.85rem;" onclick="endFlashGameEarly()"><i class="fa-solid fa-stop"></i> Spiel Beenden</button>
             </div>
-            <div class="flash-progress-bar-container">
-                <div id="flashProgressBar" class="flash-progress-bar"></div>
-            </div>
-            <div class="flash-target-display">
-                ${mainContentHtml}
-            </div>
-            <div class="flash-options-grid ${gridClass}">
-                ${optionsHtml}
+            <div class="flash-play-row">
+                <div class="flash-options-side">${leftHtml}</div>
+                <div id="flashTimerFrame" class="flash-timer-frame" style="--pct:100">
+                    <div class="flash-timer-inner">${centerHtml}</div>
+                </div>
+                <div class="flash-options-side">${rightHtml}</div>
             </div>
         </div>
     `;
@@ -1610,18 +1631,17 @@ function renderFlashGameScreen(mode, targetItem, options) {
 
 function startFlashTimer() {
     flashState.timeLeft = flashState.countdownDuration;
-    const bar = document.getElementById('flashProgressBar');
-    if (!bar) return;
+    const frame = document.getElementById('flashTimerFrame');
+    if (!frame) return;
 
-    const intervalTime = 50; 
-    const totalTimeMs = flashState.countdownDuration * 1000;
+    const intervalTime = 50;
 
     flashState.timerInterval = setInterval(() => {
         if (flashState.isAnswered) return;
         flashState.timeLeft -= (intervalTime / 1000);
         let percent = (flashState.timeLeft / flashState.countdownDuration) * 100;
         if (percent < 0) percent = 0;
-        bar.style.width = percent + '%';
+        frame.style.setProperty('--pct', percent);
 
         if (flashState.timeLeft <= 0) {
             clearInterval(flashState.timerInterval);
@@ -1641,29 +1661,46 @@ function endFlashGameEarly() {
     showFlashSummary();
 }
 
+function playFlashErrorSound() {
+    try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'square';
+        osc.frequency.value = 180;
+        gain.gain.value = 0.16;
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
+        osc.stop(ctx.currentTime + 0.26);
+        osc.onended = () => ctx.close();
+    } catch (e) { /* Sound optional, z.B. bei fehlender Web-Audio-Unterstützung */ }
+}
+
 function handleFlashAnswer(btnElement, isCorrect, targetWord) {
     if (flashState.isAnswered) return;
     flashState.isAnswered = true;
     clearInterval(flashState.timerInterval);
 
     document.querySelectorAll('.flash-option-btn, .flash-option-img-btn').forEach(btn => btn.disabled = true);
-    speakWord(targetWord);
 
     if (isCorrect) {
         flashState.score++;
         btnElement.classList.add('correct');
+        speakWord(targetWord);
+
+        flashState.roundTimeout = setTimeout(() => {
+            nextFlashRound();
+        }, 3100);
     } else {
         btnElement.classList.add('wrong');
-        document.querySelectorAll('.flash-option-btn, .flash-option-img-btn').forEach(btn => {
-            if (btn.textContent.trim() === targetWord || btn.querySelector(`img[alt="${targetWord}"]`)) {
-                btn.classList.add('correct');
-            }
-        });
-    }
+        playFlashErrorSound();
 
-    flashState.roundTimeout = setTimeout(() => {
-        nextFlashRound();
-    }, 3100);
+        flashState.roundTimeout = setTimeout(() => {
+            nextFlashRound();
+        }, 1200);
+    }
 }
 
 function handleFlashTimeout() {
