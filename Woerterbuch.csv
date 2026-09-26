@@ -1,4 +1,4 @@
-﻿Wort;Schwierigkeit;Thema;Lernstatus;Beispielsatz;Bilddatei
+Wort;Schwierigkeit;Thema;Lernstatus;Beispielsatz;Bilddatei
 die Mama;leicht;Wir leben zusammen;neu;Die Mama kocht heute das Abendessen. | Meine Mama unterstützt mich immer bei meinen Hausaufgaben.;-
 der Papa;leicht;Wir leben zusammen;neu;Der Papa repariert das kaputte Fahrrad. | Mein Papa geht jeden Morgen um sieben Uhr zur Arbeit.;-
 und;leicht;Wir leben zusammen;neu;Ich esse gerne Äpfel und Birnen. | Maria und Paul gehen gemeinsam in die Schule.;-
@@ -10,7 +10,7 @@ wollen;leicht;Wir leben zusammen;neu;Wir wollen im Sommer ans Meer fahren. | Was
 teilen;leicht;Wir leben zusammen;neu;Die Kinder teilen sich ein Stück Kuchen. | Kannst du deinen Standort mit mir teilen?;-
 helfen;leicht;Wir leben zusammen;neu;Kannst du mir bitte beim Tragen helfen? | Wir helfen unseren Nachbarn im Garten.;-
 ärgern;leicht;Wir leben zusammen;neu;Bitte ärgere deinen kleinen Bruder nicht. | Er wollte mich mit seinen Worten nur ärgern.;-
-das Haus;leicht;Wir leben zusammen;neu;Das Haus hat einen wunderschönen großen Garten. | Wir haben ein altes Haus renoviert.;-
+das Haus;leicht;Wir leben zusammen;neu;Das Haus hat einen wunderschönen großen Garten. | Wir haben ein altes Haus renoviert.;das_Haus.png
 nach Hause;leicht;Wir leben zusammen;neu;Ich gehe nach dem Unterricht direkt nach Hause. | Wann kommst du heute Abend nach Hause?;-
 dürfen;leicht;Wir leben zusammen;neu;Dürfen wir heute Abend etwas länger aufbleiben? | Hier darf man nicht parken.;-
 ich;leicht;Wir leben zusammen;neu;Ich wohne seit zwei Jahren in Deutschland. | Morgen habe ich einen wichtigen Termin.;-
@@ -19,8 +19,8 @@ mein;leicht;Wir leben zusammen;neu;Das ist mein neuer Rucksack. | Mein Hund schl
 der Vater;mittel;Wir leben zusammen;neu;Sein Vater arbeitet als Lehrer an der Schule. | Mein Vater kocht am Wochenende für die ganze Familie.;-
 die Mutter;mittel;Wir leben zusammen;neu;Ihre Mutter ist eine erfahrene Ärztin. | Die Mutter liest dem Kind eine Geschichte vor.;-
 die Eltern;mittel;Wir leben zusammen;neu;Meine Eltern fahren dieses Jahr nach Italien. | Die Eltern unterstützen ihre Kinder in allen Lebenslagen.;-
-die Familie;mittel;Wir leben zusammen;neu;Unsere Familie trifft sich jeden Sonntag zum Essen. | Er hat eine sehr große Familie mit vielen Kindern.;-
-der Zwilling;mittel;Wir leben zusammen;neu;Mein Zwilling und ich sehen uns zum Verwechseln ähnlich. | Ein Zwilling lernt meist genauso schnell wie der andere.;-
+die Familie;mittel;Wir leben zusammen;neu;Unsere Familie trifft sich jeden Sonntag zum Essen. | Er hat eine sehr große Familie mit vielen Kindern.;die_Familie.png
+der Zwilling;mittel;Wir leben zusammen;neu;Mein Zwilling und ich sehen uns zum Verwechseln ähnlich. | Ein Zwilling lernt meist genauso schnell wie der andere.;der_Zwilling.png
 sich lieben;mittel;Wir leben zusammen;neu;"Sie lieben sich seit ihrer Schulzeit. | Zwei Menschen, die sich lieben, halten zusammen.""""";-
 sich vertragen;mittel;Wir leben zusammen;neu;Nach dem kleinen Streit haben sie sich schnell wieder vertragen. | Die Geschwister vertragen sich meistens sehr gut.;-
 geben;mittel;Wir leben zusammen;neu;Kannst du mir bitte das Salz geben? | Der Lehrer gibt den Schülern nützliche Tipps.;-
@@ -100,14 +100,14 @@ am ältesten;schwer;Meine Verwandten;neu;Dieses historische Haus ist am älteste
 streicheln;leicht;Ein neuer Mensch;neu;"Die Kinder lieben es, das weiche Fell der Katze zu streicheln. | Du darfst den Hund vorsichtig am Kopf streicheln.""""";-
 das Baby;leicht;Ein neuer Mensch;neu;Das Baby schläft friedlich in seinem kleinen Kinderbett. | Wir haben der jungen Familie ein Geschenk für das Baby gebracht.;-
 brauchen;leicht;Ein neuer Mensch;neu;Ich brauche heute noch etwas Zeit für die Aufgaben. | Wir brauchen frisches Gemüsig für das Abendessen.;-
-der Schnuller;leicht;Ein neuer Mensch;neu;"Das Baby beruhigt sich schnell mit seinem Schnuller. | Vergiss nicht, den Schnuller einzupacken.""""";-
-die Windel;leicht;Ein neuer Mensch;neu;Er muss dem Baby eine frische Windel anziehen. | Die Windel ist voll und muss gewechselt werden.;-
+der Schnuller;leicht;Ein neuer Mensch;neu;"Das Baby beruhigt sich schnell mit seinem Schnuller. | Vergiss nicht, den Schnuller einzupacken.""""";der_Schnuller.png
+die Windel;leicht;Ein neuer Mensch;neu;Er muss dem Baby eine frische Windel anziehen. | Die Windel ist voll und muss gewechselt werden.;die_Windel.png
 die Wiege;leicht;Ein neuer Mensch;neu;Das Säugling schläft friedlich in der holzgeschnitzten Wiege. | Sie sanft die Wiege hin und her schaukeln.;-
 weinen;leicht;Ein neuer Mensch;neu;"Warum weint das kleine Kind so laut? | Ich musste vor Freude weinen, als ich die Nachricht hörte.""""";-
 schlafen;leicht;Ein neuer Mensch;neu;Die Kinder müssen jetzt ins Bett gehen und schlafen. | Am Wochenende schlafe ich gerne etwas länger.;-
 leise sein;leicht;Ein neuer Mensch;neu;"Bitte seid leise, damit das Baby nicht aufwacht. | Während der Prüfung müssen alle Schüler leise sein.""""";-
 der Kinderwagen;leicht;Ein neuer Mensch;neu;Wir schieben den Kinderwagen durch den ruhigen Park. | Der Kinderwagen lässt sich leicht zusammenklappen.;der_Kinderwagen.png
-der Brei;leicht;Ein neuer Mensch;neu;"Morgens isst das Baby am liebsten warmen Brei. | Der Brei muss erst abkühlen, bevor das Kind ihn essen kann.""""";-
+der Brei;leicht;Ein neuer Mensch;neu;"Morgens isst das Baby am liebsten warmen Brei. | Der Brei muss erst abkühlen, bevor das Kind ihn essen kann.""""";der_Brei.png
 füttern;leicht;Ein neuer Mensch;neu;Die Mutter füttert das kleine Kind mit dem Löffel. | Wir füttern die Enten am See gerne mit Brot.;-
 verlieben;mittel;Ein neuer Mensch;neu;"Sie haben sich schon in der Schule ineinander verliebt. | Es ist wunderschön, sich neu zu verlieben.""""";-
 schmusen;mittel;Ein neuer Mensch;neu;Die Katze kommt jeden Abend auf das Sofa zum Schmusen. | Die Kinder schmusen gerne mit ihren Plüschtieren.;-
@@ -147,21 +147,21 @@ versorgen;schwer;Ein neuer Mensch;neu;Sie versorgt die Wunde vorsichtig mit eine
 die Muttermilch;schwer;Ein neuer Mensch;neu;Muttermilch enthält wichtige Abwehrstoffe für das Baby. | Das Säugling wird ausschließlich mit Muttermilch ernährt.;-
 die Brustwarze;schwer;Ein neuer Mensch;neu;Beim Stillen erfasst das Baby die ganze Brustwarze. | Trockene Haut an der Brustwarze kann beim Stillen schmerzen.;-
 stillen;schwer;Ein neuer Mensch;neu;"Die Mutter möchte ihr Kind mindestens sechs Monate lang stillen. | Es gibt ruhige Orte im Kaufhaus, um das Baby zu stillen.""""";-
-der Geburtstag;leicht;Feste feiern;neu;Herzlichen Glückwunsch zu deinem Geburtstag! | Wir feiern meinen Geburtstag am Samstag mit Freunden.;-
+der Geburtstag;leicht;Feste feiern;neu;Herzlichen Glückwunsch zu deinem Geburtstag! | Wir feiern meinen Geburtstag am Samstag mit Freunden.;der_Geburtstag.png
 die Kerze;leicht;Feste feiern;neu;Bitte blase die Kerze auf der Geburtstagstorte aus. | Wir zünden am Abend eine gemütliche Kerze an.;die_Kerze.png
 wünschen;leicht;Feste feiern;neu;Ich wünsche dir von Herzen alles Gute zum Geburtstag. | Was wünschst du dir dieses Jahr zu Weihnachten?;-
 schenken;leicht;Feste feiern;neu;Wir schenken unserer Oma ein schönes Bild. | Was möchtest du deinem Bruder zum Geburtstag schenken?;-
 mitbringen;leicht;Feste feiern;neu;Bring bitte ein paar Getränke zur Feier mit. | Er hat aus dem Urlaub tolle Souvenirs mitgebracht.;-
 Weihnachten;leicht;Feste feiern;neu;An Weihnachten kommt die ganze Familie zusammen. | Wir wünschen euch allen ein frohes Weihnachten!;-
-der Weihnachtsbaum;leicht;Feste feiern;neu;Wir schmücken den Weihnachtsbaum immer am 24. Dezember. | Unter dem Weihnachtsbaum liegen viele bunte Geschenke.;-
+der Weihnachtsbaum;leicht;Feste feiern;neu;Wir schmücken den Weihnachtsbaum immer am 24. Dezember. | Unter dem Weihnachtsbaum liegen viele bunte Geschenke.;der_Weihnachtsbaum.png
 der Weihnachtsmann;leicht;Feste feiern;neu;Die Kinder warten gespannt auf den Weihnachtsmann. | Der Weihnachtsmann bringt die Geschenke durch den Kamin.;-
 das Christkind;leicht;Feste feiern;neu;In manchen Regionen bringt das Christkind die Geschenke. | Die Kinder stellen am Fenster einen Wunschzettel für das Christkind auf.;-
-der Nikolaus;leicht;Feste feiern;neu;Am 6. Dezember stellt man die geputzten Stiefel für den Nikolaus heraus. | Der Nikolaus bringt Äpfel und Nüsse.;-
+der Nikolaus;leicht;Feste feiern;neu;Am 6. Dezember stellt man die geputzten Stiefel für den Nikolaus heraus. | Der Nikolaus bringt Äpfel und Nüsse.;der_Nikolaus.png
 Ostern;leicht;Feste feiern;neu;An Ostern suchen die Kinder versteckte Süßigkeiten im Garten. | Wir wünschen allen ein frohes und sonniges Ostern!;-
 der Osterhase;leicht;Feste feiern;neu;Der Osterhase hat bunte Eier im Gras versteckt. | Die Kinder glauben fest an den Osterhasen.;der_Osterhase.png
 das Osterei;leicht;Feste feiern;neu;Ich habe ein rot bemaltes Osterei gefunden. | Das Verzieren der Ostereier macht allen Kindern Spaß.;-
 der Fasching;leicht;Feste feiern;neu;Im Fasching verkleiden sich die Kinder als Piraten und Prinzessinnen. | Auf den Straßen gibt es beim Fasching einen umjubelten Umzug.;der_Fasching.png
-der Luftballon;leicht;Feste feiern;neu;Die Kinder spielen im Garten mit einem bunten Luftballon. | Wir blasen viele Luftballons für die Party auf.;-
+der Luftballon;leicht;Feste feiern;neu;Die Kinder spielen im Garten mit einem bunten Luftballon. | Wir blasen viele Luftballons für die Party auf.;der_Luftballon.png
 das Fest;mittel;Feste feiern;neu;Das Sommerfest im Dorf war ein voller Erfolg. | Wir laden alle Verwandten zu diesem großen Fest ein.;-
 der Wunsch;mittel;Feste feiern;neu;Mein größter Wunsch ist eine gemeinsame Reise nach Italien. | Er hat sich seinen Traumwunsch endlich erfüllt.;-
 der Wunschzettel;mittel;Feste feiern;neu;Die Kinder schreiben schon im November ihren Wunschzettel. | Auf dem Wunschzettel steht ein neues Fahrrad an erster Stelle.;-
@@ -169,7 +169,7 @@ das Geschenk;mittel;Feste feiern;neu;Sie hat ihr Geschenk mit einer roten Schlei
 der Adventskalender;mittel;Feste feiern;neu;Jeden Morgen öffnet das Kind ein Türchen am Adventskalender. | Im Adventskalender versteckt sich leckere Schokolade.;-
 der Heiligabend;mittel;Feste feiern;neu;Am Heiligabend essen wir traditionell im Kreis der Familie. | Wir singen am Heiligabend gemeinsam Lieder vor dem Baum.;-
 schmücken;mittel;Feste feiern;neu;Wir schmücken das Wohnzimmer für die bevorstehende Feier. | Die Straße war bunt für das Straßenfest geschmückt.;-
-das Silvester;mittel;Feste feiern;neu;An Silvester schauen wir uns um Mitternacht das Feuerwerk an. | Wo feierst du dieses Jahr Silvester?;-
+das Silvester;mittel;Feste feiern;neu;An Silvester schauen wir uns um Mitternacht das Feuerwerk an. | Wo feierst du dieses Jahr Silvester?;das_Silvester.png
 der Muttertag;mittel;Feste feiern;neu;Am Muttertag schenken die Kinder ihrer Mutter selbstgepflückte Blumen. | Wir machen unserer Mutter am Muttertag das Frühstück.;-
 heiraten;mittel;Feste feiern;neu;"Sie haben beschlossen, im nächsten Sommer zu heiraten. | Möchtest du mich heiraten?""""";-
 die Hochzeit;mittel;Feste feiern;neu;Die Hochzeit fand in einer kleinen Kapelle auf dem Land statt. | Wir sind zur Hochzeit unserer besten Freunde eingeladen.;-
@@ -210,9 +210,9 @@ der Finger;leicht;Was mein Körper alles kann 1;neu;Sie trägt einen wunderschö
 zeigen;leicht;Was mein Körper alles kann 1;neu;Kannst du mir bitte den Weg zum Bahnhof zeigen? | Das Thermometer zeigt heute zwanzig Grad an.;-
 der Körper;mittel;Was mein Körper alles kann 1;neu;Sport hält den gesamten Körper fit und gesund. | Der menschliche Körper benötigt ausreichend Wasser.;-
 nackt;mittel;Was mein Körper alles kann 1;neu;Das kleine Baby krabbelt nackt über die Decke. | Im Sommer baden manche Leute nackt im See.;-
-die Stirn;mittel;Was mein Körper alles kann 1;neu;Er hatte vor Sorge tiefe Falten auf der Stirn. | Die Mutter fühlte die heiße Stirn des kranken Kindes.;-
-die Wimper;mittel;Was mein Körper alles kann 1;neu;Sie hat auffallend lange und dunkle Wimpern. | Eine Wimper ist mir ins Auge gefallen.;-
-die Wange;mittel;Was mein Körper alles kann 1;neu;Das Kind hatte rot gewordene Wangen von der Kälte. | Er gab ihr einen sanften Kuss auf die Wange.;-
+die Stirn;mittel;Was mein Körper alles kann 1;neu;Er hatte vor Sorge tiefe Falten auf der Stirn. | Die Mutter fühlte die heiße Stirn des kranken Kindes.;die_Stirn.png
+die Wimper;mittel;Was mein Körper alles kann 1;neu;Sie hat auffallend lange und dunkle Wimpern. | Eine Wimper ist mir ins Auge gefallen.;die_Wimper.png
+die Wange;mittel;Was mein Körper alles kann 1;neu;Das Kind hatte rot gewordene Wangen von der Kälte. | Er gab ihr einen sanften Kuss auf die Wange.;die_Wange.png
 schreien;mittel;Was mein Körper alles kann 1;neu;"Man sollte in der Bibliothek nicht laut schreien. | Die Fans schrien vor Freude, als das Tor fiel.""""";-
 flüstern;mittel;Was mein Körper alles kann 1;neu;"Sie flüsterten sich im Unterricht heimlich Nachrichten zu. | Bitte flüstere, denn das Baby schläft bereits.""""";-
 lecken;mittel;Was mein Körper alles kann 1;neu;Die Kinder lecken begeistert an ihrem Schokoladeneis. | Der Hund leckte dem Besitzer dankbar über die Hand.;-
@@ -221,7 +221,7 @@ schlucken;mittel;Was mein Körper alles kann 1;neu;Der Patient muss die Tablette
 die Spucke;mittel;Was mein Körper alles kann 1;neu;Vor lauter Aufregung blieb ihm die Spucke weg. | Der Arzt nimmt mit einem Stäbchen etwas Spucke für den Test.;-
 spucken;mittel;Was mein Körper alles kann 1;neu;"Es ist unhöflich, auf den Gehweg zu spucken. | Das Lama spuckte überraschend in Richtung der Besucher.""""";-
 der Hals;mittel;Was mein Körper alles kann 1;neu;Ich trage im Winter immer einen warmen Schal um den Hals. | Sie hat seit heute Morgen starke Schmerzen im Hals.;-
-die Schulter;mittel;Was mein Körper alles kann 1;neu;Er legte aufmunternd seine Hand auf meine Schulter. | Sie klagte über Verspannungen in der linken Schulter.;-
+die Schulter;mittel;Was mein Körper alles kann 1;neu;Er legte aufmunternd seine Hand auf meine Schulter. | Sie klagte über Verspannungen in der linken Schulter.;die_Schulter.png
 die Faust;mittel;Was mein Körper alles kann 1;neu;Er ballte vor Wut die Faust in der Tasche. | Der Kämpfer schlug mit der Faust auf den Sandsack.;-
 der Zeigefinger;mittel;Was mein Körper alles kann 1;neu;Sie deutete mit dem Zeigefinger auf das richtige Wort. | Er hob warnend den Zeigefinger.;-
 der Daumen;mittel;Was mein Körper alles kann 1;neu;"Ich drücke dir für die bevorstehende Prüfung fest die Daumen! | Er hielt den Daumen hoch, um zu signalisieren, dass alles gut ist.""""";-
@@ -365,14 +365,14 @@ ich bin;leicht;Die Menschen sind verschieden;neu;Ich bin heute sehr glücklich �
 du bist;leicht;Die Menschen sind verschieden;neu;"Du bist mein allerbester Freund. | Weißt du schon, ob du morgen pünktlich bist?""""";-
 er ist;leicht;Die Menschen sind verschieden;neu;Er ist ein sehr fleißiger Student. | Er ist heute wegen einer Erkältung krankgemeldet.;-
 nicht;leicht;Die Menschen sind verschieden;neu;Ich habe heute leider gar keine Zeit. | Das ist nicht die richtige Antwort auf die Frage.;-
-das Mädchen;mittel;Die Menschen sind verschieden;neu;Das kleine Mädchen liest begeistert ein Bilderbuch. | In der Schulklasse lernen viele Mädchen und Jungen.;-
-der Junge;mittel;Die Menschen sind verschieden;neu;Der Junge spielt am Nachmittag gerne draußen Fußball. | Er ist ein sehr aufgeweckter Junge.;-
-die Frau;mittel;Die Menschen sind verschieden;neu;Die freundliche Frau an der Kasse hat mir geholfen. | Sie ist eine erfolgreiche Frau in der Wirtschaft.;-
-der Mann;mittel;Die Menschen sind verschieden;neu;Der Mann drüben an der Ecke wartet auf den Bus. | Mein Nachbar ist ein sehr hilfsbereiter Mann.;-
+das Mädchen;mittel;Die Menschen sind verschieden;neu;Das kleine Mädchen liest begeistert ein Bilderbuch. | In der Schulklasse lernen viele Mädchen und Jungen.;das_Mädchen.png
+der Junge;mittel;Die Menschen sind verschieden;neu;Der Junge spielt am Nachmittag gerne draußen Fußball. | Er ist ein sehr aufgeweckter Junge.;der_Junge.png
+die Frau;mittel;Die Menschen sind verschieden;neu;Die freundliche Frau an der Kasse hat mir geholfen. | Sie ist eine erfolgreiche Frau in der Wirtschaft.;die_Frau.png
+der Mann;mittel;Die Menschen sind verschieden;neu;Der Mann drüben an der Ecke wartet auf den Bus. | Mein Nachbar ist ein sehr hilfsbereiter Mann.;der_Mann.png
 das Gesicht;mittel;Die Menschen sind verschieden;neu;Sie wusch sich morgens kaltes Wasser ins Gesicht. | Er hatte ein strahlendes Lächeln im Gesicht.;-
 aussehen;mittel;Die Menschen sind verschieden;neu;Du siehst in diesem neuen Kleid wirklich toll aus! | Wie wird das Wetter morgen wohl aussehen?;-
 die Locke;mittel;Die Menschen sind verschieden;neu;Das kleine Kind hat wunderschöne braune Locken. | Sie drehte sich spielerisch eine Locke um den Finger.;-
-der Bart;mittel;Die Menschen sind verschieden;neu;Er trägt seit kurzem einen dichten Vollbart. | Mein Großvater rasiert seinen Bart jeden Morgen.;-
+der Bart;mittel;Die Menschen sind verschieden;neu;Er trägt seit kurzem einen dichten Vollbart. | Mein Großvater rasiert seinen Bart jeden Morgen.;der_Bart.png
 wachsen;mittel;Die Menschen sind verschieden;neu;Die Pflanzen wachsen im Frühling besonders schnell. | Kinder wachsen manchmal erstaunlich rasch.;-
 dick;mittel;Die Menschen sind verschieden;neu;Im Winter ziehe ich mir einen dicken Pullover an. | Das Buch hat über fünfhundert dicke Seiten.;-
 dünn;mittel;Die Menschen sind verschieden;neu;Das Eis auf dem Teich ist noch viel zu dünn. | Für das kühle Wetter trägt er eine zu dünne Jacke.;-
@@ -461,10 +461,10 @@ schwitzen;leicht;Wenn ich krank bin;neu;Beim Sport im Sommer fängt man schnell 
 frieren;leicht;Wenn ich krank bin;neu;Ohne warme Jacke fängt man draußen schnell an zu frieren. | Frierst du an den Händen oder geht es?;-
 husten;leicht;Wenn ich krank bin;neu;Er muss wegen seines starken Schnupfens ständig husten. | Der Husten hält nun schon seit drei Tagen an.;-
 müde;leicht;Wenn ich krank bin;neu;Nach dem anstrengenden Tag bin ich sehr müde. | Das müde Kind schlummerte im Kinderwagen ein.;-
-die Medizin;leicht;Wenn ich krank bin;neu;Du musst diese Medizin dreimal täglich einnehmen. | Die Medizin hat ihm schnell bei den Schmerzen geholfen.;-
+die Medizin;leicht;Wenn ich krank bin;neu;Du musst diese Medizin dreimal täglich einnehmen. | Die Medizin hat ihm schnell bei den Schmerzen geholfen.;die_Medizin.png
 das Blut;mittel;Wenn ich krank bin;neu;Aus der kleinen Wunde tropfte ein wenig Blut. | Der Arzt nimmt dem Patienten Blut für das Labor ab.;-
 das Loch;mittel;Wenn ich krank bin;neu;Der Zaun hat ein großes Loch auf der Seite. | In seiner Socke war ein kleines Loch.;-
-die Beule;mittel;Wenn ich krank bin;neu;Nach dem Stoß am Schrank hatte er eine dicke Beule am Kopf. | Die Beule wurde mit Eis sofort gekühlt.;-
+die Beule;mittel;Wenn ich krank bin;neu;Nach dem Stoß am Schrank hatte er eine dicke Beule am Kopf. | Die Beule wurde mit Eis sofort gekühlt.;die_Beule.png
 die Bauchschmerzen;mittel;Wenn ich krank bin;neu;Nach dem Verzehr der unreifen Früchte bekam er Bauchschmerzen. | Sie klagte über leichte Bauchschmerzen.;-
 brechen;mittel;Wenn ich krank bin;neu;"Er hat sich beim Skifahren unglücklich den Arm gebrochen. | Vorsicht, dieses dünne Holz kann leicht brechen.""""";-
 das Fieber;mittel;Wenn ich krank bin;neu;Das Kind hat hohes Fieber und muss im Bett bleiben. | Das Fieber ist dank des Medikaments gesunken.;-
@@ -476,15 +476,15 @@ der Husten;mittel;Wenn ich krank bin;neu;Der trockene Husten raubte ihm nachts d
 der Hustensaft;mittel;Wenn ich krank bin;neu;Die Ärztin hat dem Kind einen süßen Hustensaft verschrieben. | Nimm vor dem Schlafengehen noch einen Löffel Hustensaft.;-
 die Wärmflasche;mittel;Wenn ich krank bin;neu;Eine warme Wärmflasche hilft sehr gut bei Bauchschmerzen. | Sie legte sich eine Wärmflasche an die kalten Füße.;-
 die Ärztin;mittel;Wenn ich krank bin;neu;Die freundliche Ärztin untersuchte das Kind gründlich. | Sie arbeitet seit vielen Jahren als Ärztin im Krankenhaus.;-
-der Zahnarzt;mittel;Wenn ich krank bin;neu;Ich habe morgen einen Termin beim Zahnarzt zur Kontrolle. | Der Zahnarzt reparierte das kleine Loch im Zahn.;-
-der Kinderarzt;mittel;Wenn ich krank bin;neu;Der Kinderarzt ist sehr liebevoll mit den kleinen Patienten. | Wir gehen heute zur Vorsorgeuntersuchung beim Kinderarzt.;-
+der Zahnarzt;mittel;Wenn ich krank bin;neu;Ich habe morgen einen Termin beim Zahnarzt zur Kontrolle. | Der Zahnarzt reparierte das kleine Loch im Zahn.;der_Zahnarzt.png
+der Kinderarzt;mittel;Wenn ich krank bin;neu;Der Kinderarzt ist sehr liebevoll mit den kleinen Patienten. | Wir gehen heute zur Vorsorgeuntersuchung beim Kinderarzt.;der_Kinderarzt.png
 untersuchen;mittel;Wenn ich krank bin;neu;Der Arzt untersucht den Patienten gründlich. | Wir müssen das Problem genauer untersuchen.;-
-das Wartezimmer;mittel;Wenn ich krank bin;neu;Im Wartezimmer der Praxis saßen bereits viele Patienten. | Bitte nehmen Sie kurz im Wartezimmer Platz.;-
-die Salbe;mittel;Wenn ich krank bin;neu;Er trug eine lindernde Salbe auf die brennende Haut auf. | Die Salbe hilft gegen den leichten Ausschlag.;-
+das Wartezimmer;mittel;Wenn ich krank bin;neu;Im Wartezimmer der Praxis saßen bereits viele Patienten. | Bitte nehmen Sie kurz im Wartezimmer Platz.;das_Wartezimmer.png
+die Salbe;mittel;Wenn ich krank bin;neu;Er trug eine lindernde Salbe auf die brennende Haut auf. | Die Salbe hilft gegen den leichten Ausschlag.;die_Salbe.png
 das Zäpfchen;mittel;Wenn ich krank bin;neu;Gegen das hohe Fieber gab die Mutter dem Baby ein Zäpfchen. | Das Zäpfchen wirkte bereits nach kurzer Zeit.;-
-die Tablette;mittel;Wenn ich krank bin;neu;Er schluckte die Tablette mit einem großen Glas Wasser. | Nehmen Sie täglich eine Tablette nach dem Essen.;-
+die Tablette;mittel;Wenn ich krank bin;neu;Er schluckte die Tablette mit einem großen Glas Wasser. | Nehmen Sie täglich eine Tablette nach dem Essen.;die_Tablette.png
 impfen;mittel;Wenn ich krank bin;neu;Der Arzt impft das Kind gegen Kinderkrankheiten. | Lassen Sie sich regelmäßig gegen Grippe impfen?;-
-die Spritze;mittel;Wenn ich krank bin;neu;Vor der Spritze beim Arzt braucht man keine Angst zu haben. | Die Ärztin gab ihm eine schmerzlindernde Spritze.;-
+die Spritze;mittel;Wenn ich krank bin;neu;Vor der Spritze beim Arzt braucht man keine Angst zu haben. | Die Ärztin gab ihm eine schmerzlindernde Spritze.;die_Spritze.png
 der Stich;mittel;Wenn ich krank bin;neu;Der Mückenstich juckt am Bein ganz fürchterlich. | Nach dem Stich der Wespe kühlte er die Stelle.;-
 kratzen;mittel;Wenn ich krank bin;neu;Du solltest den Mückenstich nicht ständig kratzen. | Die Katze kratzt gerne am Kratzbaum.;-
 gesund werden;mittel;Wenn ich krank bin;neu;"Ich wünsche dir von Herzen, dass du schnell wieder gesund wirst. | Mit viel Ruhe und Tee wird man bald gesund werden.""""";-
@@ -514,7 +514,7 @@ waschen;leicht;Im Badezimmer;neu;Vor dem Essen sollte man sich stets die Hände 
 baden;leicht;Im Badezimmer;neu;Am Wochenende badet das Kleinkind gerne mit viel Schaum. | Wir wollen im Sommer im kühlen See baden gehen.;-
 sauber;leicht;Im Badezimmer;neu;"Nach dem Putzen war das ganze Zimmer wieder komplett sauber. | Achte darauf, dass deine Hände vor dem Kochen sauber sind.""""";-
 schmutzig;leicht;Im Badezimmer;neu;Nach dem Spielen im Garten waren seine Schuhe völlig schmutzig. | Die schmutzige Wäsche kommt direkt in den Wäschekorb.;-
-der Waschlappen;leicht;Im Badezimmer;neu;Die Mutter wischt dem Kind das Gesicht mit einem feuchten Waschlappen ab. | Ich benutze morgens gerne einen weichen Waschlappen.;-
+der Waschlappen;leicht;Im Badezimmer;neu;Die Mutter wischt dem Kind das Gesicht mit einem feuchten Waschlappen ab. | Ich benutze morgens gerne einen weichen Waschlappen.;der_Waschlappen.png
 der Schwamm;leicht;Im Badezimmer;neu;Mit einem feuchten Schwamm lässt sich die Tafel schnell wischen. | Er reinigte das Auto mit einem großen Schwamm.;der_Schwamm.png
 das Handtuch;leicht;Im Badezimmer;neu;Nach dem Duschen trocknet sie sich mit einem weichen Handtuch ab. | Hänge das feuchte Handtuch bitte zum Trocknen auf.;-
 trocken;leicht;Im Badezimmer;neu;Im Sommer ist das Gras nach Wochen ohne Regen sehr trocken. | Nach dem Abtrocknen ist meine Haut wieder komplett trocken.;-
@@ -525,20 +525,20 @@ müssen;leicht;Im Badezimmer;neu;Ich muss heute leider noch für die schwere Pr�
 abwischen;leicht;Im Badezimmer;neu;Kannst du bitte den Esstisch mit einem Tuch abwischen? | Sie wischte sich die Tränen von der Wange ab.;-
 die Nägel schneiden;leicht;Im Badezimmer;neu;Einmal in der Woche sollte man sich die Nägel schneiden. | Der Vater schneidet dem Baby vorsichtig die Nägel.;die_Nägel_schneiden.png
 duschen;mittel;Im Badezimmer;neu;"Morgens gehe ich gerne kurz duschen, um wach zu werden. | Nach dem harten Training muss er erst einmal duschen.""""";-
-die Dusche;mittel;Im Badezimmer;neu;"Unsere neue Wohnung besitzt eine moderne, geräumige Dusche. | Das Wasser in der Dusche ist schön warm.""""";-
-die Badewanne;mittel;Im Badezimmer;neu;Ein heißes Bad in der Badewanne entspannt die Muskeln. | Die Kinder lassen Spielzeug in der Badewanne schwimmen.;-
+die Dusche;mittel;Im Badezimmer;neu;"Unsere neue Wohnung besitzt eine moderne, geräumige Dusche. | Das Wasser in der Dusche ist schön warm.""""";die_Dusche.png
+die Badewanne;mittel;Im Badezimmer;neu;Ein heißes Bad in der Badewanne entspannt die Muskeln. | Die Kinder lassen Spielzeug in der Badewanne schwimmen.;die_Badewanne.png
 abtrocknen;mittel;Im Badezimmer;neu;Nach dem Duschen trocknet er sich gründlich ab. | Kannst du mir bitte beim Abtrocknen des Geschirrs helfen?;-
-die Creme;mittel;Im Badezimmer;neu;Diese Creme pflegt trockene Haut im Winter sehr gut. | Trage die Salbe oder Creme sanft auf die Stelle auf.;-
+die Creme;mittel;Im Badezimmer;neu;Diese Creme pflegt trockene Haut im Winter sehr gut. | Trage die Salbe oder Creme sanft auf die Stelle auf.;die_Creme.png
 eincremen;mittel;Im Badezimmer;neu;Im Sommer muss man sich vor dem Sonnenbaden eincremen. | Sie cremt ihr Gesicht jeden Morgen sorgfältig ein.;-
 das Öl;mittel;Im Badezimmer;neu;Zum Braten in der Pfanne benutze ich hochwertiges Öl. | Das duftende Öl tut der trockenen Haut sehr gut.;-
-das Shampoo;mittel;Im Badezimmer;neu;"Das neue Shampoo macht das Haar besonders weich und glänzend. | Achte darauf, dass kein Shampoo in die Augen gelangt.""""";-
+das Shampoo;mittel;Im Badezimmer;neu;"Das neue Shampoo macht das Haar besonders weich und glänzend. | Achte darauf, dass kein Shampoo in die Augen gelangt.""""";das_Shampoo.png
 ausspülen;mittel;Im Badezimmer;neu;Du musst das Shampoo gründlich aus den Haaren ausspülen. | Spüle die Tasse nach dem Trinken kurz aus.;-
-der Föhn;mittel;Im Badezimmer;neu;Mit dem Föhn trocknet sie ihre nassen Haare im Nu. | Der Föhn bläst angenehm warme Luft.;-
+der Föhn;mittel;Im Badezimmer;neu;Mit dem Föhn trocknet sie ihre nassen Haare im Nu. | Der Föhn bläst angenehm warme Luft.;der_Föhn.png
 die Bürste;mittel;Im Badezimmer;neu;Sie entwirrt ihre Haare mit einer großen Bürste. | Mit der weichen Bürste pflegt er das Fell des Hundes.;-
 bürsten;mittel;Im Badezimmer;neu;Er bürstet sich jeden Morgen gründlich die Haare. | Das Fell der Katze muss regelmäßig gebürstet werden.;-
-der Kamm;mittel;Im Badezimmer;neu;"Er benutzt einen feinen Kamm, um seinen Scheitel zu ziehen. | Der Kamm liegt im Badezimmer neben dem Spiegel.""""";-
-die Toilette;mittel;Im Badezimmer;neu;"Entschuldigung, wo finde ich hier die nächste Toilette? | Die Toilette muss stets sauber gehalten werden.""""";-
-die Brille;mittel;Im Badezimmer;neu;Ohne seine Brille kann er die kleine Schrift nicht lesen. | Sie hat sich eine neue modische Brille ausgesucht.;-
+der Kamm;mittel;Im Badezimmer;neu;"Er benutzt einen feinen Kamm, um seinen Scheitel zu ziehen. | Der Kamm liegt im Badezimmer neben dem Spiegel.""""";der_Kamm.png
+die Toilette;mittel;Im Badezimmer;neu;"Entschuldigung, wo finde ich hier die nächste Toilette? | Die Toilette muss stets sauber gehalten werden.""""";die_Toilette.png
+die Brille;mittel;Im Badezimmer;neu;Ohne seine Brille kann er die kleine Schrift nicht lesen. | Sie hat sich eine neue modische Brille ausgesucht.;die_Brille.png
 gern;mittel;Im Badezimmer;neu;Ich helfe dir wirklich sehr gern bei dieser Aufgabe. | Essen Sie gern italienische Gerichte?;-
 schon;mittel;Im Badezimmer;neu;Bist du etwa schon mit deinen Hausaufgaben fertig? | Ich habe diesen spannenden Film schon zweimal gesehen.;-
 oft;mittel;Im Badezimmer;neu;Wir gehen im Sommer sehr oft im See schwimmen. | Wie oft besuchst du deine Großeltern im Jahr?;-
@@ -555,30 +555,30 @@ die Marmelade;leicht;Frühstück und Abendessen;neu;Erdbeermarmelade schmeckt zu
 der Honig;leicht;Frühstück und Abendessen;neu;Der süße Honig passt perfekt in eine heiße Tasse Tee. | Bienen sammeln Nektar und machen daraus Honig.;der_Honig.png
 das Ei;leicht;Frühstück und Abendessen;neu;Möchtest du zum Frühstück ein gekochtes Ei essen? | Für den Kuchenteig brauchen wir genau drei Eier.;-
 die Wurst;leicht;Frühstück und Abendessen;neu;Auf dem Teller liegen verschiedene Sorten Käse und Wurst. | Er isst gerne ein Brötchen mit frischer Wurst.;-
-der Käse;leicht;Frühstück und Abendessen;neu;In Frankreich gibt es eine riesige Auswahl an Käse. | Zum Überbacken der Aufläufe nimmt man meist geriebenen Käse.;-
+der Käse;leicht;Frühstück und Abendessen;neu;In Frankreich gibt es eine riesige Auswahl an Käse. | Zum Überbacken der Aufläufe nimmt man meist geriebenen Käse.;der_Käse.png
 der Salat;leicht;Frühstück und Abendessen;neu;Ein frischer grüner Salat schmeckt als Beilage hervorragend. | Sie bereitet einen leckeren Salat für die Feier vor.;-
 die Cornflakes;leicht;Frühstück und Abendessen;neu;Die Kinder essen morgens am liebsten Cornflakes mit kalter Milch. | Er schüttete sich eine Schüssel Cornflakes ein.;-
 das Müsli;leicht;Frühstück und Abendessen;neu;Ein gesundes Müsli mit Früchten gibt Energie für den Tag. | Ich mische mir mein Müsli am liebsten mit Joghurt.;-
 der/das Joghurt;leicht;Frühstück und Abendessen;neu;Ein fruchtiger Joghurt ist ein leckerer Zwischensnack. | Zum Müsli gebe ich meist etwas frischen Joghurt.;-
 trinken;leicht;Frühstück und Abendessen;neu;Bei Hitze muss man besonders viel frisches Wasser trinken. | Was möchtest du zum Abendessen trinken?;-
-die Milch;leicht;Frühstück und Abendessen;neu;Möchtest du einen Schuss frische Milch in deinen Kaffee? | Katzen trinken für ihr Leben gerne Milch.;-
-der Kakao;leicht;Frühstück und Abendessen;neu;An kalten Wintertagen schmeckt eine Tasse heißer Kakao wunderbar. | Die Kinder trinken morgens ihren Kakao.;-
+die Milch;leicht;Frühstück und Abendessen;neu;Möchtest du einen Schuss frische Milch in deinen Kaffee? | Katzen trinken für ihr Leben gerne Milch.;die_Milch.png
+der Kakao;leicht;Frühstück und Abendessen;neu;An kalten Wintertagen schmeckt eine Tasse heißer Kakao wunderbar. | Die Kinder trinken morgens ihren Kakao.;der_Kakao.png
 der Tee;leicht;Frühstück und Abendessen;neu;Ein heißer Pfefferminztee beruhigt den Magen. | Trinkst du deinen Tee am liebsten mit Zitrone oder Honig?;der_Tee.png
 die Zitrone;leicht;Frühstück und Abendessen;neu;Die Zitrone enthält sehr viel gesundes Vitamin C. | Ich presse etwas Zitrone über den frischen Fisch.;-
 der Saft;leicht;Frühstück und Abendessen;neu;Ein frischer Glas Orangensaft schmeckt fruchtig und lecker. | Welchen Saft trinkst du am liebsten?;-
 Hunger haben;mittel;Frühstück und Abendessen;neu;"Ich habe riesigen Hunger, wann gibt es endlich Essen? | Die Kinder hatten nach dem Sport großen Hunger.""""";-
 Durst haben;mittel;Frühstück und Abendessen;neu;"Nach dem langen Lauf hatte er gewaltigen Durst. | Wenn du Durst hast, nehme dir bitte ein Glas Wasser.""""";-
 das Frühstück;mittel;Frühstück und Abendessen;neu;Das Frühstück ist für viele die wichtigste Mahlzeit des Tages. | Beim Frühstück besprechen wir den Tagesablauf.;-
-die Brezel;mittel;Frühstück und Abendessen;neu;Eine frische Brezel mit Butter schmeckt unterwegs super. | In Bayern isst man Brezeln sehr gerne zu Würstchen.;-
-der Toast;mittel;Frühstück und Abendessen;neu;Er röstet sich zwei Scheiben Toast zum Frühstück. | Bestreiche den warmen Toast mit ein wenig Butter.;-
-die Salami;mittel;Frühstück und Abendessen;neu;Er legt sich gerne eine Scheibe würzige Salami aufs Brot. | Auf der Pizza darf eine gute Salami nicht fehlen.;-
+die Brezel;mittel;Frühstück und Abendessen;neu;Eine frische Brezel mit Butter schmeckt unterwegs super. | In Bayern isst man Brezeln sehr gerne zu Würstchen.;die_Brezel.png
+der Toast;mittel;Frühstück und Abendessen;neu;Er röstet sich zwei Scheiben Toast zum Frühstück. | Bestreiche den warmen Toast mit ein wenig Butter.;der_Toast.png
+die Salami;mittel;Frühstück und Abendessen;neu;Er legt sich gerne eine Scheibe würzige Salami aufs Brot. | Auf der Pizza darf eine gute Salami nicht fehlen.;die_Salami.png
 ein Brot schmieren;mittel;Frühstück und Abendessen;neu;Mutter schmiert den Kindern ein Brot für die Schule. | Kannst du mir bitte ein Käsebrot schmieren?;-
 abbeißen;mittel;Frühstück und Abendessen;neu;Darf ich mal kurz von deinem leckeren Apfel abbeißen? | Er biss gierig von seinem frischen Brötchen ab.;-
 der Quark;mittel;Frühstück und Abendessen;neu;Frischer Quark mit Kräutern schmeckt toll zu Pellkartoffeln. | Sie rührt den Quark mit etwas Milch glatt.;-
 das Mineralwasser;mittel;Frühstück und Abendessen;neu;Trinkst du lieber Mineralwasser mit oder ohne Kohlensäure? | Er bestellte eine kalte Flasche Mineralwasser.;-
-der Apfelsaft;mittel;Frühstück und Abendessen;neu;Ein Glas gekühlter Apfelsaft ist bei Kindern sehr beliebt. | Sie mischt Apfelsaft mit Wasser zu einer Schorle.;-
-der Orangensaft;mittel;Frühstück und Abendessen;neu;Frisch gepresster Orangensaft schmeckt besonders intensiv. | Zum Sonntagsfrühstück trinken wir gerne Orangensaft.;-
-das Abendessen;mittel;Frühstück und Abendessen;neu;Pünktlich um acht Uhr steht das Abendessen auf dem Tisch. | Was gibt es heute Leckeres zum Abendessen?;-
+der Apfelsaft;mittel;Frühstück und Abendessen;neu;Ein Glas gekühlter Apfelsaft ist bei Kindern sehr beliebt. | Sie mischt Apfelsaft mit Wasser zu einer Schorle.;der_Apfelsaft.png
+der Orangensaft;mittel;Frühstück und Abendessen;neu;Frisch gepresster Orangensaft schmeckt besonders intensiv. | Zum Sonntagsfrühstück trinken wir gerne Orangensaft.;der_Orangensaft.png
+das Abendessen;mittel;Frühstück und Abendessen;neu;Pünktlich um acht Uhr steht das Abendessen auf dem Tisch. | Was gibt es heute Leckeres zum Abendessen?;das_Abendessen.png
 hungrig;schwer;Frühstück und Abendessen;neu;Die hungrigen Kinder machten sich sofort über das Essen her. | Nach der Wanderung war er extrem hungrig.;-
 durstig;schwer;Frühstück und Abendessen;neu;"Die durstigen Wanderer tranken das kalte Quellwasser. | Wenn du durstig bist, steht im Kühlschrank Wasser.""""";-
 satt;schwer;Frühstück und Abendessen;neu;"Vielen Dank, das Essen war hervorragend, aber ich bin satt. | Nach dem üppigen Menü fühlte er sich rundum satt.""""";-
@@ -591,35 +591,35 @@ das Getränk;schwer;Frühstück und Abendessen;neu;Welches alkoholfreie Getränk
 zu Abend essen;schwer;Frühstück und Abendessen;neu;Um wie viel Uhr wollt ihr heute zu Abend essen? | Wir essen meist gegen neunzehn Uhr zu Abend.;-
 bloß;schwer;Frühstück und Abendessen;neu;Wo hast du bloß deinen Hausschlüssel verloren? | Sei bloß vorsichtig auf der glatten Straße!;-
 ob;schwer;Frühstück und Abendessen;neu;"Ich weiß noch nicht genau, ob ich morgen Zeit habe. | Kannst du mir sagen, ob der Bus schon da war?""""";-
-die Suppe;leicht;Guten Appetit!;neu;Eine heiße Hühnersuppe hilft hervorragend bei einer Erkältung. | Als Vorspeise servierten sie eine leckere Suppe.;-
+die Suppe;leicht;Guten Appetit!;neu;Eine heiße Hühnersuppe hilft hervorragend bei einer Erkältung. | Als Vorspeise servierten sie eine leckere Suppe.;die_Suppe.png
 die Kartoffel;leicht;Guten Appetit!;neu;In Deutschland werden sehr viele Kartoffeln gegessen. | Zu dem Gericht gibt es gekochte Kartoffeln.;-
 der Reis;leicht;Guten Appetit!;neu;Der Reis schmeckt hervorragend als Beilage zu Gemüse. | Sie kocht gerne asiatische Gerichte mit Reis.;-
 die Nudel;leicht;Guten Appetit!;neu;Kinder essen für ihr Leben gerne Nudeln mit Tomatensoße. | Wir haben verschiedene Sorten Nudeln im Schrank.;-
 das Fleisch;leicht;Guten Appetit!;neu;Er verzichtet seit einem Jahr komplett auf Fleisch. | Das Fleisch muss in der Pfanne gut durchgebraten werden.;-
 das Würstchen;leicht;Guten Appetit!;neu;Auf dem Grill brutzeln knackige Würstchen für das Fest. | Das Kind wünscht sich ein Würstchen mit Senf.;-
 der/das Ketchup;leicht;Guten Appetit!;neu;Gibst du bitte noch etwas Ketchup auf meine Pommes? | Manche Kinder essen Ketchup zu fast jedem Essen.;-
-der Fisch;leicht;Guten Appetit!;neu;Frischer Fisch ist sehr gesund und schmeckt hervorragend. | Wir haben am See einen leckeren Fisch gegessen.;-
-die Tomate;leicht;Guten Appetit!;neu;Für den Salat schneide ich zwei rote Tomaten in Würfel. | Die Tomaten im Garten wachsen in der Sonne sehr gut.;-
+der Fisch;leicht;Guten Appetit!;neu;Frischer Fisch ist sehr gesund und schmeckt hervorragend. | Wir haben am See einen leckeren Fisch gegessen.;der_Fisch.png
+die Tomate;leicht;Guten Appetit!;neu;Für den Salat schneide ich zwei rote Tomaten in Würfel. | Die Tomaten im Garten wachsen in der Sonne sehr gut.;die_Tomate.png
 die Gurke;leicht;Guten Appetit!;neu;Eine frische Gurke passt perfekt in den Sommersalat. | Ich esse zum Abendbrot gerne ein paar Scheiben Gurke.;-
-die Karotte;leicht;Guten Appetit!;neu;Kaninchen knabbern für ihr Leben gerne an einer Karotte. | Er hat sich eine Karotte als gesunden Snack geschält.;-
+die Karotte;leicht;Guten Appetit!;neu;Kaninchen knabbern für ihr Leben gerne an einer Karotte. | Er hat sich eine Karotte als gesunden Snack geschält.;die_Karotte.png
 die Möhre;leicht;Guten Appetit!;neu;Möhren enthalten sehr viel gesundes Vitamin A. | Für die Suppe reibe ich zwei Möhren klein.;die_Möhre.png
 die Erbse;leicht;Guten Appetit!;neu;Erbsen und Möhren werden oft gemeinsam als Beilage serviert. | Im Garten pflücken wir frische grüne Erbsen.;die_Erbse.png
 der Spinat;leicht;Guten Appetit!;neu;Spinat schmeckt besonders gut mit Blubb und Salzkartoffeln. | Der frische Spinat wird kurz in der Pfanne gedünstet.;der_Spinat.png
 noch;leicht;Guten Appetit!;neu;Möchtest du noch etwas Nachschlag vom Hauptgericht? | Ich muss noch kurz im Supermarkt einkaufen gehen.;-
-das Mittagessen;mittel;Guten Appetit!;neu;Um punkt zwölf Uhr gibt es bei uns Mittagessen. | Was kochen wir heute Schönes zum Mittagessen?;-
+das Mittagessen;mittel;Guten Appetit!;neu;Um punkt zwölf Uhr gibt es bei uns Mittagessen. | Was kochen wir heute Schönes zum Mittagessen?;das_Mittagessen.png
 der Kartoffelbrei;mittel;Guten Appetit!;neu;Kinder mögen saftigen Kartoffelbrei mit Würstchen sehr. | Sie macht den Kartoffelbrei mit etwas Butter und Milch ganz geschmeidig.;-
-die Spaghetti;mittel;Guten Appetit!;neu;Spaghetti mit Tomatensoße ist das Lieblingsgericht vieler Kinder. | Er drehte die Spaghetti gekonnt auf seiner Gabel.;-
-die Pizza;mittel;Guten Appetit!;neu;Am Freitagabend bestellen wir uns oft eine Pizza. | Die Pizza belegen wir selbst mit Käse und Gemüsen.;-
+die Spaghetti;mittel;Guten Appetit!;neu;Spaghetti mit Tomatensoße ist das Lieblingsgericht vieler Kinder. | Er drehte die Spaghetti gekonnt auf seiner Gabel.;die_Spaghetti.png
+die Pizza;mittel;Guten Appetit!;neu;Am Freitagabend bestellen wir uns oft eine Pizza. | Die Pizza belegen wir selbst mit Käse und Gemüsen.;die_Pizza.png
 die Olive;mittel;Guten Appetit!;neu;Auf eine echte Pizza gehören auch schwarze Oliven. | Sie nimmt gerne ein paar Oliven als Vorspeise.;-
 das Gulasch;mittel;Guten Appetit!;neu;"Das Gulasch muss lange köcheln, damit das Fleisch zart wird. | Zum Gulasch servieren wir heute breite Bandnudeln.""""";-
 die Bratwurst;mittel;Guten Appetit!;neu;Auf dem Sommerfest gibt es frische Bratwurst vom Grill. | Er isst seine Bratwurst am liebsten mit Senf und Brötchen.;-
 das Fischstäbchen;mittel;Guten Appetit!;neu;Fischstäbchen mit Kartoffelpüree schmecken immer hervorragend. | Die Fischstäbchen werden in der Pfanne goldbraun gebraten.;-
-das Gemüse;mittel;Guten Appetit!;neu;Frisches Gemüse ist voller Vitamine und sehr gesund. | Sie kauft das Gemüse am liebsten regional auf dem Wochenmarkt.;-
+das Gemüse;mittel;Guten Appetit!;neu;Frisches Gemüse ist voller Vitamine und sehr gesund. | Sie kauft das Gemüse am liebsten regional auf dem Wochenmarkt.;das_Gemüse.png
 der Blumenkohl;mittel;Guten Appetit!;neu;Blumenkohl lässt sich prima mit etwas Soße Hollandaise servieren. | Der gedünstete Blumenkohl schmeckte sehr mild und lecker.;-
-der Brokkoli;mittel;Guten Appetit!;neu;"Brokkoli ist ein sehr nährstoffreiches grünes Gemüse. | Ich koche den Brokkoli nur wenige Minuten, damit er knackig bleibt.""""";-
-die Paprika;mittel;Guten Appetit!;neu;Für den Salat schneide ich eine rote und eine gelbe Paprika. | Gefüllte Paprika aus dem Ofen schmecken köstlich.;-
-der Mais;mittel;Guten Appetit!;neu;Gegrillter Mais mit etwas Butter schmeckt einfach herrlich. | Wir streuen den gelben Mais gern über den Salat.;-
-die Soße;mittel;Guten Appetit!;neu;"Die Bratensoße verleiht dem Gericht einen kräftigen Geschmack. | Pass auf, dass du keine Soße auf dein weißes Hemd kleckerst.""""";-
+der Brokkoli;mittel;Guten Appetit!;neu;"Brokkoli ist ein sehr nährstoffreiches grünes Gemüse. | Ich koche den Brokkoli nur wenige Minuten, damit er knackig bleibt.""""";der_Brokkoli.png
+die Paprika;mittel;Guten Appetit!;neu;Für den Salat schneide ich eine rote und eine gelbe Paprika. | Gefüllte Paprika aus dem Ofen schmecken köstlich.;die_Paprika.png
+der Mais;mittel;Guten Appetit!;neu;Gegrillter Mais mit etwas Butter schmeckt einfach herrlich. | Wir streuen den gelben Mais gern über den Salat.;der_Mais.png
+die Soße;mittel;Guten Appetit!;neu;"Die Bratensoße verleiht dem Gericht einen kräftigen Geschmack. | Pass auf, dass du keine Soße auf dein weißes Hemd kleckerst.""""";die_Soße.png
 der Senf;mittel;Guten Appetit!;neu;Zu einer deftigen Würstchen gehört etwas scharfer Senf. | Er mag am liebsten mittelscharfen Senf.;-
 das Salz;mittel;Guten Appetit!;neu;Eine Prise Salz gehört fast in jedes Gericht. | Das Suppengericht benötigt noch etwas Salz zum Abschmecken.;-
 der Pfeffer;mittel;Guten Appetit!;neu;Frisch gemahlener schwarzer Pfeffer gibt der Soße die richtige Würze. | Pfeffer und Salz stehen immer auf dem Esstisch.;-
@@ -641,31 +641,31 @@ der Lauch;schwer;Guten Appetit!;neu;Der Lauch gibt der Gemüsesuppe eine angeneh
 die Bohne;schwer;Guten Appetit!;neu;Grüne Bohnen passen prima als Beilage zu Fleischgerichten. | Wir kochen eine deftige Suppe aus weißen Bohnen.;-
 der Kohl;schwer;Guten Appetit!;neu;Aus Weißkohl kann man leckeren Krautsalat zubereiten. | Im Winter isst man gerne Gerichte mit Kohl.;-
 verdauen;schwer;Guten Appetit!;neu;"Der Magen braucht ein paar Stunden, um schwere Speisen zu verdauen. | Nach dem Essen ruhte er sich aus, um besser zu verdauen.""""";-
-der Apfel;leicht;Gegen den kleinen Hunger;neu;Ein frischer roter Apfel ist ein gesunder Snack für zwischendurch. | Täglich ein Apfel hält den Doktor fern.;-
-die Banane;leicht;Gegen den kleinen Hunger;neu;Bananen enthalten viel Kalium und geben schnelle Energie. | Die süße Banane lässt sich leicht schälen.;-
+der Apfel;leicht;Gegen den kleinen Hunger;neu;Ein frischer roter Apfel ist ein gesunder Snack für zwischendurch. | Täglich ein Apfel hält den Doktor fern.;der_Apfel.png
+die Banane;leicht;Gegen den kleinen Hunger;neu;Bananen enthalten viel Kalium und geben schnelle Energie. | Die süße Banane lässt sich leicht schälen.;die_Banane.png
 die Orange;leicht;Gegen den kleinen Hunger;neu;"Er presst sich morgens frische Orangen für einen Saft aus. | Die Orange hat eine dicke, duftende Schale.""""";-
-die Melone;leicht;Gegen den kleinen Hunger;neu;Im heißen Sommer ist eine gekühlte Melone sehr erfrischend. | Wir schneiden die Saftige Melone in große Scheiben.;-
-der Kuchen;leicht;Gegen den kleinen Hunger;neu;Zum Geburtstag gab es einen köstlichen Schokoladenkuchen. | Oma backt am Wochenende immer frischen Kuchen.;-
-der Keks;leicht;Gegen den kleinen Hunger;neu;Möchtest du zum Kaffee einen knusprigen Keks essen? | Die Kinder knabberten erfreut an den Keksen.;-
+die Melone;leicht;Gegen den kleinen Hunger;neu;Im heißen Sommer ist eine gekühlte Melone sehr erfrischend. | Wir schneiden die Saftige Melone in große Scheiben.;die_Melone.png
+der Kuchen;leicht;Gegen den kleinen Hunger;neu;Zum Geburtstag gab es einen köstlichen Schokoladenkuchen. | Oma backt am Wochenende immer frischen Kuchen.;der_Kuchen.png
+der Keks;leicht;Gegen den kleinen Hunger;neu;Möchtest du zum Kaffee einen knusprigen Keks essen? | Die Kinder knabberten erfreut an den Keksen.;der_Keks.png
 die Schokolade;leicht;Gegen den kleinen Hunger;neu;"Zu viel Schokolade ist zwar nicht gesund, schmeckt aber herrlich. | Sie nascht abends gern ein Stück dunkle Schokolade.""""";-
-das Eis;leicht;Gegen den kleinen Hunger;neu;Im Sommer gehen die Kinder liebend gern ein Eis essen. | Was ist deine Lieblingssorte beim Eis?;-
+das Eis;leicht;Gegen den kleinen Hunger;neu;Im Sommer gehen die Kinder liebend gern ein Eis essen. | Was ist deine Lieblingssorte beim Eis?;das_Eis.png
 der Pudding;leicht;Gegen den kleinen Hunger;neu;Der warme Vanillepudding schmeckt der ganzen Familie. | Als Nachtisch gab es einen cremigen Pudding.;der_Pudding.png
 mehr;leicht;Gegen den kleinen Hunger;neu;"Ich hätte gerne noch etwas mehr Gemüse auf meinem Teller. | Mehr Zeit für Hobbys zu haben, wäre wirklich schön.""""";-
 weniger;leicht;Gegen den kleinen Hunger;neu;Du solltest etwas weniger Zucker in deinen Kaffee tun. | Im Winter gibt es weniger Sonnenstunden als im Sommer.;-
 das Obst;mittel;Gegen den kleinen Hunger;neu;"Frisches Obst liegt in einer großen Schale auf dem Esstisch. | Achte darauf, täglich ausreichend Obst zu essen.""""";-
-die Mandarine;mittel;Gegen den kleinen Hunger;neu;In der Weihnachtszeit essen wir besonders gerne süße Mandarinen. | Die Mandarine lässt sich ganz einfach mit den Fingern schälen.;-
+die Mandarine;mittel;Gegen den kleinen Hunger;neu;In der Weihnachtszeit essen wir besonders gerne süße Mandarinen. | Die Mandarine lässt sich ganz einfach mit den Fingern schälen.;die_Mandarine.png
 der Pfirsich;mittel;Gegen den kleinen Hunger;neu;Der saftige Pfirsich schmeckt im Hochsommer wunderbar süß. | Achte beim Essen vom Pfirsich auf den großen Stein in der Mitte.;-
 saftig;mittel;Gegen den kleinen Hunger;neu;Die Orangen sind diesen Winter besonders süß und saftig. | Ein saftiger Apfel ist die perfekte Erfrischung.;-
-die Birne;mittel;Gegen den kleinen Hunger;neu;Die reife Birne war so saftig und süß. | Wir pflücken die reifen Birnen direkt vom Baum.;-
+die Birne;mittel;Gegen den kleinen Hunger;neu;Die reife Birne war so saftig und süß. | Wir pflücken die reifen Birnen direkt vom Baum.;die_Birne.png
 die Kirsche;mittel;Gegen den kleinen Hunger;neu;Im Juni ernten wir die roten süßen Kirschen im Garten. | Auf dem Kuchen liegt eine rote Kirsche als Dekoration.;die_Kirsche.png
-die Pflaume;mittel;Gegen den kleinen Hunger;neu;Aus den reifen Pflaumen backt Oma einen leckeren Pflaumenkuchen. | Die blauen Pflaumen schmecken süß und leicht säuerlich.;-
-die Ananas;mittel;Gegen den kleinen Hunger;neu;Eine frische Ananas ist fruchtig und schmeckt leicht exotisch. | Für den Obstsalat schneiden wir die Ananas in Würfel.;-
-die Kiwi;mittel;Gegen den kleinen Hunger;neu;Die Kiwi ist innen grün und enthält reichlich Vitamin C. | Man kann die Kiwi halbieren und einfach mit dem Löffel auslöffeln.;-
-der Nachtisch;mittel;Gegen den kleinen Hunger;neu;Nach dem Hauptgang servierten sie ein köstliches Eis als Nachtisch. | Was wünschst du dir heute zum Nachtisch?;-
+die Pflaume;mittel;Gegen den kleinen Hunger;neu;Aus den reifen Pflaumen backt Oma einen leckeren Pflaumenkuchen. | Die blauen Pflaumen schmecken süß und leicht säuerlich.;die_Pflaume.png
+die Ananas;mittel;Gegen den kleinen Hunger;neu;Eine frische Ananas ist fruchtig und schmeckt leicht exotisch. | Für den Obstsalat schneiden wir die Ananas in Würfel.;die_Ananas.png
+die Kiwi;mittel;Gegen den kleinen Hunger;neu;Die Kiwi ist innen grün und enthält reichlich Vitamin C. | Man kann die Kiwi halbieren und einfach mit dem Löffel auslöffeln.;die_Kiwi.png
+der Nachtisch;mittel;Gegen den kleinen Hunger;neu;Nach dem Hauptgang servierten sie ein köstliches Eis als Nachtisch. | Was wünschst du dir heute zum Nachtisch?;der_Nachtisch.png
 das Kompott;mittel;Gegen den kleinen Hunger;neu;Zum Pudding schmeckt ein selbstgemachtes Apfelkompott wunderbar. | Oma macht im Herbst köstliches Zwetschgenkompott.;-
 der Schokoladenpudding;mittel;Gegen den kleinen Hunger;neu;Der Schokoladenpudding wird mit etwas Schlagsahne serviert. | Die Kinder freuen sich immer riesig auf Schokoladenpudding.;-
 naschen;mittel;Gegen den kleinen Hunger;neu;Die Kinder naschten heimlich ein paar Kekse aus der Dose. | Ich nasche abends beim Fernsehen gerne etwas Süßes.;-
-das Bonbon;mittel;Gegen den kleinen Hunger;neu;Das Fruchtbonbon schmeckt intensiv nach Erdbeere. | Er nahm ein Bonbon gegen seinen trockenen Hals.;-
+das Bonbon;mittel;Gegen den kleinen Hunger;neu;Das Fruchtbonbon schmeckt intensiv nach Erdbeere. | Er nahm ein Bonbon gegen seinen trockenen Hals.;das_Bonbon.png
 nur;mittel;Gegen den kleinen Hunger;neu;Ich möchte nur ein kleines Stückchen von dem Kuchen. | Er hat nur zwei Euro in der Tasche.;-
 der Appetit;schwer;Gegen den kleinen Hunger;neu;Guten Appetit allerseits! | Nach dem langen Spaziergang hatte er riesigen Appetit.;-
 der Apfelkuchen;schwer;Gegen den kleinen Hunger;neu;Der duftende Apfelkuchen schmeckt warm am allerbesten. | Zum Kaffee gibt es heute frisch gebackenen Apfelkuchen.;-
@@ -700,7 +700,7 @@ eingießen;mittel;Messer - Gabel - Löffel;neu;Kannst du mir bitte etwas Saft in
 der Strohhalm;mittel;Messer - Gabel - Löffel;neu;Das Kind trinkt die Limo am liebsten mit einem Strohhalm. | Wir benutzen Strohhalme aus Papier statt Plastik.;-
 der Suppenteller;mittel;Messer - Gabel - Löffel;neu;Die heiße Suppe wird in tiefen Suppentellern serviert. | Er füllte den Suppenteller bis zum Rand.;-
 das Brettchen;mittel;Messer - Gabel - Löffel;neu;Er schneidet die Gurke auf einem hölzernen Brettchen. | Leg das frische Brot bitte auf das Brettchen.;-
-die Kanne;mittel;Messer - Gabel - Löffel;neu;Die Kanne ist noch voll mit heißem Kamillentee. | Sie schenkte den Kaffee aus der porzellanenen Kanne ein.;-
+die Kanne;mittel;Messer - Gabel - Löffel;neu;Die Kanne ist noch voll mit heißem Kamillentee. | Sie schenkte den Kaffee aus der porzellanenen Kanne ein.;die_Kanne.png
 den Tisch decken;mittel;Messer - Gabel - Löffel;neu;"Kinder, helft ihr bitte mit, den Tisch für das Mittagessen zu decken? | Vor der Feier müssen wir noch schön den Tisch decken.""""";-
 abräumen;mittel;Messer - Gabel - Löffel;neu;Nach dem Essen sollten alle gemeinsam den Esstisch abräumen. | Er räumte die leeren Teller rasch ab.;-
 abwaschen;mittel;Messer - Gabel - Löffel;neu;Wer muss heute Abend das schmutzige Geschirr abwaschen? | Sie wäscht die Gläser vorsichtig mit der Hand ab.;-
@@ -737,7 +737,7 @@ leer;leicht;Wir kochen;neu;Die Flasche Wasser ist leider schon ganz leer. | Nach
 der Koch;mittel;Wir kochen;neu;Der Koch bereitet in der Restaurantküche hervorragende Speisen zu. | Er arbeitet seit Jahren als leidenschaftlicher Koch.;-
 umrühren;mittel;Wir kochen;neu;"Vergiss nicht, den Suppentopf regelmäßig umzurühren. | Sie rührte den Teig mit dem Löffel kräftig um.""""";-
 der Kochlöffel;mittel;Wir kochen;neu;Zum Umrühren der Soße nimmt sie einen hölzernen Kochlöffel. | Der Kochlöffel liegt neben dem Herd bereit.;-
-die Pfanne;mittel;Wir kochen;neu;In der Pfanne braten die Würstchen goldbraun an. | Sie erhitzte etwas Öl in der Pfanne.;-
+die Pfanne;mittel;Wir kochen;neu;In der Pfanne braten die Würstchen goldbraun an. | Sie erhitzte etwas Öl in der Pfanne.;die_Pfanne.png
 braten;mittel;Wir kochen;neu;Wir braten heute frischen Fisch mit Kartoffeln. | Das Fleisch muss von beiden Seiten gut gebraten werden.;-
 backen;mittel;Wir kochen;neu;Am Wochenende backen wir einen leckeren Apfelkuchen. | Im Ofen backt das frische Brot duftend vor sich hin.;-
 die Backform;mittel;Wir kochen;neu;"Fette die Backform gründlich ein, bevor du den Teig hineingießt. | Sie füllte den Kuchenteig in eine runde Backform.""""";-
@@ -747,7 +747,7 @@ grillen;mittel;Wir kochen;neu;"Bei schönem Wetter grillen wir gerne mit unseren
 durchschneiden;mittel;Wir kochen;neu;Er schneidet den Apfel mit einem scharfen Messer durch. | Kannst du das Seil bitte in der Mitte durchschneiden?;-
 abschneiden;mittel;Wir kochen;neu;Schneide bitte eine dicke Scheibe von dem frischen Brot ab. | Er schnitt den kaputten Faden mit der Schere ab.;-
 der Dosenöffner;mittel;Wir kochen;neu;Mit dem Dosenöffner öffnete er die Dose mit den Tomaten. | Wo haben wir nur den Dosenöffner hingelegt?;-
-das Sieb;mittel;Wir kochen;neu;Gieße die gekochten Nudeln vorsichtig durch das Sieb ab. | Sie wäscht die Erdbeeren im Sieb unter fließendem Wasser.;-
+das Sieb;mittel;Wir kochen;neu;Gieße die gekochten Nudeln vorsichtig durch das Sieb ab. | Sie wäscht die Erdbeeren im Sieb unter fließendem Wasser.;das_Sieb.png
 frisch;mittel;Wir kochen;neu;Morgens schmeckt ein Glas frisch gepresster Orangensaft hervorragend. | Wir kaufen am liebsten frisches Gemüse auf dem Markt.;-
 hart;mittel;Wir kochen;neu;Das Brot ist nach ein paar Tagen leider trocken und hart geworden. | Ein hart gekochtes Ei schmeckt gut zum Frühstück.;-
 fertig;mittel;Wir kochen;neu;"Das Abendessen ist fertig, ihr könnt an den Tisch kommen! | Bist du mit deinen Hausaufgaben schon fertig?""""";-
@@ -783,12 +783,12 @@ der Kiosk;mittel;Wo kaufen wir ein?;neu;Am Kiosk an der Haltestelle kauft er sic
 der Metzger;mittel;Wo kaufen wir ein?;neu;Der Metzger verkauft frisches Fleisch und schmackhafte Wurst. | Wir kaufen unsere Bratwürste immer beim selben Metzger.;-
 der Fleischer;mittel;Wo kaufen wir ein?;neu;Der Fleischer bietet regionale Fleischspezialitäten an. | Er fragte den Fleischer nach einem guten Stück Rindfleisch.;-
 das Fischgeschäft;mittel;Wo kaufen wir ein?;neu;Im Fischgeschäft am Hafen gibt es fangfrischen Fisch. | Sie kaufte im Fischgeschäft Lachs für das Abendessen.;-
-der Spielzeugladen;mittel;Wo kaufen wir ein?;neu;Die Kinder schauen fasziniert in das Schaufenster vom Spielzeugladen. | Wir suchen im Spielzeugladen ein Geschenk für den Geburtstag.;-
+der Spielzeugladen;mittel;Wo kaufen wir ein?;neu;Die Kinder schauen fasziniert in das Schaufenster vom Spielzeugladen. | Wir suchen im Spielzeugladen ein Geschenk für den Geburtstag.;der_Spielzeugladen.png
 der Zeitungsladen;mittel;Wo kaufen wir ein?;neu;Er kauft sich morgens im Zeitungsladen ein Magazin. | Der Zeitungsladen führt auch eine große Auswahl an Schreibwaren.;-
 die Zeitschrift;mittel;Wo kaufen wir ein?;neu;Sie liest im Wartezimmer eine interessante Zeitschrift. | Mein Vater hat diese Sport-Zeitschrift abonniert.;-
-der Comic;mittel;Wo kaufen wir ein?;neu;Kinder lesen sehr gerne bunte Comics mit lustigen Figuren. | Er sammelt seltene Comics in seinem Zimmer.;-
+der Comic;mittel;Wo kaufen wir ein?;neu;Kinder lesen sehr gerne bunte Comics mit lustigen Figuren. | Er sammelt seltene Comics in seinem Zimmer.;der_Comic.png
 der Friseur;mittel;Wo kaufen wir ein?;neu;Morgen habe ich einen Termin beim Friseur zum Haareschneiden. | Die Friseurin wäscht und schneidet ihr die Haare.;-
-Haare schneiden;mittel;Wo kaufen wir ein?;neu;"Es wird wieder Zeit, mir die Haare schneiden zu lassen. | Der Friseur kann dem Junge gekonnt die Haare schneiden.""""";-
+Haare schneiden;mittel;Wo kaufen wir ein?;neu;"Es wird wieder Zeit, mir die Haare schneiden zu lassen. | Der Friseur kann dem Junge gekonnt die Haare schneiden.""""";Haare_schneiden.png
 das Schuhgeschäft;mittel;Wo kaufen wir ein?;neu;Im Schuhgeschäft probiert sie neue Sportschuhe an. | Das Schuhgeschäft hat diese Woche tolle Rabatte.;-
 der Schuster;mittel;Wo kaufen wir ein?;neu;Der Schuster repariert die kaputte Sohle meiner Lederschuhe. | Wir bringen die Stiefel zum Schuster um die Ecke.;-
 Schuhe reparieren;mittel;Wo kaufen wir ein?;neu;"Der Schuster kann abgenutzte Schuhe fachgerecht reparieren. | Lohnt es sich noch, diese alten Schuhe zu reparieren?""""";-
@@ -828,8 +828,8 @@ die Waage;mittel;Wie viel darf es sein?;neu;"Sie stellt das Gemüse auf die Waag
 der Liter;mittel;Wie viel darf es sein?;neu;Eine normale Milchpackung enthält genau einen Liter. | Am Tag sollte man mindestens zwei Liter Wasser trinken.;-
 die Tafel Schokolade;mittel;Wie viel darf es sein?;neu;Er hat die ganze Tafel Schokolade auf einmal aufgegessen. | Zum Trost schenkte sie ihm eine Tafel Schokolade.;-
 der Kasten;mittel;Wie viel darf es sein?;neu;Der Vater trägt einen Kasten Mineralwasser in den Keller. | Im Kasten liegen verschiedene Limonadensorten bereit.;-
-der Karton;mittel;Wie viel darf es sein?;neu;Die Schuhe verbleiben nach dem Kauf im stabilen Karton. | Wir verpacken die Bücher beim Umzug in große Kartons.;-
-das Paket;mittel;Wie viel darf es sein?;neu;"Der Postbote hat heute ein schweres Paket für uns abgegeben. | Sie freut sich riesig, als das erwartete Paket ankommt.""""";-
+der Karton;mittel;Wie viel darf es sein?;neu;Die Schuhe verbleiben nach dem Kauf im stabilen Karton. | Wir verpacken die Bücher beim Umzug in große Kartons.;der_Karton.png
+das Paket;mittel;Wie viel darf es sein?;neu;"Der Postbote hat heute ein schweres Paket für uns abgegeben. | Sie freut sich riesig, als das erwartete Paket ankommt.""""";das_Paket.png
 die Pfandflasche;mittel;Wie viel darf es sein?;neu;"Vergiss nicht, die Pfandflaschen zum Supermarkt zurückzubringen. | Für jede Pfandflasche bekommt man am Automaten Geld zurück.""""";-
 verpackt;mittel;Wie viel darf es sein?;neu;Das frische Fleisch ist hygienisch in Plastik verpackt. | Die Ware wird sorgfältig für den Transport verpackt.;-
 viel;mittel;Wie viel darf es sein?;neu;In diesem Jahr hat es im Winter besonders viel geschneit. | Er trinkt über den Tag verteilt sehr viel Wasser.;-
@@ -856,7 +856,7 @@ umsonst;schwer;Wie viel darf es sein?;neu;"Das Konzert im Park war völlig umson
 einzeln;schwer;Wie viel darf es sein?;neu;Die Äpfel werden im Supermarkt auch einzeln verkauft. | Gehen Sie bitte einzeln und nacheinander durch die Tür.;-
 der Zettel;leicht;An der Kasse;neu;Ich habe mir eine Notiz auf einen Zettel geschrieben. | Der Zettel liegt auf dem Schreibtisch bereit.;der_Zettel.png
 der Korb;leicht;An der Kasse;neu;Sie legt das frische Obst vorsichtig in ihren Korb. | Der Hund schläft gemütlich in seinem warmen Korb.;-
-die Tasche;leicht;An der Kasse;neu;Er steckt den Hausschlüssel tief in seine Tasche. | Die schwere Tasche trägt sie über der Schulter.;-
+die Tasche;leicht;An der Kasse;neu;Er steckt den Hausschlüssel tief in seine Tasche. | Die schwere Tasche trägt sie über der Schulter.;die_Tasche.png
 kaufen;leicht;An der Kasse;neu;Wir möchten uns ein neues Fahrrad kaufen. | Was möchtest du heute auf dem Markt kaufen?;-
 bezahlen;leicht;An der Kasse;neu;Möchten Sie bar oder mit Karte bezahlen? | Er bezahlte die Rechnung an der Kasse.;-
 das Geld;leicht;An der Kasse;neu;Er spart sein Geld für eine große Reise im Sommer. | Ohne Geld kann man im Laden nichts einkaufen.;das_Geld.png
@@ -872,14 +872,14 @@ einkaufen;mittel;An der Kasse;neu;Am Samstagnachmittag gehen wir immer gemeinsam
 der Einkaufswagen;mittel;An der Kasse;neu;Er schiebt den vollen Einkaufswagen durch die Gänge. | Bitte bringen Sie den Einkaufswagen nach der Nutzung zurück.;-
 schieben;mittel;An der Kasse;neu;Sie schiebt den Kinderwagen vorsichtig über den Bürgersteig. | Er schob den schweren Schrank an die andere Wand.;-
 die Theke;mittel;An der Kasse;neu;An der Frischfleisch-Theke liegt leckere Wurst aus. | Er bestellt ein Getränk direkt an der Theke.;-
-der Verkäufer;mittel;An der Kasse;neu;Der freundliche Verkäufer berät die Kunden sehr geduldig. | Er fragte den Verkäufer nach der richtigen Größe.;-
-der Preis;mittel;An der Kasse;neu;Der Preis für dieses Kleidungsstück ist sehr günstig. | Auf dem Schild steht der genaue Preis der Ware.;-
-die Kassiererin;mittel;An der Kasse;neu;Die Kassiererin scannt die Lebensmittel zügig ein. | Er bedankte sich freundlich bei der Kassiererin.;-
+der Verkäufer;mittel;An der Kasse;neu;Der freundliche Verkäufer berät die Kunden sehr geduldig. | Er fragte den Verkäufer nach der richtigen Größe.;der_Verkäufer.png
+der Preis;mittel;An der Kasse;neu;Der Preis für dieses Kleidungsstück ist sehr günstig. | Auf dem Schild steht der genaue Preis der Ware.;der_Preis.png
+die Kassiererin;mittel;An der Kasse;neu;Die Kassiererin scannt die Lebensmittel zügig ein. | Er bedankte sich freundlich bei der Kassiererin.;die_Kassiererin.png
 Schlange stehen;mittel;An der Kasse;neu;"Vor dem Eingang mussten die Kunden lange Schlange stehen. | Ich hasse es, an der Kasse Schlange stehen zu müssen.""""";-
 ausrechnen;mittel;An der Kasse;neu;Der Schüler kann die schwere Matheaufgabe schnell ausrechnen. | Sie rechnet den Gesamtpreis der Einkäufe im Kopf aus.;-
 zählen;mittel;An der Kasse;neu;"Das kleine Kind kann schon bis zehn zählen. | Er zählt das Geld nach, um sicherzugehen.""""";-
 der Geldschein;mittel;An der Kasse;neu;Er übergab der Kassiererin einen Zwanzig-Euro-Geldschein. | Ein Geldschein lag zerknittert in der Tasche.;-
-die Münze;mittel;An der Kasse;neu;Die kleine Münze rollte unter das Sofa. | Er sammelt alte seltene Münzen aus verschiedenen Ländern.;-
+die Münze;mittel;An der Kasse;neu;Die kleine Münze rollte unter das Sofa. | Er sammelt alte seltene Münzen aus verschiedenen Ländern.;die_Münze.png
 das Portemonnaie;mittel;An der Kasse;neu;Er hat sein Portemonnaie mit allen Karten zu Hause vergessen. | Das Portemonnaie steckte tief in der Hosentasche.;-
 tauschen;mittel;An der Kasse;neu;Die Kinder tauschen auf dem Schulhof ihre Sammelkarten. | Kann ich diese Jacke gegen eine größere Nummer tauschen?;-
 verkaufen;schwer;An der Kasse;neu;Der Bauer verkauft sein frisches Gemüses direkt ab Hof. | Sie möchte ihr altes Auto im Internet verkaufen.;-
@@ -907,13 +907,13 @@ das Plakat;schwer;An der Kasse;neu;An der Wand hängt ein großes Plakat der Lie
 anziehen;leicht;Was ziehe ich heute an?;neu;"Morgens vor der Schule muss ich mich schnell anziehen. | Zieh dir bitte eine warme Jacke an, es ist kalt draußen.""""";-
 ausziehen;leicht;Was ziehe ich heute an?;neu;Nach dem Spaziergang ziehen wir die schmutzigen Schuhe aus. | Er zog seinen Mantel aus und hängte ihn an die Garderobe.;-
 anhaben;leicht;Was ziehe ich heute an?;neu;Was möchtest du heute auf der Feier anhaben? | Sie hatte ein wunderschönes blaues Kleid an.;-
-der Pulli;leicht;Was ziehe ich heute an?;neu;Im Winter trage ich am liebsten einen gemütlichen Pulli. | Dieser Pulli ist aus weicher Wolle gestrickt.;-
+der Pulli;leicht;Was ziehe ich heute an?;neu;Im Winter trage ich am liebsten einen gemütlichen Pulli. | Dieser Pulli ist aus weicher Wolle gestrickt.;der_Pulli.png
 die Hose;leicht;Was ziehe ich heute an?;neu;Die schwarze Hose passt sehr gut zu seinem weißen Hemd. | Er hat sich eine neue Hose im Kaufhaus gekauft.;-
-das Kleid;leicht;Was ziehe ich heute an?;neu;Sie trägt ein Sommerkleid mit bunten Blumenmustern. | Für die Hochzeit hat sie sich ein elegantes Kleid ausgesucht.;-
+das Kleid;leicht;Was ziehe ich heute an?;neu;Sie trägt ein Sommerkleid mit bunten Blumenmustern. | Für die Hochzeit hat sie sich ein elegantes Kleid ausgesucht.;das_Kleid.png
 der Rock;leicht;Was ziehe ich heute an?;neu;Der kurze Rock schwingt beim Tanzen sehr schön. | Im Sommer trägt sie gerne einen leichten Rock.;der_Rock.png
 die Jacke;leicht;Was ziehe ich heute an?;neu;"Nimm deine Jacke mit, falls es abends kühler wird. | Die Jacke schützt zuverlässig vor Wind und Regen.""""";-
 die Unterhose;leicht;Was ziehe ich heute an?;neu;Er legt saubere Unterhosen in die obere Schublade. | Die Unterhose ist aus angenehmer Baumwolle gemacht.;-
-das Unterhemd;leicht;Was ziehe ich heute an?;neu;An kalten Tagen trägt das Kind ein warmes Unterhemd. | Das weiße Unterhemd gehört unter das Hemd.;-
+das Unterhemd;leicht;Was ziehe ich heute an?;neu;An kalten Tagen trägt das Kind ein warmes Unterhemd. | Das weiße Unterhemd gehört unter das Hemd.;das_Unterhemd.png
 der Schlafanzug;leicht;Was ziehe ich heute an?;neu;Vor dem Schlafengehen zieht das Kind seinen Schlafanzug an. | Der Schlafanzug ist besonders weich und bequem.;der_Schlafanzug.png
 umziehen;mittel;Was ziehe ich heute an?;neu;Nach dem Sport müssen wir uns in der Kabine umziehen. | Nächsten Monat ziehen wir in eine neue Wohnung um.;-
 überziehen;mittel;Was ziehe ich heute an?;neu;"Zieh dir schnell einen Pulli über, wenn dir kalt ist. | Er überzog die Bettwäsche mit einem frischen Bezug.""""";-
@@ -957,15 +957,15 @@ weit;schwer;Was ziehe ich heute an?;neu;Er trägt gerne weit geschnittene Kleidu
 bequem;schwer;Was ziehe ich heute an?;neu;Der Sessel im Wohnzimmer ist unglaublich bequem. | Zieh dir für die lange Reise etwas Bequemes an.;-
 unbequem;schwer;Was ziehe ich heute an?;neu;Auf diesem harten Holzstuhl sitzt man sehr unbequem. | Die neuen Schuhe sind noch etwas unbequem.;-
 die Mütze;leicht;Kapuze - Knopf und Klettverschluss;neu;Im Winter setze ich eine warme Mütze auf. | Die Mütze schützt die Ohren vor dem kalten Wind.;die_Mütze.png
-der Schal;leicht;Kapuze - Knopf und Klettverschluss;neu;Er wickelt sich einen dicken Schal um den Hals. | Der Schal ist rot und blau gestreift.;-
+der Schal;leicht;Kapuze - Knopf und Klettverschluss;neu;Er wickelt sich einen dicken Schal um den Hals. | Der Schal ist rot und blau gestreift.;der_Schal.png
 binden;leicht;Kapuze - Knopf und Klettverschluss;neu;Sie bindet sich eine Schleife in die Haare. | Kannst du dir schon alleine die Schuhe binden?;-
-der Handschuh;leicht;Kapuze - Knopf und Klettverschluss;neu;Ohne Handschuhe bekomme ich im Winter schnell kalte Hände. | Er verlor einen Handschuh im Schnee.;-
-der Strumpf;leicht;Kapuze - Knopf und Klettverschluss;neu;Sie zieht warme Strümpfe gegen die Kälte an. | Im Strumpf war ein kleines Loch an der Ferse.;-
+der Handschuh;leicht;Kapuze - Knopf und Klettverschluss;neu;Ohne Handschuhe bekomme ich im Winter schnell kalte Hände. | Er verlor einen Handschuh im Schnee.;der_Handschuh.png
+der Strumpf;leicht;Kapuze - Knopf und Klettverschluss;neu;Sie zieht warme Strümpfe gegen die Kälte an. | Im Strumpf war ein kleines Loch an der Ferse.;der_Strumpf.png
 die Strumpfhose;leicht;Kapuze - Knopf und Klettverschluss;neu;Das Mädchen trägt eine bunte Strumpfhose unter dem Rock. | Eine warme Strumpfhose ist ideal für kalte Tage.;-
 der Schuh;leicht;Kapuze - Knopf und Klettverschluss;neu;Dieser Schuh ist sehr bequem zum Wandern. | Stell die schmutzigen Schuhe bitte vor die Tür.;-
 der Hausschuh;leicht;Kapuze - Knopf und Klettverschluss;neu;"Zu Hause trage ich meistens gemütliche Hausschuhe. | Vergiss nicht, deine Hausschuhe im Flur anzuziehen.""""";-
 der Stiefel;leicht;Kapuze - Knopf und Klettverschluss;neu;Im Winter sind gefütterte Stiefel besonders praktisch. | Mit den Stiefeln wanderten sie durch den matschigen Wald.;-
-der Knopf;leicht;Kapuze - Knopf und Klettverschluss;neu;Mir ist gestern ein Knopf vom Hemd abgerissen. | Sie näht den abgefallenen Knopf wieder fest.;-
+der Knopf;leicht;Kapuze - Knopf und Klettverschluss;neu;Mir ist gestern ein Knopf vom Hemd abgerissen. | Sie näht den abgefallenen Knopf wieder fest.;der_Knopf.png
 der Ring;leicht;Kapuze - Knopf und Klettverschluss;neu;Sie trägt einen goldenen Ring am linken Ringfinger. | Er schenkte ihr einen wertvollen Ring.;der_Ring.png
 die Kapuze;mittel;Kapuze - Knopf und Klettverschluss;neu;"Als es anfing zu regnen, setzte er die Kapuze auf. | Der Pullover hat eine praktische warme Kapuze.""""";-
 der Kniestrumpf;mittel;Kapuze - Knopf und Klettverschluss;neu;Beim Skifahren trägt er lange Kniestrümpfe. | Die Kniestrümpfe halten die Beine schön warm.;-
@@ -1095,14 +1095,14 @@ zudrehen;schwer;Mein Zimmer;neu;"Vergiss nicht, den Wasserhahn nach dem Händewa
 wohnen;leicht;Unser Haus;neu;Wir wohnen seit drei Jahren in einer gemütlichen Wohnung. | Wo wohnst du eigentlich genau?;-
 die Küche;leicht;Unser Haus;neu;In der Küche kochen wir jeden Abend leckere Gerichte. | Die Küche ist der Mittelpunkt unseres Hauses.;-
 das Bad;leicht;Unser Haus;neu;Das Bad ist mit einer Badewanne und einer Dusche ausgestattet. | Er geht morgens als Erster ins Bad.;-
-der Flur;leicht;Unser Haus;neu;Im Flur hängen die Mäntel an der Garderobe. | Der Flur verbindet alle Zimmer der Wohnung miteinander.;-
+der Flur;leicht;Unser Haus;neu;Im Flur hängen die Mäntel an der Garderobe. | Der Flur verbindet alle Zimmer der Wohnung miteinander.;der_Flur.png
 der Keller;leicht;Unser Haus;neu;Im Keller lagern wir Werkzeug und alte Kartons. | Er holt eine Flasche Saft aus dem Keller.;der_Keller.png
 der Balkon;leicht;Unser Haus;neu;Im Sommer sitzen wir abends gerne auf dem Balkon. | Vom Balkon aus hat man einen tollen Blick auf den Park.;-
 die Tür;leicht;Unser Haus;neu;"Bitte schließe die Tür, damit keine Kälte hereinzieht. | Jemand hat an der Tür geklopft.""""";-
 der Schlüssel;leicht;Unser Haus;neu;Ich kann meinen Schlüssel für die Wohnungstür nicht finden. | Hast du den Schlüssel in die Tasche gesteckt?;der_Schlüssel.png
 klingeln;leicht;Unser Haus;neu;Es hat gerade an der Haustür geklingelt. | Mein Wecker klingelt jeden Morgen um sieben Uhr.;-
 das Fenster;leicht;Unser Haus;neu;"Öffne bitte das Fenster, um frische Luft hereinzulassen. | Das Kind schaut aus dem Fenster auf die Straße.""""";-
-die Treppe;leicht;Unser Haus;neu;"Wir nehmen die Treppe statt des Aufzugs. | Pass auf, wenn du die steile Treppe hinuntergehst.""""";-
+die Treppe;leicht;Unser Haus;neu;"Wir nehmen die Treppe statt des Aufzugs. | Pass auf, wenn du die steile Treppe hinuntergehst.""""";die_Treppe.png
 die Mülltonne;leicht;Unser Haus;neu;Bringst du bitte den Abfall in die schwarze Mülltonne? | Die Mülltonne wird jeden Dienstag geleert.;die_Mülltonne.png
 schmeißen;leicht;Unser Haus;neu;Er schmeißt das alte Papier in den Mülleimer. | Bitte schmeiß den Ball nicht so fest gegen die Wand.;-
 die Wohnung;mittel;Unser Haus;neu;Unsere neue Wohnung hat drei schöne Zimmer und einen Balkon. | Sie suchen eine bezahlbare Wohnung in der Stadt.;-
@@ -1180,11 +1180,11 @@ die Schaufel;schwer;In Küche und Bad;neu;"Er hält die Schaufel, während sie d
 die Fußmatte;schwer;In Küche und Bad;neu;Bitte streife deine dreckigen Schuhe an der Fußmatte ab. | Vor der Haustür liegt eine bunte Fußmatte mit Willkommensgruß.;-
 abstreifen;schwer;In Küche und Bad;neu;Vor dem Betreten der Wohnung sollte man nasses Schuhwerk abstreifen. | Er streift den Matsch sorgfältig von den Stiefeln ab.;-
 der Tisch;leicht;Im Wohnzimmer;neu;Wir sitzen alle zusammen an einem großen hölzernen Tisch. | Auf dem Tisch steht eine Vase mit frischen Blumen.;-
-der Stuhl;leicht;Im Wohnzimmer;neu;Setz dich bitte auf den freien Stuhl neben mir. | Dieser Stuhl aus Holz ist sehr bequem.;-
-das Sofa;leicht;Im Wohnzimmer;neu;Nach der Arbeit entspannt er sich gerne auf dem gemütlichen Sofa. | Das Sofa bietet bequem Platz für drei Personen.;-
+der Stuhl;leicht;Im Wohnzimmer;neu;Setz dich bitte auf den freien Stuhl neben mir. | Dieser Stuhl aus Holz ist sehr bequem.;der_Stuhl.png
+das Sofa;leicht;Im Wohnzimmer;neu;Nach der Arbeit entspannt er sich gerne auf dem gemütlichen Sofa. | Das Sofa bietet bequem Platz für drei Personen.;das_Sofa.png
 der Sessel;leicht;Im Wohnzimmer;neu;Opa sitzt abends am liebsten in seinem weichen Sessel und liest. | Der Sessel steht direkt neben der Leselampe.;der_Sessel.png
 der Teppich;leicht;Im Wohnzimmer;neu;Der Teppich im Wohnzimmer fühlt sich angenehm weich unter den Füßen an. | Wir müssen den Teppich wieder einmal absaugen.;der_Teppich.png
-das Bild;leicht;Im Wohnzimmer;neu;An der Wand hängt ein schönes Bild von einer Landschaft. | Das Kind hat ein buntes Bild für seine Eltern gemalt.;-
+das Bild;leicht;Im Wohnzimmer;neu;An der Wand hängt ein schönes Bild von einer Landschaft. | Das Kind hat ein buntes Bild für seine Eltern gemalt.;das_Bild.png
 fernsehen;leicht;Im Wohnzimmer;neu;"Wir schauen abends selten fernsehen, sondern lesen lieber ein Buch. | Die Kinder dürfen heute eine Stunde lang fernsehen.""""";-
 das Telefon;leicht;Im Wohnzimmer;neu;"Das Telefon klingelt im Flur, er läuft schnell hin. | Kannst du mir bitte deine Telefonnummer geben?""""";-
 die Steckdose;leicht;Im Wohnzimmer;neu;Stecke den Stecker des Staubsaugers in die Steckdose. | Kinder dürfen niemals in die Steckdose greifen.;die_Steckdose.png
@@ -1225,11 +1225,11 @@ die Gardinenstange;schwer;Im Wohnzimmer;neu;"Was dich nicht direkt betrifft, geh
 die Stereoanlage;schwer;Im Wohnzimmer;neu;Er arbeitet seit zehn Jahren als treuer Angestellter in dieser Bank. | Jeder Angestellte hat ein Recht auf bezahlten Erholungsurlaub.;-
 bauen;leicht;Ein Haus wird gebaut;neu;Die gegnerische Mannschaft startete kurz vor Schluss einen letzten Angriff. | Das Computersystem wurde Opfer eines gezielten Cyber-Angriffs.;-
 baggern;leicht;Ein Haus wird gebaut;neu;Die technische Anlage im Keller muss dringend gewartet werden. | Sie hat eine lohnende finanzielle Anlage auf der Bank getätigt.;-
-der Bagger;leicht;Ein Haus wird gebaut;neu;Zu diesem feierlichen Anlass trägt er traditionell einen Anzug. | Es gab keinen wirklichen Anlass für diesen heftigen Streit.;-
-der Baggerfahrer;leicht;Ein Haus wird gebaut;neu;Am Ende des Kapitels befindet sich eine wichtige Anmerkung des Autors. | Ich habe noch eine kurze Anmerkung zu Ihrem Vorschlag.;-
+der Bagger;leicht;Ein Haus wird gebaut;neu;Zu diesem feierlichen Anlass trägt er traditionell einen Anzug. | Es gab keinen wirklichen Anlass für diesen heftigen Streit.;der_Bagger.png
+der Baggerfahrer;leicht;Ein Haus wird gebaut;neu;Am Ende des Kapitels befindet sich eine wichtige Anmerkung des Autors. | Ich habe noch eine kurze Anmerkung zu Ihrem Vorschlag.;der_Baggerfahrer.png
 die Leiter;leicht;Ein Haus wird gebaut;neu;Seine ganze Theorie stützt sich auf eine falsche Annahme. | Die Annahme des Pakets wurde von den Nachbarn verweigert.;die_Leiter.png
 der Kran;leicht;Ein Haus wird gebaut;neu;Ein Anonymer hat der Bibliothek eine große Geldsumme gespendet. | Die Beschwerde wurde von einem Anonymen per Post verschickt.;der_Kran.png
-die Wand;leicht;Ein Haus wird gebaut;neu;"Die interessante Diskussion konnte viele neue Gedanken anregen. | Ich möchte anregen, dass wir die Sitzung um eine Stunde verschieben.""""";-
+die Wand;leicht;Ein Haus wird gebaut;neu;"Die interessante Diskussion konnte viele neue Gedanken anregen. | Ich möchte anregen, dass wir die Sitzung um eine Stunde verschieben.""""";die_Wand.png
 der Boden;leicht;Ein Haus wird gebaut;neu;Bei Verspätungen haben Fahrgäste oft Anspruch auf eine Entschädigung. | Man sollte im Leben nicht immer den Anspruch auf Perfektion haben.;der_Boden.png
 das Dach;leicht;Ein Haus wird gebaut;neu;Auf dem Dach des Autos ist eine lange Radioantenne montiert. | Die Insekten nutzen ihre Fühler als feine Antennen.;das_Dach.png
 der Hammer;leicht;Ein Haus wird gebaut;neu;Die Philosophie der Antike prägt das moderne Denken bis heute. | In dem Museum gibt es viele wertvolle Statuen aus der Antike.;der_Hammer.png
@@ -1288,7 +1288,7 @@ anschubsen;leicht;Auf dem Spielplatz;neu;Was soll diese mysteriöse Nachricht ei
 die Wippe;leicht;Auf dem Spielplatz;neu;Könnten Sie mir bitte beim Bedienen der Maschine helfen? | Die moderne Maschine lässt sich intuitiv und kinderleicht bedienen.;-
 wippen;leicht;Auf dem Spielplatz;neu;"Der Zeuge musste vor Gericht feierlich beeidigen, die Wahrheit zu sagen. | Vor seiner Aussage wurde der Experte vom Richter beeidigt.""""";-
 schubsen;leicht;Auf dem Spielplatz;neu;Sie möchte ihr Studium im nächsten Semester erfolgreich beenden. | Das laute Klingeln tat dem Telefonat ein jähes Ende.;-
-der Ball;leicht;Auf dem Spielplatz;neu;"Der Hauptmann konnte seinen Soldaten befehlen, die Stellung zu halten. | Man kann Kreativität nicht einfach per Gesetz befehlen.""""";-
+der Ball;leicht;Auf dem Spielplatz;neu;"Der Hauptmann konnte seinen Soldaten befehlen, die Stellung zu halten. | Man kann Kreativität nicht einfach per Gesetz befehlen.""""";der_Ball.png
 fangen;leicht;Auf dem Spielplatz;neu;"Mein Auto befindet sich momentan in der Werkstatt zur Reparatur. | Wir müssen beraten, wie wir uns in dieser Lage befinden.""""";-
 werfen;leicht;Auf dem Spielplatz;neu;Auf dem Spaziergang ist uns ein wildes Reh begegnet. | Man sollte anderen Menschen stets mit Respekt begegnen.;-
 rollen;leicht;Auf dem Spielplatz;neu;Das fantastische Theaterstück konnte das gesamte Publikum begeistern. | Sie kann sich schnell für neue kreative Hobbys begeistern.;-
@@ -1315,7 +1315,7 @@ umrennen;schwer;Auf dem Spielplatz;neu;Die bunten Laternen baumeln leicht im lau
 seilspringen;schwer;Auf dem Spielplatz;neu;"Achte darauf, dass du im Eifer des Gefechts niemanden umrennst. | Der unvorsichtige Hund hätte fast den Stuhl umgerannt.""""";-
 vorwärts;schwer;Auf dem Spielplatz;neu;Beim Seilspringen kann man hervorragend Ausdauer und Rhythmus trainieren. | Sie schafft beim Seilspringen schon über hundert Sprünge am Stück.;-
 rückwärts;schwer;Auf dem Spielplatz;neu;Der Zug setzt sich langsam in Bewegung und fährt vorwärts. | Für eine erfolgreiche Zukunft müssen wir gemeinsam vorwärts gehen.;-
-die Leute;leicht;In der Stadt;neu;Nach dem Schreck lief er panisch einige Schritte rückwärts. | Das Auto rollte wegen der Steigung ein Stück rückwärts.;-
+die Leute;leicht;In der Stadt;neu;Nach dem Schreck lief er panisch einige Schritte rückwärts. | Das Auto rollte wegen der Steigung ein Stück rückwärts.;die_Leute.png
 die Straße;leicht;In der Stadt;neu;Auf dem Marktplatz versammelten sich heute sehr viele neugierige Leute. | Die netten Leute von nebenan haben uns zum Kaffee eingeladen.;-
 die Laterne;leicht;In der Stadt;neu;Die lange Straße führt direkt durch das historische Stadtzentrum. | An dieser Straße befinden sich viele schöne alte Fachwerkhäuser.;die_Laterne.png
 leuchten;leicht;In der Stadt;neu;Pünktlich bei Einbruch der Dunkelheit schaltete sich die Laterne ein. | Die alte Petroleumlampe war eine wunderschöne Straßenlaterne.;-
@@ -1362,11 +1362,11 @@ der Garten;leicht;In unserem Garten;neu;"Hinter dem Haus erstreckt sich ein gro�
 das Gras;leicht;In unserem Garten;neu;Das grüne Gras im Park duftet nach dem Sommerregen herrlich frisch. | Die Schafe fressen friedlich das saftige Gras auf der Weide.;das_Gras.png
 die Erde;leicht;In unserem Garten;neu;Die dunkle Erde im Blumenbeet ist feucht und nährstoffreich. | Nach dem Umgraben war die Erde schön locker und fein.;die_Erde.png
 graben;leicht;In unserem Garten;neu;"Der kleine Maulwurf liebt es, tief in der Erde zu graben. | Sie fing sofort an, ein tiefes Loch im Sand zu graben.""""";-
-das Beet;leicht;In unserem Garten;neu;"In dem kleinen Beet wachsen in diesem Jahr bunte Sommerblumen. | Das frisch geharkte Beet wartet darauf, bepflanzt zu werden.""""";-
+das Beet;leicht;In unserem Garten;neu;"In dem kleinen Beet wachsen in diesem Jahr bunte Sommerblumen. | Das frisch geharkte Beet wartet darauf, bepflanzt zu werden.""""";das_Beet.png
 gießen;leicht;In unserem Garten;neu;Man muss die durstigen Zimmerpflanzen regelmäßig mit frischem Wasser gießen. | Bei der Dürre müssen wir den Rasen jeden Abend intensiv gießen.;-
-die Erdbeere;leicht;In unserem Garten;neu;Die süße Erdbeere schmeckte nach dem Sommerfest besonders gut. | Im Frühsommer pflücken wir frische Erdbeeren direkt auf dem Feld.;-
+die Erdbeere;leicht;In unserem Garten;neu;Die süße Erdbeere schmeckte nach dem Sommerfest besonders gut. | Im Frühsommer pflücken wir frische Erdbeeren direkt auf dem Feld.;die_Erdbeere.png
 pflücken;leicht;In unserem Garten;neu;"Die Kinder helfen begeistert dabei, die roten Kirschen zu pflücken. | Im Herbst kann man hier leckere Äpfel pflücken.""""";-
-die Nuss;leicht;In unserem Garten;neu;Eine harte Schale knackt man am besten mit einem Nussknacker. | Die Eichhörnchen sammeln im Herbst eifrig jede Nuss.;-
+die Nuss;leicht;In unserem Garten;neu;Eine harte Schale knackt man am besten mit einem Nussknacker. | Die Eichhörnchen sammeln im Herbst eifrig jede Nuss.;die_Nuss.png
 der Kern;leicht;In unserem Garten;neu;"In der Mitte der Frucht befindet sich ein kleiner, harter Kern. | Der Kirschkern wurde nach dem Essen einfach ausgespuckt.""""";der_Kern.png
 der Obstbaum;mittel;In unserem Garten;neu;Der alte Obstbaum trägt in diesem Jahr unglaublich viele Früchte. | Im Frühling blüht der Obstbaum in einem zarten Rosa.;-
 das Baumhaus;mittel;In unserem Garten;neu;Die Kinder haben sich im Garten ein eigenes Baumhaus gebaut. | Von oben aus dem Baumhaus hat man eine tolle Aussicht.;-
@@ -1387,7 +1387,7 @@ die Brennnessel;mittel;In unserem Garten;neu;"Pass auf, dass du nicht versehentl
 die Blattlaus;mittel;In unserem Garten;neu;Eine kleine Blattlaus hat es sich auf dem Rosenblatt gemütlich gemacht. | Gegen die Blattlaus im Garten hilft oft eine Seifenlauge.;-
 die Schnecke;mittel;In unserem Garten;neu;Die langsame Schnecke kriecht gemächlich über das feuchte Moos. | Eine hungrige Schnecke hat die Salatblätter im Beet angefressen.;-
 der Regenwurm;mittel;In unserem Garten;neu;Der Regenwurm lockert mit seiner Arbeit den Boden im Garten auf. | Nach dem Sommerregen kroch ein großer Regenwurm aus der Erde.;-
-der Marienkäfer;mittel;In unserem Garten;neu;Der rote Marienkäfer mit den schwarzen Punkten bringt Glück. | Ein kleiner Marienkäfer krabbelte über ihren Handrücken.;-
+der Marienkäfer;mittel;In unserem Garten;neu;Der rote Marienkäfer mit den schwarzen Punkten bringt Glück. | Ein kleiner Marienkäfer krabbelte über ihren Handrücken.;der_Marienkäfer.png
 der Zaun;mittel;In unserem Garten;neu;Der hölzerne Zaun grenzt das Grundstück von der Straße ab. | Sie strichen den alten Zaun in einem frischen Weiß.;-
 braun;mittel;In unserem Garten;neu;Die Erde im Garten ist nach dem Regen dunkelbraun gefärbt. | Er trug eine schicke braune Lederjacke zu seiner Hose.;-
 die Frucht;schwer;In unserem Garten;neu;Diese exotische Frucht schmeckt sehr süß und erfrischend. | Jede reife Frucht muss rechtzeitig von den Zweigen geerntet werden.;-
@@ -1410,15 +1410,15 @@ umgraben;schwer;In unserem Garten;neu;"Im Spätherbst müssen wir das gesamte Ge
 die Harke;schwer;In unserem Garten;neu;"Mit der Harke glättet sie die Erde vor der Aussaat. | Er nahm die Harke, um das abgefallene Laub zusammenzurechen.""""";-
 jäten;schwer;In unserem Garten;neu;"Das mühsame Jäten gehört zu den regelmäßigen Aufgaben im Garten. | Sie verbrachte den ganzen Nachmittag damit, Unkraut im Beet zu jäten.""""";-
 der Park;leicht;Ein Nachmittag im Park;neu;Viele Familien verbringen den sonnigen Sonntag im Park. | Der Park bietet eine grüne Oase mitten in der lauten Stadt.;der_Park.png
-die Blume;leicht;Ein Nachmittag im Park;neu;Die bunte Blume duftet herrlich im Sonnenschein. | Er pflückte eine schöne Blume und schenkte sie seiner Mutter.;-
+die Blume;leicht;Ein Nachmittag im Park;neu;Die bunte Blume duftet herrlich im Sonnenschein. | Er pflückte eine schöne Blume und schenkte sie seiner Mutter.;die_Blume.png
 der Rasen;leicht;Ein Nachmittag im Park;neu;Nach dem Regen leuchtet der Rasen in einem saftigen Grün. | Kinder spielen im Sommer gerne barfuß auf dem weichen Rasen.;der_Rasen.png
 die Kastanie;leicht;Ein Nachmittag im Park;neu;Im Herbst basteln die Kinder niedliche Figuren aus Kastanien. | Eine glänzende Kastanie fiel vom Baum direkt auf den Weg.;die_Kastanie.png
 das Blatt;leicht;Ein Nachmittag im Park;neu;Im Oktober verfärbt sich jedes Blatt an den Bäumen bunt. | Ein trockenes Blatt schwebte leise zu Boden.;das_Blatt.png
-die Rose;leicht;Ein Nachmittag im Park;neu;"Die rote Rose blüht im Sommer im Vorgarten besonders prächtig. | Vorsicht beim Pflücken, denn die Rose hat scharfe Dornen.""""";-
+die Rose;leicht;Ein Nachmittag im Park;neu;"Die rote Rose blüht im Sommer im Vorgarten besonders prächtig. | Vorsicht beim Pflücken, denn die Rose hat scharfe Dornen.""""";die_Rose.png
 der Löwenzahn;leicht;Ein Nachmittag im Park;neu;"Der gelbe Löwenzahn verwandelt die Wiese im Frühling in ein Meer aus Blüten. | Pusteblumen entstehen, wenn der Löwenzahn verblüht ist.""""";-
 das Gänseblümchen;leicht;Ein Nachmittag im Park;neu;Auf der Wiese wachsen zahlreiche kleine Gänseblümchen. | Das Mädchen flocht eine hübsche Krone aus Gänseblümchen.;-
 der Stock;leicht;Ein Nachmittag im Park;neu;Der Hund brachte stolz einen langen Stock im Maul zurück. | Zum Wandern im Gebirge nutzt er gerne einen stabilen Stock.;-
-das Picknick;leicht;Ein Nachmittag im Park;neu;Bei strahlendem Sonnenschein machten wir ein gemütliches Picknick im Grünen. | Sie breiteten die Decke für das Picknick im Schatten der Eiche aus.;-
+das Picknick;leicht;Ein Nachmittag im Park;neu;Bei strahlendem Sonnenschein machten wir ein gemütliches Picknick im Grünen. | Sie breiteten die Decke für das Picknick im Schatten der Eiche aus.;das_Picknick.png
 der Kletterbaum;mittel;Ein Nachmittag im Park;neu;Der alte Apfelbaum im Garten eignet sich perfekt als Kletterbaum. | Die Kinder verbrachten Stunden auf dem Kletterbaum im Schulhof.;-
 die Hecke;mittel;Ein Nachmittag im Park;neu;Die dichte Hecke schützt den Garten vor neugierigen Blicken. | Im Frühjahr muss die Hecke wieder ordentlich zugeschnitten werden.;-
 der Schatten;mittel;Ein Nachmittag im Park;neu;An heißen Sommertagen suchen wir Schutz im Schatten der großen Bäume. | Der lange Schatten der Laterne fiel über die Straße.;-
@@ -1454,7 +1454,7 @@ die Gärtnerin;schwer;Ein Nachmittag im Park;neu;Die erfahrene Gärtnerin kümme
 der Rasensprenger;schwer;Ein Nachmittag im Park;neu;Im heißen Sommer läuft am Abend regelmäßig der Rasensprenger. | Die Kinder hüpften vergnügt durch den kühlen Wasserstrahl vom Rasensprenger.;-
 die Schubkarre;schwer;Ein Nachmittag im Park;neu;Er belud die schwere Schubkarre mit frischer Gartenerde. | Mit der Schubkarre transportierte er das geerntete Holz zum Schuppen.;-
 der Wald;leicht;Ein Spaziergang im Wald;neu;Ein Spaziergang im kühlen Wald tut Körper und Seele gut. | Im dichten Wald kann man viele verschiedene Wildtiere beobachten.;der_Wald.png
-der Baum;leicht;Ein Spaziergang im Wald;neu;Der alte Baum spendet im Sommer kühlen Schatten im Garten. | Ein starker Windstoß brachte den mächtigen Baum zum Schwanken.;-
+der Baum;leicht;Ein Spaziergang im Wald;neu;Der alte Baum spendet im Sommer kühlen Schatten im Garten. | Ein starker Windstoß brachte den mächtigen Baum zum Schwanken.;der_Baum.png
 der Busch;leicht;Ein Spaziergang im Wald;neu;Hinter dem dichten Busch versteckte sich ein kleiner Hase. | Wir müssen den überwucherten Busch am Wegesrand zurückschneiden.;der_Busch.png
 der Pilz;leicht;Ein Spaziergang im Wald;neu;"Im feuchten Herbstboden wächst so mancher schmackhafte Pilz. | Man sollte nur Pilze pflücken, die man ganz sicher kennt.""""";der_Pilz.png
 giftig;leicht;Ein Spaziergang im Wald;neu;Manche Beeren im Wald sind sehr giftig und dürfen nicht gegessen werden. | Der grüne Knollenblätterpilz ist lebensgefährlich giftig.;-
@@ -1503,17 +1503,17 @@ kahl;schwer;Ein Spaziergang im Wald;neu;Im Spätherbst standen die Bäume völli
 der Bauernhof;leicht;Auf dem Bauernhof;neu;Auf dem idyllischen Bauernhof leben viele verschiedene Tiere. | Die Kinder durften heute dem Bauern beim Füttern auf dem Bauernhof helfen.;der_Bauernhof.png
 die Bäuerin;leicht;Auf dem Bauernhof;neu;Die freundliche Bäuerin versorgte die verletzte Taube im Hof. | Jeden Morgen sammelt die Bäuerin die frischen Eier ein.;-
 die Wiese;leicht;Auf dem Bauernhof;neu;Die grüne Wiese bot reichlich Platz zum Fuße spielen. | Auf der Wiese blühten im Frühling unzählige bunte Blumen.;die_Wiese.png
-die Kuh;leicht;Auf dem Bauernhof;neu;Die braune Kuh kaute gemütlich frisches Gras auf der Weide. | Jeden Tag gibt die gesunde Kuh frische Milch.;-
+die Kuh;leicht;Auf dem Bauernhof;neu;Die braune Kuh kaute gemütlich frisches Gras auf der Weide. | Jeden Tag gibt die gesunde Kuh frische Milch.;die_Kuh.png
 der Stall;leicht;Auf dem Bauernhof;neu;Am Abend wurden alle Tiere in den warmen Stall gebracht. | Der Bauer mistete am Vormittag den großen Kuhstall aus.;der_Stall.png
 die Scheune;leicht;Auf dem Bauernhof;neu;In der großen Scheune lagern im Winter die schweren Strohballen. | Die alten Maschinen fanden ihren Platz in der Scheune.;-
 der Misthaufen;leicht;Auf dem Bauernhof;neu;Neben dem Stall dampfte der große Misthaufen in der Morgensonne. | Der Bauer lud den Mist vom Misthaufen auf den Anhänger.;-
-der Hahn;leicht;Auf dem Bauernhof;neu;Der stolze Hahn krähte laut bei Anbruch des neuen Tages. | Der bunte Hahn passte gut auf seine Hühnerschar auf.;-
+der Hahn;leicht;Auf dem Bauernhof;neu;Der stolze Hahn krähte laut bei Anbruch des neuen Tages. | Der bunte Hahn passte gut auf seine Hühnerschar auf.;der_Hahn.png
 das Huhn;leicht;Auf dem Bauernhof;neu;Das Huhn scharrte geschäftig im Boden nach ein paar Würmern. | Im Gehege pickte das Huhn nach den Körnern.;-
-die Ente;leicht;Auf dem Bauernhof;neu;Eine weiße Ente zog mit ihren Küken gemächlich ihre Bahnen auf dem Teich. | Die Ente watschelte lustig über den Hof.;-
-die Katze;leicht;Auf dem Bauernhof;neu;Die Katze schlief zusammengerollt auf dem warmen Ofen. | Die Hofkatze fing geschickt eine kleine Maus.;-
+die Ente;leicht;Auf dem Bauernhof;neu;Eine weiße Ente zog mit ihren Küken gemächlich ihre Bahnen auf dem Teich. | Die Ente watschelte lustig über den Hof.;die_Ente.png
+die Katze;leicht;Auf dem Bauernhof;neu;Die Katze schlief zusammengerollt auf dem warmen Ofen. | Die Hofkatze fing geschickt eine kleine Maus.;die_Katze.png
 der Traktor;leicht;Auf dem Bauernhof;neu;Der rote Traktor fuhr langsam über das holprige Feld. | Mit dem großen Traktor zog er den schweren Anhänger.;der_Traktor.png
 der Anhänger;leicht;Auf dem Bauernhof;neu;Der Traktor hatte einen großen Anhänger voller Getreide geladen. | Er lud die schweren Kisten auf den Anhänger.;-
-die Sonnenblume;leicht;Auf dem Bauernhof;neu;Die riesige Sonnenblume blickte direkt in die warme Sonne. | Gelbe Sonnenblumen säumen den Rand des Gemüsebeets.;-
+die Sonnenblume;leicht;Auf dem Bauernhof;neu;Die riesige Sonnenblume blickte direkt in die warme Sonne. | Gelbe Sonnenblumen säumen den Rand des Gemüsebeets.;die_Sonnenblume.png
 das Dorf;mittel;Auf dem Bauernhof;neu;Das kleine Dorf liegt friedlich eingebettet zwischen sanften Hügeln. | Im Dorf kennt fast jeder Bewohner jeden mit Namen.;-
 das Feld;mittel;Auf dem Bauernhof;neu;Auf dem weiten Feld wächst in diesem Jahr goldgelber Weizen. | Der Bauer fuhr mit der Erntemaschine über das Feld.;-
 der Feldweg;mittel;Auf dem Bauernhof;neu;Ein schmaler Feldweg führte direkt zum alten Waldrand. | Wir spazierten am Nachmittag gemütlich den Feldweg entlang.;-
@@ -1551,18 +1551,18 @@ dreschen;schwer;Auf dem Bauernhof;neu;Früher mussten die Bauern das Getreide m�
 der Mähdrescher;schwer;Auf dem Bauernhof;neu;Ein riesiger Mähdrescher fuhr über das Feld und erntete den Weizen. | Der Mähdrescher schnitt die Halme ab und trennte die Körner.;-
 die Rübe;schwer;Auf dem Bauernhof;neu;Im Herbst gruben wir die süßen Rüben aus der feuchten Erde. | Aus den geernteten Rüben wurde Viehfutter hergestellt.;-
 die Zuckerrübe;schwer;Auf dem Bauernhof;neu;Die Zuckerrübe enthält besonders viel süßen Pflanzensaft. | Auf dem Lastwagen wurden tonnenweise Zuckerrüben zur Fabrik gefahren.;-
-das Wasser;leicht;Am Wasser;neu;Klares Wasser ist die wichtigste Grundlage für alles Leben auf Erden. | Die Kinder tranken nach dem Sport gierig kühles Wasser.;-
+das Wasser;leicht;Am Wasser;neu;Klares Wasser ist die wichtigste Grundlage für alles Leben auf Erden. | Die Kinder tranken nach dem Sport gierig kühles Wasser.;das_Wasser.png
 schwimmen;leicht;Am Wasser;neu;An heißen Sommertagen gehen wir am liebsten im See schwimmen. | Die Fische schwimmen agil im fließenden Gewässer.;-
-das Meer;leicht;Am Wasser;neu;Das weite Meer schimmerte in der Nachmittagssonne tiefblau. | Nach langer Seefahrt sahen die Matrosen endlich wieder das Meer.;-
-der Fluss;leicht;Am Wasser;neu;Der Fluss schlängelt sich malerisch durch das grüne Tal. | Die Brücke führt über den breit fließenden Fluss.;-
-der See;leicht;Am Wasser;neu;Ein lauschiger Weg führte direkt zum idyllischen Waldsee. | Im klaren Wasser des Sees spiegelten sich die Wolken.;-
+das Meer;leicht;Am Wasser;neu;Das weite Meer schimmerte in der Nachmittagssonne tiefblau. | Nach langer Seefahrt sahen die Matrosen endlich wieder das Meer.;das_Meer.png
+der Fluss;leicht;Am Wasser;neu;Der Fluss schlängelt sich malerisch durch das grüne Tal. | Die Brücke führt über den breit fließenden Fluss.;der_Fluss.png
+der See;leicht;Am Wasser;neu;Ein lauschiger Weg führte direkt zum idyllischen Waldsee. | Im klaren Wasser des Sees spiegelten sich die Wolken.;der_See.png
 der Bach;leicht;Am Wasser;neu;Ein kleiner Bach plätscherte munter über die runden Steine. | Forellen fühlten sich im kühlen Bach besonders wohl.;-
 die Welle;leicht;Am Wasser;neu;Eine hohe Welle schwappte an den Bug des kleinen Holzbootes. | Die sanften Wellen rollten gleichmäßig an den Strand.;die_Welle.png
 der Tropfen;leicht;Am Wasser;neu;Ein einzelner Regentropfen landete auf ihrer Nasenspitze. | Die Tropfen trommelten leise gegen das Fensterscheibe.;der_Tropfen.png
 fließen;leicht;Am Wasser;neu;Das Wasser begann langsam aus dem undichten Hahn zu fließen. | Tränen begannen über ihre Wangen zu fließen.;-
 planschen;leicht;Am Wasser;neu;"Die Kinder verbrachten den Nachmittag damit, im flachen Wasser zu planschen. | Entenküken planschten vergnügt im kühlen Nass.""""";-
 blau;leicht;Am Wasser;neu;Ein strahlend blauer Himmel ohne Wolken lockte alle nach draußen. | Sie trug heute einen schicken blauen Mantel.;-
-der Strand;leicht;Am Wasser;neu;Am sandigen Strand bauten die Kinder eine riesige Burg. | Barfuß liefen sie im warmen Sand am Strand entlang.;-
+der Strand;leicht;Am Wasser;neu;Am sandigen Strand bauten die Kinder eine riesige Burg. | Barfuß liefen sie im warmen Sand am Strand entlang.;der_Strand.png
 die Sandburg;leicht;Am Wasser;neu;Aus feuchtem Sand bauten sie eine detailreiche Sandburg. | Die Flut schwemmte die sorgfältig gebaute Sandburg weg.;die_Sandburg.png
 der Teich;mittel;Am Wasser;neu;Im kleinen Gartenbiotop gluckerte ein künstlicher Teich. | Frösche quakten vergnügt am Ufer des großen Teichs.;-
 plätschern;mittel;Am Wasser;neu;Das Wasser schien fröhlich über die glatten Steine zu plätschern. | Man konnte das ferne Plätschern des Brunnens hören.;-
@@ -1602,7 +1602,7 @@ seicht;schwer;Am Wasser;neu;"Das Wasser an dieser Stelle war so seicht, dass man
 das Watt;schwer;Am Wasser;neu;Bei Ebbe kann man im Wattenmeer wunderbar durch das feuchte Watt wandern. | Die Muscheln und Wattwürmer verstecken sich tief im Watt.;-
 der Berg;leicht;In den Bergen;neu;Der Mount Everest ist der höchste Berg der Welt. | Auf dem schneebedeckten Berg kann man herrlich Ski fahren.;der_Berg.png
 hoch;leicht;In den Bergen;neu;Der Kirchturm ist erstaunlich hoch und weithin sichtbar. | Sie flog mit dem Flugzeug hoch über den Wolken.;-
-der Weg;leicht;In den Bergen;neu;Dieser schmale Weg führt direkt durch den dichten Wald. | Welcher Weg führt am schnellsten zum Bahnhof?;-
+der Weg;leicht;In den Bergen;neu;Dieser schmale Weg führt direkt durch den dichten Wald. | Welcher Weg führt am schnellsten zum Bahnhof?;der_Weg.png
 das Tal;mittel;In den Bergen;neu;Das malerische Tal ist im Frühling von Blumen übersät. | Der Fluss schlängelt sich friedlich durch das tiefe Tal.;-
 auf den Berg;mittel;In den Bergen;neu;Wir machten uns früh morgens auf den Weg auf den Berg. | Die Aussicht auf den Berg entschädigte für den anstrengenden Aufstieg.;-
 steigen;mittel;In den Bergen;neu;"Es erfordert viel Kondition, diesen steilen Berg zu steigen. | Vorsicht, man darf den glatten Felsen nicht unterschätzen, wenn man hinauf will.""""";-
@@ -1646,7 +1646,7 @@ der Skilift;schwer;In den Bergen;neu;Mit dem Skilift ging es für die Winterspor
 die Lawine;schwer;In den Bergen;neu;Nach dem schweren Schneefall drohte im oberen Hang eine Lawine. | Zum Glück wurde das Dorf rechtzeitig vor der Lawine gewarnt.;-
 zwischen;schwer;In den Bergen;neu;Das kleine Haus liegt idyllisch zwischen zwei großen Seen. | Wähle eine Zahl zwischen eins und zehn.;-
 am höchsten;schwer;In den Bergen;neu;Dieser Berg ist der höchste im ganzen Umkreis. | Er erreichte das Ziel als Schnellster und wurde am höchsten belohnt.;-
-der Hund;leicht;Tiere im Haus;neu;Der treue Hund begrüßte sein Herrchen schwanzwedelnd an der Tür. | Ein lautes Bellen des Hundes kündigte den Besucher an.;-
+der Hund;leicht;Tiere im Haus;neu;Der treue Hund begrüßte sein Herrchen schwanzwedelnd an der Tür. | Ein lautes Bellen des Hundes kündigte den Besucher an.;der_Hund.png
 das Fell;leicht;Tiere im Haus;neu;Das dicke Fell schützt den Bären vor der eisigen Kälte im Winter. | Sie streichelte der Katze über das weiche Fell.;das_Fell.png
 bellen;leicht;Tiere im Haus;neu;Abends fing der große Schäferhund wieder an zu bellen. | Warum musste der fremde Hund denn schon wieder bellen?;-
 miauen;leicht;Tiere im Haus;neu;Die kleine Katze fing plötzlich an leise zu miauen. | Man hörte die hungernde Katze vor der geschlossenen Tür miauen.;-
@@ -1665,14 +1665,14 @@ schnurren;mittel;Tiere im Haus;neu;Die gemütliche Katze lag auf dem Teppich und
 das Meerschweinchen;mittel;Tiere im Haus;neu;Unser kleines Meerschweinchen nagt gerne an hartem Salat. | Die Kinder fütterten das zahme Meerschweinchen mit frischer Gurke.;-
 der Hamster;mittel;Tiere im Haus;neu;Der kleine Hamster lief nachts stundenlang im Laufrad. | Im Käfig wohnte ein süßer goldener Hamster.;-
 das Kaninchen;mittel;Tiere im Haus;neu;Das weiße Kaninchen mümmelte genüsslich an einer frischen Karotte. | Im Gehege hoppelte ein junges Kaninchen herum.;-
-die Maus;mittel;Tiere im Haus;neu;"Eine kleine Maus huschte blitzschnell unter den Küchenschrank. | Katzen sind exzellente Jäger, wenn es darum geht, eine Maus zu fangen.""""";-
+die Maus;mittel;Tiere im Haus;neu;"Eine kleine Maus huschte blitzschnell unter den Küchenschrank. | Katzen sind exzellente Jäger, wenn es darum geht, eine Maus zu fangen.""""";die_Maus.png
 der Käfig;mittel;Tiere im Haus;neu;Der Papagei kletterte geschickt an den Gittern seines Käfigs hoch. | Bitte mach die Tür vom Käfig sorgfältig zu.;-
 nagen;mittel;Tiere im Haus;neu;Meerschweinchen nagen für ihr Leben gern an kleinen Holzstücken. | Die Ratten können sich durch fast jedes Material nagen.;-
 schnuppern;mittel;Tiere im Haus;neu;"Der Hund fing an, am Boden zu schnuppern. | Sie schnupperte an dem duftenden Blumenstrauß.""""";-
 der Wellensittich;mittel;Tiere im Haus;neu;Der bunte Wellensittich zwitscherte fröhlich in seinem Vogelheim. | Unser Wellensittich kann sogar ein paar einfache Wörter nachsprechen.;-
 piepsen;mittel;Tiere im Haus;neu;Das kleine Vögelchen fing im Nest an zu piepsen. | Man hörte die Küken im Gras leise piepsen.;-
 zahm;mittel;Tiere im Haus;neu;Das Kaninchen war sehr zahm und ließ sich streicheln. | Nach ein paar Wochen Geduld wurde das Eichhörnchen ganz zahm.;-
-die Schildkröte;mittel;Tiere im Haus;neu;Die alte Schildkröte bewegte sich nur sehr langsam durch den Garten. | Im Terrarium lebt eine kleine griechische Landschildkröte.;-
+die Schildkröte;mittel;Tiere im Haus;neu;Die alte Schildkröte bewegte sich nur sehr langsam durch den Garten. | Im Terrarium lebt eine kleine griechische Landschildkröte.;die_Schildkröte.png
 das Futter;mittel;Tiere im Haus;neu;Das frische Futter für die Tiere stand bereits im Napf. | Die Katze fraß gierig ihr tägliches Nassfutter auf.;-
 pflegen;mittel;Tiere im Haus;neu;Er kümmert sich jeden Tag liebevoll um die Pflege seines Gartens. | Kranke Tiere brauchen eine spezielle medizinische Betreuung.;-
 die Laus;mittel;Tiere im Haus;neu;Die lästige Laus konnte im Fell des Hundes schnell gefunden werden. | Auf den Blättern der Rose saßen viele kleine Läuse.;-
@@ -1689,14 +1689,14 @@ die Streu;schwer;Tiere im Haus;neu;Für den Hamsterkäfig kaufte sie eine Packun
 der Floh;schwer;Tiere im Haus;neu;"Der Hund kratzte sich, weil er leider ein paar Flöhe hatte. | Ein winziger Floh sprang im dichten Fell des Hundes herum.""""";-
 der Tierarzt;schwer;Tiere im Haus;neu;Mit dem kranken Hund mussten wir sofort zum Tierarzt fahren. | Der Tierarzt untersuchte die verletzte Pfote der Katze sehr vorsichtig.;-
 die Impfung;schwer;Tiere im Haus;neu;Der Hund bekam heute seine jährliche Impfung gegen Tollwut. | Die wichtige Impfung schützt das Haustier vor gefährlichen Krankheiten.;-
-das Eichhörnchen;leicht;Tiere im Wald;neu;Ein flinkes Eichhörnchen sprang geschickt von Ast zu Ast. | Das Eichhörnchen versteckte seine Nüsse im Laubhaufen.;-
-der Fuchs;leicht;Tiere im Wald;neu;Der schlaue Fuchs schlich nachts leise um den Hühnerstall. | Im dichten Unterholz entdeckten wir einen roten Fuchs.;-
+das Eichhörnchen;leicht;Tiere im Wald;neu;Ein flinkes Eichhörnchen sprang geschickt von Ast zu Ast. | Das Eichhörnchen versteckte seine Nüsse im Laubhaufen.;das_Eichhörnchen.png
+der Fuchs;leicht;Tiere im Wald;neu;Der schlaue Fuchs schlich nachts leise um den Hühnerstall. | Im dichten Unterholz entdeckten wir einen roten Fuchs.;der_Fuchs.png
 das Reh;leicht;Tiere im Wald;neu;Ein scheues Reh stand plötzlich am Waldrand und blickte uns an. | Das Reh sprang mit einem weiten Satz über den Zaun.;-
 der Hirsch;leicht;Tiere im Wald;neu;Der mächtige Hirsch trug ein großes Geweih auf dem Kopf. | Im Herbst kann man das Röhren der Hirsche im Wald hören.;-
 der Hase;leicht;Tiere im Wald;neu;Ein kleiner Hase hoppelte schnell über das abgeerntete Feld. | Im Frühlingsgras saß ein brauner Hase und mümmelte Klee.;-
-der Igel;leicht;Tiere im Wald;neu;Der kleine Igel rollte sich bei Gefahr sofort zu einer stachligen Kugel zusammen. | Nachts sucht der Igel im Garten nach Schnecken und Würmern.;-
-die Eule;leicht;Tiere im Wald;neu;Die schlaue Eule saß hoch oben in der Astgabel und schaute zu. | Man hörte den Ruf der Eule tief aus dem dunklen Wald.;-
-der Kuckuck;leicht;Tiere im Wald;neu;Im Mai kann man im Wald oft den Kuckuck rufen hören. | Der Kuckuck baut bekanntlich keine eigenen Nester.;-
+der Igel;leicht;Tiere im Wald;neu;Der kleine Igel rollte sich bei Gefahr sofort zu einer stachligen Kugel zusammen. | Nachts sucht der Igel im Garten nach Schnecken und Würmern.;der_Igel.png
+die Eule;leicht;Tiere im Wald;neu;Die schlaue Eule saß hoch oben in der Astgabel und schaute zu. | Man hörte den Ruf der Eule tief aus dem dunklen Wald.;die_Eule.png
+der Kuckuck;leicht;Tiere im Wald;neu;Im Mai kann man im Wald oft den Kuckuck rufen hören. | Der Kuckuck baut bekanntlich keine eigenen Nester.;der_Kuckuck.png
 der Käfer;leicht;Tiere im Wald;neu;Ein bunter Käfer krabbelte langsam über das grüne Blatt. | Kinder sammelten im Garten verschiedene Arten von Käfern.;-
 die Ameise;leicht;Tiere im Wald;neu;Die fleißige Ameise trug ein schweres Stück Holz zum Bau. | Eine lange Kolonie von Ameisen zog über den Waldweg.;-
 der Wurm;leicht;Tiere im Wald;neu;Nach dem Regen kroch ein langer Regenwurm aus der Erde hervor. | Der frische Wurm diente dem kleinen Vogel als schmackhaftes Frühstück.;-
@@ -1734,9 +1734,9 @@ die Hornisse;schwer;Tiere im Wald;neu;"Die große Hornisse flog brummend an unse
 summen;schwer;Tiere im Wald;neu;Die Bienen summen unermüdlich von einer Blüte zur nächsten. | Ein leises Summen ging von dem großen Insektenschwarm aus.;-
 die Made;schwer;Tiere im Wald;neu;In den verfaulten Früchten krabbelten kleine weiße Maden. | Die Angelhaken wurden mit frischen Maden beködert.;-
 die Tollwut;schwer;Tiere im Wald;neu;Die gefährliche Tollwut wird oft von Füchsen übertragen. | Gegen die Tollwut kann man Haustiere wirksam impfen lassen.;-
-das Pferd;leicht;Tiere auf dem Bauernhof;neu;Auf der Koppel galoppierte ein wunderschönes braunes Pferd. | Die Kinder durften heute zum ersten Mal auf einem Pferd reiten.;-
-das Schaf;leicht;Tiere auf dem Bauernhof;neu;Auf der grünen Deichwiese grasten friedlich weiße Schafe. | Im Frühjahr bekamen viele Schafe niedliche kleine Lämmer.;-
-das Schwein;leicht;Tiere auf dem Bauernhof;neu;Die rosa Schweine wälzten sich vergnügt im kühlen Schlamm. | Der Bauer fütterte die Schweine im großen Stall.;-
+das Pferd;leicht;Tiere auf dem Bauernhof;neu;Auf der Koppel galoppierte ein wunderschönes braunes Pferd. | Die Kinder durften heute zum ersten Mal auf einem Pferd reiten.;das_Pferd.png
+das Schaf;leicht;Tiere auf dem Bauernhof;neu;Auf der grünen Deichwiese grasten friedlich weiße Schafe. | Im Frühjahr bekamen viele Schafe niedliche kleine Lämmer.;das_Schaf.png
+das Schwein;leicht;Tiere auf dem Bauernhof;neu;Die rosa Schweine wälzten sich vergnügt im kühlen Schlamm. | Der Bauer fütterte die Schweine im großen Stall.;das_Schwein.png
 krähen;leicht;Tiere auf dem Bauernhof;neu;Früh morgens fing der stolze Hahn auf dem Misthaufen an zu krähen. | Man hörte den Nachbarshahn schon von weitem laut krähen.;-
 die Biene;leicht;Tiere auf dem Bauernhof;neu;Eine fleißige Biene sammelte süßen Nektar auf der Blumenwiese. | Der Honig von dieser Biene schmeckt besonders lecker.;-
 die Fliege;leicht;Tiere auf dem Bauernhof;neu;Eine lästige Fliege summte unaufhörlich um den Obstkorb herum. | Die Fliege setzte sich auf das offene Marmorjaland.;-
@@ -1781,13 +1781,13 @@ die Henne;schwer;Tiere auf dem Bauernhof;neu;Die braune Henne suchte auf dem Hof
 Eier legen;schwer;Tiere auf dem Bauernhof;neu;"Die Hühner im Stall können im Frühling täglich frische Eier legen. | Die Vögel bauen ihre Nester, um dort ihre Eier zu legen.""""";-
 die Ratte;schwer;Tiere auf dem Bauernhof;neu;Eine graue Ratte huschte blitzschnell hinter den Mülleimer. | Wegen der Lebensmittel mussten wir Fallen gegen Ratten aufstellen.;-
 die Schwalbe;schwer;Tiere auf dem Bauernhof;neu;Im Frühjahr kehrte jede Schwalbe zu ihrem Nest unter dem Dach zurück. | Schwalben jagen geschickt im Flug nach kleinen Insekten.;-
-der Hai;leicht;Tiere am und im Wasser;neu;Im tiefen Meer schwamm ein großer grauer Hai vorbei. | Vor den Küsten kann man manchmal kleine Haie beobachten.;-
-der Wal;leicht;Tiere am und im Wasser;neu;Der riesige Blauwal ist das größte Tier auf der ganzen Erde. | Manchmal kann man den Blas eines Wals im Ozean sehen.;-
-der Delfin;leicht;Tiere am und im Wasser;neu;"Ein verspielter Delfin sprang hoch aus dem klaren Meereswasser. | Delfine sind sehr intelligente Meeressäuger, die in Gruppen leben.""""";-
-der Frosch;leicht;Tiere am und im Wasser;neu;"Ein grüner Frosch saß am Ufer des Teiches und quakte. | Die Kinder versuchten, den kleinen Frosch im Gras zu fangen.""""";-
-der Seehund;leicht;Tiere am und im Wasser;neu;An der Küste lag ein dicker Seehund faul auf den Steinen. | Der Seehund tauchte geschickt nach Fischen im kalten Wasser.;-
-der Schwan;leicht;Tiere am und im Wasser;neu;Auf dem stillen See schwamm ein stolzer weißer Schwan. | Der Schwan streckte seinen langen Hals anmutig in die Höhe.;-
-die Mücke;leicht;Tiere am und im Wasser;neu;Die stechende Mücke störte unseren Schlaf in der warmen Sommernacht. | Wegen der vielen Mücken nutzten wir ein Insektenschutzgitter.;-
+der Hai;leicht;Tiere am und im Wasser;neu;Im tiefen Meer schwamm ein großer grauer Hai vorbei. | Vor den Küsten kann man manchmal kleine Haie beobachten.;der_Hai.png
+der Wal;leicht;Tiere am und im Wasser;neu;Der riesige Blauwal ist das größte Tier auf der ganzen Erde. | Manchmal kann man den Blas eines Wals im Ozean sehen.;der_Wal.png
+der Delfin;leicht;Tiere am und im Wasser;neu;"Ein verspielter Delfin sprang hoch aus dem klaren Meereswasser. | Delfine sind sehr intelligente Meeressäuger, die in Gruppen leben.""""";der_Delfin.png
+der Frosch;leicht;Tiere am und im Wasser;neu;"Ein grüner Frosch saß am Ufer des Teiches und quakte. | Die Kinder versuchten, den kleinen Frosch im Gras zu fangen.""""";der_Frosch.png
+der Seehund;leicht;Tiere am und im Wasser;neu;An der Küste lag ein dicker Seehund faul auf den Steinen. | Der Seehund tauchte geschickt nach Fischen im kalten Wasser.;der_Seehund.png
+der Schwan;leicht;Tiere am und im Wasser;neu;Auf dem stillen See schwamm ein stolzer weißer Schwan. | Der Schwan streckte seinen langen Hals anmutig in die Höhe.;der_Schwan.png
+die Mücke;leicht;Tiere am und im Wasser;neu;Die stechende Mücke störte unseren Schlaf in der warmen Sommernacht. | Wegen der vielen Mücken nutzten wir ein Insektenschutzgitter.;die_Mücke.png
 fischen;mittel;Tiere am und im Wasser;neu;"Am Wochenende fuhren sie hinaus auf den See, um zu fischen. | Die Möwen hofften darauf, beim fischen etwas abzubekommen.""""";-
 der Hering;mittel;Tiere am und im Wasser;neu;Der frische Hering schmeckte mit Zwiebeln und Sahne hervorragend. | Große Schwärme von Heringe zogen durch das offene Meer.;-
 der Tintenfisch;mittel;Tiere am und im Wasser;neu;Der Tintenfisch stieß bei Gefahr eine dunkle Wolke aus Tinte aus. | In der Tiefsee leben viele geheimnisvolle Arten von Tintenfischen.;-
@@ -1812,20 +1812,20 @@ der Seestern;schwer;Tiere am und im Wasser;neu;Am Meeresboden lag ein roter Sees
 die Krabbe;schwer;Tiere am und im Wasser;neu;Eine kleine Krabbe huschte seitwärts über den nassen Sandstrand. | Die Krabbe kniff mit ihrer Schere nach einem hölzernen Stock.;-
 die Kröte;schwer;Tiere am und im Wasser;neu;Eine dicke braune Kröte saß abends feucht im heimischen Garten. | Die Kröte hüpfte langsam über den gepflasterten Gartenweg.;-
 der Salamander;schwer;Tiere am und im Wasser;neu;Der bunte Feuersalamander kroch nach dem Sommerregen aus dem Laub. | Man erkennt den Salamander leicht an seiner schwarz-gelben Warnfarbe.;-
-der Biber;schwer;Tiere am und im Wasser;neu;Der fleißige Biber baute einen massiven Damm aus Holz und Schlamm. | Nachts nagte der Biber an einem großen Baumstamm.;-
+der Biber;schwer;Tiere am und im Wasser;neu;Der fleißige Biber baute einen massiven Damm aus Holz und Schlamm. | Nachts nagte der Biber an einem großen Baumstamm.;der_Biber.png
 der Fischotter;schwer;Tiere am und im Wasser;neu;Der geschickte Fischotter fing im klaren Fluss einen großen Fisch. | Man konnte den Fischotter spielend im kalten Wasser beobachten.;-
-die Robbe;schwer;Tiere am und im Wasser;neu;Die Robbe sonnte sich gemütlich auf einer Klippe im Meer. | Eine neugierige Robbe schwamm dicht an unser Boot heran.;-
+die Robbe;schwer;Tiere am und im Wasser;neu;Die Robbe sonnte sich gemütlich auf einer Klippe im Meer. | Eine neugierige Robbe schwamm dicht an unser Boot heran.;die_Robbe.png
 die Schwimmhäute;schwer;Tiere am und im Wasser;neu;Wasservögel wie Enten und Gänse besitzen praktische Schwimmhäute an den Füßen. | Dank der Schwimmhäute können die Tiere kraftvoll durch den See gleiten.;-
 die Möwe;schwer;Tiere am und im Wasser;neu;Eine laute Möwe kreischte aufgeregt über den Köpfen der Touristen. | Die Möwe schnappte sich ein Stück Brot direkt aus der Hand.;-
 kreischen;schwer;Tiere am und im Wasser;neu;Die Möwen begannen am Hafen laut zu kreischen. | Man hörte das helle Kreischen der Vögel schon von weitem.;-
 die Libelle;schwer;Tiere am und im Wasser;neu;Eine zarte Libelle flog elegant über die Wasseroberfläche des Teiches. | Die blaue Libelle landete kurz auf einem Schilfhalm.;-
 die Larve;schwer;Tiere am und im Wasser;neu;Aus der kleinen Insektenlarve entwickelte sich schließlich ein Käfer. | Die Larven ernähren sich meist von winzigen Pflanzenresten.;-
-der Vogel;leicht;Tiere in der Luft;neu;Ein kleiner Vogel saß fröhlich singend auf dem kahlen Ast. | Jeder Vogel baut im Frühjahr ein eigenes Nest für den Nachwuchs.;-
+der Vogel;leicht;Tiere in der Luft;neu;Ein kleiner Vogel saß fröhlich singend auf dem kahlen Ast. | Jeder Vogel baut im Frühjahr ein eigenes Nest für den Nachwuchs.;der_Vogel.png
 fliegen;leicht;Tiere in der Luft;neu;Die Schwalben fliegen im Herbst gemeinsam in den warmen Süden. | Könnte ich doch nur wie ein freier Vogel fliegen!;-
-das Nest;leicht;Tiere in der Luft;neu;Hoch oben im Baum hatte ein Amselpärchen ein sicheres Nest gebaut. | Das kleine Vögelchen fiel unglücklich aus seinem Nest.;-
+das Nest;leicht;Tiere in der Luft;neu;Hoch oben im Baum hatte ein Amselpärchen ein sicheres Nest gebaut. | Das kleine Vögelchen fiel unglücklich aus seinem Nest.;das_Nest.png
 die Taube;leicht;Tiere in der Luft;neu;Eine graue Taube landete auf dem Marktplatz und suchte Futter. | Die Stadttaube ist in vielen Großstädten weit verbreitet.;-
-der Spatz;leicht;Tiere in der Luft;neu;Ein kleiner frecher Spatz pickte die heruntergefallenen Körner auf. | Auf dem Balkon stritten sich drei Spatzen um ein Brötchen.;-
-der Rabe;leicht;Tiere in der Luft;neu;Der kluge Rabe flog mit einem Stück Holz im Schnabel davon. | Auf dem verlassenen Feld saß ein schwarzer Rabe.;-
+der Spatz;leicht;Tiere in der Luft;neu;Ein kleiner frecher Spatz pickte die heruntergefallenen Körner auf. | Auf dem Balkon stritten sich drei Spatzen um ein Brötchen.;der_Spatz.png
+der Rabe;leicht;Tiere in der Luft;neu;Der kluge Rabe flog mit einem Stück Holz im Schnabel davon. | Auf dem verlassenen Feld saß ein schwarzer Rabe.;der_Rabe.png
 zwitschern;mittel;Tiere in der Luft;neu;"Morgens um fünf Uhr beginnen die Vögel im Garten laut zu zwitschern. | Ich liebe es, im Sommer vom Zwitschern geweckt zu werden.""""";-
 flattern;mittel;Tiere in der Luft;neu;Der Schmetterling ließ seine bunten Flügel nervös flattern. | Im Wind fing das lose Stofftuch an zu flattern.;-
 brüten;mittel;Tiere in der Luft;neu;"Die Vogeldame fing im April an, ihre Eier im Nest zu brüten. | Zwei Wochen lang musste die Amsel unermüdlich brüten.""""";-
@@ -1839,7 +1839,7 @@ die Krähe;mittel;Tiere in der Luft;neu;Die Krähe flog laut krächzend über da
 hacken;mittel;Tiere in der Luft;neu;"Spechte hacken mit großer Kraft in die Rinde von morschen Bäumen. | Das Huhn fing an, Körner aus der Erde zu hacken.""""";-
 das Vogelhäuschen;mittel;Tiere in der Luft;neu;Im Winter stellten wir ein kleines Vogelhäuschen auf den Balkon. | Meisen und Finken besuchen regelmäßig unser Vogelhäuschen.;-
 das Vogelfutter;mittel;Tiere in der Luft;neu;Sie streute reichlich Vogelfutter auf das Brett vor dem Fenster. | Das frische Vogelfutter lockte viele verschiedene Vögel an.;-
-der Schmetterling;mittel;Tiere in der Luft;neu;Ein wunderschöner bunter Schmetterling saß auf einer roten Blume. | Die Raupe verwandelte sich schließlich in einen prächtigen Schmetterling.;-
+der Schmetterling;mittel;Tiere in der Luft;neu;Ein wunderschöner bunter Schmetterling saß auf einer roten Blume. | Die Raupe verwandelte sich schließlich in einen prächtigen Schmetterling.;der_Schmetterling.png
 die Fledermaus;mittel;Tiere in der Luft;neu;"Nachts flatterte eine kleine Fledermaus lautlos durch das offene Zimmer. | Fledermäuse nutzen Ultraschall, um sich im Dunkeln zu orientieren.""""";-
 ein Nest bauen;schwer;Tiere in der Luft;neu;"Die Vögel beginnen schon im März damit, ein neues Nest zu bauen. | Es ist faszinierend zu sehen, wie präzise Vögel ein Nest bauen.""""";-
 schlüpfen;schwer;Tiere in der Luft;neu;Aus dem Ei schlüpfte nach kurzer Zeit ein kleines gelbes Küken. | Die jungen Vögel schlüpfen meistens in den frühen Morgenstunden.;-
@@ -1862,12 +1862,12 @@ die Raupe;schwer;Tiere in der Luft;neu;Die grüne Raupe fraß sich mühsam durch
 die Puppe;schwer;Tiere in der Luft;neu;Die verpuppte Raupe hing regungslos unter dem Ast. | In der Puppe findet eine wundersame Verwandlung statt.;-
 einspinnen;schwer;Tiere in der Luft;neu;Die Raupe begann sich vor dem Verpuppen in feine Fäden einzuspinnen. | Viele Insektenarten können sich komplett in Kokons einspinnen.;-
 der Affe;leicht;Tiere im Zoo;neu;Der lustige Affe kletterte geschickt von einem Ast zum anderen. | Im Zoo fütterten die Besucher die Affen mit Nüssen.;-
-der Elefant;leicht;Tiere im Zoo;neu;Der riesige Elefant besaß einen langen Rüssel und große Ohren. | In Afrika trank der Elefant gierig Wasser aus dem Fluss.;-
-der Löwe;leicht;Tiere im Zoo;neu;Der stolze Löwe ruhte sich im Schatten eines Baumes aus. | Man konnte das laute Brüllen des Löwen weithin hören.;-
+der Elefant;leicht;Tiere im Zoo;neu;Der riesige Elefant besaß einen langen Rüssel und große Ohren. | In Afrika trank der Elefant gierig Wasser aus dem Fluss.;der_Elefant.png
+der Löwe;leicht;Tiere im Zoo;neu;Der stolze Löwe ruhte sich im Schatten eines Baumes aus. | Man konnte das laute Brüllen des Löwen weithin hören.;der_Löwe.png
 brüllen;leicht;Tiere im Zoo;neu;Der hungrige Löwe fing im hohen Gras an zu brüllen. | Plötzlich fing das Raubtier an bedrohlich zu brüllen.;-
-der Tiger;leicht;Tiere im Zoo;neu;Der bengalische Tiger strich leise durch den dichten Dschungel. | Man erkannte den Tiger sofort an seinem schwarz-gelb gestreiften Fell.;-
-der Bär;leicht;Tiere im Zoo;neu;Der große Braunbär angelte geschickt nach Lachsen im Fluss. | Im Winter zieht sich der Bär in seine Höhle zurück.;-
-die Schlange;leicht;Tiere im Zoo;neu;Eine giftige Schlange glitt leise zischend durch das trockene Gras. | Viele Menschen haben große Angst vor einer Begegnung mit einer Schlange.;-
+der Tiger;leicht;Tiere im Zoo;neu;Der bengalische Tiger strich leise durch den dichten Dschungel. | Man erkannte den Tiger sofort an seinem schwarz-gelb gestreiften Fell.;der_Tiger.png
+der Bär;leicht;Tiere im Zoo;neu;Der große Braunbär angelte geschickt nach Lachsen im Fluss. | Im Winter zieht sich der Bär in seine Höhle zurück.;der_Bär.png
+die Schlange;leicht;Tiere im Zoo;neu;Eine giftige Schlange glitt leise zischend durch das trockene Gras. | Viele Menschen haben große Angst vor einer Begegnung mit einer Schlange.;die_Schlange.png
 wild;leicht;Tiere im Zoo;neu;"In der afrikanischen Steppe leben viele Tiere völlig wild. | Der Wolf ist ein wildes Tier, das man selten zu Gesicht bekommt.""""";-
 der Schimpanse;mittel;Tiere im Zoo;neu;Der schlaue Schimpanse nutzte einen Stock als Werkzeug. | Schimpansen gehören zu den nächsten Verwandten des Menschen.;-
 der Gorilla;mittel;Tiere im Zoo;neu;Ein großer Gorilla saß friedlich essend im dichten Blätterdach. | Gorillas leben in familiären Gruppen im Regenwald.;-
@@ -1877,13 +1877,13 @@ trompeten;mittel;Tiere im Zoo;neu;"Die Elefanten fingen an laut zu trompeten, al
 der Stoßzahn;mittel;Tiere im Zoo;neu;Die langen Stoßzähne des Elefanten glänzten im hellen Sonnenlicht. | Aus Elfenbein wurden früher wertvolle Skulpturen geschnitzt.;-
 stoßen;mittel;Tiere im Zoo;neu;"Der Bulle wollte im Streit mit einem anderen Tier heftig stoßen. | Das große Schaf fing an, mit den Hörnern zu stoßen.""""";-
 das Nashorn;mittel;Tiere im Zoo;neu;"Das schwere Nashorn lief langsam durch das schlammige Wasserloch. | Auf der Nase des Nashorns saß ein kleiner, spitzer Hornaufsatz.""""";-
-der Eisbär;mittel;Tiere im Zoo;neu;Der weiße Eisbär lief suchend über das dicke Packeis in der Arktis. | Wegen des Klimawandels ist der Lebensraum des Eisbären bedroht.;-
-der Panda;mittel;Tiere im Zoo;neu;Der süße Pandabär knabberte genüsslich an einem frischen Bambusstock. | Pandas sind in freier Wildbahn vom Aussterben bedroht.;-
-das Zebra;mittel;Tiere im Zoo;neu;Das schwarz-weiß gestreifte Zebra stand friedlich neben einer Giraffe. | Ein einzelnes Zebra hebt sich gut aus der Herde ab.;-
-die Giraffe;mittel;Tiere im Zoo;neu;Die große Giraffe erreichte mit ihrem langen Hals die obersten Blätter. | Wegen ihrer langen Beine muss die Giraffe weit trinken.;-
+der Eisbär;mittel;Tiere im Zoo;neu;Der weiße Eisbär lief suchend über das dicke Packeis in der Arktis. | Wegen des Klimawandels ist der Lebensraum des Eisbären bedroht.;der_Eisbär.png
+der Panda;mittel;Tiere im Zoo;neu;Der süße Pandabär knabberte genüsslich an einem frischen Bambusstock. | Pandas sind in freier Wildbahn vom Aussterben bedroht.;der_Panda.png
+das Zebra;mittel;Tiere im Zoo;neu;Das schwarz-weiß gestreifte Zebra stand friedlich neben einer Giraffe. | Ein einzelnes Zebra hebt sich gut aus der Herde ab.;das_Zebra.png
+die Giraffe;mittel;Tiere im Zoo;neu;Die große Giraffe erreichte mit ihrem langen Hals die obersten Blätter. | Wegen ihrer langen Beine muss die Giraffe weit trinken.;die_Giraffe.png
 das Kamel;mittel;Tiere im Zoo;neu;Das zweihöckrige Kamel wanderte ausdauernd durch die heiße Wüste. | Kamele können tagelang ohne frisches Wasser auskommen.;-
-das Krokodil;mittel;Tiere im Zoo;neu;Das gefährliche Krokodil lauerte im flachen Wasser auf Beute. | Die scharfen Zähne des Krokodils packten den Angreifer blitzschnell.;-
-der Pinguin;mittel;Tiere im Zoo;neu;"Der kleine Pinguin watschelte lustig über das rutschige Eis. | Pinguine können zwar nicht fliegen, dafür aber hervorragend schwimmen.""""";-
+das Krokodil;mittel;Tiere im Zoo;neu;Das gefährliche Krokodil lauerte im flachen Wasser auf Beute. | Die scharfen Zähne des Krokodils packten den Angreifer blitzschnell.;das_Krokodil.png
+der Pinguin;mittel;Tiere im Zoo;neu;"Der kleine Pinguin watschelte lustig über das rutschige Eis. | Pinguine können zwar nicht fliegen, dafür aber hervorragend schwimmen.""""";der_Pinguin.png
 der Papagei;mittel;Tiere im Zoo;neu;Der bunte Papagei plapperte vergnügt die Wörter seiner Besitzer nach. | Im tropischen Urwald riefen die Papageien laut um die Wette.;-
 der Tierpfleger;mittel;Tiere im Zoo;neu;Der fleißige Tierpfleger fütterte morgens alle Löwen und Elefanten. | Der Tierpfleger säuberte das Gehege der Affen gründlich.;-
 frei;mittel;Tiere im Zoo;neu;Die Vögel flogen am Morgen glücklich in die weite Freiheit hinaus. | Endlich durfte das gerettete Tier wieder in die Freiheit entlassen werden.;-
@@ -1904,15 +1904,15 @@ die Kobra;schwer;Tiere im Zoo;neu;Die giftige Kobra richtete sich bedrohlich auf
 das Gift;schwer;Tiere im Zoo;neu;Das hochwirksame Gift der Schlange kann für Menschen tödlich sein. | Viele Insekten nutzen ein giftiges Sekret zur Verteidigung.;-
 der Giftzahn;schwer;Tiere im Zoo;neu;Durch den scharfen Giftzahn injizierte die Schlange ihre Beute. | Der Tierarzt zog dem Tier vorsorglich den Giftzahn.;-
 das Stachelschwein;schwer;Tiere im Zoo;neu;Das stachelige Stachelschwein richtete bei Gefahr seine langen Stacheln auf. | Im Wald begegneten wir nachts einem kleinen Stachelschwein.;-
-der Flamingo;schwer;Tiere im Zoo;neu;Der rosa Flamingo stand auf einem Bein im flachen Wasser. | Eine große Gruppe Flamingos bot ein wunderschönes Bild am See.;-
+der Flamingo;schwer;Tiere im Zoo;neu;Der rosa Flamingo stand auf einem Bein im flachen Wasser. | Eine große Gruppe Flamingos bot ein wunderschönes Bild am See.;der_Flamingo.png
 der Strauß;schwer;Tiere im Zoo;neu;"Der große Strauß kann sehr schnell rennen, aber nicht fliegen. | Im Zoo versteckte der Strauß seinen Kopf im Sand.""""";-
 das Gehege;schwer;Tiere im Zoo;neu;"Die Löwen lagen gemütlich im großen, eingezäunten Gehege. | Das Gehege für die Affen wurde im Sommer renoviert.""""";-
 das Aquarium;schwer;Tiere im Zoo;neu;Im großen Aquarium schwammen hunderte bunte tropische Fische. | Die Kinder bestaunten die Haie im Berliner Aquarium.;-
 einsperren;schwer;Tiere im Zoo;neu;"Es ist traurig, wilde Tiere einfach so einzusperren. | Früher wurden viele Vögel zur Zierde in Käfigen eingesperrt.""""";-
 spielen;leicht;Wir spielen;neu;Die Kinder spielen am Nachmittag vergnügt im sonnigen Garten. | Wir wollen heute Abend alle zusammen ein Brettspiel spielen.;-
-der Teddy;leicht;Wir spielen;neu;Der kleine Junge schlief jede Nacht fest mit seinem geliebten Teddy ein. | Auf dem Bett saß ein brauner Plüsch-Teddy.;-
-der Bauklotz;leicht;Wir spielen;neu;Aus den bunten Bauklötzen bauten die Kinder ein riesiges Schloss. | Ein schwerer Bauklotz fiel polternd auf den Teppich.;-
-der Turm;leicht;Wir spielen;neu;Aus zwanzig Holzteilen bauten sie einen sehr hohen Turm. | Der Kirchturm war weithin über das ganze Tal zu sehen.;-
+der Teddy;leicht;Wir spielen;neu;Der kleine Junge schlief jede Nacht fest mit seinem geliebten Teddy ein. | Auf dem Bett saß ein brauner Plüsch-Teddy.;der_Teddy.png
+der Bauklotz;leicht;Wir spielen;neu;Aus den bunten Bauklötzen bauten die Kinder ein riesiges Schloss. | Ein schwerer Bauklotz fiel polternd auf den Teppich.;der_Bauklotz.png
+der Turm;leicht;Wir spielen;neu;Aus zwanzig Holzteilen bauten sie einen sehr hohen Turm. | Der Kirchturm war weithin über das ganze Tal zu sehen.;der_Turm.png
 umwerfen;leicht;Wir spielen;neu;Aus Versehen hat die Katze den schönen Turm umgeworfen. | Wer hat denn hier die ganzen Bausteine umgeworfen?;-
 das Puzzle;leicht;Wir spielen;neu;Das schwere Puzzle bestand aus eintausend kleinen Teilen. | Sie setzte das letzte Teil in das bunte Puzzle ein.;-
 machen;leicht;Wir spielen;neu;Was möchtest du heute am Nachmittag gerne machen? | Sie kann wunderbar leckere Kuchen backen.;-
@@ -1955,7 +1955,7 @@ malen;leicht;Wir malen und basteln;neu;"Die Künstlerin fing an, ein großes Öl
 das Papier;leicht;Wir malen und basteln;neu;Sie legte ein unbeschriebenes Blatt Papier auf den Tisch. | Auf dem weißen Papier hinterließ der Füller dunkle Flecken.;-
 der Stift;leicht;Wir malen und basteln;neu;Er zog einen blauen Stift aus seiner vollen Federmappe. | Mit diesem dünnen Stift kann man besonders sauber schreiben.;-
 die Fingerfarbe;leicht;Wir malen und basteln;neu;Die kleinen Kinder kleckerten fröhlich mit roter Fingerfarbe. | Fingerfarbe fördert die Kreativität von Kleinkindern im Kindergarten.;-
-die Knete;leicht;Wir malen und basteln;neu;Aus bunter Knete formte das Mädchen ein kleines Auto. | Die weiche Knete roch angenehm nach Vanille.;-
+die Knete;leicht;Wir malen und basteln;neu;Aus bunter Knete formte das Mädchen ein kleines Auto. | Die weiche Knete roch angenehm nach Vanille.;die_Knete.png
 kneten;leicht;Wir malen und basteln;neu;Sie konnte stundenlang ruhig dastehen und Figuren kneten. | Die Kinder kneteten lustige Tiere aus farbiger Tonmasse.;-
 kleben;leicht;Wir malen und basteln;neu;"Mit etwas Kleber konnte sie die zerrissene Seite wieder kleben. | Das Buch war kaputt, deshalb musste sie es kleben.""""";-
 rund;leicht;Wir malen und basteln;neu;Der Ball ist wunderbar rund und rollt schnell über den Rasen. | Ein runder Tisch bietet Platz für viele Gäste.;-
@@ -2004,7 +2004,7 @@ Ball spielen;leicht;Sport macht Spaß;neu;Im Garten können die Geschwister wund
 der Fußball;leicht;Sport macht Spaß;neu;Der Fußball liegt schon bereit auf dem Rasen. | Er hat zum Geburtstag einen neuen Fußball bekommen.;-
 turnen;leicht;Sport macht Spaß;neu;"Jeden Dienstag geht sie in die Halle, um zu turnen. | Kinder lieben es, auf den Geräten zu klettern und zu turnen.""""";-
 der Purzelbaum;leicht;Sport macht Spaß;neu;"Sie kann schon einen perfekten Purzelbaum auf der Matte machen. | Der kleine Junge übt fleißig, wie man einen Purzelbaum schlägt.""""";-
-die Matte;leicht;Sport macht Spaß;neu;Die blaue Matte liegt sicher auf dem Boden. | Vor dem Sprung legen wir die dicke Matte aus.;-
+die Matte;leicht;Sport macht Spaß;neu;Die blaue Matte liegt sicher auf dem Boden. | Vor dem Sprung legen wir die dicke Matte aus.;die_Matte.png
 der Hüpfball;leicht;Sport macht Spaß;neu;Mit dem bunten Hüpfball springt er durch den Flur. | Sie hält sich fest an den Griffen vom Hüpfball.;-
 festhalten;leicht;Sport macht Spaß;neu;Du musst dich gut am Geländer festhalten. | Bei der rasanten Fahrt sollst du dich fest festhalten.;-
 reiten;leicht;Sport macht Spaß;neu;"Auf dem Bauernhof darf sie heute endlich reiten. | Reiten macht großen Spaß, erfordert aber auch viel Übung.""""";-
@@ -2050,7 +2050,7 @@ schlagen;schwer;Sport macht Spaß;neu;"Die Kirschen hängen reif, man kann sie v
 die Weltmeisterschaft;schwer;Sport macht Spaß;neu;Alle vier Jahre findet eine spannende Weltmeisterschaft statt. | Die besten Sportler kämpfen bei der Weltmeisterschaft um Gold.;-
 lesen;leicht;Lieblingsbuch und Lieblingsfilm;neu;Am Abend liest sie gerne ein spannendes Buch im Bett. | Lesen erweitert den Wortschatz und regt die Fantasie an.;-
 vorlesen;leicht;Lieblingsbuch und Lieblingsfilm;neu;"Oma setzt sich zu ihm und will ihm eine Geschichte vorlesen. | Die Lehrerin fängt an, den Kindern ein Märchen vorzulesen.""""";-
-das Buch;leicht;Lieblingsbuch und Lieblingsfilm;neu;Dieses dicke Buch hat eine sehr fesselnde Handlung. | Sie schlägt das Buch auf der ersten Seite auf.;-
+das Buch;leicht;Lieblingsbuch und Lieblingsfilm;neu;Dieses dicke Buch hat eine sehr fesselnde Handlung. | Sie schlägt das Buch auf der ersten Seite auf.;das_Buch.png
 die Geschichte;leicht;Lieblingsbuch und Lieblingsfilm;neu;Die erzählte Geschichte handelte von mutigen Rittern. | Jedes Kind lauschte gespannt der fantastischen Geschichte.;-
 Fernsehen gucken;leicht;Lieblingsbuch und Lieblingsfilm;neu;Am Wochenende darf er abends noch etwas Fernsehen gucken. | Nach den Hausaufgaben möchte sie kurz Fernsehen gucken.;-
 das Sandmännchen;leicht;Lieblingsbuch und Lieblingsfilm;neu;Um 18:50 Uhr bringt das Sandmännchen allen Kindern gute Nacht. | Kleine Kinder freuen sich jeden Abend auf das Sandmännchen.;-
@@ -2095,11 +2095,11 @@ der Sender;schwer;Lieblingsbuch und Lieblingsfilm;neu;Dieser Radiosender spielt 
 die Fernbedienung;schwer;Lieblingsbuch und Lieblingsfilm;neu;Die kleine Fernbedienung liegt auf dem Couchtisch. | Wer hat schon wieder die Fernbedienung verlegt?;-
 das Programm;schwer;Lieblingsbuch und Lieblingsfilm;neu;Das aktuelle Fernsehprogramm bietet heute viele gute Filme. | Das kulturelle Programm der Stadt ist sehr abwechslungsreich.;-
 wegfahren;leicht;Wir fahren in den Urlaub;neu;In den Sommerferien wollen wir alle zusammen ans Meer wegfahren. | Vor dem wegfahren müssen wir noch alle Fenster schließen.;-
-das Hotel;leicht;Wir fahren in den Urlaub;neu;Wir haben für unseren Urlaub ein gemütliches Hotel gebucht. | Das Hotel liegt direkt am schönen Sandstrand.;-
+das Hotel;leicht;Wir fahren in den Urlaub;neu;Wir haben für unseren Urlaub ein gemütliches Hotel gebucht. | Das Hotel liegt direkt am schönen Sandstrand.;das_Hotel.png
 der Campingplatz;leicht;Wir fahren in den Urlaub;neu;Im Sommer zelten wir gerne auf einem ruhigen Campingplatz. | Der Campingplatz verfügt über moderne Sanitäranlagen.;-
-das Zelt aufbauen;leicht;Wir fahren in den Urlaub;neu;"Gemeinsam helfen sie dabei, das schwere Zelt aufzubauen. | Vor dem Einbruch der Dunkelheit müssen wir das Zelt aufbauen.""""";-
+das Zelt aufbauen;leicht;Wir fahren in den Urlaub;neu;"Gemeinsam helfen sie dabei, das schwere Zelt aufzubauen. | Vor dem Einbruch der Dunkelheit müssen wir das Zelt aufbauen.""""";das_Zelt_aufbauen.png
 die Luftmatratze;leicht;Wir fahren in den Urlaub;neu;"Bevor wir schlafen, pumpen wir die Luftmatratze auf. | Auf der weichen Luftmatratze schläft es sich wunderbar im Zelt.""""";-
-der Koffer;leicht;Wir fahren in den Urlaub;neu;Sie packt ihre Kleidung sorgfältig in den schweren Koffer. | Vor der Abreise muss der Koffer noch einmal gewogen werden.;-
+der Koffer;leicht;Wir fahren in den Urlaub;neu;Sie packt ihre Kleidung sorgfältig in den schweren Koffer. | Vor der Abreise muss der Koffer noch einmal gewogen werden.;der_Koffer.png
 die Sonnenbrille;leicht;Wir fahren in den Urlaub;neu;Bei strahlendem Sonnenschein trägt er immer seine Sonnenbrille. | Die modische Sonnenbrille schützt die Augen vor hellem Licht.;-
 das Foto;leicht;Wir fahren in den Urlaub;neu;Er macht ein schönes Foto von der blühenden Wiese. | Dieses alte Foto erinnert uns an den schönen Sommerurlaub.;-
 in Urlaub fahren;mittel;Wir fahren in den Urlaub;neu;"Nächste Woche werden wir endlich alle in Urlaub fahren. | Viele Familien freuen sich darauf, im August in Urlaub fahren zu können.""""";-
@@ -2140,9 +2140,9 @@ der Fotoapparat;schwer;Wir fahren in den Urlaub;neu;"Der alte Fotoapparat funkti
 die Digitalkamera;schwer;Wir fahren in den Urlaub;neu;Mit der modernen Digitalkamera gelingen scharfe Bilder. | Sie speichert alle Urlaubsfotos auf ihrer Digitalkamera.;-
 spazieren gehen;leicht;Wir machen einen Ausflug;neu;Nach dem Mittagessen gehen wir gerne eine Runde spazieren. | Bei schönem Wetter kann man gut im Park spazieren gehen.;-
 die Trinkflasche;leicht;Wir machen einen Ausflug;neu;Fülle deine Trinkflasche am besten mit frischem Wasser auf. | Die rote Trinkflasche passt perfekt in den Rucksack.;-
-der Zoo;leicht;Wir machen einen Ausflug;neu;Im Zoo kann man exotische Tiere aus der Nähe betrachten. | Besonders die Affen im Zoo faszinieren die kleinen Kinder.;-
-der Zirkus;leicht;Wir machen einen Ausflug;neu;Der farbenfrohe Zirkus gastiert dieses Wochenende in unserer Stadt. | Die Akrobaten im Zirkus zeigen waghalsige Kunststücke.;-
-der Clown;leicht;Wir machen einen Ausflug;neu;Der lustige Clown bringt alle Zuschauer zum Lachen. | Mit seiner großen roten Nase ist der Clown sehr beliebt.;-
+der Zoo;leicht;Wir machen einen Ausflug;neu;Im Zoo kann man exotische Tiere aus der Nähe betrachten. | Besonders die Affen im Zoo faszinieren die kleinen Kinder.;der_Zoo.png
+der Zirkus;leicht;Wir machen einen Ausflug;neu;Der farbenfrohe Zirkus gastiert dieses Wochenende in unserer Stadt. | Die Akrobaten im Zirkus zeigen waghalsige Kunststücke.;der_Zirkus.png
+der Clown;leicht;Wir machen einen Ausflug;neu;Der lustige Clown bringt alle Zuschauer zum Lachen. | Mit seiner großen roten Nase ist der Clown sehr beliebt.;der_Clown.png
 wohin;leicht;Wir machen einen Ausflug;neu;Wohin führt uns wohl der nächste gemeinsame Ausflug? | Weit weg von hier – aber wohin genau wissen wir noch nicht.;-
 der Ausflug;mittel;Wir machen einen Ausflug;neu;Am Sonntag machen wir einen gemeinsamen Ausflug in den Wald. | Die Schulklasse freut sich schon sehr auf den Ausflug.;-
 der Spaziergang;mittel;Wir machen einen Ausflug;neu;Ein abendlicher Spaziergang an der frischen Luft tut gut. | Wir unternehmen bei Sonnenuntergang einen langen Spaziergang.;-
@@ -2307,15 +2307,15 @@ das Arbeitsblatt;schwer;Bald gehe ich in die Schule;neu;Die Lehrerin verteilt an
 das Zeugnis;schwer;Bald gehe ich in die Schule;neu;Am Ende des Schuljahres bekommt jedes Kind sein Zeugnis. | Sie hat sich über die guten Noten in ihrem Zeugnis gefreut.;-
 der Stundenplan;schwer;Bald gehe ich in die Schule;neu;Hängt dein neuer Stundenplan schon gut sichtbar an der Wand? | Am Montag zeigt der Stundenplan gleich zwei Stunden Sport.;-
 der Hausmeister;schwer;Bald gehe ich in die Schule;neu;"Der freundliche Hausmeister repariert die kaputte Tür im Flur. | Wenn es ein Problem gibt, hilft der Hausmeister immer sofort.""""";-
-die Polizei;leicht;Bei Polizei und Feuerwehr;neu;Bei einem Unfall muss man sofort die Polizei anrufen. | Die Polizei regelt den Verkehr an der Kreuzung.;-
-die Polizistin;leicht;Bei Polizei und Feuerwehr;neu;Die nette Polizistin hilft den Kindern über die Straße. | Auf der Wache arbeitet eine erfahrene Polizistin im Innendienst.;-
+die Polizei;leicht;Bei Polizei und Feuerwehr;neu;Bei einem Unfall muss man sofort die Polizei anrufen. | Die Polizei regelt den Verkehr an der Kreuzung.;die_Polizei.png
+die Polizistin;leicht;Bei Polizei und Feuerwehr;neu;Die nette Polizistin hilft den Kindern über die Straße. | Auf der Wache arbeitet eine erfahrene Polizistin im Innendienst.;die_Polizistin.png
 das Polizeiauto;leicht;Bei Polizei und Feuerwehr;neu;Mit lautem Blaulicht fährt das Polizeiauto schnell zum Einsatzort. | Kinder bestaunen immer das große Polizeiauto auf der Straße.;-
 die Sirene;leicht;Bei Polizei und Feuerwehr;neu;"Man hörte die laute Sirene des Einsatzfahrzeugs aus der Ferne. | Wenn die Sirene heult, müssen alle Autofahrer Platz machen.""""";-
 klauen;leicht;Bei Polizei und Feuerwehr;neu;"Es ist verboten, im Laden fremde Dinge zu klauen. | Wer andere Sachen klaut, bekommt großen Ärger.""""";-
-das Feuer;leicht;Bei Polizei und Feuerwehr;neu;Im Kamin knistert ein gemütliches und warmes Feuer. | Die Kinder wärmen sich nach dem Schneespaziergang am Feuer.;-
+das Feuer;leicht;Bei Polizei und Feuerwehr;neu;Im Kamin knistert ein gemütliches und warmes Feuer. | Die Kinder wärmen sich nach dem Schneespaziergang am Feuer.;das_Feuer.png
 brennen;leicht;Bei Polizei und Feuerwehr;neu;Das Holz im Ofen fängt nach kurzer Zeit an zu brennen. | Aus ungeklärter Ursache fing das alte Gebäude an zu brennen.;-
 löschen;leicht;Bei Polizei und Feuerwehr;neu;"Die Feuerwehrleute versuchen, das große Feuer schnell zu löschen. | Nach dem Grillen muss man die Glut sorgfältig löschen.""""";-
-die Feuerwehr;leicht;Bei Polizei und Feuerwehr;neu;Bei einem Brand rückt sofort die freiwillige Feuerwehr aus. | Die Feuerwehr rettete die Katze aus dem hohen Baum.;-
+die Feuerwehr;leicht;Bei Polizei und Feuerwehr;neu;Bei einem Brand rückt sofort die freiwillige Feuerwehr aus. | Die Feuerwehr rettete die Katze aus dem hohen Baum.;die_Feuerwehr.png
 retten;leicht;Bei Polizei und Feuerwehr;neu;"Der Held wollte das kleine Mädchen aus der Gefahr retten. | Schwimmer versuchen oft, ertrinkende Menschen zu retten.""""";-
 die Wache;mittel;Bei Polizei und Feuerwehr;neu;Die Polizisten halten auf der Wache Wache. | Auf der Station ist immer eine Wache besetzt.;-
 das Blaulicht;mittel;Bei Polizei und Feuerwehr;neu;Das helle Blaulicht war schon von weitem gut zu erkennen. | Einsatzfahrzeuge fahren oft mit lautem Horn und Blaulicht.;-
@@ -2358,7 +2358,7 @@ der Notruf;schwer;Bei Polizei und Feuerwehr;neu;Bei akuter Gefahr wählt man sof
 ausfahren;schwer;Bei Polizei und Feuerwehr;neu;Die Feuerwehr muss bei einem Alarm sofort mit den Wagen ausfahren. | Bei starkem Sturm müssen die Markisen ausfahren gesichert werden.;-
 der Feueralarm;schwer;Bei Polizei und Feuerwehr;neu;Plötzlich ertönte in der gesamten Schule der laute Feueralarm. | Wegen eines angekündigten Feueralarms verließen alle das Gebäude.;-
 der Doktor;leicht;Im Krankenhaus;neu;"Der freundliche Doktor untersucht den kranken Jungen im Sprechzimmer. | Wenn man krank ist, geht man am besten zum Doktor.""""";-
-der Krankenwagen;leicht;Im Krankenhaus;neu;Mit Blaulicht und Sirene fährt der Krankenwagen zum Einsatz. | Der Verletzte wird vorsichtig in den Krankenwagen getragen.;-
+der Krankenwagen;leicht;Im Krankenhaus;neu;Mit Blaulicht und Sirene fährt der Krankenwagen zum Einsatz. | Der Verletzte wird vorsichtig in den Krankenwagen getragen.;der_Krankenwagen.png
 das Krankenhaus;leicht;Im Krankenhaus;neu;Nach dem schweren Sturz wurde sie ins nächste Krankenhaus gebracht. | Im Krankenhaus arbeiten viele Ärzte und hilfsbereite Pfleger.;-
 die Krankenschwester;leicht;Im Krankenhaus;neu;Die nette Krankenschwester bringt dem Patienten frisches Wasser. | Sie arbeitet seit vielen Jahren als Krankenschwester auf Station.;-
 der Arzt;mittel;Im Krankenhaus;neu;Der erfahrene Arzt verschreibt dem Patienten die passenden Medikamente. | Bei starken Halsschmerzen sollte man einen Arzt aufsuchen.;-
@@ -2396,11 +2396,11 @@ eingipsen;schwer;Im Krankenhaus;neu;Der Unfallarzt musste das gebrochene Handgel
 die Krücke;schwer;Im Krankenhaus;neu;Mit zwei Krücken bewegt er sich vorsichtig durch den Flur. | Nach dem Beinbruch ist er auf eine Krücke angewiesen.;-
 der Rollstuhl;schwer;Im Krankenhaus;neu;Nach der Operation saß sie für ein paar Wochen im Rollstuhl. | Der moderne Rollstuhl lässt sich ganz leicht schieben.;-
 damit;schwer;Im Krankenhaus;neu;"Übe fleißig, damit du den Test morgen gut bestehst. | Er kaufte Farbe, damit er das Zimmer streichen kann.""""";-
-der Arbeiter;leicht;In der Fabrik;neu;Der fleißige Arbeiter repariert die Straße vor dem Haus. | Viele Arbeiter in der Fabrik arbeiten in verschiedenen Schichten.;-
+der Arbeiter;leicht;In der Fabrik;neu;Der fleißige Arbeiter repariert die Straße vor dem Haus. | Viele Arbeiter in der Fabrik arbeiten in verschiedenen Schichten.;der_Arbeiter.png
 arbeiten;leicht;In der Fabrik;neu;"Die Eltern müssen den ganzen Tag in der Stadt arbeiten. | Er liebt es, an kreativen Projekten zu arbeiten.""""";-
 die Fabrik;leicht;In der Fabrik;neu;In dieser großen Fabrik werden moderne Autos hergestellt. | Der Rauchteig steigt aus den Schornsteinen der Fabrik auf.;-
-die Maschine;leicht;In der Fabrik;neu;"Die große Maschine in der Fabrik stanzt präzise Metallteile. | Wenn die Maschine defekt ist, stoppt die gesamte Produktion.""""";-
-der Roboter;leicht;In der Fabrik;neu;Ein programmierter Roboter baut die Autos am Band zusammen. | In der Zukunft übernimmt vielleicht ein Roboter gefährliche Aufgaben.;-
+die Maschine;leicht;In der Fabrik;neu;"Die große Maschine in der Fabrik stanzt präzise Metallteile. | Wenn die Maschine defekt ist, stoppt die gesamte Produktion.""""";die_Maschine.png
+der Roboter;leicht;In der Fabrik;neu;Ein programmierter Roboter baut die Autos am Band zusammen. | In der Zukunft übernimmt vielleicht ein Roboter gefährliche Aufgaben.;der_Roboter.png
 die Werkstatt;mittel;In der Fabrik;neu;In der Autowerkstatt repariert der Mechaniker den defekten Reifen. | Der Schreiner arbeitet konzentriert in seiner holzriechenden Werkstatt.;-
 der Meister;mittel;In der Fabrik;neu;Der erfahrene Meister leitet das Team in der Montagehalle. | Nach vielen Jahren Ausbildung hat er seinen Meisterbrief erhalten.;-
 der Job;mittel;In der Fabrik;neu;Nach dem Studium suchte sie sofort einen gut bezahlten Job. | Neben der Schule hat er einen kleinen Job im Supermarkt.;-
@@ -2476,9 +2476,9 @@ das Konto;schwer;Im Büro;neu;Das Geld wurde direkt auf sein Bankkonto überwies
 das Sparbuch;schwer;Im Büro;neu;Als Kind hat sie ihr Erspartes immer auf ein Sparbuch eingezahlt. | Das alte Sparbuch liegt sicher im Schrank.;-
 arm;schwer;Im Büro;neu;Der arme Mann besaß nach dem Brand fast gar nichts mehr. | In der Geschichte hilft er den armen Menschen in der Stadt.;-
 reich;schwer;Im Büro;neu;"Der erfolgreiche Unternehmer ist durch seine Erfindungen sehr reich geworden. | Nicht Geld macht glücklich, sondern reiche Lebenserfahrung.""""";-
-der Müll;leicht;Rund um das Rathaus;neu;"Nach dem Picknick müssen wir unseren Müll ordentlich entsorgen. | Der Eimer ist voll, wir müssen den Müll rausbringen.""""";-
-das Müllauto;leicht;Rund um das Rathaus;neu;Früh morgens fährt das laute Müllauto durch die schmalen Straßen. | Die Kinder winken immer begeistert dem großen Müllauto zu.;-
-der Müllmann;leicht;Rund um das Rathaus;neu;Der fleißige Müllmann leert die schweren Tonnen in den Wagen. | Bei Wind und Wetter sind die Männer der Müllabfuhr im Einsatz.;-
+der Müll;leicht;Rund um das Rathaus;neu;"Nach dem Picknick müssen wir unseren Müll ordentlich entsorgen. | Der Eimer ist voll, wir müssen den Müll rausbringen.""""";der_Müll.png
+das Müllauto;leicht;Rund um das Rathaus;neu;Früh morgens fährt das laute Müllauto durch die schmalen Straßen. | Die Kinder winken immer begeistert dem großen Müllauto zu.;das_Müllauto.png
+der Müllmann;leicht;Rund um das Rathaus;neu;Der fleißige Müllmann leert die schweren Tonnen in den Wagen. | Bei Wind und Wetter sind die Männer der Müllabfuhr im Einsatz.;der_Müllmann.png
 das Rathaus;mittel;Rund um das Rathaus;neu;Das historische Rathaus steht mitten auf dem Marktplatz. | Für offizielle Dokumente muss man zum Amt ins Rathaus gehen.;-
 der Pfarrer;mittel;Rund um das Rathaus;neu;Der freundliche Pfarrer hält sonntags die Predigt in der Kirche. | Nach dem Gottesdienst redet der Pfarrer mit den Gemeindemitgliedern.;-
 die Müllabfuhr;mittel;Rund um das Rathaus;neu;Dienstags kommt immer pünktlich um sechs Uhr die Müllabfuhr. | Die Mitarbeiter der Müllabfuhr leisten eine schwere Arbeit.;-
@@ -2514,7 +2514,7 @@ das Altpapier;schwer;Rund um das Rathaus;neu;Gesammelte Zeitungen und Kartons ge
 an der Hand gehen;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;"Kleine Kinder sollten an einer befahrenen Straße an der Hand gehen. | Sie liebt es, abends mit ihm an der Hand spazieren zu gehen.""""";-
 über die Straße gehen;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;"Schau nach links und rechts, bevor du über die Straße gehst. | Am Zebrastreifen kann man sicher über die Straße gehen.""""";-
 stehen bleiben;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;Bei Rotlicht musst du mit dem Fahrrad sofort stehen bleiben. | Das Auto musste vor dem Zebrastreifen stehen bleiben.;-
-das Auto;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;Mein Vater fährt jeden Tag mit dem Auto zur Arbeit. | Auf der Straße parkt ein rotes Auto.;-
+das Auto;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;Mein Vater fährt jeden Tag mit dem Auto zur Arbeit. | Auf der Straße parkt ein rotes Auto.;das_Auto.png
 die Ampel;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;"An der großen Kreuzung schaltet die Ampel auf Grün. | Warte an der Ampel, bis das Signal für Fußgänger leuchtet.""""";-
 rot;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;"Die Ampel steht auf rot, also müssen wir jetzt anhalten. | Sie trägt heute eine rote Jacke und rote Schuhe.""""";-
 gelb;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;"Gelb bedeutet an der Ampel, dass man sich auf das Halten vorbereitet. | Die Blume strahlt in einem wunderschönen Gelb.""""";-
@@ -2523,7 +2523,7 @@ warten;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;"Wir müssen an der Halt
 das Fahrrad;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;Er fährt jeden Morgen mit seinem blauen Fahrrad zur Schule. | Das Fahrrad steht sicher angeschlossen vor dem Haus.;-
 schnell;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;Der Hase lief unglaublich schnell über das weite Feld. | Kannst du bitte so schnell wie möglich kommen?;-
 langsam;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;Die Schildkröte bewegt sich sehr langsam durch das Gras. | Bitte fahr hier in der Spielstraße ein bisschen langsamer.;-
-die Pfütze;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;"Nach dem Regen springen die Kinder vergnügt in jede Pfütze. | Pass auf, dass du nicht in die tiefe Pfütze tritts!""""";-
+die Pfütze;leicht;Zu Fuß und mit dem Fahrrad unterwegs;neu;"Nach dem Regen springen die Kinder vergnügt in jede Pfütze. | Pass auf, dass du nicht in die tiefe Pfütze tritts!""""";die_Pfütze.png
 die Fußgängerin;mittel;Zu Fuß und mit dem Fahrrad unterwegs;neu;Die aufmerksame Fußgängerin überquert die Straße an der Ampel. | Ein Auto hielt rechtzeitig für die Fußgängerin an.;-
 das Ampelmännchen;mittel;Zu Fuß und mit dem Fahrrad unterwegs;neu;"Das grüne Ampelmännchen zeigt an, dass der Weg frei ist. | Besonders beliebt ist das Berliner Ampelmännchen mit Hut.""""";-
 der Zebrastreifen;mittel;Zu Fuß und mit dem Fahrrad unterwegs;neu;"Auf dem Zebrastreifen haben Fußgänger immer Vorrang. | Kinder lernen in der Schule, wie man den Zebrastreifen nutzt.""""";-
@@ -2591,11 +2591,11 @@ sich verfahren;schwer;Auf der Straße;neu;In der fremden Stadt hat er sich abend
 der Parkplatz;schwer;Auf der Straße;neu;Vor dem Supermarkt gibt es zum Glück viele freie Parkplätze. | Wir suchen schon seit zehn Minuten nach einem Parkplatz.;-
 das Kopfsteinpflaster;schwer;Auf der Straße;neu;Die historische Altstadt ist komplett mit Kopfsteinpflaster ausgelegt. | Auf dem alten Kopfsteinpflaster holpert das Fahrrad stark.;-
 holprig;schwer;Auf der Straße;neu;Die Fahrt mit dem Wagen über den Weg war ziemlich holprig. | Wegen der Baustelle ist die Straße im Moment sehr holprig.;-
-der Kindersitz;leicht;Rund um das Auto;neu;Für kleine Kinder ist ein geprüfter Kindersitz im Auto Pflicht. | Der neue Kindersitz lässt sich schnell auf dem Rücksitz montieren.;-
+der Kindersitz;leicht;Rund um das Auto;neu;Für kleine Kinder ist ein geprüfter Kindersitz im Auto Pflicht. | Der neue Kindersitz lässt sich schnell auf dem Rücksitz montieren.;der_Kindersitz.png
 anschnallen;leicht;Rund um das Auto;neu;"Bitte vor der Abfahrt alle im Auto den Gurt anschnallen! | Er hat vergessen, sich vor dem Start anzuschnallen.""""";-
 mitfahren;leicht;Rund um das Auto;neu;Darf ich heute Nachmittag bei dir im Auto mitfahren? | Viele Kinder wollen bei dem Schulausflug mitfahren.;-
 der Motor;leicht;Rund um das Auto;neu;Der Motor des Autos springt bei der Kälte schlecht an. | Nach langer Fahrt war der Motor noch heiß.;-
-die Hupe;leicht;Rund um das Auto;neu;Ein kurzer Druck auf die Hupe warnte den unachtsamen Fußgänger. | Die Hupe von diesem alten Wagen klingt sehr lustig.;-
+die Hupe;leicht;Rund um das Auto;neu;Ein kurzer Druck auf die Hupe warnte den unachtsamen Fußgänger. | Die Hupe von diesem alten Wagen klingt sehr lustig.;die_Hupe.png
 blinken;leicht;Rund um das Auto;neu;Du musst vor dem Abbiegen unbedingt rechtzeitig blinken. | Das rote Licht an der Baustelle fängt an zu blinken.;-
 die Fahrerin;mittel;Rund um das Auto;neu;Die erfahrene Fahrerin lenkt den Bus sicher durch den Schnee. | Eine junge Fahrerin hat das Rennen gewonnen.;-
 vorn;mittel;Rund um das Auto;neu;Die Plätze ganz vorn im Bus sind für ältere Menschen reserviert. | Er sitzt im Klassenzimmer immer ganz vorn an der Tafel.;-
@@ -2637,8 +2637,8 @@ der Automechaniker;schwer;Rund um das Auto;neu;Der erfahrene Automechaniker such
 die Fahrschule;schwer;Rund um das Auto;neu;Sie hat sich für die theoretische Prüfung in der Fahrschule angemeldet. | In der Fahrschule lernt man das sichere Fahren im Straßenverkehr.;-
 der Führerschein;schwer;Rund um das Auto;neu;Endlich hat sie die Prüfung bestanden und ihren Führerschein erhalten. | Ohne einen gültigen Führerschein darf man kein Auto lenken.;-
 die Eisenbahn;leicht;Auf der Schiene;neu;Früher reisten die Menschen meistens mit der historischen Eisenbahn. | Die Modell-Eisenbahn im Kinderzimmer fährt auf kleinen Schienen.;-
-der Zug;leicht;Auf der Schiene;neu;Der schnelle Personenzug fährt pünktlich in den Bahnhof ein. | Wir haben unseren Zug wegen Verspätung leider verpasst.;-
-der Bahnhof;leicht;Auf der Schiene;neu;Am großen Bahnhof treffen sich täglich Tausende von Reisenden. | Vor dem Bahnhof stehen viele Taxis bereit.;-
+der Zug;leicht;Auf der Schiene;neu;Der schnelle Personenzug fährt pünktlich in den Bahnhof ein. | Wir haben unseren Zug wegen Verspätung leider verpasst.;der_Zug.png
+der Bahnhof;leicht;Auf der Schiene;neu;Am großen Bahnhof treffen sich täglich Tausende von Reisenden. | Vor dem Bahnhof stehen viele Taxis bereit.;der_Bahnhof.png
 die Schiene;leicht;Auf der Schiene;neu;Die schweren Metallschiene leiten den Zug sicher über das Gleis. | Auf der Schiene rollt der Nahverkehr leise voran.;-
 die Straßenbahn;leicht;Auf der Schiene;neu;Die rote Straßenbahn fährt mitten durch die Fußgängerzone. | An der Haltestelle steigen viele Leute in die Straßenbahn ein.;-
 halten;leicht;Auf der Schiene;neu;"Der Bus wird gleich an der roten Ampel anhalten müssen. | Du kannst hier kurz anhalten, um den Brief einzuwerfen.""""";-
@@ -2686,11 +2686,11 @@ kontrollieren;schwer;Auf der Schiene;neu;Der Polizist will die Papiere des Fahre
 der Lokführer;schwer;Auf der Schiene;neu;Der erfahrene Lokführer steuert den schweren Zug sicher ans Ziel. | Im Führerstand sitzt konzentriert der Lokführer.;-
 der Zugführer;schwer;Auf der Schiene;neu;Der Zugführer trägt die Verantwortung für die gesamte Fahrt. | Er arbeitet seit vielen Jahren als verantwortlicher Zugführer.;-
 nah;schwer;Auf der Schiene;neu;Das Ziel unserer heutigen Wanderung ist schon ganz nah. | Sie wohnt ganz nah an der großen Schule.;-
-das Boot;leicht;Schiffe und Seefahrt;neu;Die Kinder rudern mit einem kleinen Holzboot über den See. | Das bunte Boot schaukelt sanft auf den Wellen des Wassers.;-
-das Schiff;leicht;Schiffe und Seefahrt;neu;Ein großes Kreuzfahrtschiff fuhr majestätisch aus dem Hafen. | Auf dem Frachtschiff werden Tausende von Containern transportiert.;-
+das Boot;leicht;Schiffe und Seefahrt;neu;Die Kinder rudern mit einem kleinen Holzboot über den See. | Das bunte Boot schaukelt sanft auf den Wellen des Wassers.;das_Boot.png
+das Schiff;leicht;Schiffe und Seefahrt;neu;Ein großes Kreuzfahrtschiff fuhr majestätisch aus dem Hafen. | Auf dem Frachtschiff werden Tausende von Containern transportiert.;das_Schiff.png
 der Dampfer;leicht;Schiffe und Seefahrt;neu;Der alte Schaufelraddampfer bringt Touristen den Fluss hinauf. | Früher fuhren die Menschen mit einem großen Dampfer über den Ozean.;-
-der Hafen;leicht;Schiffe und Seefahrt;neu;Im belebten Hafen liegen viele Fischerboote und Jachten vor Anker. | Die riesigen Kräne im Hafen laden die Container aus.;-
-der Kapitän;leicht;Schiffe und Seefahrt;neu;Der erfahrene Kapitän steht auf der Brücke des großen Schiffes. | Alle Passagiere begrüßten freundlich den Kapitän.;-
+der Hafen;leicht;Schiffe und Seefahrt;neu;Im belebten Hafen liegen viele Fischerboote und Jachten vor Anker. | Die riesigen Kräne im Hafen laden die Container aus.;der_Hafen.png
+der Kapitän;leicht;Schiffe und Seefahrt;neu;Der erfahrene Kapitän steht auf der Brücke des großen Schiffes. | Alle Passagiere begrüßten freundlich den Kapitän.;der_Kapitän.png
 das Segelboot;mittel;Schiffe und Seefahrt;neu;"Bei gutem Wind gleitet das weiße Segelboot über den See. | Er liebt es, bei Sonnenschein mit dem Segelboot zu fahren.""""";-
 die Fähre;mittel;Schiffe und Seefahrt;neu;Die große Autofähre bringt die Urlauber sicher über das Meer. | Wir müssen auf die nächste Fähre zur Insel warten.;-
 das Ruderboot;mittel;Schiffe und Seefahrt;neu;Mit einem leichten Ruderboot erkundeten sie die kleine Bucht. | Sie spannten die Muskeln an und schoben das Ruderboot ins Wasser.;-
@@ -2736,10 +2736,10 @@ sinken;schwer;Schiffe und Seefahrt;neu;"Nach dem Zusammenstoß begann das besch�
 der Seemann;schwer;Schiffe und Seefahrt;neu;Der erfahrene Seemann erzählte spannende Geschichten von hoher See. | Ein guter Seemann verliert auch im Sturm nicht den Mut.;-
 der Lotse;schwer;Schiffe und Seefahrt;neu;"Der erfahrene Lotse kam an Bord, um das Schiff sicher in den Hafen zu steuern. | Ohne den Lotsen wäre die Einfahrt in das enge Gewässer zu riskant.""""";-
 die Boje;schwer;Schiffe und Seefahrt;neu;Eine gelbe Boje markiert die Grenze für den Schwimmbereich. | Das Boot fuhr knapp an der schwimmenden Boje vorbei.;-
-die Luft;leicht;Flugzeuge und Flugverkehr;neu;Auf dem Berggipfel ist die Luft besonders klar und frisch. | Nach dem Regen roch die Luft herrlich nach nasser Erde.;-
-das Flugzeug;leicht;Flugzeuge und Flugverkehr;neu;Am Himmel zog ein weißes Flugzeug seine kondensierten Spuren. | Sie stieg mit großer Aufregung in das große Flugzeug ein.;-
-die Pilotin;leicht;Flugzeuge und Flugverkehr;neu;Die erfahrene Pilotin begrüßte alle Gäste herzlich über das Mikrofon. | Als Pilotin trägt sie eine große Verantwortung für die Crew.;-
-der Hubschrauber;mittel;Flugzeuge und Flugverkehr;neu;Der laute Hubschrauber kreiste über dem Unfallort am Waldrand. | Der Rettungshubschrauber landete direkt neben der Straße.;-
+die Luft;leicht;Flugzeuge und Flugverkehr;neu;Auf dem Berggipfel ist die Luft besonders klar und frisch. | Nach dem Regen roch die Luft herrlich nach nasser Erde.;die_Luft.png
+das Flugzeug;leicht;Flugzeuge und Flugverkehr;neu;Am Himmel zog ein weißes Flugzeug seine kondensierten Spuren. | Sie stieg mit großer Aufregung in das große Flugzeug ein.;das_Flugzeug.png
+die Pilotin;leicht;Flugzeuge und Flugverkehr;neu;Die erfahrene Pilotin begrüßte alle Gäste herzlich über das Mikrofon. | Als Pilotin trägt sie eine große Verantwortung für die Crew.;die_Pilotin.png
+der Hubschrauber;mittel;Flugzeuge und Flugverkehr;neu;Der laute Hubschrauber kreiste über dem Unfallort am Waldrand. | Der Rettungshubschrauber landete direkt neben der Straße.;der_Hubschrauber.png
 der Ballon;mittel;Flugzeuge und Flugverkehr;neu;Ein bunter Ballon stieg langsam in den blauen Himmel auf. | Die Kinder ließen einen mit Helium gefüllten Ballon los.;-
 der Flughafen;mittel;Flugzeuge und Flugverkehr;neu;Am großen internationalen Flughafen herrscht Tag und Nacht Betrieb. | Wir müssen mindestens zwei Stunden vor Abflug am Flughafen sein.;-
 starten;mittel;Flugzeuge und Flugverkehr;neu;Das Passagierflugzeug wird auf der Piste gleich starten. | Der Hubschrauber kann senkrecht in die Höhe starten.;-
@@ -2776,7 +2776,7 @@ bringen;leicht;Große Lasten transportieren;neu;Kannst du mir bitte einen Becher
 holen;leicht;Große Lasten transportieren;neu;"Er ging in den Keller, um eine Flasche Wasser zu holen. | Kannst du bitte die Kinder von der Schule abholen?""""";-
 der Laster;leicht;Große Lasten transportieren;neu;Ein schwerer Laster blockierte kurzzeitig die schmale Straße. | Die Kisten wurden auf die Ladefläche vom Laster gehoben.;-
 der Sack;leicht;Große Lasten transportieren;neu;Der Bauer trug einen schweren Sack voller Kartoffeln in die Scheune. | Sie füllte die Gartenabfälle in einen großen Sack.;-
-die Kiste;leicht;Große Lasten transportieren;neu;Die schwere Holzkiste wurde mit stabilen Nägeln verschlossen. | In der alten Kiste auf dem Dachboden lagen alte Briefe.;-
+die Kiste;leicht;Große Lasten transportieren;neu;Die schwere Holzkiste wurde mit stabilen Nägeln verschlossen. | In der alten Kiste auf dem Dachboden lagen alte Briefe.;die_Kiste.png
 heben;leicht;Große Lasten transportieren;neu;"Er musste all seine Kraft aufwenden, um den Stein zu heben. | Bitte hilf mir mal kurz, diesen schweren Tisch zu heben.""""";-
 stapeln;leicht;Große Lasten transportieren;neu;"Die Kartons wurden ordentlich im Lagerraum übereinander gestapelt. | Kinder lieben es, bunte Bauklötze hoch zu stapeln.""""";-
 schwer;leicht;Große Lasten transportieren;neu;"Diese Kiste ist zu schwer, als dass du sie alleine tragen könntest. | Die Prüfung am Ende des Semesters war wirklich sehr schwer.""""";-
@@ -2810,26 +2810,26 @@ umkippen;schwer;Große Lasten transportieren;neu;"Pass auf, dass das volle Glas 
 abladen;schwer;Große Lasten transportieren;neu;Die Helfer begannen sofort nach der Ankunft mit dem Abladen. | Sie müssen die Kisten an der Rampe wieder abladen.;-
 abliefern;schwer;Große Lasten transportieren;neu;Der Postbote soll das Paket direkt beim Empfänger abliefern. | Er musste die Dokumente fristgerecht im Büro abliefern.;-
 der Zoll;schwer;Große Lasten transportieren;neu;Am Flughafen wurden unsere Taschen vom Zoll kontrolliert. | Für manche importierten Waren muss man extra Zoll bezahlen.;-
-der Himmel;leicht;Wie ist das Wetter heute?;neu;Heute zeigt sich der Himmel über der Stadt wolkenlos und blau. | Am Abend verfärbte sich der Himmel rot und orange.;-
-die Sonne;leicht;Wie ist das Wetter heute?;neu;Die warme Sonne wärmt an diesem Frühlingsnachmittag das Gesicht. | Bei strahlendem Sonnenschein machten sie einen langen Spaziergang.;-
+der Himmel;leicht;Wie ist das Wetter heute?;neu;Heute zeigt sich der Himmel über der Stadt wolkenlos und blau. | Am Abend verfärbte sich der Himmel rot und orange.;der_Himmel.png
+die Sonne;leicht;Wie ist das Wetter heute?;neu;Die warme Sonne wärmt an diesem Frühlingsnachmittag das Gesicht. | Bei strahlendem Sonnenschein machten sie einen langen Spaziergang.;die_Sonne.png
 scheinen;leicht;Wie ist das Wetter heute?;neu;Die helle Sonne scheint heute unermüdlich vom blauen Himmel. | Der Mond schien in der Nacht hell durch das Fenster.;-
-die Wolke;leicht;Wie ist das Wetter heute?;neu;Eine dunkle Wolke kündigte ein herannahendes Gewitter an. | Weiße Wolken zogen langsam über das offene Meer hinweg.;-
+die Wolke;leicht;Wie ist das Wetter heute?;neu;Eine dunkle Wolke kündigte ein herannahendes Gewitter an. | Weiße Wolken zogen langsam über das offene Meer hinweg.;die_Wolke.png
 der Regen;leicht;Wie ist das Wetter heute?;neu;Der anhaltende Regen verwandelte den Feldweg in Schlamm. | Sie suchten Schutz vor dem plötzlichen Regen unter einem Dach.;-
 regnen;leicht;Wie ist das Wetter heute?;neu;"Es fing plötzlich an zu regnen, als wir spazieren waren. | Wenn es morgen weiter regnet, fällt der Ausflug ins Wasser.""""";-
-der Blitz;leicht;Wie ist das Wetter heute?;neu;Ein heller Blitz zuckte kurz darauf über den dunklen Nachthimmel. | Der Blitz schlug in der Ferne in einen großen Baum ein.;-
+der Blitz;leicht;Wie ist das Wetter heute?;neu;Ein heller Blitz zuckte kurz darauf über den dunklen Nachthimmel. | Der Blitz schlug in der Ferne in einen großen Baum ein.;der_Blitz.png
 der Donner;leicht;Wie ist das Wetter heute?;neu;Nach dem hellen Blitz folgte ein lauter Donner. | Man hörte ein dumpfes Grollen und Donner in der Ferne.;-
-der Schnee;leicht;Wie ist das Wetter heute?;neu;"Die Kinder spielten vergnügt im tiefen, weißen Schnee. | Der frische Schnee glitzerte wunderschön im Morgenlicht.""""";-
+der Schnee;leicht;Wie ist das Wetter heute?;neu;"Die Kinder spielten vergnügt im tiefen, weißen Schnee. | Der frische Schnee glitzerte wunderschön im Morgenlicht.""""";der_Schnee.png
 schneien;leicht;Wie ist das Wetter heute?;neu;Es hat die ganze Nacht ununterbrochen angefangen zu schneien. | Morgen wird es bestimmt im ganzen Tal kräftig schneien.;-
 der Wind;leicht;Wie ist das Wetter heute?;neu;Ein starker Wind wehte uns heute kräftig ins Gesicht. | Die Blätter wurden vom Wind über die Straße getrieben.;-
 blasen;leicht;Wie ist das Wetter heute?;neu;"Der kalte Nordwind bläst heute sehr ungemütlich durch die Gassen. | Er musste kräftig in die Kerze blasen, um sie zu löschen.""""";-
-der Regenbogen;mittel;Wie ist das Wetter heute?;neu;Nach dem Sommergewitter leuchtete ein bunter Regenbogen am Himmel. | Kinder staunen immer wieder über die Farben vom Regenbogen.;-
+der Regenbogen;mittel;Wie ist das Wetter heute?;neu;Nach dem Sommergewitter leuchtete ein bunter Regenbogen am Himmel. | Kinder staunen immer wieder über die Farben vom Regenbogen.;der_Regenbogen.png
 der Regentropfen;mittel;Wie ist das Wetter heute?;neu;Ein dicker Regentropfen landete direkt auf ihrer Nasenspitze. | Viele kleine Regentropfen prasseln laut an die Fensterscheibe.;-
 der Hagel;mittel;Wie ist das Wetter heute?;neu;Plötzlich ging ein heftiger Hagel nieder und beschädigte Autos. | Die kleinen Hagelkörner blieben kurz auf dem Rasen liegen.;-
 hageln;mittel;Wie ist das Wetter heute?;neu;"Es fing an zu hageln, weshalb wir schnell Unterschlupf suchten. | Bei dem starken Gewitter kann es heute Nachmittag hageln.""""";-
 der Nebel;mittel;Wie ist das Wetter heute?;neu;Dicker Nebel zog am frühen Morgen über das Flussufer. | Wegen dem dichten Nebel konnte man die Straße kaum sehen.;-
 blitzen;mittel;Wie ist das Wetter heute?;neu;Es fing am Horizont an zu blitzen und zu donnern. | Man sah es in der Ferne unheimlich blitzen.;-
 donnern;mittel;Wie ist das Wetter heute?;neu;Nach jedem hellen Blitz war ein lautes Donnern zu hören. | Der Sturm fing an zu toben und es begann zu donnern.;-
-das Gewitter;mittel;Wie ist das Wetter heute?;neu;Ein schweres Gewitter zog mit Blitz und Donner über das Land. | Wir blieben während des Gewitters sicher im Haus.;-
+das Gewitter;mittel;Wie ist das Wetter heute?;neu;Ein schweres Gewitter zog mit Blitz und Donner über das Land. | Wir blieben während des Gewitters sicher im Haus.;das_Gewitter.png
 die Schneeflocke;mittel;Wie ist das Wetter heute?;neu;Jede einzelne Schneeflocke tanzte sanft im kalten Wind. | Eine große Schneeflocke landete auf ihrem warmen Wollmantel.;-
 zufrieren;mittel;Wie ist das Wetter heute?;neu;"Der kleine See war im strengen Winter komplett zugefroren. | Pass auf, dass die Rohre bei starkem Frost nicht zufrieren.""""";-
 der Eiszapfen;mittel;Wie ist das Wetter heute?;neu;"An der Dachkante hingen lange, spitze Eiszapfen herab. | Die Kinder brachen vorsichtig einen Eiszapfen von der Mauer ab.""""";-
@@ -2890,12 +2890,12 @@ der Orkan;schwer;Der Wetterbericht;neu;Ein schwerer Orkan fegte über das Land u
 der Wirbelsturm;schwer;Der Wetterbericht;neu;Der tropische Wirbelsturm richtete schwere Schäden an der Küste an. | In den Nachrichten sah man Bilder von dem zerstörerischen Wirbelsturm.;-
 der Sturmschaden;schwer;Der Wetterbericht;neu;"Die Feuerwehr war im Dauereinsatz, um Sturmschäden zu beseitigen. | Nach dem Sturm wurden im Wald viele Sturmschäden gezählt.""""";-
 das Jahr;leicht;Die Jahreszeiten;neu;Ein ganzes Jahr hat genau zwölf Monate und 365 Tage. | Im letzten Jahr sind sie in eine neue Wohnung gezogen.;-
-der Frühling;leicht;Die Jahreszeiten;neu;Im Frühling erwacht die Natur nach dem kalten Winter zu neuem Leben. | Die ersten warmen Tage im Frühling tun einfach gut.;-
-der Sommer;leicht;Die Jahreszeiten;neu;Im Sommer verbringen viele Menschen ihren Urlaub am Meer. | Lange Tage und warmer Sonnenschein zeichnen den Sommer aus.;-
+der Frühling;leicht;Die Jahreszeiten;neu;Im Frühling erwacht die Natur nach dem kalten Winter zu neuem Leben. | Die ersten warmen Tage im Frühling tun einfach gut.;der_Frühling.png
+der Sommer;leicht;Die Jahreszeiten;neu;Im Sommer verbringen viele Menschen ihren Urlaub am Meer. | Lange Tage und warmer Sonnenschein zeichnen den Sommer aus.;der_Sommer.png
 baden gehen;leicht;Die Jahreszeiten;neu;Bei diesen Temperaturen wollen die Kinder unbedingt baden gehen. | Wir packen die Badesachen ein und gehen am See baden.;-
-der Herbst;leicht;Die Jahreszeiten;neu;Im Herbst färben sich die Blätter an den Bäumen bunt. | Der goldene Herbst bietet oft noch wunderschöne Sonnentage.;-
+der Herbst;leicht;Die Jahreszeiten;neu;Im Herbst färben sich die Blätter an den Bäumen bunt. | Der goldene Herbst bietet oft noch wunderschöne Sonnentage.;der_Herbst.png
 der Winter;leicht;Die Jahreszeiten;neu;"Der Winter bringt oft Schnee, Eis und eisige Temperaturen. | Im Winter trinken wir abends gerne heißen Tee.""""";-
-Schlitten fahren;leicht;Die Jahreszeiten;neu;Nach dem ersten Schneefall gingen die Kinder Schlitten fahren. | Auf dem großen Hügel kann man wunderbar Schlitten fahren.;-
+Schlitten fahren;leicht;Die Jahreszeiten;neu;Nach dem ersten Schneefall gingen die Kinder Schlitten fahren. | Auf dem großen Hügel kann man wunderbar Schlitten fahren.;Schlitten_fahren.png
 wärmer werden;mittel;Die Jahreszeiten;neu;"Ab April fangen die Tage an, deutlich wärmer zu werden. | Wenn die Sonne herauskommt, wird es draußen sofort wärmer.""""";-
 die Bäume blühen;mittel;Die Jahreszeiten;neu;"Im Frühling sieht man überall, wie die Bäume blühen. | Wenn die Bäume blühen, riecht es herrlich in der Luft.""""";-
 Blumen pflücken;mittel;Die Jahreszeiten;neu;"Die Kinder liefen über die Wiese, um Blumen zu pflücken. | Man sollte in diesem geschützten Naturschutzgebiet keine Blumen pflücken.""""";-
@@ -2907,7 +2907,7 @@ Kastanien sammeln;mittel;Die Jahreszeiten;neu;Im Oktober gehen wir im Wald spazi
 rodeln;mittel;Die Jahreszeiten;neu;"Bei viel Schnee gehen die Kinder am Hang sofort rodeln. | Im Winter macht es großen Spaß, mit dem Schlitten zu rodeln.""""";-
 Schlittschuh laufen;mittel;Die Jahreszeiten;neu;"Auf dem zugefrorenen Teich kann man wunderbar Schlittschuh laufen. | Sie hat gelernt, wie man elegant Schlittschuh laufen kann.""""";-
 schlittern;mittel;Die Jahreszeiten;neu;"Kinder lieben es, auf dem gefrorenen Schulhof zu schlittern. | Pass auf, dass du auf dem glatten Eis nicht ausrutschst und anfängst zu schlittern.""""";-
-der Schneemann;mittel;Die Jahreszeiten;neu;Im Garten haben die Kinder einen großen Schneemann gebaut. | Der Schneemann hat eine Karotte als Nase bekommen.;-
+der Schneemann;mittel;Die Jahreszeiten;neu;Im Garten haben die Kinder einen großen Schneemann gebaut. | Der Schneemann hat eine Karotte als Nase bekommen.;der_Schneemann.png
 Schneeball werfen;mittel;Die Jahreszeiten;neu;"Es macht ihnen Spaß, sich gegenseitig Schneeball werfen zu duellieren. | Beim Schneeball werfen sollte man natürlich niemanden im Gesicht treffen.""""";-
 wieder;mittel;Die Jahreszeiten;neu;Endlich scheint nach dem langen Regen wieder die Sonne. | Wirst du mich morgen wieder besuchen kommen?;-
 der Kalender;schwer;Die Jahreszeiten;neu;An der Wand hängt ein bunter Kalender mit Monatsbildern. | Ich muss einen Termin für nächste Woche im Kalender eintragen.;-
@@ -2926,10 +2926,10 @@ der Oktober;schwer;Die Jahreszeiten;neu;Im Oktober färben sich die Blätter an 
 der November;schwer;Die Jahreszeiten;neu;Der November ist oft ein nebliger und eher grauer Monat. | Im November gedenken viele Menschen auf den Friedhöfen.;-
 der Dezember;schwer;Die Jahreszeiten;neu;Im Dezember feiern wir im Kreis der Familie Weihnachten. | Der Dezember ist der letzte Monat des Jahres.;-
 der Tag;leicht;Die Zeit;neu;Ein ganzer Tag hat genau vierundzwanzig Stunden. | Sie hat den ganzen Tag hart an ihrem Projekt gearbeitet.;-
-die Nacht;leicht;Die Zeit;neu;In der Nacht schlafen die meisten Menschen tief und fest. | Der Vollmond leuchtet hell in der dunklen Nacht.;-
-der Morgen;leicht;Die Zeit;neu;Am frühen Morgen trinke ich gerne eine Tasse Kaffee. | Der frische Morgen kündigte einen schönen Sonnentag an.;-
-der Mittag;leicht;Die Zeit;neu;Um genau zwölf Uhr mittags machen wir eine kurze Pause. | Die Sonne steht am Mittag am höchsten am Himmel.;-
-der Abend;leicht;Die Zeit;neu;Am Abend entspannen sie sich gerne bei einem guten Buch. | Wir trafen uns gestern Abend mit Freunden im Restaurant.;-
+die Nacht;leicht;Die Zeit;neu;In der Nacht schlafen die meisten Menschen tief und fest. | Der Vollmond leuchtet hell in der dunklen Nacht.;die_Nacht.png
+der Morgen;leicht;Die Zeit;neu;Am frühen Morgen trinke ich gerne eine Tasse Kaffee. | Der frische Morgen kündigte einen schönen Sonnentag an.;der_Morgen.png
+der Mittag;leicht;Die Zeit;neu;Um genau zwölf Uhr mittags machen wir eine kurze Pause. | Die Sonne steht am Mittag am höchsten am Himmel.;der_Mittag.png
+der Abend;leicht;Die Zeit;neu;Am Abend entspannen sie sich gerne bei einem guten Buch. | Wir trafen uns gestern Abend mit Freunden im Restaurant.;der_Abend.png
 früh;leicht;Die Zeit;neu;Er steht jeden Tag sehr früh am Morgen auf. | Sie kam heute viel zu früh zum vereinbarten Treffpunkt.;-
 spät;leicht;Die Zeit;neu;"Es ist schon sehr spät, wir sollten jetzt nach Hause gehen. | Er kam gestern Abend erst sehr spät von der Arbeit zurück.""""";-
 dann;leicht;Die Zeit;neu;"Wir gehen erst einkaufen und kochen dann das Abendessen. | Wenn du Zeit hast, kannst du dann gerne vorbeikommen.""""";-
@@ -3009,15 +3009,15 @@ die Regierung;schwer;In einem anderen Land;neu;Die Regierung hat neue Gesetze zu
 der Staat;schwer;In einem anderen Land;neu;Der Staat unterstützt Familien mit verschiedenen Förderungen. | Jedes Kind hat ein Recht auf Bildung im Staat.;-
 der Krieg;schwer;In einem anderen Land;neu;Ein Krieg bringt unendliches Leid über die betroffene Bevölkerung. | Historiker erforschen die Ursachen für diesen schrecklichen Krieg.;-
 der Frieden;schwer;In einem anderen Land;neu;Die Menschen auf der ganzen Welt sehnen sich nach Frieden. | Nach langen Verhandlungen wurde endlich der Frieden gesichert.;-
-der Mond;leicht;Die Erde und das Weltall;neu;In der klaren Nacht leuchtet der Mond hell am Himmel. | Der Mond umkreist als treuer Begleiter unsere Erde.;-
-der Stern;leicht;Die Erde und das Weltall;neu;Ein einzelner Stern funkelte einsam am dunklen Nachthimmel. | Astronomen erforschen ferne Galaxien und jeden einzelnen Stern.;-
+der Mond;leicht;Die Erde und das Weltall;neu;In der klaren Nacht leuchtet der Mond hell am Himmel. | Der Mond umkreist als treuer Begleiter unsere Erde.;der_Mond.png
+der Stern;leicht;Die Erde und das Weltall;neu;Ein einzelner Stern funkelte einsam am dunklen Nachthimmel. | Astronomen erforschen ferne Galaxien und jeden einzelnen Stern.;der_Stern.png
 das Weltall;mittel;Die Erde und das Weltall;neu;Das weite Weltall birgt noch viele ungelöste Geheimnisse. | Raketen fliegen mit hoher Geschwindigkeit hinaus ins Weltall.;-
 der Planet;mittel;Die Erde und das Weltall;neu;"Die Erde ist der Planet, auf dem wir alle leben. | Jupiter ist der größte Planet in unserem Sonnensystem.""""";-
 die Kugel;mittel;Die Erde und das Weltall;neu;Die Erde hat fast die Form einer perfekten Kugel. | Aus dem Teig formte sie kleine Kugeln zum Backen.;-
 der Vollmond;mittel;Die Erde und das Weltall;neu;Bei Vollmond schlafen manche Menschen angeblich sehr unruhig. | Der Vollmond war in dieser Nacht besonders gut zu sehen.;-
 der Weltraum;mittel;Die Erde und das Weltall;neu;Wissenschaftler senden Sonden tief in den Weltraum. | Die Reise in den Weltraum erfordert modernste Technik.;-
 das Raumschiff;mittel;Die Erde und das Weltall;neu;Das Raumschiff landete sicher auf der Oberfläche des Mars. | Die Besatzung des Raumschiffs bereitete sich auf den Start vor.;-
-die Rakete;mittel;Die Erde und das Weltall;neu;Mit lautem Getöse hob die schwere Rakete ab. | Die Trägerrakete brachte den Satelliten in die Umlaufbahn.;-
+die Rakete;mittel;Die Erde und das Weltall;neu;Mit lautem Getöse hob die schwere Rakete ab. | Die Trägerrakete brachte den Satelliten in die Umlaufbahn.;die_Rakete.png
 der Norden;mittel;Die Erde und das Weltall;neu;Im Winter zieht es viele Vögel aus dem Norden in den Süden. | Unser Kompass zeigt in Richtung Norden.;-
 der Süden;mittel;Die Erde und das Weltall;neu;Sie verbringen ihren Urlaub am liebsten im sonnigen Süden. | Aus dem Süden wehte eine angenehm warme Brise.;-
 der Westen;mittel;Die Erde und das Weltall;neu;Die Sonne geht jeden Abend im Westen unter. | Unser Haus liegt an einer ruhigen Straße im Westen der Stadt.;-
@@ -3347,10 +3347,10 @@ der Kunde;leicht;A1;neu;Der Kunde ist heute wichtig. | Der Kunde spielt im Allta
 der Dank;leicht;A1;neu;Der Dank ist heute wichtig. | Der Dank spielt im Alltag eine Rolle.;-
 die Antwort;leicht;A1;neu;Die Antwort ist heute wichtig. | Die Antwort spielt im Alltag eine Rolle.;-
 die Hilfe;leicht;A1;neu;Die Hilfe ist heute wichtig. | Die Hilfe spielt im Alltag eine Rolle.;-
-die Mitte;leicht;A1;neu;Die Mitte ist heute wichtig. | Die Mitte spielt im Alltag eine Rolle.;-
+die Mitte;leicht;A1;neu;Die Mitte ist heute wichtig. | Die Mitte spielt im Alltag eine Rolle.;die_Mitte.png
 die Aussage;leicht;A1;neu;Die Aussage ist heute wichtig. | Die Aussage spielt im Alltag eine Rolle.;-
 der Jugendliche;leicht;A1;neu;Der Jugendliche ist heute wichtig. | Der Jugendliche spielt im Alltag eine Rolle.;-
-das Essen;leicht;A1;neu;Das Essen ist heute wichtig. | Das Essen spielt im Alltag eine Rolle.;-
+das Essen;leicht;A1;neu;Das Essen ist heute wichtig. | Das Essen spielt im Alltag eine Rolle.;das_Essen.png
 der Plan;leicht;A1;neu;Der Plan ist heute wichtig. | Der Plan spielt im Alltag eine Rolle.;-
 der Schluss;leicht;A1;neu;Der Schluss ist heute wichtig. | Der Schluss spielt im Alltag eine Rolle.;-
 die Nummer;leicht;A1;neu;Die Nummer sind heute wichtig. | Die Nummer spielen im Alltag eine Rolle.;-
@@ -3363,7 +3363,7 @@ die Karte;leicht;A1;neu;Die Karte ist heute wichtig. | Die Karte spielt im Allta
 die Prüfung;leicht;A1;neu;Die Prüfung ist heute wichtig. | Die Prüfung spielt im Alltag eine Rolle.;-
 die Bitte;leicht;A1;neu;Die Bitte ist heute wichtig. | Die Bitte spielt im Alltag eine Rolle.;-
 die Dame;leicht;A1;neu;Die Dame ist heute wichtig. | Die Dame spielt im Alltag eine Rolle.;-
-die Bahn;leicht;A1;neu;Die Bahn ist heute wichtig. | Die Bahn spielt im Alltag eine Rolle.;-
+die Bahn;leicht;A1;neu;Die Bahn ist heute wichtig. | Die Bahn spielt im Alltag eine Rolle.;die_Bahn.png
 der Nachmittag;leicht;A1;neu;Der Nachmittag ist heute wichtig. | Der Nachmittag spielt im Alltag eine Rolle.;-
 die Führung;leicht;A1;neu;Die Führung ist heute wichtig. | Die Führung spielt im Alltag eine Rolle.;-
 der Wein;leicht;A1;neu;Der Wein ist heute wichtig. | Der Wein spielt im Alltag eine Rolle.;-
@@ -3396,7 +3396,7 @@ das Hobby;leicht;A1;neu;Das Hobby ist heute wichtig. | Das Hobby spielt im Allta
 der Ausländer;leicht;A1;neu;Der Ausländer ist heute wichtig. | Der Ausländer spielt im Alltag eine Rolle.;-
 das Lebensmittel;leicht;A1;neu;Das Lebensmittel ist heute wichtig. | Das Lebensmittel spielt im Alltag eine Rolle.;-
 das Viertel;leicht;A1;neu;Das Viertel ist heute wichtig. | Das Viertel spielt im Alltag eine Rolle.;-
-die Zigarette;leicht;A1;neu;Die Zigarette ist heute wichtig. | Die Zigarette spielt im Alltag eine Rolle.;-
+die Zigarette;leicht;A1;neu;Die Zigarette ist heute wichtig. | Die Zigarette spielt im Alltag eine Rolle.;die_Zigarette.png
 die Verkäuferin;leicht;A1;neu;Die Verkäuferin ist heute wichtig. | Die Verkäuferin spielt im Alltag eine Rolle.;-
 der Verwandte;leicht;A1;neu;Der Verwandte ist heute wichtig. | Der Verwandte spielt im Alltag eine Rolle.;-
 der Eingang;leicht;A1;neu;Der Eingang ist heute wichtig. | Der Eingang spielt im Alltag eine Rolle.;-
@@ -3406,7 +3406,7 @@ der Empfänger;leicht;A1;neu;Der Empfänger ist heute wichtig. | Der Empfänger 
 der Hunger;leicht;A1;neu;Der Hunger ist heute wichtig. | Der Hunger spielt im Alltag eine Rolle.;-
 das Wiedersehen;leicht;A1;neu;Das Wiedersehen ist heute wichtig. | Das Wiedersehen spielt im Alltag eine Rolle.;-
 das Geschwister;leicht;A1;neu;Das Geschwister ist heute wichtig. | Das Geschwister spielt im Alltag eine Rolle.;-
-das Möbel;leicht;A1;neu;Das Möbel ist heute wichtig. | Das Möbel spielt im Alltag eine Rolle.;-
+das Möbel;leicht;A1;neu;Das Möbel ist heute wichtig. | Das Möbel spielt im Alltag eine Rolle.;das_Möbel.png
 die Einladung;leicht;A1;neu;Die Einladung ist heute wichtig. | Die Einladung spielt im Alltag eine Rolle.;-
 die Vorsicht;leicht;A1;neu;Die Vorsicht ist heute wichtig. | Die Vorsicht spielt im Alltag eine Rolle.;-
 das Praktikum;leicht;A1;neu;Das Praktikum ist heute wichtig. | Das Praktikum spielt im Alltag eine Rolle.;-
@@ -3414,11 +3414,11 @@ die Unterschrift;leicht;A1;neu;Die Unterschrift ist heute wichtig. | Die Untersc
 der Vermieter;leicht;A1;neu;Der Vermieter ist heute wichtig. | Der Vermieter spielt im Alltag eine Rolle.;-
 der Vormittag;leicht;A1;neu;Der Vormittag ist heute wichtig. | Der Vormittag spielt im Alltag eine Rolle.;-
 der Europäer;leicht;A1;neu;Der Europäer ist heute wichtig. | Der Europäer spielt im Alltag eine Rolle.;-
-das Ticket;leicht;A1;neu;Das Ticket ist heute wichtig. | Das Ticket spielt im Alltag eine Rolle.;-
+das Ticket;leicht;A1;neu;Das Ticket ist heute wichtig. | Das Ticket spielt im Alltag eine Rolle.;das_Ticket.png
 die Reparatur;leicht;A1;neu;Die Reparatur ist heute wichtig. | Die Reparatur spielt im Alltag eine Rolle.;-
 der Ausweis;leicht;A1;neu;Der Ausweis ist heute wichtig. | Der Ausweis spielt im Alltag eine Rolle.;-
-die Speisekarte;leicht;A1;neu;Die Speisekarte ist heute wichtig. | Die Speisekarte spielt im Alltag eine Rolle.;-
-der Anruf;leicht;A1;neu;Der Anruf ist heute wichtig. | Der Anruf spielt im Alltag eine Rolle.;-
+die Speisekarte;leicht;A1;neu;Die Speisekarte ist heute wichtig. | Die Speisekarte spielt im Alltag eine Rolle.;die_Speisekarte.png
+der Anruf;leicht;A1;neu;Der Anruf ist heute wichtig. | Der Anruf spielt im Alltag eine Rolle.;der_Anruf.png
 die Achtung;leicht;A1;neu;Die Achtung ist heute wichtig. | Die Achtung spielt im Alltag eine Rolle.;-
 der Absender;leicht;A1;neu;Der Absender ist heute wichtig. | Der Absender spielt im Alltag eine Rolle.;-
 die Hausaufgabe;leicht;A1;neu;Die Hausaufgabe ist heute wichtig. | Die Hausaufgabe spielt im Alltag eine Rolle.;-
@@ -3442,7 +3442,7 @@ der Schalter;leicht;A1;neu;Der Schalter ist heute wichtig. | Der Schalter spielt
 der Prospekt;leicht;A1;neu;Der Prospekt ist heute wichtig. | Der Prospekt spielt im Alltag eine Rolle.;-
 das Doppelzimmer;leicht;A1;neu;Das Doppelzimmer ist heute wichtig. | Das Doppelzimmer spielt im Alltag eine Rolle.;-
 die Briefmarke;leicht;A1;neu;Die Briefmarke ist heute wichtig. | Die Briefmarke spielt im Alltag eine Rolle.;-
-die Pommes frites;leicht;A1;neu;Die Pommes frites sind heute wichtig. | Die Pommes frites spielen im Alltag eine Rolle.;-
+die Pommes frites;leicht;A1;neu;Die Pommes frites sind heute wichtig. | Die Pommes frites spielen im Alltag eine Rolle.;die_Pommes_frites.png
 die Postleitzahl;leicht;A1;neu;Die Postleitzahl ist heute wichtig. | Die Postleitzahl spielt im Alltag eine Rolle.;-
 die Bäckerei;leicht;A1;neu;Die Bäckerei ist heute wichtig. | Die Bäckerei spielt im Alltag eine Rolle.;-
 der Automat;leicht;A1;neu;Der Automat ist heute wichtig. | Der Automat spielt im Alltag eine Rolle.;-
@@ -3522,7 +3522,7 @@ die Note;Mittel;A2;neu;Die Note ist heute wichtig. | Die Note spielt im Alltag e
 der Tipp;Mittel;A2;neu;Der Tipp ist heute wichtig. | Der Tipp spielt im Alltag eine Rolle.;-
 das Festival;Mittel;A2;neu;Das Festival ist heute wichtig. | Das Festival spielt im Alltag eine Rolle.;-
 der Sänger;Mittel;A2;neu;Der Sänger ist heute wichtig. | Der Sänger spielt im Alltag eine Rolle.;-
-der Hamburger;Mittel;A2;neu;Der Hamburger ist heute wichtig. | Der Hamburger spielt im Alltag eine Rolle.;-
+der Hamburger;Mittel;A2;neu;Der Hamburger ist heute wichtig. | Der Hamburger spielt im Alltag eine Rolle.;der_Hamburger.png
 der Service;Mittel;A2;neu;Der Service ist heute wichtig. | Der Service spielt im Alltag eine Rolle.;-
 die Website;Mittel;A2;neu;Die Website ist heute wichtig. | Die Website spielt im Alltag eine Rolle.;-
 die Homepage;Mittel;A2;neu;Die Homepage ist heute wichtig. | Die Homepage spielt im Alltag eine Rolle.;-

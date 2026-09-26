@@ -62,7 +62,9 @@ button.btn-status-geplant:hover { background: #a78bfa; }
 .card-buttons{display:grid;grid-template-columns:repeat(4, 1fr);gap:6px;}
 .card-buttons button{font-size:1rem;padding:8px 4px;width:100%;line-height:1.2;text-align:center;}
 
-.repeat-counter-badge{position:absolute;top:16px;right:16px;background:var(--success);color:#fff;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;box-shadow:var(--shadow-sm);}
+.repeat-counter-badge{position:absolute;top:16px;right:16px;background:var(--success);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;box-shadow:var(--shadow-sm);border:none;cursor:pointer;padding:0;transition:transform .12s ease,filter .12s ease;}
+.repeat-counter-badge:hover{filter:brightness(1.1);}
+.repeat-counter-badge:active{transform:scale(0.9);}
 
 .table-card{background:#fff;border-radius:12px;border:1px solid var(--border-color);box-shadow:var(--shadow-sm);overflow:hidden}.table-wrapper{max-height:600px;overflow:auto}
 table{width:100%;border-collapse:collapse;font-size:.9rem;text-align:left}th,td{padding:14px 18px;border-bottom:1px solid var(--border-color)}th{background:#f8fafc;color:var(--text-muted);font-weight:600;position:sticky;top:0;z-index:1}
@@ -872,15 +874,15 @@ function confirmShowSameTopicWords() {
 
 function createCardHeader(wordObj, customBadgeHtml) {
     return `<div class="word-card-header">
-        <div style="display:flex;align-items:center;gap:8px;min-width:0;width:100%;justify-content:space-between;">
-            <div style="display:flex;align-items:center;gap:8px;min-width:0;">
-                ${thumbnailHtml(wordObj.Bilddatei, {size: 40, cls: 'thumb-img-card'})}
-                <h3>${escapeHtml(wordObj.Wort)}</h3>
-                ${speakButtonHtml(wordObj.Wort)}
-            </div>
+        <div style="display:flex;align-items:center;gap:8px;min-width:0;width:100%;">
+            ${thumbnailHtml(wordObj.Bilddatei, {size: 40, cls: 'thumb-img-card'})}
+            <h3>${escapeHtml(wordObj.Wort)}</h3>
+            ${speakButtonHtml(wordObj.Wort)}
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+            <span class="tag">${escapeHtml(wordObj.Thema || 'Allgemein')}</span>
             ${customBadgeHtml || ''}
         </div>
-        <span class="tag">${escapeHtml(wordObj.Thema || 'Allgemein')}</span>
     </div>`;
 }
 
@@ -951,27 +953,26 @@ function handleStatusClick(event, newStatus) {
     if (h3) {
         const item = meineWoerterliste.find(w => w.Wort === h3.textContent);
         if (item) {
-            if (newStatus === 'wiederholt' && currentView === 'wiederholt') {
-                item.wiederholZaehler = (item.wiederholZaehler || 0) + 1;
-                saveCurrentData(false);
-                let badge = cardElement.querySelector('.repeat-counter-badge');
-                if (!badge) {
-                    badge = document.createElement('div');
-                    badge.className = 'repeat-counter-badge';
-                    cardElement.appendChild(badge);
-                }
-                badge.textContent = item.wiederholZaehler;
-                updateListInfoText();
-                return;
-            } else {
-                item.Lernstatus = newStatus;
-                item.wiederholZaehler = 0;
-                saveCurrentData(false);
-            }
+            item.Lernstatus = newStatus;
+            item.wiederholZaehler = 0;
+            saveCurrentData(false);
         }
     }
     cardElement.remove();
     updateListInfoText();
+}
+
+function incrementRepeatCounter(event) {
+    event.stopPropagation();
+    const cardElement = event.currentTarget.closest('.word-card');
+    if (!cardElement) return;
+    const h3 = cardElement.querySelector('h3');
+    if (!h3) return;
+    const item = meineWoerterliste.find(w => w.Wort === h3.textContent);
+    if (!item) return;
+    item.wiederholZaehler = (item.wiederholZaehler || 0) + 1;
+    saveCurrentData(false);
+    event.currentTarget.textContent = item.wiederholZaehler;
 }
 
 function showNewWords(count = 10) {
@@ -1008,13 +1009,11 @@ function filterByStatus(status) {
         const card = document.createElement('div');
         card.className = 'word-card';
         let badgeHtml = '';
-        let statusBadgeStyle = '';
         if (status === 'wiederholt') {
             const count = wordObj.wiederholZaehler || 0;
-            badgeHtml = `<div class="repeat-counter-badge" title="Wiederholungen">${count}</div>`;
-            statusBadgeStyle = ' style="margin-right:40px;"';
+            badgeHtml = `<button type="button" class="repeat-counter-badge" title="Wiederholung zählen" onclick="incrementRepeatCounter(event)">${count}</button>`;
         }
-        const statusBadge = `<span class="badge badge-${escapeHtml(wordObj.Lernstatus)}"${statusBadgeStyle}>${escapeHtml(wordObj.Lernstatus)}</span>`;
+        const statusBadge = `<span class="badge badge-${escapeHtml(wordObj.Lernstatus)}">${escapeHtml(wordObj.Lernstatus)}</span>`;
         card.innerHTML = `${badgeHtml}<div>${createCardHeader(wordObj, statusBadge)}${createExampleBox(wordObj.Beispielsatz)}</div>${createCardButtons(status)}`;
         container.appendChild(card);
     });
