@@ -270,6 +270,13 @@ th,td{padding:10px 12px}
 .top-nav-buttons button{padding:9px 6px;font-size:.78rem}
 .menu-item{padding:8px 12px;font-size:.8rem}
 }
+
+/* Touch-Geräte: kein klebendes Hover, damit ein einziger Tap sofort den Status ändert */
+button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+@media (hover:none){
+.card-buttons button:hover,#tab-spiel1 .card-buttons button:hover{transform:none}
+#tab-spiel1 .word-card:hover{transform:none;box-shadow:0 5px 0 rgba(79,70,229,.14),var(--shadow-sm)}
+}
 </style>
 </head>
 <body>
@@ -979,6 +986,7 @@ function showSameTopicWords(count = 10, chosenTopic = 'random') {
     topicWords.forEach(wordObj => {
         const card = document.createElement('div');
         card.className = 'word-card';
+        cardWordMap.set(card, wordObj);
         card.innerHTML = `<div>${createCardHeader(wordObj)}${createExampleBox(wordObj.Beispielsatz)}</div>${createCardButtons('sameTopic')}`;
         container.appendChild(card);
     });
@@ -1005,29 +1013,39 @@ function createCardButtons(context) {
     return `<div class="card-buttons">${buttonsHtml}</div>`;
 }
 
-function handleStatusClick(event, newStatus) {
-    const cardElement = event.currentTarget.closest('.word-card');
-    if (!cardElement) return;
+// Verknüpft jede Wortkarte direkt mit ihrem Wort-Objekt (auch bei doppelten Wörtern eindeutig)
+const cardWordMap = new WeakMap();
+
+function findWordForCard(cardElement) {
+    const direct = cardWordMap.get(cardElement);
+    if (direct) return direct;
     const h3 = cardElement.querySelector('h3');
-    if (h3) {
-        const item = meineWoerterliste.find(w => w.Wort === h3.textContent);
-        if (item) {
-            item.Lernstatus = newStatus;
-            item.wiederholZaehler = 0;
-            saveCurrentData(false);
-        }
+    return h3 ? meineWoerterliste.find(w => w.Wort === h3.textContent) : null;
+}
+
+function handleStatusClick(event, newStatus) {
+    event.stopPropagation();
+    const cardElement = event.currentTarget.closest('.word-card');
+    if (!cardElement || cardElement.dataset.removing === '1') return; // Doppel-Tap ignorieren
+    cardElement.dataset.removing = '1';
+
+    const item = findWordForCard(cardElement);
+    if (item) {
+        item.Lernstatus = newStatus;
+        item.wiederholZaehler = 0;
+        try { saveCurrentData(false); } catch (e) { console.warn('Speichern fehlgeschlagen', e); }
     }
+    // Karte sofort ausblenden und entfernen: das Wort wird nicht mehr angezeigt
+    cardElement.style.display = 'none';
     cardElement.remove();
-    updateListInfoText();
+    try { updateListInfoText(); } catch (e) { console.warn(e); }
 }
 
 function incrementRepeatCounter(event) {
     event.stopPropagation();
     const cardElement = event.currentTarget.closest('.word-card');
     if (!cardElement) return;
-    const h3 = cardElement.querySelector('h3');
-    if (!h3) return;
-    const item = meineWoerterliste.find(w => w.Wort === h3.textContent);
+    const item = findWordForCard(cardElement);
     if (!item) return;
     item.wiederholZaehler = (item.wiederholZaehler || 0) + 1;
     saveCurrentData(false);
@@ -1049,6 +1067,7 @@ function showNewWords(count = 10) {
     selectedWords.forEach(wordObj => {
         const card = document.createElement('div');
         card.className = 'word-card';
+        cardWordMap.set(card, wordObj);
         card.innerHTML = `<div>${createCardHeader(wordObj)}${createExampleBox(wordObj.Beispielsatz)}</div>${createCardButtons('new')}`;
         container.appendChild(card);
     });
@@ -1067,6 +1086,7 @@ function filterByStatus(status) {
     words.forEach(wordObj => {
         const card = document.createElement('div');
         card.className = 'word-card';
+        cardWordMap.set(card, wordObj);
         let badgeHtml = '';
         if (status === 'wiederholt') {
             const count = wordObj.wiederholZaehler || 0;
